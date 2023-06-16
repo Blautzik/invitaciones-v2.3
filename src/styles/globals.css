@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+svg {
+    stroke: transparent;
+    stroke-width: 0px;
+}

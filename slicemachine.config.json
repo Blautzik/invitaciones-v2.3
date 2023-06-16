@@ -1,0 +1,6 @@
+{
+  "libraries": ["./src/slices"],
+  "adapter": "@slicemachine/adapter-next",
+  "repositoryName": "invitaciones-v23",
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+}
