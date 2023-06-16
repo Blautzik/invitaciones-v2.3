@@ -60,7 +60,7 @@ const Info = ({ dia, lugar, direccion }) => {
                             <h4 className={`${roboto.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
                             <p className={`${inter.className} text-base mb-2 text-center w-80 text-slate-600`}>sábado 5 de julio - 21hs</p>
 
-                            <a href="https://calendar.google.com/" target="_blank">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf14IEwtbBeknTzPAx_Izy7NqS1YreOa88UnZhaqgTIU90CKg/viewform?usp=sf_link" target="_blank">
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 hover:bg-white hover:text-slate-600 rounded-full py-2 px-8 text-slate-50 shadow-md`}>Confirmar Asistencia</button>
                             </a>
                             <h4 className={`${roboto.className} text-xl text-center w-80 text-slate-600`}>Lugar</h4>
