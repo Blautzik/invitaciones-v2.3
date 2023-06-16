@@ -10,7 +10,7 @@ const Info = ({ dia, lugar, direccion }) => {
     return (
         <div>
             <div className="flex-col w-full mt-20 mb-20">
-                <div className="flex flex-col md:flex-row md:w-10/12 w-full justify-between items-center lg:items-start">
+                <div className="flex flex-col md:flex-row md:w-10/12 w-full justify-between items-center lg:items-start m-auto">
                     <div className="flex flex-col justify-center items-center w-5/12">
                         <div className="flex flex-col justify-center items-center ">
                             <div className='bg-white h-40 w-40 rounded-full flex justify-center items-center drop-shadow mb-8'>
@@ -36,7 +36,7 @@ const Info = ({ dia, lugar, direccion }) => {
                             <a href='https://https://www.google.com/maps/place/Catedral+Metropolitana+de+Buenos+Aires/@-34.6071891,-58.3750032,17.75z/data=!4m6!3m5!1s0x95bcb9c134355bc3:0xe7611c1602820d34!8m2!3d-34.6075694!4d-58.3732574!16zL20vMGR0dGs1?hl=es-AR&entry=ttu'>
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 hover:bg-white hover:text-slate-600 rounded-full py-2 px-8 text-slate-50 shadow-md`}>¿Cómo llegar?</button>
                             </a>
-                            <div className="opacity-60 mt-5">
+                            <div className="opacity-0 lg:opacity-60 mt-5">
                                 <Image src="/janoslogo.png" alt="logo" width="150" height="100" />
                             </div>
 

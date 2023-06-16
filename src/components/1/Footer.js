@@ -11,11 +11,9 @@ const Footer = () => {
             <a href='https://janoseventos.com' target='_blank'>
                 <img className='w-52 h-24' src='https://www.janoseventos.com/assets/img/logos/Logos-Janos-horizontal.png' layout='cover' alt='logojanos' />
             </a>
-            <div className="p-4 text-center w-screen  text-white  bg-neutral-900">
-                © 2023 Copyright:
-                <a class="text-white" href=""
-                > Federico Blautzik</a
-                >
+            <div className="py-4 text-center w-screen lg:w-full text-white  bg-neutral-900">
+                © 2023 Copyright: Federico Blautzik
+                
             </div>
         </div>
     )

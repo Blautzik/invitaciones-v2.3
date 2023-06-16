@@ -22,9 +22,9 @@ export default function Article({ article }) {
   const imageStyle = {
     objectFit: 'cover',
     objectPosition: '50% 50%',
-    opacity:0.7,
+    opacity: 0.7,
     position: 'relative',
-    top:'-140px',
+    top: '-140px',
     background: '#EFEDE7'
   }
 
@@ -34,48 +34,51 @@ export default function Article({ article }) {
         <title>
           {prismic.asText(article.data.title)}
         </title>
+        <meta property="og:image" content={prismic.asImageSrc(article.data.featuredImage)} />
+        <meta property="og:description" content="Nos Casamos y queremos compartir este momento con vos!" />
+
       </Head>
       <main className="bg-[#EFEDE7]">
 
-      <section className='h-screen'>
+        <section className='h-screen'>
 
-        <Header
-          title={article.data.title[0].text}
-          coverImage={prismic.asImageSrc(article.data.featuredImage)}
-          date={article.data.fechaEvento}
-          content={article.data.frase}
+          <Header
+            title={article.data.title[0].text}
+            coverImage={prismic.asImageSrc(article.data.featuredImage)}
+            date={article.data.fechaEvento}
+            content={article.data.frase}
           />
 
 
-      </section>
+        </section>
 
-      <section className='h-[45vh] mt-20 bg-[#EFEDE7]'>
-        <Countdown date={article.data.fechaEvento} />
-      </section>
+        <section className='h-[45vh] mt-20 bg-[#EFEDE7]'>
+          <Countdown date={article.data.fechaEvento} />
+        </section>
 
 
-      <section className=' lg:h-screen lg:max-w-[60vw] m-auto bg-[#EFEDE7]'>
-        <Info 
-        
-        />
-        
-      </section>
-      <section className='mt-40 h-0 lg:mt-0 lg:h-32 bg-[#EFEDE7] -z-20'>
-        <div className="-z-10">
-          <Image src={ondas} alt="Image description"  style={imageStyle}/>
-        </div>
-      </section>
-      <section className="lg:relative block text-center p-2">
-        <Gallery/>
-      </section>
-      <section className="lg:max-w-[60vw] m-auto bg-[#EFEDE7]">
-        <Regalo/>
-      </section>
+        <section className=' lg:h-screen lg:max-w-[60vw] m-auto bg-[#EFEDE7]'>
+          <Info
 
-      <section>
-        <Footer />
-        {/* <Footermio /> */}
-      </section>
+          />
+
+        </section>
+        <section className='mt-40 h-0 lg:mt-0 lg:h-32 bg-[#EFEDE7] -z-20'>
+          <div className="-z-10">
+            <Image src={ondas} alt="Image description" style={imageStyle} />
+          </div>
+        </section>
+        <section className="lg:relative block text-center p-2">
+          <Gallery />
+        </section>
+        <section className="lg:max-w-[60vw] m-auto bg-[#EFEDE7]">
+          <Regalo />
+        </section>
+
+        <section>
+          <Footer />
+          {/* <Footermio /> */}
+        </section>
       </main>
     </>
 
