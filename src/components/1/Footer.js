@@ -4,8 +4,8 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className='flex flex-col items-center justify-center text-center mx-10'>
-            <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl `}>
+        <div className='flex flex-col items-center justify-center text-center '>
+            <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10`}>
                 Gracias por acompañarnos en este momento tan importante!!
             </h2>
             <a href='https://janoseventos.com' target='_blank'>
