@@ -26,10 +26,7 @@ const routes = [
     type: "quince",
     path: "/3/:uid",
   },
-  {
-    type: "page",
-    path: "/:uid",
-  },
+
 ];
 
 /**
