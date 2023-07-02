@@ -20,6 +20,9 @@ const routes = [
 
   {
     type: "quince",
+    resolvers: {
+      diseño: 'diseño',
+    },
     path: "/:diseño?/:uid",
   },
   {
