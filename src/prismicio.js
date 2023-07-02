@@ -1,6 +1,5 @@
 import * as prismic from "@prismicio/client";
 import * as prismicNext from "@prismicio/next";
-
 import sm from "../slicemachine.config.json";
 
 /**
@@ -21,9 +20,12 @@ const routes = [
 
   {
     type: "quince",
-    path: "/3/:uid",
+    path: "/:diseño?/:uid",
   },
-
+  {
+    type: "page",
+    path: "/:uid",
+  },
 ];
 
 /**

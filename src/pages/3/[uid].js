@@ -107,6 +107,7 @@ export async function getStaticPaths() {
 
     const articles = await client.getAllByType("quince");
 
+
     return {
         paths: articles.map((article) => prismic.asLink(article)),
         fallback: false,
