@@ -60,6 +60,7 @@ export default function Gallery({imagenes, titulo}) {
                         
                         <div className="flex items-center min-h-screen px-4 py-8">
                             <div className="flex relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg">
+                                
                                 <img src={images[index]} onClick={()=>openClose(0)} onScroll={handleScroll}/>
                             </div>
                         </div>
