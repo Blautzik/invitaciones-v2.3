@@ -18,10 +18,7 @@ const routes = [
     type: "article",
     path: "/1/:uid",
   },
-  {
-    type: "quince",
-    path: "/2/:uid",
-  },
+
   {
     type: "quince",
     path: "/3/:uid",
