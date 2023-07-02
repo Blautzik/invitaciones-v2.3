@@ -1,0 +1,113 @@
+{
+  "id": "quince",
+  "label": "quince",
+  "format": "page",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "config": { "label": "UID" }, "type": "UID" },
+      "title": {
+        "type": "Text",
+        "config": { "label": "title", "placeholder": "" }
+      },
+      "foto": {
+        "type": "Image",
+        "config": { "label": "foto", "constraint": {}, "thumbnails": [] }
+      },
+      "frase": {
+        "type": "Text",
+        "config": { "label": "frase", "placeholder": "" }
+      },
+      "saludo": {
+        "type": "Text",
+        "config": { "label": "saludo", "placeholder": "" }
+      },
+      "fecha": {
+        "type": "Date",
+        "config": { "label": "Fecha", "placeholder": "" }
+      },
+      "galeria": {
+        "type": "Group",
+        "config": {
+          "label": "galeria",
+          "fields": {
+            "foto1": {
+              "type": "Text",
+              "config": { "label": "foto1", "placeholder": "" }
+            },
+            "foto2": {
+              "type": "Text",
+              "config": { "label": "foto2", "placeholder": "" }
+            },
+            "foto3": {
+              "type": "Text",
+              "config": { "label": "foto3", "placeholder": "" }
+            },
+            "foto4": {
+              "type": "Text",
+              "config": { "label": "foto4", "placeholder": "" }
+            },
+            "foto5": {
+              "type": "Text",
+              "config": { "label": "foto5", "placeholder": "" }
+            },
+            "foto6": {
+              "type": "Text",
+              "config": { "label": "foto6", "placeholder": "" }
+            }
+          }
+        }
+      },
+      "salon": {
+        "type": "Text",
+        "config": { "label": "salon", "placeholder": "" }
+      },
+      "ubicacion": {
+        "type": "Text",
+        "config": { "label": "ubicacion", "placeholder": "" }
+      },
+      "formulario": {
+        "type": "Text",
+        "config": { "label": "formulario", "placeholder": "" }
+      },
+      "alias": {
+        "type": "Text",
+        "config": { "label": "alias regalos", "placeholder": "" }
+      },
+      "titulo_galeria": {
+        "type": "Text",
+        "config": { "label": "titulo galeria", "placeholder": "" }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": { "choices": {} }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "StructuredText"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": { "height": 1260, "width": 2400 },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      }
+    }
+  }
+}

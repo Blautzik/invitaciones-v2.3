@@ -198,6 +198,256 @@ type PageDocumentDataSlicesSlice =
  */
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+/** Content for quince documents */
+interface QuinceDocumentData {
+  /**
+   * title field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * foto field in *quince*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.foto
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  foto: prismic.ImageField<never>;
+  /**
+   * frase field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.frase
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  frase: prismic.KeyTextField;
+  /**
+   * saludo field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.saludo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  saludo: prismic.KeyTextField;
+  /**
+   * Fecha field in *quince*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.fecha
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/date
+   *
+   */
+  fecha: prismic.DateField;
+  /**
+   * galeria field in *quince*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.galeria[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  galeria: prismic.GroupField<Simplify<QuinceDocumentDataGaleriaItem>>;
+  /**
+   * salon field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.salon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  salon: prismic.KeyTextField;
+  /**
+   * ubicacion field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.ubicacion
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ubicacion: prismic.KeyTextField;
+  /**
+   * formulario field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.formulario
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  formulario: prismic.KeyTextField;
+  /**
+   * alias regalos field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.alias
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  alias: prismic.KeyTextField;
+  /**
+   * titulo galeria field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.titulo_galeria
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  titulo_galeria: prismic.KeyTextField;
+  /**
+   * Slice Zone field in *quince*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<QuinceDocumentDataSlicesSlice>;
+  /**
+   * Meta Description field in *quince*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: quince.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  meta_description: prismic.RichTextField;
+  /**
+   * Meta Image field in *quince*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  meta_image: prismic.ImageField<never>;
+  /**
+   * Meta Title field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: quince.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
+}
+/**
+ * Item in quince → galeria
+ *
+ */
+export interface QuinceDocumentDataGaleriaItem {
+  /**
+   * foto1 field in *quince → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.galeria[].foto1
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto1: prismic.KeyTextField;
+  /**
+   * foto2 field in *quince → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.galeria[].foto2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto2: prismic.KeyTextField;
+  /**
+   * foto3 field in *quince → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.galeria[].foto3
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto3: prismic.KeyTextField;
+  /**
+   * foto4 field in *quince → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.galeria[].foto4
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto4: prismic.KeyTextField;
+  /**
+   * foto5 field in *quince → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.galeria[].foto5
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto5: prismic.KeyTextField;
+  /**
+   * foto6 field in *quince → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.galeria[].foto6
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto6: prismic.KeyTextField;
+}
+/**
+ * Slice for *quince → Slice Zone*
+ *
+ */
+type QuinceDocumentDataSlicesSlice = never;
+/**
+ * quince document from Prismic
+ *
+ * - **API ID**: `quince`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type QuinceDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<QuinceDocumentData>, "quince", Lang>;
 /** Content for Settings documents */
 interface SettingsDocumentData {
   /**
@@ -275,6 +525,7 @@ export type AllDocumentTypes =
   | ArticleDocument
   | NavigationDocument
   | PageDocument
+  | QuinceDocument
   | SettingsDocument;
 /**
  * Default variation for ContactForm Slice
@@ -555,6 +806,10 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       PageDocument,
+      QuinceDocumentData,
+      QuinceDocumentDataGaleriaItem,
+      QuinceDocumentDataSlicesSlice,
+      QuinceDocument,
       SettingsDocumentData,
       SettingsDocument,
       AllDocumentTypes,
