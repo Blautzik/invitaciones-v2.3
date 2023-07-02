@@ -23,6 +23,10 @@ const routes = [
     path: "/2/:uid",
   },
   {
+    type: "quince",
+    path: "/3/:uid",
+  },
+  {
     type: "page",
     path: "/:uid",
   },

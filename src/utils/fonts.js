@@ -1,4 +1,4 @@
-import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif } from 'next/font/google'
+import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display } from 'next/font/google'
  
 export const inter = Inter({
   subsets: ['latin'],
@@ -20,3 +20,10 @@ export const roboto = Roboto_Serif({
     display: 'swap',
     weight: '500'
   })
+
+
+export const playFair = Playfair_Display({
+  subsets: ['latin'],
+  display:'swap',
+  weight: '400'
+})
