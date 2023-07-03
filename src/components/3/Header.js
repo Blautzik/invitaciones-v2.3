@@ -21,7 +21,16 @@ const Header = ({ coverImage, title, date, content }) => {
     return (
         <div className="md:flex md:flex-row">
 
-            <div className="fixed md:relative top-0 w-full md:w-1/2 md:h-[44vw] md:min-h-[34rem] md:max-h-[50rem]  h-3/5 bg-center bg-cover ">
+            <motion.div 
+                initial={{
+                    opacity:0,
+                    y:150
+                }}
+                whileInView={{
+                    opacity:1, 
+                    y:0
+                }}
+                className="fixed md:relative top-0 w-full md:w-1/2 md:h-[44vw] md:min-h-[34rem] md:max-h-[50rem]  h-3/5 bg-center bg-cover ">
                 <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 "></div>
                 <Image
                     src={coverImage}
@@ -31,7 +40,7 @@ const Header = ({ coverImage, title, date, content }) => {
                     alt='portada'
                 />
 
-            </div>
+            </motion.div>
             <div className='absolute md:relative md:w-1/2 md:h-[50vw] md:min-h-[75%] md:mt-[10%] top-[55%] w-full h-full'>
                 <div className='w-full flex justify-center bg-[#f6f2e3] pt-14'>
                     <div className='flex w-full justify-center '> 

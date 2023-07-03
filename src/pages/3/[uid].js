@@ -36,7 +36,7 @@ const Invitacion = ({ article }) => {
 
                 <main className="bg-[#f6f2e3] ">
 
-                    <section className='h-screen md:h-auto  md:w-auto'>
+                    <section className='h-screen md:h-auto  md:w-auto z-10'>
 
                         <Header
                             title={article.data.title}
@@ -48,7 +48,7 @@ const Invitacion = ({ article }) => {
 
 
                     </section>
-                    <div className='md:-translate-y-64'>
+                    <div className='estaseccion md:-translate-y-64 bg-[#f6f2e3] z-50'>
 
                         <section className='h-[45vh] mt-40 md:mt:0 md:-translate-y-12 pb-24 bg-[#f6f2e3]'>
                             <Countdown date={article.data.fecha} />
@@ -69,17 +69,17 @@ const Invitacion = ({ article }) => {
 
                         </section>
 
-                        <section className="bg-[#f6f2e3] md:-translate-y-36 md:z-40  relative text-center  -translate-y-36">
+                        <section className="bg-[#f6f2e3] md:-translate-y-36 md:z-40 h-[75vh] md:h-auto relative text-center -translate-y-64">
                             <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
                         </section>
 
 
 
-                        <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 pt-10 -translate-y-36">
+                        <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 pt-10 -translate-y-72">
                             <Regalo />
                         </section>
 
-                        <section className='bg-[#f6f2e3] -translate-y-28'>
+                        <section className='bg-[#f6f2e3] -translate-y-60'>
                             <Footer />
                             {/* <Footermio /> */}
                         </section>
