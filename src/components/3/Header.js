@@ -19,7 +19,7 @@ const Header = ({ coverImage, title, date, content }) => {
     const dateFormated = moment(date).format('DD-MM-YYYY')
 
     return (
-        <div className="md:flex md:flex-row">
+        <div className="md:flex md:flex-row h-screen ">
 
             <motion.div 
                 initial={{
@@ -30,7 +30,7 @@ const Header = ({ coverImage, title, date, content }) => {
                     opacity:1, 
                     y:0
                 }}
-                className="fixed md:relative top-0 w-full md:w-1/2 md:h-[44vw] md:min-h-[34rem] md:max-h-[50rem]  h-3/5 bg-center bg-cover ">
+                className="relative md:relative top-0 w-full md:w-1/2 md:h-[44vw] md:min-h-[34rem] md:max-h-[50rem]  h-3/5 bg-center bg-cover ">
                 <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 "></div>
                 <Image
                     src={coverImage}
@@ -41,7 +41,7 @@ const Header = ({ coverImage, title, date, content }) => {
                 />
 
             </motion.div>
-            <div className='absolute md:relative md:w-1/2 md:h-[50vw] md:min-h-[75%] md:mt-[10%] top-[55%] w-full h-full bg-[#f6f2e3]'>
+            <div className='absolute md:relative md:w-1/2 md:h-[50vw] md:min-h-[75%] md:mt-[10%] top-[55%] md:top-[0] w-full h-full bg-[#f6f2e3]'>
                 <div className='w-full flex justify-center  pt-14'>
                     <div className='flex w-full justify-center '> 
                         <span className='border-b w-1/4 border-b-orange-700 h-5 mx-3'></span>

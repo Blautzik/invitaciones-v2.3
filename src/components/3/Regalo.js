@@ -16,7 +16,7 @@ const Regalo = () => {
         <>
             <div className="w-full flex justify-center">
                 <div className="flex flex-col md:flex-row md:w-10/12 pb-24 w-full justify-between items-center md:items-stretch">
-                    <div className="flex flex-col justify-center items-center w-full">
+                    <div className="flex flex-col justify-center items-center w-full pt-12">
                         <IoGift className="text-5xl text-gray-600" />
                         <h3 className={`${roboto.className} text-3xl text-center mt-1 mb-8 text-slate-600`}>Regalo</h3>
                         <p className={`${inter.className} text-base text-center lg:max-w-lg  text-slate-600`}>Lo que nos importa es que en este día tan especial contemos con tu presencia, pero si queres podes hacernos un regalo. </p>

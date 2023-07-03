@@ -48,15 +48,11 @@ const Invitacion = ({ article }) => {
 
 
                     </section>
-                    <div className='estaseccion md:-asdasd-64 bg-[#f6f2e3] z-50'>
+                    <div className='md:-translate-y-64  z-50'>
 
-                        <section className='h-[45vh] mt-40 md:mt:0 md:-translate-y-12 bg-[#f6f2e3]'>
-                            <Countdown date={article.data.fecha} />
-                            <div className=' h-24 asdasd-32'>
+                        
+                        <Countdown date={article.data.fecha} />
 
-                                <img className='md:hidden' src='https://www.fixdate.io/modelo-invitacion/95/img/curva02.png' />
-                            </div>
-                        </section>
 
 
                         <section className=' md:h-[50rem] md:-asdasd-36 md:w-full bg-[#f6f2e3]  '>
