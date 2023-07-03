@@ -79,7 +79,7 @@ const Invitacion = ({ article }) => {
                             <Regalo />
                         </section>
 
-                        <section className='bg-[#f6f2e3] -asdasd-60'>
+                        <section className='bg-[#f6f2e3] -translate-y-2'>
                             <Footer />
                             {/* <Footermio /> */}
                         </section>
