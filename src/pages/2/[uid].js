@@ -102,9 +102,17 @@ export async function getStaticProps({ params, previewData }) {
     const client = createClient();
   
     const articles = await client.getAllByType("quince");
+
+    const linkResolver = (doc) => {
+        if (doc.type === 'quince') {
+         return `/2/${doc.uid}/`
+        } else {
+          return `false`
+        }
+       }
   
     return {
-      paths: articles.map((article) => prismic.asLink(article)),
+      paths: articles.map((article) => prismic.asLink(article, { linkResolver})),
       fallback: false,
     };
   }

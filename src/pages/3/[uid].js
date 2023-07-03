@@ -107,9 +107,17 @@ export async function getStaticPaths() {
 
     const articles = await client.getAllByType("quince");
 
+    const linkResolver = (doc) => {
+        if (doc.type === 'quince') {
+         return `/3/${doc.uid}/`
+        } else {
+          return `false`
+        }
+       }
+
 
     return {
-        paths: articles.map((article) => prismic.asLink(article)),
+        paths: articles.map((article) => prismic.asLink(article, {linkResolver})),
         fallback: false,
     };
 }
