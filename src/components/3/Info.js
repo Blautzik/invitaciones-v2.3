@@ -9,7 +9,7 @@ import ondas from '../../../public/img_ondas02.svg'
 const Info = ({ dia, lugar, direccion }) => {
     return (
         <div className=" relative w-full bg-[#f6f2e3] md:flex md:flex-col md:justify-center -asdasd-36 ">
-            <div className="flex-col items-center  w-full mb-20 pt-4">
+            <div className="flex-col items-center  w-full  pt-4">
                 <div className="flex flex-col md:flex-row md:w-10/12 w-full justify-between md:items-center md:justify-center items-center lg:items-start m-auto">
                     <div className="flex flex-col justify-center items-center w-5/12">
                         <div className="flex flex-col justify-center items-center">
