@@ -48,40 +48,45 @@ const Invitacion = ({ article }) => {
 
 
                     </section>
+                    <div className='md:-translate-y-64'>
 
-                    <section className='h-[45vh] mt-40 md:mt:0 md:-translate-y-12 bg-[#f6f2e3]'>
-                        <Countdown date={article.data.fecha} />
-                        <div className=' h-24 translate-y-32'>
+                        <section className='h-[45vh] mt-40 md:mt:0 md:-translate-y-12 bg-[#f6f2e3]'>
+                            <Countdown date={article.data.fecha} />
+                            <div className=' h-24 translate-y-32'>
 
-                            <img className='md:hidden' src='https://www.fixdate.io/modelo-invitacion/95/img/curva02.png' />
-                        </div>
-                    </section>
-
-
-                    <section className=' md:h-[50rem] md:-translate-y-36 md:w-full m-auto bg-[#f6f2e3]  pb-24'>
-                        <div className='flex justify-center'>
-
-                        <Info className='bg-[#f6f2e3] '
-
-                        />
-                        </div>
-
-                    </section>
-
-                    <section className="bg-[#f6f2e3] md:-translate-y-36 md:z-40  relative text-center pb-24 -translate-y-36">
-                        <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className=''/>
-                    </section>
+                                <img className='md:hidden' src='https://www.fixdate.io/modelo-invitacion/95/img/curva02.png' />
+                            </div>
+                        </section>
 
 
+                        <section className=' md:h-[50rem] md:-translate-y-36 md:w-full m-auto bg-[#f6f2e3]  pb-24'>
+                            <div className='flex justify-center'>
 
-                    <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 pt-10 -translate-y-36">
-                        <Regalo />
-                    </section>
+                                <Info className='bg-[#f6f2e3] '
 
-                    <section className='bg-[#f6f2e3] pt-14 -translate-y-64'>
-                        <Footer />
-                        {/* <Footermio /> */}
-                    </section>
+                                />
+                            </div>
+
+                        </section>
+
+                        <section className="bg-[#f6f2e3] md:-translate-y-36 md:z-40  relative text-center  -translate-y-36">
+                            <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
+                        </section>
+
+
+
+                        <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 pt-10 -translate-y-36">
+                            <Regalo />
+                        </section>
+
+                        <section className='bg-[#f6f2e3] -translate-y-28'>
+                            <Footer />
+                            {/* <Footermio /> */}
+                        </section>
+                    </div>
+                    <div className=" relative bottom-0 py-4 text-center w-screen lg:w-full text-white z-50 bg-neutral-900">
+                        © 2023 Copyright: Federico Blautzik
+                    </div>
                 </main>
             </>
 
@@ -112,15 +117,15 @@ export async function getStaticPaths() {
 
     const linkResolver = (doc) => {
         if (doc.type === 'quince') {
-         return `/3/${doc.uid}/`
+            return `/3/${doc.uid}/`
         } else {
-          return `false`
+            return `false`
         }
-       }
+    }
 
 
     return {
-        paths: articles.map((article) => prismic.asLink(article, {linkResolver})),
+        paths: articles.map((article) => prismic.asLink(article, { linkResolver })),
         fallback: false,
     };
 }

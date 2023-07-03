@@ -21,7 +21,7 @@ const Header = ({ coverImage, title, date, content }) => {
     return (
         <div className="md:flex md:flex-row">
 
-            <div className="fixed md:relative top-0 w-full md:w-1/2 md:h-[50vw] md:min-h-[75%]  h-3/5 bg-center bg-cover ">
+            <div className="fixed md:relative top-0 w-full md:w-1/2 md:h-[44vw] md:min-h-[34rem] md:max-h-[50rem]  h-3/5 bg-center bg-cover ">
                 <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 "></div>
                 <Image
                     src={coverImage}

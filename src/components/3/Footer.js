@@ -4,17 +4,13 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className='flex flex-col items-center justify-center text-center '>
-            <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10`}>
+        <div className='flex flex-col items-center justify-center text-center  -translate-y-36 bg-[#f6f2e3] md:-mb-72'>
+            <h2 className={`${great_vives.className} mt-16 text-gray-600 md:text-5xl text-4xl mx-10 `}>
                 Gracias por acompañarnos en este momento tan importante!!
             </h2>
             <a href='https://janoseventos.com' target='_blank'>
                 <img className='w-52 h-24' src='https://www.janoseventos.com/assets/img/logos/Logos-Janos-horizontal.png' layout='cover' alt='logojanos' />
             </a>
-            <div className=" absolute bottom-0 translate-y-52 py-4 text-center w-screen lg:w-full text-white  bg-neutral-900">
-                © 2023 Copyright: Federico Blautzik
-                
-            </div>
         </div>
     )
 }
