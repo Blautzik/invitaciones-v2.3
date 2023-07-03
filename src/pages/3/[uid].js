@@ -50,7 +50,7 @@ const Invitacion = ({ article }) => {
                     </section>
                     <div className='md:-translate-y-64'>
 
-                        <section className='h-[45vh] mt-40 md:mt:0 md:-translate-y-12 bg-[#f6f2e3]'>
+                        <section className='h-[45vh] mt-40 md:mt:0 md:-translate-y-12 pb-24 bg-[#f6f2e3]'>
                             <Countdown date={article.data.fecha} />
                             <div className=' h-24 translate-y-32'>
 
