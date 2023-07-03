@@ -20,17 +20,7 @@ const routes = [
   },
   {
     type: "quince",
-    resolvers: {
-      uid:'uid'
-    },
-    path: "/2/:uid",
-  },
-  {
-    type: "quince",
-    resolvers: {
-      uid:'uid'
-    },
-    path: "/3/:uid",
+    path: "/:uid",
   },
   {
     type: "page",
