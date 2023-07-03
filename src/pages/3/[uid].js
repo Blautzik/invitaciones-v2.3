@@ -59,7 +59,7 @@ const Invitacion = ({ article }) => {
                         </section>
 
 
-                        <section className=' md:h-[50rem] md:-translate-y-36 md:w-full m-auto bg-[#f6f2e3]  pb-24'>
+                        <section className=' md:h-[50rem] md:-translate-y-36 md:w-full m-auto bg-[#f6f2e3]  py-24'>
                             <div className='flex justify-center'>
 
                                 <Info className='bg-[#f6f2e3] '
