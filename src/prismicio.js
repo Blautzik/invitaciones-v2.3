@@ -16,16 +16,13 @@ export const { repositoryName } = sm;
 const routes = [
   {
     type: "article",
-    path: "/1/:uid",
+    path: "/:uid",
   },
   {
     type: "quince",
     path: "/:uid",
   },
-  {
-    type: "page",
-    path: "/:uid",
-  },
+
 ];
 
 /**
