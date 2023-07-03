@@ -59,8 +59,8 @@ const Invitacion = ({ article }) => {
                         </section>
 
 
-                        <section className=' md:h-[50rem] md:-asdasd-36 md:w-full m-auto bg-[#f6f2e3]  '>
-                            <div className='flex justify-center'>
+                        <section className=' md:h-[50rem] md:-asdasd-36 md:w-full bg-[#f6f2e3]  '>
+                            <div className='md:flex md:justify-center'>
 
                                 <Info className='bg-[#f6f2e3] '
 
@@ -79,7 +79,7 @@ const Invitacion = ({ article }) => {
                             <Regalo />
                         </section>
 
-                        <section className='bg-[#f6f2e3] -translate-y-2'>
+                        <section className='bg-[#f6f2e3] -translate-y-4'>
                             <Footer />
                             {/* <Footermio /> */}
                         </section>
