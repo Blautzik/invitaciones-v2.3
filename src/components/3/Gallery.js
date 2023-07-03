@@ -42,7 +42,7 @@ export default function Gallery({imagenes, titulo}) {
     <>
     <div className="flex flex-col items-center bg-[#f6f2e3] z-10 px-2">
     <h2 className={`${roboto.className} text-gray-600 text-4xl mb-10`} >{titulo}</h2>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2  md:w-4/5 center">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2  md:w-4/5 center">
         
       {images.map(e=> <div key={e} className='rounded md:hover:scale-[1.02] drop-shadow-2xl hover:z-10 transition-all' onClick={() => openClose(images.indexOf(e))}>
         <img className="rounded" key={e}  src={e} alt="" layout="fill"/>

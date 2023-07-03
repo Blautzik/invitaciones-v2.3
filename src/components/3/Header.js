@@ -19,9 +19,9 @@ const Header = ({ coverImage, title, date, content }) => {
     const dateFormated = moment(date).format('DD-MM-YYYY')
 
     return (
-        <div className="scroll-smooth min-w-full">
+        <div className="md:flex md:flex-row">
 
-            <div className="fixed top-0 w-full h-1/2 bg-center bg-cover ">
+            <div className="fixed md:relative top-0 w-full md:w-1/2 md:h-[50vw] md:min-h-[75%]  h-3/5 bg-center bg-cover ">
                 <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 "></div>
                 <Image
                     src={coverImage}
@@ -32,12 +32,8 @@ const Header = ({ coverImage, title, date, content }) => {
                 />
 
             </div>
-            <div className='absolute top-[38%] w-full h-full'>
-                <img
-                    src='https://www.fixdate.io/modelo-invitacion/95/img/curva_portada_horizontal.png'
-                />
-
-                <div className='w-full flex justify-center bg-[#f6f2e3] '>
+            <div className='absolute md:relative md:w-1/2 md:h-[50vw] md:min-h-[75%] md:mt-[10%] top-[55%] w-full h-full'>
+                <div className='w-full flex justify-center bg-[#f6f2e3] pt-14'>
                     <div className='flex w-full justify-center '> 
                         <span className='border-b w-1/4 border-b-orange-700 h-5 mx-3'></span>
                         <h3 className={`${playFair.className} text-[#18564C] text-2xl mb-6`}>{dateFormated}</h3>
@@ -50,6 +46,16 @@ const Header = ({ coverImage, title, date, content }) => {
                     <h3 className={`${playFair.className} text-[#9D7605] text-center text-4xl mb-6`}>Mis 15 años</h3>
                     <p className={`${playFair.className} text-[#18564c] text-center text-xl mb-6 mx-7`}>{content}</p>
                 </div>
+            </div>
+                <div className='absolute top-[38%] md:top-[55%] w-full h-full'>
+                    <img
+                        src='https://www.fixdate.io/modelo-invitacion/95/img/curva_portada_horizontal.png'
+                        className='md:hidden'
+                    />
+                    <img
+                        src='https://www.fixdate.io/modelo-invitacion/95/img/curva01.png'
+                        className='hidden md:block'
+                    />
             </div>
 
         </div>

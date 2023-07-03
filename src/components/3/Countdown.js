@@ -1,7 +1,7 @@
 import moment from 'moment'
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
-import circulo from '../../assets/5109602.jpg'
+import circulo from '../../assets/contador.webp'
 import { roboto } from '../../utils/fonts';
 import { BsFillHeartFill } from 'react-icons/bs'
 
@@ -44,17 +44,21 @@ const Countdown = ({ date }) => {
 
     return (
         <>
-            <div className="flex flex-col w-screen h-[rem] justify-center bg-rose-200 items-center z-40">
-                <div className='flex h-[24rem] w-full lg:h-[32rem] lg:w-[32rem] absolute mt-10  items-center justify-center'>
+            <div className="flex flex-col  justify-center bg-rose-200 z-40">
+                <div className='flex h-[24rem] w-full absolute mt-36 md:mt-0  items-center md:items-start md:-translate-y-20 justify-center'>
+                  <div className='w-full h-86  flex items-center mx-auto justify-center  p-0 m-0'>
+
                     <div style={{
                         backgroundImage: `url(${circulo.src})`,
                         backgroundSize: 'contain',
-                        height: '300px',
+                        backgroundPositionX:'center',
+                        height: '400px',
                         backgroundRepeat: 'no-repeat'
                     }}
-                        className='w-full h-86 flex items-center justify-center z-50 p-0 m-0'
+                        className='w-full flex flex-row items-center justify-center z-50 md:flex-col'
+                        
                     >
-                        <div className='flex flex-col w-[16rem] h-[16rem] lg:h-[21rem] lg:w-[21rem] bg-slate-50 rounded-full items-center -z-20 mb-8 drop-shadow-2xl'>
+                        <div className='flex flex-col w-[16rem] h-[16rem] bg-slate-50 rounded-full items-center -z-20 '>
                             <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-16 z-50`}>Faltan:</h2>
                             <div className="flex h-[4rem] w-[14rem] justify-between items-center ">
                                 <div className="flex flex-col items-center md:w-1/12 pl-4 lg:pr-8 border-r">
@@ -77,9 +81,9 @@ const Countdown = ({ date }) => {
 
                         </div>
                     </div>
+                    </div>
                 </div>
-                <div className="flex w-full justify-center bg-verde h-32 items-center">
-                </div>
+              
             </div>
 
         </>

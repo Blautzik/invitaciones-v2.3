@@ -7,8 +7,8 @@ import Image from 'next/image';
 import Countdown from '@/components/3/Countdown';
 import Info from '@/components/3/Info';
 import Gallery from '@/components/3/Gallery';
-import Regalo from '@/components/1/Regalo';
-import Footer from '@/components/1/Footer';
+import Regalo from '@/components/3/Regalo';
+import Footer from '@/components/3/Footer';
 import ondas from '../../../public/img_ondas02.svg'
 
 const Invitacion = ({ article }) => {
@@ -34,48 +34,51 @@ const Invitacion = ({ article }) => {
 
                 </Head>
 
-                <main className="bg-[#f6f2e3] w-screen ">
+                <main className="bg-[#f6f2e3] ">
 
-                    <section className='h-screen w-screen'>
+                    <section className='h-screen md:h-auto  md:w-auto'>
 
                         <Header
                             title={article.data.title}
                             coverImage={prismic.asImageSrc(article.data.foto)}
                             date={article.data.fecha}
                             content={article.data.frase}
-                            className='h-screen w-full'
+
                         />
 
 
                     </section>
 
-                    <section className='h-[45vh] mt-20 bg-[#f6f2e3]'>
+                    <section className='h-[45vh] mt-40 md:mt:0 md:-translate-y-12 bg-[#f6f2e3]'>
                         <Countdown date={article.data.fecha} />
-                        <div className='w-full h-24 translate-y-32'>
+                        <div className=' h-24 translate-y-32'>
 
-                            <img className='asdasdasdasdasdasdasdasdasdasdas' src='https://www.fixdate.io/modelo-invitacion/95/img/curva02.png' />
+                            <img className='md:hidden' src='https://www.fixdate.io/modelo-invitacion/95/img/curva02.png' />
                         </div>
                     </section>
 
 
-                    <section className='relative lg:h-screen lg:max-w-[60vw] m-auto bg-[#f6f2e3]  pb-24'>
+                    <section className=' md:h-[50rem] md:-translate-y-36 md:w-full m-auto bg-[#f6f2e3]  pb-24'>
+                        <div className='flex justify-center'>
+
                         <Info className='bg-[#f6f2e3] '
 
                         />
+                        </div>
 
                     </section>
 
-                    <section className="bg-[#f6f2e3] relative text-center pb-24 -translate-y-4">
+                    <section className="bg-[#f6f2e3] md:-translate-y-36 md:z-40  relative text-center pb-24 -translate-y-36">
                         <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className=''/>
                     </section>
 
 
 
-                    <section className="lg:max-w-[60vw] m-auto  relative lg:h-screen bg-[#f6f2e3] z-50 pt-10 -translate-y-6">
+                    <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 pt-10 -translate-y-36">
                         <Regalo />
                     </section>
 
-                    <section>
+                    <section className='bg-[#f6f2e3] pt-14 -translate-y-64'>
                         <Footer />
                         {/* <Footermio /> */}
                     </section>
