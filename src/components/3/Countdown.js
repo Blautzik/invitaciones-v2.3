@@ -45,7 +45,7 @@ const Countdown = ({ date }) => {
     return (
         <>
             <div className="flex flex-col  justify-center bg-rose-200 z-40">
-                <div className='flex h-[24rem] w-full absolute mt-36 md:mt-0  items-center md:items-start md:-translate-y-20 justify-center'>
+                <div className='flex h-[24rem] w-full absolute mt-36 md:mt-0  items-center md:items-start md:-asdasd-20 justify-center'>
                   <div className='w-full h-86  flex items-center mx-auto justify-center  p-0 m-0'>
 
                     <div style={{

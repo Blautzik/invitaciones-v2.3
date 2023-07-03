@@ -63,7 +63,7 @@ const Header = ({ coverImage, title, date, content }) => {
                                     </div>
 
                                 </motion.div>
-                                <div className="flex w-full justify-center translate-y-40"> 
+                                <div className="flex w-full justify-center asdasd-40"> 
                                         <IoChevronDown className='animate-bounce text-4xl text-gray-50 z-50' />
                                 </div>
                             </div>

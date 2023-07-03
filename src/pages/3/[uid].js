@@ -48,18 +48,18 @@ const Invitacion = ({ article }) => {
 
 
                     </section>
-                    <div className='estaseccion md:-translate-y-64 bg-[#f6f2e3] z-50'>
+                    <div className='estaseccion md:-asdasd-64 bg-[#f6f2e3] z-50'>
 
                         <section className='h-[45vh] mt-40 md:mt:0 md:-translate-y-12 pb-24 bg-[#f6f2e3]'>
                             <Countdown date={article.data.fecha} />
-                            <div className=' h-24 translate-y-32'>
+                            <div className=' h-24 asdasd-32'>
 
                                 <img className='md:hidden' src='https://www.fixdate.io/modelo-invitacion/95/img/curva02.png' />
                             </div>
                         </section>
 
 
-                        <section className=' md:h-[50rem] md:-translate-y-36 md:w-full m-auto bg-[#f6f2e3]  py-24'>
+                        <section className=' md:h-[50rem] md:-asdasd-36 md:w-full m-auto bg-[#f6f2e3]  '>
                             <div className='flex justify-center'>
 
                                 <Info className='bg-[#f6f2e3] '
@@ -69,17 +69,17 @@ const Invitacion = ({ article }) => {
 
                         </section>
 
-                        <section className="bg-[#f6f2e3] md:-translate-y-36 md:z-40 h-[75vh] md:h-auto relative text-center -translate-y-64">
+                        <section className="bg-[#f6f2e3] md:-asdasd-36 md:z-40 h-[75vh] md:h-auto relative text-center -translate-y-1">
                             <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
                         </section>
 
 
 
-                        <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 pt-10 -translate-y-72">
+                        <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 -translate-y-2">
                             <Regalo />
                         </section>
 
-                        <section className='bg-[#f6f2e3] -translate-y-60'>
+                        <section className='bg-[#f6f2e3] -asdasd-60'>
                             <Footer />
                             {/* <Footermio /> */}
                         </section>

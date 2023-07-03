@@ -14,7 +14,7 @@ const Regalo = () => {
 
     return (
         <>
-            <div className="w-full flex justify-center mt-20 mb-20">
+            <div className="w-full flex justify-center">
                 <div className="flex flex-col md:flex-row md:w-10/12 pb-24 w-full justify-between items-center md:items-stretch">
                     <div className="flex flex-col justify-center items-center w-full">
                         <IoGift className="text-5xl text-gray-600" />

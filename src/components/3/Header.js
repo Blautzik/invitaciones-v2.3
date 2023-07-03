@@ -41,8 +41,8 @@ const Header = ({ coverImage, title, date, content }) => {
                 />
 
             </motion.div>
-            <div className='absolute md:relative md:w-1/2 md:h-[50vw] md:min-h-[75%] md:mt-[10%] top-[55%] w-full h-full'>
-                <div className='w-full flex justify-center bg-[#f6f2e3] pt-14'>
+            <div className='absolute md:relative md:w-1/2 md:h-[50vw] md:min-h-[75%] md:mt-[10%] top-[55%] w-full h-full bg-[#f6f2e3]'>
+                <div className='w-full flex justify-center  pt-14'>
                     <div className='flex w-full justify-center '> 
                         <span className='border-b w-1/4 border-b-orange-700 h-5 mx-3'></span>
                         <h3 className={`${playFair.className} text-[#18564C] text-2xl mb-6`}>{dateFormated}</h3>
@@ -51,7 +51,7 @@ const Header = ({ coverImage, title, date, content }) => {
                 </div>
 
                 <div className='bg-[#f6f2e3] text-center h-full'>
-                    <h1 className={`${playFair.className} text-[#18564C] text-center text-7xl mb-2`}>{title}encia</h1>
+                    <h1 className={`${playFair.className} text-[#18564C] text-center text-7xl mb-2 first-letter:`}>{title}encia</h1>
                     <h3 className={`${playFair.className} text-[#9D7605] text-center text-4xl mb-6`}>Mis 15 años</h3>
                     <p className={`${playFair.className} text-[#18564c] text-center text-xl mb-6 mx-7`}>{content}</p>
                 </div>
@@ -106,7 +106,7 @@ export default Header
                 </div>
 
             </motion.div>
-            <div className="flex w-full justify-center translate-y-40">
+            <div className="flex w-full justify-center asdasd-40">
                 <IoChevronDown className='animate-bounce text-4xl text-gray-50 z-50' />
             </div>
         </div>
