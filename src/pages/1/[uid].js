@@ -87,7 +87,7 @@ export default function Article({ article }) {
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
 
-  const article = await client.getByUID("article", params.uid);
+  const article = await client.getByUID("quince", params.uid);
   return {
     props: {
       article,
@@ -98,7 +98,7 @@ export async function getStaticProps({ params, previewData }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const articles = await client.getAllByType("article");
+  const articles = await client.getAllByType("quince");
 
   return {
     paths: articles.map((article) => prismic.asLink(article)),
