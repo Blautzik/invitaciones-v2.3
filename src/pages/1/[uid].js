@@ -1,7 +1,6 @@
 
 import Head from "next/head";
-import * as prismic from "@prismicio/client";
-import { createClient } from "@/prismicio";
+
 import Header from "@/components/1/Header";
 import Countdown from "@/components/1/Countdown";
 import Info from "@/components/1/Info";

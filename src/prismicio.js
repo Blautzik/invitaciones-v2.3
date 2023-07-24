@@ -15,10 +15,13 @@ export const { repositoryName } = sm;
  */
 const routes = [
   {
-    type: "article",
-    path: "/1/:uid",
+    type: "quince",
+    path: "/*/:uid",
   },
-
+  {
+    type: "boda",
+    path: "/*/:uid",
+  }
 ];
 
 /**
