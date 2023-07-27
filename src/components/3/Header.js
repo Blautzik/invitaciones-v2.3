@@ -51,7 +51,7 @@ const Header = ({ coverImage, title, date, content }) => {
                 </div>
 
                 <div className='bg-[#f6f2e3] text-center h-full'>
-                    <h1 className={`${playFair.className} text-[#18564C] text-center text-7xl mb-2 first-letter:`}>{title}encia</h1>
+                    <h1 className={`${playFair.className} text-[#18564C] text-center text-7xl mb-2 first-letter:`}>{title}</h1>
                     <h3 className={`${playFair.className} text-[#9D7605] text-center text-4xl mb-6`}>Mis 15 años</h3>
                     <p className={`${playFair.className} text-[#18564c] text-center text-xl mb-6 mx-7`}>{content}</p>
                 </div>
