@@ -106,7 +106,7 @@ export default Header
                 </div>
 
             </motion.div>
-            <div className="flex w-full justify-center asdasd-40">
+            <div className="flex w-full justify-center globals-40">
                 <IoChevronDown className='animate-bounce text-4xl text-gray-50 z-50' />
             </div>
         </div>

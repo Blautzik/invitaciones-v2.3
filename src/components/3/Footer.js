@@ -4,7 +4,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className='flex flex-col items-center justify-center text-center  -asdasd-36 bg-[#f6f2e3] mb:[-40rem] md:-mb-72'>
+        <div className='flex flex-col items-center justify-center text-center  -globals-36 bg-[#f6f2e3] mb:[-40rem] md:-mb-72'>
             <h2 className={`${great_vives.className} mt-16 text-gray-600 md:text-5xl text-4xl mx-10 `}>
                 Gracias por acompañarnos en este momento tan importante!!
             </h2>

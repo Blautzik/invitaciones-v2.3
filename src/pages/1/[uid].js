@@ -10,6 +10,7 @@ import Gallery from "@/components/1/Gallery";
 import Regalo from "@/components/1/Regalo";
 import Footer from "@/components/1/Footer";
 import Footermio from "@/components/1/Footermio";
+import { createClient } from "@prismicio/client";
 
 
 
@@ -17,7 +18,7 @@ import Footermio from "@/components/1/Footermio";
 
 
 export default function Article({ article }) {
-  console.log(article.data)
+
   const imageStyle = {
     objectFit: 'cover',
     objectPosition: '50% 50%',
@@ -28,8 +29,9 @@ export default function Article({ article }) {
   }
 
   return (
-    <>
-      <Head>
+  <>
+    
+    <Head>
         <title>
           {prismic.asText(article.data.title)}
         </title>
@@ -46,7 +48,7 @@ export default function Article({ article }) {
             coverImage={prismic.asImageSrc(article.data.featuredImage)}
             date={article.data.fechaEvento}
             content={article.data.frase}
-          />
+            />
 
 
         </section>
@@ -59,7 +61,7 @@ export default function Article({ article }) {
         <section className=' lg:h-screen lg:max-w-[60vw] m-auto bg-[#EFEDE7]'>
           <Info
 
-          />
+/>
 
         </section>
         <section className='mt-40 h-0 lg:mt-0 lg:h-32 bg-[#EFEDE7] -z-20'>
@@ -79,8 +81,7 @@ export default function Article({ article }) {
           {/* <Footermio /> */}
         </section>
       </main>
-    </>
-
+     </>
   );
 }
 

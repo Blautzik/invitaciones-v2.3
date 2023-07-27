@@ -44,8 +44,15 @@ export default function Gallery({imagenes, titulo}) {
     <h2 className={`${roboto.className} text-gray-600 text-4xl pt-10 mb-10`} >{titulo}</h2>
     <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2  md:w-4/5 center">
         
-      {images.map(e=> <div key={e} className='rounded md:hover:scale-[1.02] drop-shadow-2xl hover:z-10 transition-all' onClick={() => openClose(images.indexOf(e))}>
-        <img className="rounded" key={e}  src={e} alt="" layout="fill"/>
+      {images.map(e=> <div key={e} 
+      className='rounded md:hover:scale-[1.02] drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-48' 
+      style={{backgroundImage: `url(${e})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'
+      }}
+      onClick={() => openClose(images.indexOf(e))}>
+        
         </div>
         )}
     </div>
@@ -59,7 +66,7 @@ export default function Gallery({imagenes, titulo}) {
                         ></div>
                         
                         <div className="flex items-center min-h-screen px-4 py-8">
-                            <div className="flex relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg">
+                            <div className="flex relative w-full max-w-lg p-4 mx-auto  bg-white rounded-md shadow-lg">
                                 <img src={images[index]} onClick={()=>openClose(0)} onScroll={handleScroll}/>
                             </div>
                         </div>

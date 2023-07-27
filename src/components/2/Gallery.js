@@ -40,7 +40,7 @@ export default function Gallery({imagenes, titulo}) {
 
   return (
     <>
-    <div className="flex flex-col items-center bg-[#EFEDE7] z-10 -asdasd-36 pt-14">
+    <div className="flex flex-col items-center bg-[#EFEDE7] z-10 -globals-36 pt-14">
     <h2 className={`${roboto.className} text-gray-600 text-4xl mb-10`} >{titulo}</h2>
     <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2  md:w-4/5 center">
         

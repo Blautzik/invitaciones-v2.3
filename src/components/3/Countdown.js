@@ -45,7 +45,7 @@ const Countdown = ({ date }) => {
     return (
         <div className='relative  flex items-center justify-center '>
             <div className="flex flex-col justify-center items-center z-40">
-                <div className='w-full  md:mt-0 md:items-start md:-asdasd-20'>
+                <div className='w-full  md:mt-0 md:items-start md:-globals-20'>
                   <div className='w-full h-[20rem] flex justify-center'>
 
                     <div style={{
