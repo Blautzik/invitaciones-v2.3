@@ -24,19 +24,19 @@ const Info = ({ dia, lugar, direccion }) => {
                         </div>
                         <div className="flex flex-col justify-center items-center">
                             <h4 className={`${roboto.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
-                            <p className={`${inter.className} text-base mb-2 text-center w-80 text-slate-600`}>sábado 5 de julio - 21hs</p>
+                            <p className={`${inter.className} text-base mb-2 text-center w-80 text-slate-600`}>Viernes 1 de septiembre - 21:30 a 05:30</p>
 
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf14IEwtbBeknTzPAx_Izy7NqS1YreOa88UnZhaqgTIU90CKg/viewform?usp=sf_link" target="_blank">
+                            <a href="https://forms.gle/YjWev9czayxjnDXB9" target="_blank">
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 lg:hover:bg-white lg:hover:text-slate-600 rounded-full py-2 px-8 text-slate-50 shadow-md`}>Confirmar Asistencia</button>
                             </a>
                             <h4 className={`${roboto.className} text-xl text-center w-80 text-slate-600`}>Lugar</h4>
-                            <p className={`${inter.className} text-base text-center w-80 mb-3 text-slate-600`}>Janos Escobar</p>
-                            <a href='https://www.janoseventos.com/salones.php?q=janos-escobar' target="_blank">
+                            <p className={`${inter.className} text-base text-center w-80 mb-3 text-slate-600`}>Jano's San Isidro</p>
+                            <a href='https://www.janoseventos.com/salones.php?q=janos-San%20Isidro' target="_blank">
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 rounded-full py-2 px-8 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>Conocé el salón</button>
                             </a>
                             <h4 className={`${roboto.className} text-xl text-center w-80 text-slate-600`}>Dirección</h4>
-                            <p className={`${inter.className} text-base text-center w-80 text-slate-600`}> Av. Sarmiento 1131, Belén de Escobar</p>
-                            <a href='https://goo.gl/maps/48rYodsJPEW218ndA'>
+                            <p className={`${inter.className} text-base text-center w-80 text-slate-600`}> Av. Bernabé Márquez 504</p>
+                            <a href='https://www.google.com/maps/place/Janos+San+Isidro/@-34.478008,-58.519432,15z/data=!4m6!3m5!1s0x95bcb168e2679ab5:0xc1e8dbff0dd17415!8m2!3d-34.478008!4d-58.519432!16s%2Fg%2F11s4cqq26c?entry=ttu'>
 
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 rounded-full py-2 px-8 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                             </a>
