@@ -30,7 +30,7 @@ const Info = ({ dia, lugar, direccion }) => {
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 lg:hover:bg-white lg:hover:text-slate-600 rounded-full py-2 px-8 text-slate-50 shadow-md`}>Confirmar Asistencia</button>
                             </a>
                             <h4 className={`${roboto.className} text-xl text-center w-80 text-slate-600`}>Lugar</h4>
-                            <p className={`${inter.className} text-base text-center w-80 mb-3 text-slate-600`}>Jano's San Isidro</p>
+                            <p className={`${inter.className} text-base text-center w-80 mb-3 text-slate-600`}>Janos San Isidro</p>
                             <a href='https://www.janoseventos.com/salones.php?q=janos-San%20Isidro' target="_blank">
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 rounded-full py-2 px-8 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>Conocé el salón</button>
                             </a>
@@ -41,7 +41,7 @@ const Info = ({ dia, lugar, direccion }) => {
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 rounded-full py-2 px-8 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                             </a>
                             
-                            <div className="opacity-60       mt-5">
+                            <div className="opacity-60 mt-5">
                             </div>                  
                         </div>
                     </div>
