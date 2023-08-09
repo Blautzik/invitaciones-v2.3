@@ -18,6 +18,7 @@ const routes = [
     type: "quince",
     path: "/*/:uid",
   },
+  
 
 ];
 
