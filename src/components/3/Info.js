@@ -41,7 +41,7 @@ const Info = ({ dia, lugar, direccion }) => {
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 rounded-full py-2 px-8 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                             </a>
                             
-                            <div className="opacity-60 mt-5">
+                            <div className="opacity-60       mt-5">
                             </div>                  
                         </div>
                     </div>
