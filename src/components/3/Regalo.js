@@ -20,7 +20,7 @@ const Regalo = () => {
                         <IoGift className="text-5xl text-gray-600" />
                         <h3 className={`${roboto.className} text-3xl text-center mt-1 mb-8 text-slate-600`}>Regalo</h3>
                         <p className={`${inter.className} text-base text-center lg:max-w-lg  text-slate-600`}>El regalo es opcional, me importa tu presencia, pero si deseas regalarme algo, prefiero una transferencia </p>
-                        
+
                         <button 
                             className={`${roboto.className} text-base text-center mt-5 mb-3 w-80 lg:w-64 bg-slate-600 hover:bg-white hover:text-slate-600 rounded-full py-2 px-8 text-slate-50 shadow-md`}
                             onClick={() => openClose()}
@@ -46,8 +46,8 @@ const Regalo = () => {
                                     <p>Cvu: 0000003100041054082398</p>
                                     <p>alias: mia.sola.giuliboni.</p>
                                     <div className="mt-3 w-full flex justify-evenly">
-                                        <button className="mt-5 px-5  py-2 rounded-full bg-verde text-white" onClick={() => { navigator.clipboard.writeText('0150851001000121263259') }}>Copiar CBU</button>
-                                        <button className="mt-5 px-5  py-2 rounded-full bg-verde text-white" onClick={() => openClose()}>Cerrar</button>
+                                        <button className="mt-5 px-5  py-2 rounded-full" onClick={() => { navigator.clipboard.writeText('0000003100041054082398') }}>Copiar CBU</button>
+                                        <button className="mt-5 px-5  py-2 rounded-full" onClick={() => openClose()}>Cerrar</button>
                                     </div>
                                 </div>
                             </div>

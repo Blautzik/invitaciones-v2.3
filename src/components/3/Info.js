@@ -3,6 +3,7 @@ import { GiGlassCelebration, GiPartyPopper } from "react-icons/gi";
 import { inter, roboto } from '../../utils/fonts';
 import Image from "next/image";
 import ondas from '../../../public/img_ondas02.svg'
+import ropa from '../../../public/ropa.png'
 
 
 
@@ -14,7 +15,7 @@ const Info = ({ dia, lugar, direccion }) => {
                     <div className="flex flex-col justify-center items-center w-5/12">
                         <div className="flex flex-col justify-center items-center">
                             <div className='bg-white h-40 w-40 rounded-full flex justify-center items-center drop-shadow mb-8'>
-                                <GiPartyPopper className=" text-8xl text-slate-400 mb-5"/>
+                                <GiPartyPopper className=" text-8xl text-slate-400 mb-5" />
                             </div>
                             <div className="bg-slate-600 h-14 w-72 mt-3 flex items-center justify-between">
                                 <div className="relative bg-[#f6f2e3] w-40 h-20 rotate-45 -left-5"></div>
@@ -40,15 +41,28 @@ const Info = ({ dia, lugar, direccion }) => {
 
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 rounded-full py-2 px-8 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                             </a>
-                            
+
                             <div className="opacity-60 mt-5">
-                            </div>                  
+                            </div>
+                            <div className="flex flex-col justify-center items-center">
+                                <h3 className={`${roboto.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
+                                <h4 className={`${inter.className} text-base text-center w-80 text-slate-600`}> Elegante </h4>
+                                <div className="bg-white h-40 w-40 rounded-full flex justify-center items-center drop-shadow mb-8">
+                                    <Image
+                                        src={ropa}
+                                        alt="dresscode"
+                                        width={90}
+                                        height={90}
+                                        className="opacity-40"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-                               
+
     );
 };
 
