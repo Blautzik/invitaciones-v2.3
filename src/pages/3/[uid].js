@@ -65,7 +65,7 @@ const Invitacion = ({ article }) => {
 
                         </section>
 
-                        <section className="bg-[#f6f2e3] md:-asdasd-36 md:z-40 h-[75vh] md:h-auto relative text-center -translate-y-1">
+                        <section className="bg-[#f6f2e3] mt-12 md:z-40 h-[75vh] md:h-auto relative text-center -translate-y-1">
                             <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
                         </section>
 
