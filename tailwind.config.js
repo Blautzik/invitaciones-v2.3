@@ -21,6 +21,10 @@ module.exports = {
       animation:{
         'pulse-grow-slow': 'pulse 2s linear infinite'
       },
+      backgroundImage: {
+        'footer-texture': "url('https://res.cloudinary.com/fedexx/image/upload/v1692113799/invi/curva01_violeta_tkziux.png')",
+      },
+
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
