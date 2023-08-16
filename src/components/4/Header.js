@@ -42,7 +42,7 @@ const Header = ({ coverImage, title, date, content }) => {
                 />
                 <div className='absolute bottom-0 left-0 bg-footer-texture h-24 w-full z-50 bg-cover'></div>
             </motion.div>
-            <div className='top-[55%]  w-full h-full bg-[#fff]'>
+            <div className='w-full h-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>
                     <div className='flex w-full justify-center '> 
                         <span className='border-b w-1/4 border-b-[#3b1b55] h-5 mx-3'></span>
