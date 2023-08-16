@@ -92,13 +92,13 @@ export default function Gallery({ imagenes, titulo }) {
       </motion.div>
       {modalOpen ? (
         <>
-          <div className="fixed inset-0 z-10 overflow-y-auto">
+          <div className="fixed inset-0 z-10 ">
             <div
-              className="fixed inset-0 w-full h-full bg-silver opacity-40"
+              className="fixed inset-0 w-full  bg-silver opacity-40"
               onClick={() => openClose(0)}
             ></div>
 
-            <div className="flex items-center min-h-screen px-4 py-8">
+            <div className="flex items-center  px-4 py-8">
               <div className="flex relative w-full max-w-lg p-4 mx-auto  bg-white rounded-md shadow-lg">
                 <img src={images[index]} onClick={() => openClose(0)} onScroll={handleScroll} />
               </div>

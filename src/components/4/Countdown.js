@@ -50,7 +50,7 @@ const Countdown = ({ date }) => {
                     </div>
             <div className="flex flex-col justify-center items-center z-40">
                 <div className='w-full  '>
-                  <div className='max-w-screen w-full h-[22rem] flex justify-center'>
+                  <div className='max-w-screen w-full h-[23rem] flex justify-center'>
                     
                     <div 
                         className='w-full z-50 '

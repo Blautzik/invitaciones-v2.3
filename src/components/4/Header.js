@@ -45,16 +45,16 @@ const Header = ({ coverImage, title, date, content }) => {
             <div className='top-[55%]  w-full h-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>
                     <div className='flex w-full justify-center '> 
-                        <span className='border-b w-1/4 border-b-orange-700 h-5 mx-3'></span>
-                        <h3 className={`${playFair.className} text-[#18564C] text-2xl mb-6`}>{dateFormated}</h3>
-                        <span className='border-b w-1/4 border-b-orange-700 h-5 mx-3'></span>
+                        <span className='border-b w-1/4 border-b-[#3b1b55] h-5 mx-3'></span>
+                        <h3 className={`${playFair.className} text-slate-600 text-2xl mb-6`}>{dateFormated}</h3>
+                        <span className='border-b w-1/4 border-b-[#3b1b55] h-5 mx-3'></span>
                     </div>
                 </div>
 
                 <div className='bg-[#fff] text-center h-full'>
-                    <h1 className={`${playFair.className} text-[#18564C] text-center text-7xl mb-2 first-letter:`}>{title}</h1>
-                    <h3 className={`${playFair.className} text-[#9D7605] text-center text-4xl mb-6`}>Mis 15 años</h3>
-                    <p className={`${playFair.className} text-[#18564c] text-center text-xl mb-6 mx-7`}>{content}</p>
+                    <h1 className={`${playFair.className} text-slate-600 text-center text-7xl mb-2 first-letter:`}>{title}</h1>
+                    <h3 className={`${playFair.className} text-[#3b1b55] text-center text-4xl mb-6`}>Mis 15 años</h3>
+                    <p className={`${playFair.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>
                 </div>
             </div>
                 

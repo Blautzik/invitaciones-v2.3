@@ -11,7 +11,7 @@ import { easeIn, motion } from "framer-motion"
 
 const Info = ({ dia, lugar, direccion }) => {
     return (
-        <div className=" relative w-full md:flex md:flex-col md:justify-center -globals-36 ">
+        <div className=" relative w-full mt-4 -globals-36 ">
             <div className="flex-col items-center  w-full ">
                 <div className="flex flex-col md:flex-row md:w-10/12 w-full justify-between md:items-center md:justify-center items-center lg:items-start m-auto">
                     <div className="flex flex-col justify-center items-center w-5/12">
