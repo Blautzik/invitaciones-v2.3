@@ -19,7 +19,7 @@ const Header = ({ coverImage, title, date, content }) => {
     const dateFormated = moment(date).format('DD-MM-YYYY')
 
     return (
-        <div className="md:flex md:flex-row h-screen ">
+        <div className=" h-screen ">
 
             <motion.div 
                 initial={{
@@ -30,18 +30,19 @@ const Header = ({ coverImage, title, date, content }) => {
                     opacity:1, 
                     y:0
                 }}
-                className="relative md:relative top-0 w-full md:w-1/2 md:h-[44vw] md:min-h-[34rem] md:max-h-[50rem]  h-3/5 bg-center bg-cover ">
-                <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 "></div>
+                className="relative top-0 w-full h-3/5 bg-center bg-cover ">
+                <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 foto"></div>
                 <Image
                     src={coverImage}
                     fill
                     quality={100}
                     style={imageStyle}
                     alt='portada'
+                    
                 />
-
+                <div className='absolute bottom-0 left-0 bg-footer-texture h-24 w-full z-50 bg-cover'></div>
             </motion.div>
-            <div className='absolute md:relative md:w-1/2 md:h-[50vw] md:min-h-[75%] md:mt-[10%] top-[55%] md:top-[0] w-full h-full bg-[#fff]'>
+            <div className='top-[55%]  w-full h-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>
                     <div className='flex w-full justify-center '> 
                         <span className='border-b w-1/4 border-b-orange-700 h-5 mx-3'></span>
@@ -56,10 +57,10 @@ const Header = ({ coverImage, title, date, content }) => {
                     <p className={`${playFair.className} text-[#18564c] text-center text-xl mb-6 mx-7`}>{content}</p>
                 </div>
             </div>
-                <div className='absolute w-full'>
-                    <div className='bg-footer-texture w-full h-24 bg-cover -translate-y-28'> </div>
+                
+                    
 
-            </div>
+            
 
         </div>
     )

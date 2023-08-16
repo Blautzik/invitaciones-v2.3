@@ -60,7 +60,7 @@ export default function Gallery({ imagenes, titulo }) {
             scale: 1,
           }}
           className={`${roboto.className} text-gray-600 text-4xl pt-10 mb-10`} >{titulo}</motion.h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-1 md:gap-2  md:w-4/5 center">
+        <div className="grid grid-cols-2 gap-1 center">
 
           {images.map(e => <motion.div
             initial={{

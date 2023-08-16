@@ -61,14 +61,15 @@ const Info = ({ dia, lugar, direccion }) => {
                                     x: 0,
                                     opacity: 1,
                                     scale: 1,
-                                }} 
+                                }}
+                                className="flex flex-col justify-center items-center" 
                             >
 
                                 <h4 className={`${roboto.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
                                 <p className={`${inter.className} text-base mb-2 text-center w-80 text-slate-600`}>Viernes 1 de septiembre - 21:30 a 05:30</p>
 
                             <a href="https://forms.gle/YjWev9czayxjnDXB9" target="_blank">
-                                <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 lg:hover:bg-white lg:hover:text-slate-600 rounded-full py-2 px-8 text-slate-50 shadow-md`}>Confirmar Asistencia</button>
+                                <button className={`${roboto.className} text-base m-auto text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 lg:hover:bg-white lg:hover:text-slate-600 rounded-full py-2 px-8 text-slate-50 shadow-md`}>Confirmar Asistencia</button>
                             </a>
                             </motion.div>
 
@@ -88,6 +89,7 @@ const Info = ({ dia, lugar, direccion }) => {
                                     opacity: 1,
                                     scale: 1,
                                 }} 
+                                className="flex flex-col justify-center items-center" 
                             >
 
                             <h4 className={`${roboto.className} text-xl text-center w-80 text-slate-600`}>Lugar</h4>
@@ -114,6 +116,7 @@ const Info = ({ dia, lugar, direccion }) => {
                                     opacity: 1,
                                     scale: 1,
                                 }} 
+                                className="flex flex-col justify-center items-center" 
                             >
                             <h4 className={`${roboto.className} text-xl text-center w-80 text-slate-600`}>Dirección</h4>
                             <p className={`${inter.className} text-base text-center w-80 text-slate-600`}> Av. Bernabé Márquez 504</p>

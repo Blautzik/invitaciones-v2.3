@@ -49,16 +49,16 @@ const Countdown = ({ date }) => {
                         <Circulo className=""/>
                     </div>
             <div className="flex flex-col justify-center items-center z-40">
-                <div className='w-full  md:mt-0 md:items-start md:-globals-20'>
+                <div className='w-full  '>
                   <div className='max-w-screen w-full h-[22rem] flex justify-center'>
                     
                     <div 
-                        className='w-full z-50 md:flex-col'
+                        className='w-full z-50 '
                     >
-                        <div className='flex flex-col w-[12rem] h-[12rem] items-center justify-around  -z-20 m-auto mt-auto md:-mt-8 '>
-                            <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-20 md:mt-40 z-50`}>Faltan:</h2>
+                        <div className='flex flex-col w-[12rem] h-[16rem] items-center justify-center  -z-20 m-auto mt-auto  '>
+                            <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-20 z-50`}>Faltan:</h2>
                             <div className="flex h-[4rem] w-[12rem] justify-between items-center">
-                                <div className="flex flex-col items-center md:w-1/12 pl-4 lg:pr-6 border-r">
+                                <div className="flex flex-col items-center md:w-1/12 pl-4  border-r">
                                     <span className={`${roboto.className} text-slate-600 text-2xl rounded-full w-10 h-6 text-center flex items-center justify-center`}>{days}</span>
                                     <span className="md:text-lg text-base text-slate-600">Dias</span>
                                 </div>

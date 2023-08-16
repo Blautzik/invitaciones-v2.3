@@ -10,18 +10,14 @@ import Gallery from '@/components/4/Gallery';
 import Regalo from '@/components/4/Regalo';
 import Footer from '@/components/4/Footer';
 import ondas from '../../../public/img_ondas02.svg'
-import { easeIn ,motion } from "framer-motion"
+import { easeIn, motion } from "framer-motion"
+import { useState, useEffect } from 'react';
 
 const Invitacion = ({ article }) => {
 
-  const imageStyle = {
-    objectFit: 'cover',
-    objectPosition: '50% 50%',
-    opacity: 0.7,
-    position: 'relative',
-    top: '-140px',
-    background: '#EFEDE7'
-  }
+
+  const [loading, setLoading] = useState(true)
+
 
   if (article) {
     return (
@@ -34,10 +30,11 @@ const Invitacion = ({ article }) => {
           <meta property="og:description" content={article.data.frase} />
 
         </Head>
+        <div className='flex flex-col  justify-center items-center'>
 
-        <main className="bg-[#fff] ">
+        <main className="bg-[#fff] w-2xl">
 
-          <section className='h-screen md:h-auto md:w-auto z-10'>
+          <section className='h-screen z-10'>
 
             <Header
               title={article.data.title}
@@ -69,10 +66,10 @@ const Invitacion = ({ article }) => {
 
 
 
-            <section className=' md:h-[50rem] md:-asdasd-36 md:w-full overflow-x-hidden  '>
+            <section className=' overflow-x-hidden  '>
               <motion.div
 
-               className='md:flex md:justify-center'>
+                className=''>
 
                 <Info className=' '
 
@@ -81,7 +78,7 @@ const Invitacion = ({ article }) => {
 
             </section>
 
-            <section className="bg-[#fff] mt-12 md:z-40 h-[75vh] md:h-auto relative text-center -translate-y-1 max-w-screen-sm">
+            <section className="bg-[#fff] mt-12 h-[75vh] relative text-center flex justify-center -translate-y-1 ">
               <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
             </section>
 
@@ -96,10 +93,9 @@ const Invitacion = ({ article }) => {
               {/* <Footermio /> */}
             </section>
           </div>
-          <div className=" relative bottom-0 py-4 text-center w-screen lg:w-full text-white z-50 bg-neutral-900">
-            © 2023 Copyright: Federico Blautzik
-          </div>
         </main>
+
+      </div>
       </>
 
     )
