@@ -1,9 +1,14 @@
 module.exports = {
   content: [
+    "./node_modules/flowbite-react/**/*.js",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",  
+  ],
+  plugins: [
+    require("flowbite/plugin"),
+    require("@tailwindcss/aspect-ratio")
   ],
   theme: {
     fontFamily: {
@@ -27,5 +32,7 @@ module.exports = {
 
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+
 };
+
+

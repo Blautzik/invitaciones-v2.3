@@ -120,7 +120,7 @@ const Info = ({ dia, lugar, direccion }) => {
                             >
                             <h4 className={`${roboto.className} text-xl text-center w-80 text-slate-600`}>Dirección</h4>
                             <p className={`${inter.className} text-base text-center w-80 text-slate-600`}> Av. Bernabé Márquez 504</p>
-                            <a href='https://www.google.com/maps/place/Janos+San+Isidro/@-34.478008,-58.519432,15z/data=!4m6!3m5!1s0x95bcb168e2679ab5:0xc1e8dbff0dd17415!8m2!3d-34.478008!4d-58.519432!16s%2Fg%2F11s4cqq26c?entry=ttu'>
+                            <a href='https://www.google.com/maps/place/Janos+San+Isidro/@-34.478008,-58.519432,15z/data=!4m6!3m5!1s0x95bcb168e2679ab5:0xc1e8dbff0dd17415!8m2!3d-34.478008!4d-58.519432!16s%2Fg%2F11s4cqq26c?entry=ttu' target="_blank">
 
                                 <button className={`${roboto.className} text-base text-center mt-2 mb-3 w-80 lg:w-64 bg-slate-600 rounded-full py-2 px-8 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                             </a>
