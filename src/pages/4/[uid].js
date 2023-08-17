@@ -64,7 +64,8 @@ const Invitacion = ({ article }) => {
               <Countdown date={article.data.fecha} />
             </motion.div>
 
-
+ {/* 
+               */}
 
             <section className=' overflow-x-hidden  '>
               <motion.div
@@ -78,19 +79,19 @@ const Invitacion = ({ article }) => {
 
             </section>
 
-            <section className="bg-[#fff] mt-12 h-[75vh] relative text-center flex justify-center -translate-y-1 ">
+            <section className="bg-[#fff] mt-12 h-[75vh] text-center flex justify-center ">
               <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
             </section>
 
 
 
-            <section className="lg:max-w-[60vw] m-auto  relative  bg-[#fff] md:z-0 z-50 -translate-y-2">
+            <section className="lg:max-w-[60vw] bg-[#fff]  z-50">
               <Regalo />
             </section>
 
-            <section className='bg-[#fff] -translate-y-4'>
+            <section className='bg-[#fff] '>
               <Footer />
-              {/* <Footermio /> */}
+             
             </section>
           </div>
         </main>
