@@ -1,11 +1,6 @@
-import { GiChurch } from "react-icons/gi";
-import { GiGlassCelebration, GiPartyPopper } from "react-icons/gi";
+
 import { inter, roboto } from '../../utils/fonts';
-import Image from "next/image";
-import ondas from '../../../public/img_ondas02.svg'
-import ropa from '../../../public/ropa.png'
-import Fiesta from "./anims/Fiesta";
-import { easeIn, motion } from "framer-motion"
+import {  motion } from "framer-motion"
 import { DotLottiePlayer } from "@dotlottie/react-player";
 
 

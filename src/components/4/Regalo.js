@@ -2,9 +2,9 @@
 import { inter, roboto } from '@/utils/fonts'
 import React from 'react'
 import { useState } from 'react'
-import { IoClipboard, IoGift } from 'react-icons/io5'
+
 import { easeInOut, easeIn, motion } from "framer-motion"
-import RegaloIcon from './anims/RegaloIcon'
+
 import { Button, Modal } from 'flowbite-react';
 import { DotLottiePlayer } from '@dotlottie/react-player';
 
