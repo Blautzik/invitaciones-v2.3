@@ -93,7 +93,7 @@ const Regalo = () => {
                     </div>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={() => { navigator.clipboard.writeText('0000003100041054082398') }}>Copiar CVU</Button>
+                    <Button  className='bg-slate-600' onClick={() => { navigator.clipboard.writeText('0000003100041054082398') }}>Copiar CVU</Button>
                     <Button color="gray" onClick={() => props.setOpenModal(undefined)}>
                         Cerrar
                     </Button>
