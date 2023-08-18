@@ -52,15 +52,11 @@ const Header = ({ coverImage, title, date, content }) => {
                 </div>
 
                 <div className='bg-[#fff] text-center h-full'>
-                    <h1 className={`${twcen.className} text-slate-600 text-center text-7xl mb-2 first-letter:`}>{title}</h1>
-                    <h3 className={`${playFair.className} text-[#3b1b55] text-center text-4xl mb-6`}>MIS <span className='relative bottom-1'>15</span> AÑOS</h3>
+                    <h1 className={`${twcen.className} text-slate-600 text-center text-8xl mb-2 first-letter:`}>{title}</h1>
+                    <h3 className={`${playFair.className} text-[#3b1b55] text-center text-3xl mb-6`}>MIS <span className='relative bottom-1'>15</span> AÑOS</h3>
                     <p className={`${playFair.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>
                 </div>
-            </div>
-                
-                    
-
-            
+            </div>           
 
         </div>
     )
