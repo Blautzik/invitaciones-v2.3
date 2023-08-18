@@ -9,7 +9,7 @@ import { Spinner } from 'flowbite-react';
 
 export default function GallerySlider({ images, index }) {
 
-    const reorderedImg = images.slice(index).concat(images.slice(0, index)).concat(images.slice(3))
+    const reorderedImg = images.slice(index).concat(images.slice(0, index))
 
     const final = [...reorderedImg, 'https://res.cloudinary.com/fedexx/image/upload/v1692365675/15%20mia/0065_MIA_lqyifq.jpg',
         'https://res.cloudinary.com/fedexx/image/upload/v1692365697/15%20mia/0085_MIA_z3s3km.jpg',
@@ -43,7 +43,7 @@ export default function GallerySlider({ images, index }) {
                             src={e}
                             fill
                             quality={25}
-                            style={{ objectFit: "cover", borderRadius: '2%' }}
+                            style={{ objectFit: "cover", borderRadius: '2%', objectPosition:'top'}}
                         />
                     </div>
                 )
