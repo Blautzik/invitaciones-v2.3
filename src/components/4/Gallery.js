@@ -120,7 +120,7 @@ export default function Gallery({ imagenes, titulo }) {
             </div>
           </Modal.Body>
           <Modal.Footer className='justify-center '>
-            <Button className='bg-slate-700 text-white' onClick={()=> props.setOpenModal(undefined)}>Cerrar</Button>
+            <Button className='bg-[#772c87] text-white' onClick={()=> props.setOpenModal(undefined)}>Cerrar</Button>
           </Modal.Footer>
             
           </Modal>
