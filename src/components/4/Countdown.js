@@ -65,7 +65,7 @@ const Countdown = ({ date }) => {
                             className='w-full z-50 '
                         >
                             <div className='flex flex-col w-[14rem] h-[19rem] items-center justify-center  -z-20 m-auto mt-auto  '>
-                                <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-20 z-50`}>Faltan:</h2>
+                                <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-20 z-50`}>Faltan</h2>
                                 <div className="flex h-[4rem] w-[14rem] justify-between items-center">
                                     <div className="flex flex-col items-center  pl-4  border-r">
                                         <span className={`${roboto.className} text-slate-600 text-2xl rounded-full w-10 h-6 text-center flex items-center justify-center`}>{days}</span>

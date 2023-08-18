@@ -91,7 +91,7 @@ const Invitacion = ({ article }) => {
 
             <section className='bg-[#fff] '>
               <Footer />
-             
+
             </section>
           </div>
         </main>

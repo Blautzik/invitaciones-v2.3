@@ -1,28 +1,28 @@
 import { great_vives, roboto } from '@/utils/fonts'
 import { useState } from 'react'
 import { easeInOut, easeIn, motion } from "framer-motion"
+import Image from 'next/image'
+import { Button, Modal } from 'flowbite-react';
+import GallerySlider from './GallerySlider';
 
 
 export default function Gallery({ imagenes, titulo }) {
-  const [modalOpen, setModalOpen] = useState(false)
   const [index, setIndex] = useState(0)
+  const [openModal, setOpenModal] = useState();
+
+  const props = {  openModal,  setOpenModal };
 
   const openClose = (index) => {
-    setModalOpen(!modalOpen)
     setIndex(index)
+    props.setOpenModal('default')
+
   }
 
   const handleScroll = () => {
     setModalOpen(false)
   }
 
-  if (process.browser) {
-    if (modalOpen === true) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-  }
+
 
 
 
@@ -34,7 +34,20 @@ export default function Gallery({ imagenes, titulo }) {
     imagenes[0].foto5,
     imagenes[0].foto6
   ]
+  
 
+  const customTheme = {
+    content: {
+      "base": "relative h-full w-full p-4 md:h-auto",
+      "inner": "relative rounded-lg bg-transparent shadow flex flex-col max-h-[90vh]"
+    },
+    header: {
+      close: {
+        base: " inline-flex items-center rounded-lg bg-transparent p-1.5 text-lg text-gray-900 ",
+        icon: "h-8 w-8"
+      }
+    },
+  }
 
 
 
@@ -78,34 +91,41 @@ export default function Gallery({ imagenes, titulo }) {
             }}
             key={e}
             className='rounded md:hover:scale-[1.02] drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-48'
-            style={{
-              backgroundImage: `url(${e})`,
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat'
-            }}
-            onClick={() => openClose(images.indexOf(e))}>
 
+            onClick={() => openClose(images.indexOf(e))}>
+            <Image
+              src={e}
+              fill
+              alt='foto'
+              quality={10}
+              style={{ objectFit: "cover", borderRadius: '2%' }}
+            />
           </motion.div>
           )}
         </div>
       </motion.div>
-      {modalOpen ? (
-        <>
-          <div className="fixed inset-0 z-10 ">
-            <div
-              className="fixed inset-0 w-full  bg-silver opacity-40"
-              onClick={() => openClose(0)}
-            ></div>
 
-            <div className="flex items-center  px-4 py-8">
-              <div className="flex relative w-full max-w-lg p-4 mx-auto  bg-white rounded-md shadow-lg">
-                <img src={images[index]} onClick={() => openClose(0)} onScroll={handleScroll} />
-              </div>
+        <>
+          <Modal
+            show={props.openModal === 'default'}
+            onClose={() => props.setOpenModal(undefined)}
+            className='pt-20'
+            theme={customTheme}
+          > 
+          
+
+          <Modal.Body className='p-0 bg-transparent'>
+            <div className='h-96'> 
+              <GallerySlider images={images} index={index}/>
             </div>
-          </div>
+          </Modal.Body>
+          <Modal.Footer className='justify-center '>
+            <Button className='bg-slate-700 text-white' onClick={()=> props.setOpenModal(undefined)}>Cerrar</Button>
+          </Modal.Footer>
+            
+          </Modal>
         </>
-      ) : null}
+
     </>
   );
 }

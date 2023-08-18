@@ -1,5 +1,15 @@
 import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display } from 'next/font/google'
- 
+import localFont from '@next/font/local'
+
+
+export const twcen = localFont({ 
+  src: './TwCenMTStd.woff2',
+  subsets: ['latin'],
+  variable: '--tw-cen'
+}) 
+
+
+
 export const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
