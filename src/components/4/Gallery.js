@@ -32,8 +32,10 @@ export default function Gallery({ imagenes, titulo }) {
     imagenes[0].foto3,
     imagenes[0].foto4,
     imagenes[0].foto5,
-    imagenes[0].foto6
+    imagenes[0].foto6,
+
   ]
+
   
 
   const customTheme = {
