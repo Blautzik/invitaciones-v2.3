@@ -37,12 +37,13 @@ export default function GallerySlider({ images, index }) {
                 final.map(e =>
                     <div key={e} className='h-96 w-full object-contain'>
                         <Image
+                            placeholder="blur"
+                            blurDataURL={e}
                             alt="..."
                             src={e}
                             fill
                             quality={25}
                             style={{ objectFit: "cover", borderRadius: '2%' }}
-                            loader={imageLoader}
                         />
                     </div>
                 )
