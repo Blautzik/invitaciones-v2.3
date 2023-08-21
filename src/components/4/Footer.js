@@ -9,7 +9,7 @@ const Footer = () => {
             
             
             <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10 `}>
-                Gracias por acompañarnos en este momento tan importante!!
+                Gracias por acompañarme en este momento tan importante!!
             </h2>
             <a href='https://janoseventos.com' target='_blank'>
                 <div className='object-contain mt-8 mb-8'>
@@ -19,7 +19,6 @@ const Footer = () => {
                         height={100}
                         quality={25}
                         alt='logo'
-                        
                     />
 
                 </div>

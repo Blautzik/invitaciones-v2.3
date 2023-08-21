@@ -24,13 +24,13 @@ const Header = ({ coverImage, title, date, content }) => {
             <motion.div 
                 initial={{
                     opacity:0,
-                    y:150
+
                 }}
                 whileInView={{
                     opacity:1, 
-                    y:0
+
                 }}
-                className="relative top-0 w-full h-3/5 bg-center bg-cover ">
+                className="top-0 w-full h-3/5 bg-center bg-cover ">
                 <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 foto"></div>
                 <Image
                     src={coverImage}
