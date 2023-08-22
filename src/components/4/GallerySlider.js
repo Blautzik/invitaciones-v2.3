@@ -28,10 +28,8 @@ export default function GallerySlider({ images, index }) {
 
 
 
-        <Carousel leftControl
-            rightControl
+        <Carousel 
             slide={false}
-
         >
             {final &&
                 final.map(e =>
