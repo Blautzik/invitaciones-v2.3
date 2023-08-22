@@ -31,7 +31,6 @@ export default function GallerySlider({ images, index }) {
         <Carousel leftControl
             rightControl
             slide={false}
-
         >
             {final &&
                 final.map(e =>
