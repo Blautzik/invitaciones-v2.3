@@ -21,16 +21,9 @@ const Header = ({ coverImage, title, date, content }) => {
     return (
         <div className=" h-screen ">
 
-            <motion.div 
-                initial={{
-                    opacity:0,
+            <div 
 
-                }}
-                whileInView={{
-                    opacity:1, 
-
-                }}
-                className="top-0 w-full h-3/5 bg-center bg-cover ">
+                className="relative top-0 w-full h-3/5 bg-center bg-cover ">
                 <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 foto"></div>
                 <Image
                     src={coverImage}
@@ -41,7 +34,7 @@ const Header = ({ coverImage, title, date, content }) => {
                     
                 />
                 <div className='absolute bottom-0 left-0 bg-footer-texture h-24 w-full z-50 bg-cover'></div>
-            </motion.div>
+            </div>
             <div className='w-full h-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>
                     <div className='flex w-full justify-center '> 
