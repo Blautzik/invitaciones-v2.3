@@ -87,6 +87,318 @@ export type ArticleDocument<Lang extends string = string> =
     "article",
     Lang
   >;
+/** Content for boda documents */
+interface BodaDocumentData {
+  /**
+   * title field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  title: prismic.KeyTextField;
+  /**
+   * portada field in *boda*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.foto
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  foto: prismic.ImageField<never>;
+  /**
+   * frase field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.frase
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  frase: prismic.KeyTextField;
+  /**
+   * saludo field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.saludo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  saludo: prismic.KeyTextField;
+  /**
+   * galeria field in *boda*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/group
+   *
+   */
+  galeria: prismic.GroupField<Simplify<BodaDocumentDataGaleriaItem>>;
+  /**
+   * salon field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.salon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  salon: prismic.KeyTextField;
+  /**
+   * ubicacion field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.ubicacion
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ubicacion: prismic.KeyTextField;
+  /**
+   * formulario field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.formulario
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  formulario: prismic.KeyTextField;
+  /**
+   * alias field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.alias
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  alias: prismic.KeyTextField;
+  /**
+   * cbu field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.cbu
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  cbu: prismic.KeyTextField;
+  /**
+   * ubicacion civil field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.ubicacion_civil
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  ubicacion_civil: prismic.KeyTextField;
+  /**
+   * Fecha Evento field in *boda*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.fecha_evento
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/date
+   *
+   */
+  fecha_evento: prismic.DateField;
+  /**
+   * fecha civil field in *boda*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.fecha_civil
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/date
+   *
+   */
+  fecha_civil: prismic.DateField;
+  /**
+   * Slice Zone field in *boda*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<BodaDocumentDataSlicesSlice>;
+  /**
+   * Meta Description field in *boda*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: boda.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  meta_description: prismic.RichTextField;
+  /**
+   * Meta Image field in *boda*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  meta_image: prismic.ImageField<never>;
+  /**
+   * Meta Title field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: boda.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
+}
+/**
+ * Item in boda → galeria
+ *
+ */
+export interface BodaDocumentDataGaleriaItem {
+  /**
+   * foto1 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto1
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto1: prismic.KeyTextField;
+  /**
+   * foto2 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto2
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto2: prismic.KeyTextField;
+  /**
+   * foto3 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto3
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto3: prismic.KeyTextField;
+  /**
+   * foto4 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto4
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto4: prismic.KeyTextField;
+  /**
+   * foto5 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto5
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto5: prismic.KeyTextField;
+  /**
+   * foto6 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto6
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto6: prismic.KeyTextField;
+  /**
+   * foto7 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto7
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto7: prismic.KeyTextField;
+  /**
+   * foto8 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto8
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto8: prismic.KeyTextField;
+  /**
+   * foto9 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto9
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto9: prismic.KeyTextField;
+  /**
+   * foto10 field in *boda → galeria*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.galeria[].foto10
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto10: prismic.KeyTextField;
+}
+/**
+ * Slice for *boda → Slice Zone*
+ *
+ */
+type BodaDocumentDataSlicesSlice = never;
+/**
+ * boda document from Prismic
+ *
+ * - **API ID**: `boda`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BodaDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<BodaDocumentData>, "boda", Lang>;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
   /**
@@ -523,6 +835,7 @@ export type SettingsDocument<Lang extends string = string> =
   >;
 export type AllDocumentTypes =
   | ArticleDocument
+  | BodaDocument
   | NavigationDocument
   | PageDocument
   | QuinceDocument
@@ -800,6 +1113,10 @@ declare module "@prismicio/client" {
       ArticleDocumentData,
       ArticleDocumentDataSlicesSlice,
       ArticleDocument,
+      BodaDocumentData,
+      BodaDocumentDataGaleriaItem,
+      BodaDocumentDataSlicesSlice,
+      BodaDocument,
       NavigationDocumentData,
       NavigationDocumentDataLinksItem,
       NavigationDocument,

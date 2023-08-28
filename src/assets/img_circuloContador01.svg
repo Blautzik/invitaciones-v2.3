@@ -6,21 +6,22 @@
 	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:1.7896;stroke-miterlimit:10;}
 	.st1{fill:none;stroke:url(#SVGID_2_);stroke-width:5.3687;stroke-miterlimit:10;}
 	.st2{fill:none;stroke:url(#SVGID_3_);stroke-width:1.7896;stroke-miterlimit:10;}
-	.st3{fill:#C6D7CF;}
-	.st4{fill:#C7C38F;}
-	.st5{fill:#CFD6BB;}
-	.st6{fill:#79A28F;}
-	.st7{fill:#809B96;}
-	.st8{fill:#81948B;}
-	.st9{fill:#81918F;}
-	.st10{fill:#534351;}
-	.st11{fill:#4A6360;}
-	.st12{fill:#524351;}
-	.st13{fill:#BCC497;}
-	.st14{fill:#D8D5B3;}
-	.st15{fill:#7A9080;}
-	.st16{fill:#C8DAB9;}
-	.st17{fill:#9BAE7F;}
+	.st3{fill:#C6D7CF66;}
+	.st4{fill:#C7C38F66;}
+	.st5{fill:#CFD6BB66;}
+	.st6{fill:#79A28F66;}
+	.st7{fill:#809B9666;}
+	.st8{fill:#81948B66;}
+	.st9{fill:#81918F66;}
+	.st10{fill:#53435166;}
+	.st11{fill:#4A636066;}
+	.st12{fill:#52435166;}
+	.st13{fill:#BCC49766;}
+	.st14{fill:#D8D5B366;}
+	.st15{fill:#7A908066;}
+	.st16{fill:#C8DAB966;}
+	.st17{fill:#9BAE7F66;}
+
 </style>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-1098.1627" y1="1601.2797" x2="-527.8578" y2="1601.2797" gradientTransform="matrix(0 -1 1 0 -1308 -504)">
 	<stop  offset="0" style="stop-color:#D89D3B"/>

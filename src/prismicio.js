@@ -18,6 +18,11 @@ const routes = [
     type: "quince",
     path: "/*/:uid",
   },
+
+  {
+    type: "boda",
+    path: "/*/:uid",
+  }
   
 
 ];

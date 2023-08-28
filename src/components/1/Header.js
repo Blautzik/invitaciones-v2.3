@@ -19,7 +19,7 @@ const Header = ({ coverImage, title, date, content }) => {
 
     return (
         <div className="scroll-smooth">
-            <div className="absolute top-0 w-full h-screen bg-center bg-cover ">
+            <div className="w-full h-screen bg-center bg-cover ">
             <div className="absolute top-0 w-full h-screen bg-center bg-cover bg-slate-800 "></div>
                 <Image
                     src={coverImage}

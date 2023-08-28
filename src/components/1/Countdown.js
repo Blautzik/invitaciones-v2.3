@@ -43,18 +43,19 @@ const Countdown = ({ date }) => {
     }, [target]);
 
     return (
-        <div className="flex flex-col w-full justify-center bg-rose-200 items-center z-40">
-            <div className='flex h-[24rem] w-[24rem] lg:h-[32rem] lg:w-[32rem] absolute mt-40 items-center justify-center'>
+        
+            <div className='flex h-[24rem] w-[24rem] items-center justify-center'>
                 <div style={{
                     backgroundImage: `url(${circulo.src})`,
                     height: '100%',
                     width: '100%',
-                    backgroundRepeat: 'no-repeat'
+                    backgroundRepeat: 'no-repeat',
+                    bacopacity:0.6
                 }}
                     className='flex items-center justify-center z-50'
                 >
                     <div className='flex flex-col w-[16rem] h-[16rem] lg:h-[21rem] lg:w-[21rem] bg-slate-50 rounded-full items-center -z-20 drop-shadow-2xl'>
-                        <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-12 z-50`}>Falta:</h2>
+                        <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-12 z-50`}>Faltan:</h2>
                     <div className="flex h-[10rem] w-[14rem] justify-between items-center ">
                         <div className="flex flex-col items-center md:w-1/12 pl-4 lg:pr-8 border-r">
                             <span className={`${roboto.className} text-slate-600 text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`}>{days}</span>
@@ -74,14 +75,12 @@ const Countdown = ({ date }) => {
                         </div>
                     </div>
                     <div>
-                        <BsFillHeartFill className='text-6xl text-slate-600 animate-pulse-grow-slow'/>
+                        <BsFillHeartFill className='text-4xl mb-4 text-slate-600 animate-pulse-grow-slow'/>
                     </div>
                     </div>
                 </div>
             </div>
-            <div className="flex w-full justify-center bg-verde h-32 items-center">
-            </div>
-        </div>
+       
     );
 };
 
