@@ -233,6 +233,17 @@ interface BodaDocumentData {
    */
   fecha_civil: prismic.DateField;
   /**
+   * portadapc field in *boda*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.portadapc
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  portadapc: prismic.ImageField<never>;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

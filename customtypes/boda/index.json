@@ -103,6 +103,10 @@
         "type": "Date",
         "config": { "label": "fecha civil", "placeholder": "" }
       },
+      "portadapc": {
+        "type": "Image",
+        "config": { "label": "portadapc", "constraint": {}, "thumbnails": [] }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

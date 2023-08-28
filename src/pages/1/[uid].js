@@ -22,7 +22,7 @@ export default function Article({ article }) {
           <title>
             {article.data.title}
           </title>
-          <meta property="og:image" content={prismic.asImageSrc(article.data.foto)} />
+          <meta property="og:image" content={article.data.foto} />
           <meta property="og:description" content="Nos Casamos y queremos compartir este momento con vos!" />
         </Head>
 
@@ -30,11 +30,13 @@ export default function Article({ article }) {
 
         <main className="bg-[#EFEDE7] flex flex-col justify-center items-center">
 
+
           <section className='h-screen'>
 
             <Header
               title={article.data.title}
               coverImage={prismic.asImageSrc(article.data.foto)}
+              coverImagePc={prismic.asImageSrc(article.data.portadapc)}
               date={article.data.fecha}
               content={article.data.frase}
             />
@@ -81,7 +83,7 @@ export default function Article({ article }) {
                 height={100}
                 quality={25}
                 alt='logo'
-              />
+                />
 
             </a>
           </section>
@@ -97,6 +99,7 @@ export default function Article({ article }) {
             </DotLottiePlayer>
           </div>
 
+         
         </main>
 
       </>

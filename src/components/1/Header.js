@@ -6,7 +6,7 @@ import { great_vives, inter, roboto } from "../../utils/fonts";
 import moment from "moment/moment";
 import Image from 'next/image';
 
-const Header = ({ coverImage, title, date, content }) => {
+const Header = ({ coverImage, coverImagePc, title, date, content }) => {
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 50%',
@@ -20,18 +20,32 @@ const Header = ({ coverImage, title, date, content }) => {
     return (
         <div className="scroll-smooth">
             <div className="w-full h-screen  bg-cover ">
-            <div className="absolute top-0 left-0 w-full h-screen bg-cover bg-slate-800 "></div>
+            <div className="absolute  top-0 left-0 w-full h-screen bg-cover bg-slate-800 "></div>
+                <div className='md:hidden'>
+
                 <Image
                     src={coverImage}
                     fill
                     quality={100}
                     style={imageStyle}
                     alt='portada'
-                />
+                    />
+                </div>
+
+                <div className='hidden md:block'>
+                <Image
+                    src={coverImagePc}
+                    fill
+                    quality={100}
+                    style={imageStyle}
+                    alt='portada'
+                    />
+                </div>
+                
 
                 <div className="w-full h-full flex container relative mx-auto z-10">
                     <div className=" w-full items-center justify-center flex flex-wrap z-30">
-                        <div className="w-full lg:w-7/12 lg:max-w-7/12 px-4 ml-auto mr-auto text-center">
+                        <div className="w-full  px-4 ml-auto mr-auto text-center">
                             <div className="w-full">
                                 <motion.div initial='hidden' animate='visible' variants={{
                                     hidden: {
