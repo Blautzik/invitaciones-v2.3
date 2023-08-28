@@ -22,7 +22,7 @@ export default function Article({ article }) {
           <title>
             {article.data.title}
           </title>
-          <meta property="og:image" content={prismic.asImageSrc(article.data.featuredImage)} />
+          <meta property="og:image" content={prismic.asImageSrc(article.data.foto)} />
           <meta property="og:description" content="Nos Casamos y queremos compartir este momento con vos!" />
         </Head>
 
