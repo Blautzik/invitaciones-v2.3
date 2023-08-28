@@ -4,7 +4,7 @@ import { createClient } from "@/prismicio";
 import Head from 'next/head';
 import Header from '@/components/4/Header';
 import Countdown from '@/components/4/Countdown';
-import Info from '@/components/4/Info';
+import Info from '@/components/5/Info';
 import Gallery from '@/components/4/Gallery';
 import Regalo from '@/components/5/Regalo';
 import Footer from '@/components/4/Footer';
