@@ -11,10 +11,15 @@ const Info = ({ dia, lugar, direccion }) => {
     return (
         <div>
             <div className="flex-col w-full mt-20 mb-10">
+                
                 <div className="flex flex-col md:flex-row md:w-10/12 w-full justify-between items-center lg:items-start m-auto">
-                    <div className="flex flex-col justify-center items-center w-5/12">
+
+
+
+
+                    <div className="flex flex-col w-5/12">
                         <div className="flex flex-col justify-center items-center ">
-                            <div className='bg-white h-40 w-40 rounded-full flex justify-center items-center drop-shadow mb-8'>
+                            <div className='bg-white h-40 w-40 rounded-full flex justify-center items-center drop-shadow mb-4'>
                                 <DotLottiePlayer
                                     src='/corazon.lottie'
                                     autoplay
@@ -22,7 +27,7 @@ const Info = ({ dia, lugar, direccion }) => {
                                 >
                                 </DotLottiePlayer>
                             </div>
-                            <div className="bg-slate-600 h-14 w-72 mt-3 flex items-center justify-between">
+                            <div className="bg-slate-600 h-14 w-72 flex items-center justify-between">
                                 <div className="relative bg-[#EFEDE7] w-40 h-20 rotate-45 -left-5"></div>
                                 <h3 className={`${roboto.className} text-2xl text-center w-80 my-3 text-slate-50`}>Ceremonia</h3>
                                 <div className="relative bg-[#EFEDE7] w-40 h-20 rotate-45 -right-5"></div>

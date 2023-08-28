@@ -88,12 +88,12 @@ export default function Article({ article }) {
 
 
                     
-          <div className="w-full ">
+          <div className="w-full max-w-xl  ">
             <DotLottiePlayer
               src='/flores.lottie'
               autoplay
               loop
-            >
+              speed={0.5}>
             </DotLottiePlayer>
           </div>
 

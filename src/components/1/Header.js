@@ -19,8 +19,8 @@ const Header = ({ coverImage, title, date, content }) => {
 
     return (
         <div className="scroll-smooth">
-            <div className="w-full h-screen bg-center bg-cover ">
-            <div className="absolute top-0 w-full h-screen bg-center bg-cover bg-slate-800 "></div>
+            <div className="w-full h-screen  bg-cover ">
+            <div className="absolute top-0 left-0 w-full h-screen bg-cover bg-slate-800 "></div>
                 <Image
                     src={coverImage}
                     fill
@@ -48,7 +48,7 @@ const Header = ({ coverImage, title, date, content }) => {
                                     },
                                 }} >
 
-                                    <div className='flex justify-center mt-16'>
+                                    <div className='flex justify-center mt-48'>
                                         <span className='border-b w-1/4 border-b-white h-4 mx-3'></span>
                                         <h3 className={`${roboto.className} text-gray-50 text-2xl`}>{dateFormated}</h3>
                                         <span className='border-b w-1/4 border-b-white h-4 mx-3'></span>
@@ -62,7 +62,7 @@ const Header = ({ coverImage, title, date, content }) => {
                                     </div>
 
                                 </motion.div>
-                                <div className="flex w-full justify-center globals-40"> 
+                                <div className="flex w-full justify-center globals-40 pt-24"> 
                                         <IoChevronDown className='animate-bounce text-4xl text-gray-50 z-50' />
                                 </div>
                             </div>

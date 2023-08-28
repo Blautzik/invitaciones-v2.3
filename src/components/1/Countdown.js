@@ -54,7 +54,7 @@ const Countdown = ({ date }) => {
                 }}
                     className='flex items-center justify-center z-50'
                 >
-                    <div className='flex flex-col w-[16rem] h-[16rem] lg:h-[21rem] lg:w-[21rem] bg-slate-50 rounded-full items-center -z-20 drop-shadow-2xl'>
+                    <div className='flex flex-col w-[16rem] h-[16rem]  bg-slate-50 rounded-full items-center -z-20 drop-shadow-2xl'>
                         <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-12 z-50`}>Faltan:</h2>
                     <div className="flex h-[10rem] w-[14rem] justify-between items-center ">
                         <div className="flex flex-col items-center md:w-1/12 pl-4 lg:pr-8 border-r">
