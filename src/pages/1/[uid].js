@@ -9,12 +9,7 @@ import Image from "next/image";
 import Gallery from "@/components/1/Gallery";
 import Regalo from "@/components/1/Regalo";
 import Footer from "@/components/1/Footer";
-import Footermio from "@/components/1/Footermio";
 import { createClient } from "@prismicio/client";
-
-
-
-
 
 
 export default function Article({ article }) {
@@ -101,8 +96,12 @@ export async function getStaticPaths() {
 
   const articles = await client.getAllByType("quince");
 
-  return {
-    paths: articles.map((article) => prismic.asLink(article)),
-    fallback: false,
-  };
+  const linkResolver = (doc) => {
+    if (doc.type === 'quince') {
+      return `/5/${doc.uid}/`
+    } else {
+      return `false`
+    }
+  }
+
 }
