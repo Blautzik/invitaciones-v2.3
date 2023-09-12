@@ -36,14 +36,13 @@ const Invitacion = ({ article }) => {
 
                 <main className="bg-[#f6f2e3] ">
 
-                    <section className='h-screen md:h-auto  md:w-auto z-10'>
+                    <section className='h-screen z-10'>
 
                         <Header
                             title={article.data.title}
                             coverImage={prismic.asImageSrc(article.data.foto)}
                             date={article.data.fecha}
                             content={article.data.frase}
-
                         />
 
 

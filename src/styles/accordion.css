@@ -1,0 +1,36 @@
+.collapsible-content-edonec {
+    overflow: hidden;
+    transition: height 0.7s ease-in-out;
+    border: 1px solid #dee2e6;
+    border-top: none;
+  }
+  .title-text-edonec {
+    display: block;
+    font-size: 1em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  .collapsible-header-edonec {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 20px 2px 20px;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+  }
+  .collapsible-content-padding-edonec {
+    padding: 0px 20px 20px 20px;
+  }
+
+  .collapsible-card-edonec {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    transition: 0.7s;
+  }
+  
+  .collapsible-card-edonec:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  

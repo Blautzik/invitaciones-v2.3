@@ -25,15 +25,22 @@
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.5.0",
     "framer-motion": "^10.12.16",
+    "googleapis": "^126.0.1",
+    "media-chrome": "^1.4.2",
     "moment": "^2.29.4",
     "next": "^13.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.9.0"
+    "react-icons": "^4.9.0",
+    "react-youtube": "^10.1.0",
+    "tw-elements": "^1.0.0",
+    "tw-elements-react": "^1.0.0-alpha1",
+    "url-loader": "^4.1.1"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.6",
     "@types/react": "18.2.8",
     "autoprefixer": "^10.4.14",
     "concurrently": "^8.1.0",

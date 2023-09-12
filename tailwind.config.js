@@ -4,11 +4,14 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",  
+    "./src/slices/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/tw-elements-react/dist/js/**/*.js"  
   ],
   plugins: [
     require("flowbite/plugin"),
-    require("@tailwindcss/aspect-ratio")
+    require("@tailwindcss/aspect-ratio"),
+    require('@tailwindcss/forms'),
+    require("tw-elements-react/dist/plugin.cjs")
   ],
   theme: {
     fontFamily: {
@@ -29,6 +32,9 @@ module.exports = {
       backgroundImage: {
         'footer-texture': "url('https://res.cloudinary.com/fedexx/image/upload/v1692113799/invi/curva01_violeta_tkziux.png')",
       },
+      colors: {
+        violeta: '#772c87',
+      }
 
     },
   },

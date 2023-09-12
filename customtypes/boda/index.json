@@ -23,6 +23,10 @@
         "type": "Text",
         "config": { "label": "saludo", "placeholder": "" }
       },
+      "titulo_galeria": {
+        "type": "Text",
+        "config": { "label": "titulo galeria", "placeholder": "" }
+      },
       "galeria": {
         "type": "Group",
         "config": {
@@ -106,6 +110,10 @@
       "portadapc": {
         "type": "Image",
         "config": { "label": "portadapc", "constraint": {}, "thumbnails": [] }
+      },
+      "fechaevento": {
+        "type": "Timestamp",
+        "config": { "label": "fechaevento_hora", "placeholder": "" }
       },
       "slices": {
         "type": "Slices",

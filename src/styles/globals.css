@@ -11,3 +11,8 @@
     position:relative;
     top:50%;
 }
+
+
+body{
+    scroll-behavior: smooth;
+}

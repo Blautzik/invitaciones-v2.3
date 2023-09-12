@@ -134,6 +134,17 @@ interface BodaDocumentData {
    */
   saludo: prismic.KeyTextField;
   /**
+   * titulo galeria field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.titulo_galeria
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  titulo_galeria: prismic.KeyTextField;
+  /**
    * galeria field in *boda*
    *
    * - **Field Type**: Group
@@ -243,6 +254,17 @@ interface BodaDocumentData {
    *
    */
   portadapc: prismic.ImageField<never>;
+  /**
+   * fechaevento_hora field in *boda*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.fechaevento
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/timestamp
+   *
+   */
+  fechaevento: prismic.TimestampField;
   /**
    * Slice Zone field in *boda*
    *

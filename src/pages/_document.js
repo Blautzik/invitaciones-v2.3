@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html>
+    <Html className="scroll-smooth">
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
@@ -13,7 +13,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="overflow-x-hidden antialiased">
+      <body className="overflow-x-hidden antialiased scroll-smooth">
         <Main />
         <NextScript />
       </body>

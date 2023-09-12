@@ -1,4 +1,4 @@
-import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display } from 'next/font/google'
+import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display, Open_Sans, Comfortaa } from 'next/font/google'
 import localFont from '@next/font/local'
 
 
@@ -36,4 +36,17 @@ export const playFair = Playfair_Display({
   subsets: ['latin'],
   display:'swap',
   weight: '400'
+})
+
+
+export const openSans = Open_Sans({
+  subsets: ['latin'],
+  display:'swap',
+  weight: ['300','400','500','600','700','800'],
+})
+
+export const comfortaa = Comfortaa({
+  subsets: ['latin'],
+  display:'swap',
+  weight: ['500','300','400','600','700'],
 })
