@@ -1,4 +1,4 @@
-import { great_vives, roboto } from '@/utils/fonts'
+import { great_vives, minion, openSans, roboto } from '@/utils/fonts'
 import { useState } from 'react'
 import { easeInOut, easeIn, motion } from "framer-motion"
 import Image from 'next/image'
@@ -122,7 +122,7 @@ export default function Gallery({ imagenes, titulo }) {
             </div>
           </Modal.Body>
           <Modal.Footer className='justify-center '>
-            <Button className='bg-[#772c87] text-white' onClick={()=> props.setOpenModal(undefined)}>Cerrar</Button>
+            <button  className={`${openSans.className} bg-black rounded-full font-[600] text-sm px-8 py-3 text-white`} onClick={()=> props.setOpenModal(undefined)}>CERRAR</button>
           </Modal.Footer>
             
           </Modal>

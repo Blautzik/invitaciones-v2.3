@@ -13,7 +13,7 @@ export default function Document() {
           rel="stylesheet"
         />
       </Head>
-      <body className="overflow-x-hidden antialiased scroll-smooth">
+      <body className="overflow-x-hidden antialiased">
         <Main />
         <NextScript />
       </body>

@@ -11,7 +11,7 @@ const Formulario = () => {
     const [message, setMessage] = useState('');
     const id = '16HiAHj5IkJplCGhIHJVduGfH2-8UUhoppn25nfCah4U'
 
-    const inputCN = "shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-xs"
+    const inputCN = "shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm"
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -64,7 +64,7 @@ const Formulario = () => {
                     </div>
                     <div className="flex items-center justify-center">
                         <label htmlFor="phone" className="sr-only">Phone</label>
-                        <input value={phone} onChange={e => setPhone(e.target.value)} type="tel" name="phone" id="phone" className={inputCN} placeholder="Si venís con Chicos escribi aquí sus nombres" />
+                        <input value={phone} onChange={e => setPhone(e.target.value)} type="text" name="phone" id="phone" className={inputCN} placeholder="Si venís con Chicos escribi aquí sus nombres" />
                     </div>
                     <div className="flex items-center justify-center">
                         <label htmlFor="message" className="sr-only">Message</label>

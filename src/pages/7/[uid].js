@@ -2,26 +2,25 @@ import React from 'react'
 import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import Head from 'next/head';
-import Header from '@/components/3/Header';
+import Header from '@/components/4/Header';
 import Image from 'next/image';
-import Countdown from '@/components/3/Countdown';
-import Info from '@/components/3/Info';
-import Gallery from '@/components/3/Gallery';
-import Regalo from '@/components/3/Regalo';
-import Footer from '@/components/3/Footer';
+import Countdown from '@/components/4/Countdown';
+import Info from '@/components/4/Info';
+import Gallery from '@/components/4/Gallery';
+import Regalo from '@/components/4/Regalo';
+import Footer from '@/components/4/Footer';
 import ondas from '../../../public/img_ondas02.svg'
+import { easeIn, motion } from "framer-motion"
+import { useState, useEffect } from 'react';
+
 import Audiowe from '@/components/Audiowe';
+
 
 const Invitacion = ({ article }) => {
 
-    const imageStyle = {
-        objectFit: 'cover',
-        objectPosition: '50% 50%',
-        opacity: 0.7,
-        position: 'relative',
-        top: '-140px',
-        background: '#EFEDE7'
-    }
+
+    const [loading, setLoading] = useState(true)
+
 
     if (article) {
         return (
@@ -34,87 +33,106 @@ const Invitacion = ({ article }) => {
                     <meta property="og:description" content={article.data.frase} />
 
                 </Head>
-        
 
-                        <main className="bg-[#f6f2e3] ">
+                <div className='fixed bottom-4 right-0 z-50'>
 
-                            <div className='absolute z-50 '>   
-                                <Audiowe />
+                    <Audiowe />
+                </div>
 
-                            </div>
-                            <section className='h-screen z-10'>
+                <div className='flex flex-col  justify-center items-center'>
 
-                                <Header
-                                    title={article.data.title}
-                                    coverImage={prismic.asImageSrc(article.data.foto)}
-                                    date={article.data.fecha}
-                                    content={article.data.frase}
-                                />
+                    <main className="bg-[#fff] w-2xl">
 
 
-                            </section>
-                            <div className='md:-translate-y-64  z-50'>
+                        <section className='h-screen z-10'>
 
+                            <Header
+                                title={article.data.title}
+                                coverImage={prismic.asImageSrc(article.data.foto)}
+                                date={article.data.fecha}
+                                content={article.data.frase}
+
+                            />
+
+
+                        </section>
+                        <div className=' z-50'>
+
+                            <motion.div
+                                initial={{
+                                    opacity: 0,
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    easeIn
+                                }}
+                                whileInView={{
+                                    x: 0, opacity: 1
+                                }}
+                                className='overflow-hidden'>
 
                                 <Countdown date={article.data.fecha} />
+                            </motion.div>
+
+                            {/* 
+                 */}
+
+                            <section className=' overflow-x-hidden  '>
+                                <motion.div
+
+                                    className=''>
+
+                                    <Info className=' '
+
+                                    />
+                                </motion.div>
+
+                            </section>
+
+                            <section className="bg-[#fff] mt-12 h-[75vh] text-center flex justify-center ">
+                                <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
+                            </section>
 
 
 
-                                <section className=' md:h-[50rem] md:-asdasd-36 md:w-full bg-[#f6f2e3]  '>
-                                    <div className='md:flex md:justify-center'>
+                            <section className="lg:max-w-[60vw] bg-[#fff]  z-50">
+                                <Regalo />
+                            </section>
 
-                                        <Info className='bg-[#f6f2e3] '
+                            <section className='bg-[#fff] mb-16'>
+                                <Footer />
 
-                                        />
-                                    </div>
+                            </section>
+                        </div>
+                    </main>
 
-                                </section>
+                </div>
+            </>
 
-                                <section className="bg-[#f6f2e3] mt-12 md:z-40 h-[75vh] md:h-auto relative text-center -translate-y-1">
-                                    <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
-                                </section>
-
-
-
-                                <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 -translate-y-2">
-                                    <Regalo />
-                                </section>
-
-                                <section className='bg-[#f6f2e3] -translate-y-4'>
-                                    <Footer />
-                                    {/* <Footermio /> */}
-                                </section>
-                            </div>
-                            <div className=" relative bottom-0 py-4 text-center w-screen lg:w-full text-white z-50 bg-neutral-900">
-                                © 2023 Copyright: Federico Blautzik
-                            </div>
-                        </main>
-                    </>
-
-                    )
+        )
     }
 
 }
 
-                    export default Invitacion
+export default Invitacion
 
 
-                    export async function getStaticProps({params, previewData}) {
-    const client = createClient({previewData});
+export async function getStaticProps({ params, previewData }) {
+    const client = createClient({ previewData });
 
-                    const article = await client.getByUID("quince", params.uid);
-                    console.log(article)
-                    return {
-                        props: {
-                        article
-                    },
+    const article = await client.getByUID("quince", params.uid);
+    console.log(article)
+    return {
+        props: {
+            article
+        },
     };
 }
 
-                    export async function getStaticPaths() {
+export async function getStaticPaths() {
     const client = createClient();
 
-                    const articles = await client.getAllByType("quince");
+    const articles = await client.getAllByType("quince");
 
     const linkResolver = (doc) => {
         if (doc.type === 'quince') {
@@ -125,8 +143,8 @@ const Invitacion = ({ article }) => {
     }
 
 
-                    return {
-                        paths: articles.map((article) => prismic.asLink(article, {linkResolver})),
-                    fallback: false,
+    return {
+        paths: articles.map((article) => prismic.asLink(article, { linkResolver })),
+        fallback: false,
     };
 }
