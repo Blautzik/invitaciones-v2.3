@@ -1,23 +1,15 @@
-import { NextApiRequest, NextApiResponse } from "next";
+
 import { google } from 'googleapis'
+import { NextResponse } from 'next/server'
 
-
-type SheetForm = {
-    name:string
-    email:string
-    phone:string
-    message:string
-    id:string
-}
-
-export async function handler(
-    req: NextApiRequest,
-    res: NextApiResponse
+export default async function handler(
+    req,
+    NextResponse
 ){
     if(req.method !== 'POST'){
         return res.status( 405).send({message:'solo post request'})
     }
-    const body = req.body as SheetForm
+    const body = req.body
 
     try{
         const auth = new google.auth.GoogleAuth({
@@ -31,6 +23,8 @@ export async function handler(
                 'https://www.googleapis.com/auth/spreadsheets'
             ]
         })
+
+        
         console.log(req.body)
         const sheets = google.sheets({
             auth, 
@@ -42,7 +36,7 @@ export async function handler(
             range: 'A1:D1',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
-                
+            
                 values: [
                     [body.name, body.email, body.phone, body.message]
                 ]
@@ -50,7 +44,7 @@ export async function handler(
 
         })
 
-        return res.status(201).json({
+        return NextResponse.status(201).json({
             data: response.data
         })
 
