@@ -15,7 +15,6 @@ export default function Gallery({ imagenes, titulo }) {
   const openClose = (index) => {
     setIndex(index)
     props.setOpenModal('default')
-
   }
 
   const handleScroll = () => {
