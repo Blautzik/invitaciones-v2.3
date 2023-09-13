@@ -99,7 +99,7 @@ export default function Gallery({ imagenes, titulo }) {
               
             }}
             key={e}
-            className='rounded  drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-96 md:w-[45%]'
+            className='rounded  drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-[40rem] md:w-[45%]'
 
             onClick={() => openClose(images.indexOf(e))}>
             <Image
