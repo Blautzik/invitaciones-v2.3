@@ -80,20 +80,20 @@ export default function Gallery({ imagenes, titulo }) {
 
           {images.map(e => <motion.div
             initial={{
-              scale: 0.9,
               opacity: 0,
+
 
             }}
             transition={{
-              duration: 0.8,
-              easeInOut
+              duration: 0.9,
+
             }}
             whileInView={{
               opacity: 1,
-              scale: 1,
+              
             }}
             key={e}
-            className='rounded md:hover:scale-[1.02] drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-96 md:w-[45%]'
+            className='rounded  drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-96 md:w-[45%]'
 
             onClick={() => openClose(images.indexOf(e))}>
             <Image

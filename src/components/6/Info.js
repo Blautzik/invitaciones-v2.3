@@ -4,14 +4,22 @@ import { FaChampagneGlasses } from "react-icons/fa6";
 import { PiMapPin } from 'react-icons/pi'
 import { comfortaa, openSans } from '../../utils/fonts';
 import Image from 'next/image';
+import ceremoniaIcon from '../../../public/fiestas-11.png'
+import fiestaIcon from '../../../public/fiestas-12.png'
 
 const Info = () => {
 
-    const textito = 'text-gray-600 tracking-wider font-[500]'
+    const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
     return (
         <div className='flex md:flex-row md:justify-evenly md:items-start flex-col'>
             <div className='md:mt-4 flex flex-col items-center justify-center'>
-                <FaChurch className='text-violeta text-7xl mb-5' />
+                <div className='h-16 w-16 relative mb-6'>
+                <Image
+                    src={ceremoniaIcon}
+                    fill
+                />
+
+                </div>
                 <h3 className={`${comfortaa.className} text-slate-700 text-2xl mb-10 font-[700]`}>La Ceremonia</h3>
 
                 <Image
@@ -26,11 +34,11 @@ const Info = () => {
                     }}
                 />
       
-                <div className={`${openSans.className}my-4 text-center font-[600]}`}>
+                <div className={`${openSans.className}my-4 text-center leading-7`}>
 
                     <p className={textito}><strong>Fecha: </strong> Domingo 16 de Julio</p>
-                    <p className={textito}><strong>Hora:</strong>15:00 hs</p>
-                    <p className={textito}><strong>Lugar:</strong>Nuestra señora del Caramelo</p>
+                    <p className={textito}><strong>Hora: </strong> 15:00 hs</p>
+                    <p className={textito}><strong>Lugar: </strong> Nuestra señora del Caramelo</p>
                     <p className={textito}>Marcelo T. de Alvear 2465, CABA</p>
                 </div>
                 
@@ -47,7 +55,7 @@ const Info = () => {
                         }}
                     />
                 
-                <button className={`${openSans.className} flex flex-row py-4 px-8 bg-[#772c87] tracking-wide text-sm rounded-md text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
+                <button className={`${openSans.className} flex flex-row py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
                     <PiMapPin className=' text-lg mr-1' /> LLEGAR A LA CEREMONIA</button>
             </div>
 
@@ -64,7 +72,13 @@ const Info = () => {
 
 
             <div className='md:mt-4 flex flex-col items-center justify-center'>
-                <FaChampagneGlasses className='text-violeta text-7xl mb-5 opacity-70' />
+            <div className='h-16 w-16 relative mb-6'>
+                <Image
+                    src={fiestaIcon}
+                    fill
+                />
+
+                </div>
                 <h3 className={`${comfortaa.className} text-slate-700 text-2xl mb-10 font-[700]`}>La Fiesta</h3>
 
                 <Image
@@ -79,7 +93,7 @@ const Info = () => {
                     }}
                 />
       
-                <div className={`${openSans.className}my-4 text-center font-[600]} w-10/12 leading-8`}>
+                <div className={`${openSans.className}my-4 text-center w-10/12 leading-7`}>
 
                     <p className={textito}><strong>Fecha: </strong> Domingo 16 de Julio</p>
                     <p className={textito}><strong>Hora: </strong>18:00 hs</p>
@@ -100,7 +114,7 @@ const Info = () => {
                         }}
                     />
                 
-                <button className={`${openSans.className} flex flex-row py-4 px-8 bg-[#772c87] tracking-wide text-sm rounded-md text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
+                <button className={`${openSans.className} flex flex-row py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
                     <PiMapPin className=' text-lg mr-1' /> LLEGAR A LA FIESTA</button>
             </div>
         </div>

@@ -36,12 +36,10 @@ export default async function handler(
             range: 'A1:D1',
             valueInputOption: 'USER_ENTERED',
             requestBody: {
-            
                 values: [
                     [body.name, body.email, body.phone, body.message]
                 ]
             }
-
         })
 
         return NextResponse.status(201).json({

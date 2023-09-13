@@ -13,7 +13,7 @@ const Agendar = () => {
             <BiCalendar className="h-20 w-20 text-black mt-6 " />
 
             <h3 className={`${comfortaa.className} text-4xl `}>Agendar</h3>
-            <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center w-72 text-[14px] font-[600] px-6 py-4 rounded-lg `}
+            <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center w-72 text-[14px] font-[600] px-6 py-4 rounded-full `}
                 href='https://calendar.google.com/calendar'
                 target="_blank"
                 >

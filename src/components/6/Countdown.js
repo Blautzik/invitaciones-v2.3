@@ -36,32 +36,32 @@ const Countdown = ({ date }) => {
     }, [target]);
 
 
-    const cuentaStyle = `${comfortaa.className} text-slate-50 text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
+    const cuentaStyle = `${openSans.className} text-slate-50 font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
     const textitoStyle = "text-slate-50 text-[10px] text-center"
     const dospu = "text-slate-50 text-3xl mb-5"
 
     return (
         <div className='w-60'>
 
-        <div className = {`${comfortaa.className} flex justify-between items-center opacity-40 mb-8 mt-4 `}>
+        <div className = {`${openSans.className} flex font-[100] justify-between items-center opacity-80 mb-10 mt-2 `}>
             <div className="flex flex-col items center">
                 <span className={cuentaStyle}>{days} </span>
-                <span className={textitoStyle}>Día</span>
+                <span className={textitoStyle}>días</span>
             </div>
             <span className={dospu}> : </span>
             <div className="flex flex-col items-center ">
                 <span className={cuentaStyle}>{hours}</span>
-                <span className={textitoStyle}>Hs</span>
+                <span className={textitoStyle}>horas</span>
             </div>
             <span className={dospu}> : </span>
             <div className="flex flex-col items-center ">
                 <span className={cuentaStyle}>{minutes}</span>
-                <span className={textitoStyle}>Min</span>
+                <span className={textitoStyle}>minutos</span>
             </div>
             <span className={dospu}> : </span>
             <div className="flex flex-col items-center ">
                 <span className={cuentaStyle}>{seconds}</span>
-                <span className={textitoStyle}>Seg</span>
+                <span className={textitoStyle}>segundos</span>
             </div>
         </div>
         </div>

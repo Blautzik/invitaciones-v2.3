@@ -24,7 +24,7 @@ const Formulario = () => {
             message,
         }
 
-        const rawResponse = await fetch("/api/form", {
+        const response = await fetch("/api/form", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -32,7 +32,7 @@ const Formulario = () => {
             },
             body: JSON.stringify(form)
         });
-        const content = await rawResponse.json();
+        const content = await response.json();
 
         // print to screen
         alert(content.data.tableRange)
@@ -72,7 +72,7 @@ const Formulario = () => {
                     </div>
                     
                     <div className="flex items-end  justify-end mr-">
-                        <button type="submit" className={`${openSans.className} bg-black text-white flex justify-evenly items-center w-36 text-[14px] font-[600] px-6 py-4 rounded-lg `}>CONFIRMAR</button>
+                        <button type="submit" className={`${openSans.className} bg-white text-black flex justify-evenly items-center w-36 text-[14px] font-[600] px-6 py-3 rounded-full `}>CONFIRMAR</button>
                     </div>
                 </form>
             </div>

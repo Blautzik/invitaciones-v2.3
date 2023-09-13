@@ -1,4 +1,4 @@
-import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display, Open_Sans, Comfortaa } from 'next/font/google'
+import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display, Open_Sans, Comfortaa, Alegreya, Urbanist } from 'next/font/google'
 import localFont from '@next/font/local'
 
 
@@ -7,6 +7,13 @@ export const twcen = localFont({
   subsets: ['latin'],
   variable: '--tw-cen'
 }) 
+
+export const minion = localFont({
+  src:'./MinionPro-Regular.woff2',
+  subsets:['latin'],
+  variable:'--minion'
+})
+
 
 
 
@@ -39,14 +46,21 @@ export const playFair = Playfair_Display({
 })
 
 
-export const openSans = Open_Sans({
+export const openSans = Urbanist({
   subsets: ['latin'],
   display:'swap',
-  weight: ['300','400','500','600','700','800'],
+  weight: ['100', '200', '300','400','500','600','700','800','900'],
 })
 
 export const comfortaa = Comfortaa({
   subsets: ['latin'],
   display:'swap',
   weight: ['500','300','400','600','700'],
+})
+
+
+export const alegreya = Alegreya({
+  subsets: ['latin'],
+  display:'swap',
+  weight: ['500','400','600','700'],
 })
