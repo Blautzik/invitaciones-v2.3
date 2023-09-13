@@ -39,6 +39,7 @@ export default function Gallery({ imagenes, titulo }) {
 
   ]
 
+  const portadaVideo = imagenes[0].foto1
 
 
   const customTheme = {
@@ -63,11 +64,16 @@ export default function Gallery({ imagenes, titulo }) {
     <GalleryTitle titulo={titulo}/>
       <div className='bg-gray-500 my-12'>
         {!showVideo ? <div >
-          <div className='w-full bg-[url("https://res.cloudinary.com/fedexx/image/upload/v1694472872/muestra/A-31_k6qbox.jpg")] bg-cover opacity-70 flex flex-col items-center justify-center' onClick={() => setShowVideo(!showVideo)}>
+          <div className='w-full relative bg-cover opacity-70 flex flex-col items-center justify-center' onClick={() => setShowVideo(!showVideo)}>
+            <Image 
+              src={portadaVideo}
+              fill
+              style={{objectFit:'cover'}}
+            />
           <AiOutlinePlayCircle className="text-gray-50 opacity-90 text-6xl my-[20%]" />
           </div>
         </div>
-          : <YouTubePlayer videoId='hpbYfotJwfE' className='' />
+          : <YouTubePlayer videoId='DAhgWDbsPxc' className='' />
         }
       </div>
       <motion.div
@@ -101,7 +107,7 @@ export default function Gallery({ imagenes, titulo }) {
               fill
               alt='foto'
               quality={10}
-              style={{ objectFit: "cover", borderRadius: '5px' }}
+              style={{ objectFit: "cover", borderRadius: '5px', objectPosition:'top'}}
             />
           </motion.div>
           )}

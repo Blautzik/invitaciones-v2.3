@@ -24,9 +24,9 @@ const Agendar = () => {
             <div className="shadow-2xl">
 
                 <Image
-                    src={'https://res.cloudinary.com/fedexx/image/upload/v1694460733/A-1191-480x543_gjlyce.jpg'}
-                    width={200}
-                    height={50}
+                    src={'https://res.cloudinary.com/fedexx/image/upload/v1694625070/muestra/Rox_Pablo_131_ds2s9b.jpg'}
+                    width={300}
+                    height={80}
                     style={{
                         borderRadius: 5,
                     }}
