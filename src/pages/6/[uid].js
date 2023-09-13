@@ -7,6 +7,7 @@ import Regalos from "@/components/6/Regalos";
 import Formulario from "@/components/6/Formulario";
 import Agendar from "src/components/6/Agendar";
 import Gallery from "src/components/6/Gallery";
+import Head from 'next/head';
 
 
 
@@ -17,36 +18,44 @@ import Gallery from "src/components/6/Gallery";
 const seis = ({ article }) => {
     return (
         <>
-        <div className="mb-16">
-            <Header title={article.data.title}
-                coverImage={prismic.asImageSrc(article.data.foto)}
-                coverImagePc={prismic.asImageSrc(article.data.portadapc)}
-                date={article.data.fecha_evento}
-                content={article.data.frase} 
+            <Head>
+                <title>
+                    {article.data.title}
+                </title>
+                <meta property="og:image" content={prismic.asImageSrc(article.data.foto)} />
+                <meta property="og:description" content={article.data.title} />
+
+            </Head>
+            <div className="mb-16">
+                <Header title={article.data.title}
+                    coverImage={prismic.asImageSrc(article.data.foto)}
+                    coverImagePc={prismic.asImageSrc(article.data.portadapc)}
+                    date={article.data.fecha_evento}
+                    content={article.data.frase}
                 />
-        </div>
+            </div>
 
-        <div id="info">
-            <Info />
-        </div>
+            <div id="info">
+                <Info />
+            </div>
 
 
-        <div>
-            <Regalos />
-        </div>
+            <div>
+                <Regalos />
+            </div>
 
-        <div>
-            <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} />
-        </div>
+            <div>
+                <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} />
+            </div>
 
-        <div>
-            <Formulario />
-        </div>
-        
+            <div>
+                <Formulario />
+            </div>
 
-        <div>
-            <Agendar />
-        </div>
+
+            <div>
+                <Agendar />
+            </div>
         </>
     )
 }
