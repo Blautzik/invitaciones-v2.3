@@ -39,7 +39,7 @@ export default function Gallery({ imagenes, titulo }) {
 
   ]
 
-  const portadaVideo = imagenes[0].foto1
+  const portadaVideo = imagenes[0].foto7
 
 
   const customTheme = {
