@@ -9,6 +9,7 @@ const Formulario = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
+    const [menu, setMenu] = useState('');
     const id = '16HiAHj5IkJplCGhIHJVduGfH2-8UUhoppn25nfCah4U'
 
     const inputCN = "shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm"
@@ -22,6 +23,7 @@ const Formulario = () => {
             email,
             phone,
             message,
+            menu
         }
 
         const response = await fetch("/api/form", {
@@ -69,13 +71,13 @@ const Formulario = () => {
                     <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
                     <div className="flex items-center justify-center">
 
-                        <select name="select" className={`${inputCN} text-gray-500`} >
+                        <select name="select" className={`${inputCN} text-gray-500`} onChange={e => setMenu(e.target.value)}>
                             
-                            <option value="value1" className="text-gray-500" selected>Menú Principal </option>
-                            <option value="value2">Menú Vegetariano</option>
-                            <option value="value3">Menú Vegano</option>
-                            <option value="value3">Menú Celíaco</option>
-                            <option value="value3">Menú Adolescente/Niño</option>
+                            <option value="Menú Principal" className="text-gray-500" selected>Menú Principal </option>
+                            <option value="Menú Vegetariano">Menú Vegetariano</option>
+                            <option value="Menú Vegano">Menú Vegano</option>
+                            <option value="Menú Celíaco">Menú Celíaco</option>
+                            <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>
                         </select>
                     </div>
                     <div className="flex items-center justify-center">
