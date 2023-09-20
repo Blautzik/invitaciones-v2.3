@@ -5,9 +5,9 @@ import { easeInOut, easeIn, motion } from "framer-motion"
 import Image from 'next/image'
 import { Button, Modal } from 'flowbite-react';
 import GallerySlider from './GallerySlider';
-import { comfortaa } from '../../utils/fonts';
-import YouTubePlayer from '../YoutubePlayer';
-import GalleryTitle from "./GalleryTitle";
+import { openSans } from "@/utils/fonts";
+
+
 
 
 export default function Gallery({ imagenes, titulo }) {
@@ -61,33 +61,18 @@ export default function Gallery({ imagenes, titulo }) {
   return (
     <>
 
-    <GalleryTitle titulo={titulo}/>
-      <div className='bg-gray-500 my-12'>
-        {!showVideo ? <div >
-          <div className='w-full relative bg-cover opacity-70 flex flex-col items-center justify-center' onClick={() => setShowVideo(!showVideo)}>
-            <Image 
-              src={portadaVideo}
-              fill
-              style={{objectFit:'cover'}}
-            />
-          <AiOutlinePlayCircle className="text-gray-50 opacity-90 text-6xl my-[20%]" />
-          </div>
-        </div>
-          : <YouTubePlayer videoId='DAhgWDbsPxc' className='' />
-        }
-      </div>
       <motion.div
         className="flex flex-col items-center bg-[#fff] z-10 w-screen text center">
+          <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
 
 
 
 
-        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center w-full pl-1 mb-10">
+        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
 
           {images.map(e => <motion.div
             initial={{
               opacity: 0,
-
 
             }}
             transition={{
@@ -99,14 +84,14 @@ export default function Gallery({ imagenes, titulo }) {
               
             }}
             key={e}
-            className='rounded  drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-[40rem] md:w-[45%]'
+            className='rounded drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-[24rem] md:w-[40%] md:gap-1'
 
             onClick={() => openClose(images.indexOf(e))}>
             <Image
               src={e}
               fill
               alt='foto'
-              quality={10}
+              quality={50}
               style={{ objectFit: "cover", borderRadius: '5px', objectPosition:'top'}}
             />
           </motion.div>
