@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Header = ({ coverImage, title, date, content }) => {
     const imageStyle = {
         objectFit: 'cover',
-        objectPosition: '50% 50%',
+        objectPosition: '50% 5%',
         zIndex: 0,
         opacity: 0.7,
         backgroundColor: '#555',
