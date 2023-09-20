@@ -66,6 +66,19 @@ const Formulario = () => {
                         <label htmlFor="phone" className="sr-only">Phone</label>
                         <input value={phone} onChange={e => setPhone(e.target.value)} type="text" name="phone" id="phone" className={inputCN} placeholder="Si venís con Chicos escribi aquí sus nombres" />
                     </div>
+
+                    <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
+                    <div className="flex items-center justify-center">
+
+                        <select name="select" className={`${inputCN} text-gray-500`} >
+                            
+                            <option value="value1" className="text-gray-500" selected>Menú Principal </option>
+                            <option value="value2">Menú Vegetariano</option>
+                            <option value="value3">Menú Vegano</option>
+                            <option value="value3">Menú Celíaco</option>
+                            <option value="value3">Menú Adolescente/Niño</option>
+                        </select>
+                    </div> 
                     <div className="flex items-center justify-center">
                         <label htmlFor="message" className="sr-only">Message</label>
                         <textarea value={message} onChange={e => setMessage(e.target.value)} id="message" className={`${inputCN} pt-4 !h-40`}  placeholder="Comentarios y saludos" />

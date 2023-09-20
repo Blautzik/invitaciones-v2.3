@@ -1,8 +1,8 @@
 'use client'
 import { comfortaa, openSans } from "@/utils/fonts";
-import {useState} from "react";
+import { useState } from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
-import {GoCheckCircle} from 'react-icons/go'
+import { GoCheckCircle } from 'react-icons/go'
 
 const Formulario = () => {
     const [name, setName] = useState('');
@@ -35,7 +35,7 @@ const Formulario = () => {
         const content = await response.json();
 
         // print to screen
-        alert(content.data.tableRange)
+        alert('asistencia registrada correctamente')
 
         // Reset the form fields
         setMessage('')
@@ -66,11 +66,23 @@ const Formulario = () => {
                         <label htmlFor="phone" className="sr-only">Phone</label>
                         <input value={phone} onChange={e => setPhone(e.target.value)} type="text" name="phone" id="phone" className={inputCN} placeholder="Si venís con Chicos escribi aquí sus nombres" />
                     </div>
+                    <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
+                    <div className="flex items-center justify-center">
+
+                        <select name="select" className={`${inputCN} text-gray-500`} >
+                            
+                            <option value="value1" className="text-gray-500" selected>Menú Principal </option>
+                            <option value="value2">Menú Vegetariano</option>
+                            <option value="value3">Menú Vegano</option>
+                            <option value="value3">Menú Celíaco</option>
+                            <option value="value3">Menú Adolescente/Niño</option>
+                        </select>
+                    </div>
                     <div className="flex items-center justify-center">
                         <label htmlFor="message" className="sr-only">Message</label>
-                        <textarea value={message} onChange={e => setMessage(e.target.value)} id="message" className={`${inputCN} pt-4 !h-40`}  placeholder="Comentarios y saludos" />
+                        <textarea value={message} onChange={e => setMessage(e.target.value)} id="message" className={`${inputCN} pt-4 !h-32`} placeholder="Comentarios, aclaraciones y saludos" />
                     </div>
-                    
+
                     <div className="flex items-end  justify-end mr-">
                         <button type="submit" className={`${openSans.className} bg-white text-black flex justify-evenly items-center w-36 text-[14px] font-[600] px-6 py-3 rounded-full `}>CONFIRMAR</button>
                     </div>
