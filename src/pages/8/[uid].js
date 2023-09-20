@@ -10,6 +10,7 @@ import Regalos from '@/components/8/Regalos';
 import Footer from '@/components/4/Footer';
 import { easeIn, motion } from "framer-motion"
 import Formulario from '@/components/8/Formulario';
+import Agendar from '@/components/8/Agendar';
 
 const Invitacion = ({ article }) => {
 
@@ -85,10 +86,13 @@ const Invitacion = ({ article }) => {
               <Regalos />
             </section>
 
+            <section>
+              <Agendar/>
+            </section>
 
             <section className='bg-[#fff] mt-5'>
               <Footer />
-
+              <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
             </section>
           </div>
         </main>
