@@ -67,7 +67,7 @@ const Invitacion = ({ article }) => {
                 className=''>
 
                 <Info className=' '
-
+                  article={article.data}
                 />
               </motion.div>
 
@@ -113,6 +113,8 @@ export async function getStaticProps({ params, previewData }) {
 
   const article = await client.getByUID("quince", params.uid);
   console.log(article)
+  console.log(article.data)
+  
   return {
     props: {
       article

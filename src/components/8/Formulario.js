@@ -71,9 +71,9 @@ const Formulario = () => {
                     <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
                     <div className="flex items-center justify-center">
 
-                        <select name="select" className={`${inputCN} text-gray-500`} onChange={e => setMenu(e.target.value)}>
+                        <select name="select" className={`${inputCN} text-gray-500`} onChange={e => setMenu(e.target.value)} defaultValue={'Menú Principal'}>
                             
-                            <option value="Menú Principal" className="text-gray-500" selected>Menú Principal </option>
+                            <option value="Menú Principal" className="text-gray-500" >Menú Principal </option>
                             <option value="Menú Vegetariano">Menú Vegetariano</option>
                             <option value="Menú Vegano">Menú Vegano</option>
                             <option value="Menú Celíaco">Menú Celíaco</option>

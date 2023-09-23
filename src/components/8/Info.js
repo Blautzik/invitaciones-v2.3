@@ -8,8 +8,10 @@ import suitIcon from '../../../public/suit (1).png'
 
 
 
-const Info = ({ dia, lugar, direccion }) => {
+const Info = ({ dia, lugar, direccion, article }) => {
 
+
+    console.log('-------------------->asdasdqawaerasdfwertfsdxcvsdgjhdrty',article)
     const imgstyle = {
         objectFit: 'cover',
         objectPosition: '50% 0%',

@@ -107,6 +107,10 @@
         "type": "Date",
         "config": { "label": "fecha civil", "placeholder": "" }
       },
+      "direccion_civil": {
+        "type": "Text",
+        "config": { "label": "direccion civil", "placeholder": "" }
+      },
       "portadapc": {
         "type": "Image",
         "config": { "label": "portadapc", "constraint": {}, "thumbnails": [] }
@@ -114,6 +118,50 @@
       "fechaevento": {
         "type": "Timestamp",
         "config": { "label": "fechaevento_hora", "placeholder": "" }
+      },
+      "nombre_lugar_civil": {
+        "type": "Text",
+        "config": { "label": "nombre lugar civil", "placeholder": "" }
+      },
+      "hora_string": {
+        "type": "Text",
+        "config": { "label": "hora string", "placeholder": "" }
+      },
+      "hora_fiesta_string": {
+        "type": "Text",
+        "config": { "label": "hora fiesta string", "placeholder": "" }
+      },
+      "direccion_salon": {
+        "type": "Text",
+        "config": { "label": "direccion salon", "placeholder": "" }
+      },
+      "video_id": {
+        "type": "Text",
+        "config": { "label": "video id", "placeholder": "" }
+      },
+      "foto_salon": {
+        "type": "Text",
+        "config": { "label": "foto salon", "placeholder": "" }
+      },
+      "fondo_regalos": {
+        "type": "Text",
+        "config": { "label": "fondo regalos", "placeholder": "" }
+      },
+      "titular_cuenta": {
+        "type": "Text",
+        "config": { "label": "titular cuenta", "placeholder": "" }
+      },
+      "dni": {
+        "type": "Text",
+        "config": { "label": "dni", "placeholder": "" }
+      },
+      "foto_agendar": {
+        "type": "Text",
+        "config": { "label": "foto agendar", "placeholder": "" }
+      },
+      "form_id": {
+        "type": "Text",
+        "config": { "label": "form_id", "placeholder": "" }
       },
       "slices": {
         "type": "Slices",

@@ -36,25 +36,25 @@ const seis = ({ article }) => {
             </div>
 
             <div id="info">
-                <Info />
+                <Info article={article.data} />
             </div>
 
 
             <div>
-                <Regalos />
+                <Regalos article={article.data}/>
             </div>
 
             <div>
-                <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} />
+                <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} videoId={article.data.video_id} />
             </div>
 
             <div>
-                <Formulario />
+                <Formulario form_id={article.data.form_id}/>
             </div>
 
 
             <div>
-                <Agendar />
+                <Agendar foto={article.data.foto_agendar} />
             </div>
         </>
     )
@@ -69,7 +69,7 @@ export async function getStaticProps({ params, previewData }) {
     const client = createClient({ previewData });
 
     const article = await client.getByUID("boda", params.uid);
-    console.log(article)
+    console.log(article.data)
     return {
         props: {
             article

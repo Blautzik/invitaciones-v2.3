@@ -4,12 +4,13 @@ import {useState} from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import {GoCheckCircle} from 'react-icons/go'
 
-const Formulario = () => {
+const Formulario = ({form_id}) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
-    const id = '16HiAHj5IkJplCGhIHJVduGfH2-8UUhoppn25nfCah4U'
+    const [menu, setMenu] = useState('');
+    const id = form_id
 
     const inputCN = "shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm"
 
@@ -22,6 +23,7 @@ const Formulario = () => {
             email,
             phone,
             message,
+            menu
         }
 
         const response = await fetch("/api/form", {
@@ -35,7 +37,8 @@ const Formulario = () => {
         const content = await response.json();
 
         // print to screen
-        alert(content.data.tableRange)
+
+        alert('Asistencia registrada correctamente! Muchas gracias!')
 
         // Reset the form fields
         setMessage('')
@@ -70,13 +73,14 @@ const Formulario = () => {
                     <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
                     <div className="flex items-center justify-center">
 
-                        <select name="select" className={`${inputCN} text-gray-500`} >
+                        <select name="select" className={`${inputCN}  text-gray-500`} onChange={e => setMenu(e.target.value)} defaultValue={'Menú Principal'} >
                             
                             <option value="value1" className="text-gray-500" selected>Menú Principal </option>
-                            <option value="value2">Menú Vegetariano</option>
-                            <option value="value3">Menú Vegano</option>
-                            <option value="value3">Menú Celíaco</option>
-                            <option value="value3">Menú Adolescente/Niño</option>
+                            <option value="Menú Vegetariano">Menú Vegetariano</option>
+                            <option value="Menú Vegano">Menú Vegano</option>
+                            <option value="Menú Celíaco">Menú Celíaco</option>
+                            <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>
+                            <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
                         </select>
                     </div> 
                     <div className="flex items-center justify-center">

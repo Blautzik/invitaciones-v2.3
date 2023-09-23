@@ -244,6 +244,17 @@ interface BodaDocumentData {
    */
   fecha_civil: prismic.DateField;
   /**
+   * direccion civil field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.direccion_civil
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  direccion_civil: prismic.KeyTextField;
+  /**
    * portadapc field in *boda*
    *
    * - **Field Type**: Image
@@ -265,6 +276,127 @@ interface BodaDocumentData {
    *
    */
   fechaevento: prismic.TimestampField;
+  /**
+   * nombre lugar civil field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.nombre_lugar_civil
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  nombre_lugar_civil: prismic.KeyTextField;
+  /**
+   * hora string field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.hora_string
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  hora_string: prismic.KeyTextField;
+  /**
+   * hora fiesta string field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.hora_fiesta_string
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  hora_fiesta_string: prismic.KeyTextField;
+  /**
+   * direccion salon field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.direccion_salon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  direccion_salon: prismic.KeyTextField;
+  /**
+   * video id field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.video_id
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  video_id: prismic.KeyTextField;
+  /**
+   * foto salon field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.foto_salon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto_salon: prismic.KeyTextField;
+  /**
+   * fondo regalos field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.fondo_regalos
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  fondo_regalos: prismic.KeyTextField;
+  /**
+   * titular cuenta field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.titular_cuenta
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  titular_cuenta: prismic.KeyTextField;
+  /**
+   * dni field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.dni
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  dni: prismic.KeyTextField;
+  /**
+   * foto agendar field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.foto_agendar
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto_agendar: prismic.KeyTextField;
+  /**
+   * form_id field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.form_id
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  form_id: prismic.KeyTextField;
   /**
    * Slice Zone field in *boda*
    *

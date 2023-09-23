@@ -5,7 +5,7 @@ import { RiFacebookLine, RiTwitterLine, RiInstagramLine } from "react-icons/ri";
 import { BiCalendar, BiCalendarCheck } from "react-icons/bi";
 
 
-const Agendar = () => {
+const Agendar = ({foto}) => {
     return (
         <div className='h-screen flex flex-col items-center justify-between'>
             <div className="flex flex-col items-center h-60 justify-between">
@@ -24,7 +24,7 @@ const Agendar = () => {
             <div className="shadow-2xl">
 
                 <Image
-                    src={'https://res.cloudinary.com/fedexx/image/upload/v1694625070/muestra/Rox_Pablo_131_ds2s9b.jpg'}
+                    src={foto}
                     width={300}
                     height={80}
                     style={{

@@ -1,6 +1,7 @@
 
 'use client'
 import React, { useState , useRef, useEffect} from "react";
+import { BiChevronDown } from "react-icons/bi";
 
 
 const Collapsible = ({
@@ -46,7 +47,12 @@ const Collapsible = ({
           <div>
             <div className={headerClassName} onClick={handleFilterOpening}>
 
-              <div className={titleClassName}>{header}</div>
+              <div className=' w-full flex flex-row justify-between py-4 items-center'>
+                <p>
+                {header}
+                </p>
+                <BiChevronDown className="text-2xl"/>
+              </div>
 
 
             </div>

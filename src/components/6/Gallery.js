@@ -10,7 +10,7 @@ import YouTubePlayer from '../YoutubePlayer';
 import GalleryTitle from "./GalleryTitle";
 
 
-export default function Gallery({ imagenes, titulo }) {
+export default function Gallery({ imagenes, titulo, videoId }) {
   const [index, setIndex] = useState(0)
   const [openModal, setOpenModal] = useState();
   const [showVideo, setShowVideo] = useState()
@@ -36,7 +36,6 @@ export default function Gallery({ imagenes, titulo }) {
     imagenes[0].foto4,
     imagenes[0].foto5,
     imagenes[0].foto6,
-
   ]
 
   const portadaVideo = imagenes[0].foto7
@@ -73,7 +72,7 @@ export default function Gallery({ imagenes, titulo }) {
           <AiOutlinePlayCircle className="text-gray-50 opacity-90 text-6xl my-[20%]" />
           </div>
         </div>
-          : <YouTubePlayer videoId='DAhgWDbsPxc' className='' />
+          : <YouTubePlayer videoId={videoId} className='' />
         }
       </div>
       <motion.div

@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 
 
-const Header = ({ coverImage, title, date }) => {
+const Header = ({ coverImage, title, date, coverImagePc }) => {
 
     const imageStyle = {
         objectFit: 'cover',
@@ -24,13 +24,26 @@ const Header = ({ coverImage, title, date }) => {
         <div className=" h-screen ">
             <div className=" top-0 w-full h-full">
                 <div className="top-0 w-full h-full bg-slate-800"></div>
-                <Image
-                    src={coverImage}
-                    fill
-                    quality={100}
-                    style={imageStyle}
-                    alt='portada'
-                />
+                <div className='md:hidden'>
+
+                    <Image
+                        src={coverImage}
+                        fill
+                        quality={100}
+                        style={imageStyle}
+                        alt='portada'
+                    />
+                </div>
+                <div className='hidden md:block'>
+
+                    <Image
+                        src={coverImagePc}
+                        fill
+                        quality={100}
+                        style={imageStyle}
+                        alt='portada'
+                    />
+                </div>
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
 
                     <div className=' pt-8'>

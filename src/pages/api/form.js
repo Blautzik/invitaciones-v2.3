@@ -7,7 +7,7 @@ export default async function handler(
     NextResponse
 ){
     if(req.method !== 'POST'){
-        return res.status( 405).send({message:'solo post request'})
+        return NextResponse.status( 405).send({message:'solo post request'})
     }
     const body = req.body
 
