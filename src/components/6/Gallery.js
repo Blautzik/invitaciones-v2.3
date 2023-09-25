@@ -5,7 +5,7 @@ import { easeInOut, easeIn, motion } from "framer-motion"
 import Image from 'next/image'
 import { Button, Modal } from 'flowbite-react';
 import GallerySlider from './GallerySlider';
-import { comfortaa } from '../../utils/fonts';
+import {comfortaa, openSans} from '../../utils/fonts';
 import YouTubePlayer from '../YoutubePlayer';
 import GalleryTitle from "./GalleryTitle";
 
@@ -44,13 +44,17 @@ export default function Gallery({ imagenes, titulo, videoId }) {
   const customTheme = {
     content: {
       "base": "relative h-full w-full p-4 md:h-auto",
-      "inner": "relative rounded-lg bg-transparent shadow flex flex-col max-h-[90vh]"
+      "inner": "relative rounded-lg bg-transparent shadow flex flex-col "
     },
     header: {
       close: {
         base: " inline-flex items-center rounded-lg bg-transparent p-1.5 text-lg text-gray-900 ",
         icon: "h-8 w-8"
       }
+    },
+    "body": {
+      "base": "p-6  h-[36rem]",
+      "popup": "pt-0"
     },
   }
 
@@ -117,18 +121,18 @@ export default function Gallery({ imagenes, titulo, videoId }) {
         <Modal
           show={props.openModal === 'default'}
           onClose={() => props.setOpenModal(undefined)}
-          className='pt-20'
+          className='pt-20 '
           theme={customTheme}
         >
 
 
-          <Modal.Body className='p-0 bg-transparent'>
-            <div className='h-96'>
+          <Modal.Body className='p-0 bg-transparent '>
+            
               <GallerySlider images={images} index={index} />
-            </div>
+
           </Modal.Body>
-          <Modal.Footer className='justify-center '>
-            <Button className='bg-[#772c87] text-white' onClick={() => props.setOpenModal(undefined)}>Cerrar</Button>
+          <Modal.Footer className='justify-center border-transparent'>
+            <button className={`${openSans.className} bg-black text-white flex justify-evenly items-center  text-[14px] font-[600] px-4 py-3 rounded-full `} onClick={() => props.setOpenModal(undefined)}>CERRAR X</button>
           </Modal.Footer>
 
         </Modal>

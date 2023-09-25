@@ -17,22 +17,24 @@ export default function GallerySlider({ images, index }) {
     return (
 
 
-
-        <Carousel leftControl
+        
+        <Carousel 
+            leftControl
             rightControl
             slide={false}
+            className='h-[36rem]'
         >
             {final &&
                 final.map(e =>
-                    <div key={e} className='h-96 w-full object-contain'>
+                    <div key={e} className='h-96 w-full '>
                         <Image
                             placeholder="blur"
                             blurDataURL={e}
                             alt="..."
                             src={e}
                             fill
-                            quality={25}
-                            style={{ objectFit: "cover", borderRadius: '2%', objectPosition:'top'}}
+                            quality={75}
+                            style={{ objectFit: "contain", borderRadius: '2%', objectPosition:'center'}}
                         />
                     </div>
                 )

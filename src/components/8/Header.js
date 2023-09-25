@@ -19,7 +19,7 @@ const Header = ({ coverImage, title, date, content }) => {
         <div className="">
 
             <div className="relative top-0 w-full h-[60vh] md:h-[70vh] bg-center bg-cover ">
-                <div className=" top-0 w-full h-full bg-center bg-cover bg-slate-800 foto"></div>
+                <div className=" top-0 bg-slate-800"></div>
                 <Image
                     src={coverImage}
                     fill
