@@ -21,8 +21,8 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
 
 
     return (
-        <div className=" h-screen ">
-            <div className=" top-0 w-full h-full bg-slate-800">
+        <div className=" h-screen bg-slate-800 ">
+            <div className="top-0 w-full h-auto ">
                 
                 <div className='md:hidden'>
 
@@ -35,7 +35,6 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
                     />
                 </div>
                 <div className='hidden md:block'>
-
                     <Image
                         src={coverImagePc}
                         fill
