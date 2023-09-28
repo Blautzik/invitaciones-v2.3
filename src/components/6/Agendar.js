@@ -5,7 +5,7 @@ import { RiFacebookLine, RiTwitterLine, RiInstagramLine } from "react-icons/ri";
 import { BiCalendar, BiCalendarCheck } from "react-icons/bi";
 
 
-const Agendar = ({foto}) => {
+const Agendar = ({foto, links}) => {
     return (
         <div className='h-screen flex flex-col items-center justify-between'>
             <div className="flex flex-col items-center h-60 justify-between">
@@ -32,7 +32,11 @@ const Agendar = ({foto}) => {
                     }}
                 />
             </div>
-            <div className="md:w-96 w-10/12 flex items-center justify-evenly mb-">
+
+
+            {
+                links &&    
+                <div className="md:w-96 w-10/12 flex items-center justify-evenly mb-">
                 <div className=" border-black text-black flex items-center border rounded-full h-16 w-16">
                     <RiFacebookLine className="text-xl m-auto" />
                 </div>
@@ -42,9 +46,12 @@ const Agendar = ({foto}) => {
                 </div>
                 <div className=" border-black text-black flex items-center border rounded-full h-16 w-16 ">
                     <RiInstagramLine className="text-xl m-auto"/>
-
                 </div>
             </div>
+
+            }
+
+
             <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
         </div>
     )

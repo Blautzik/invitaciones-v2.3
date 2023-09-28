@@ -28,7 +28,7 @@ const Info = ({ article }) => {
                     />
 
                 </div>
-                <h3 className={`${comfortaa.className} text-slate-700 text-2xl mb-10 font-[700] text-center`}>La Ceremonia</h3>
+                <h3 className={`${comfortaa.className} text-slate-700 sm:text-2xl xs:text-xl mb-10 font-[700] text-center`}>La Ceremonia</h3>
 
                 <Image
                     src='https://res.cloudinary.com/fedexx/image/upload/v1694286992/03-ceremonia-1_reblw1.jpg'
@@ -85,7 +85,7 @@ const Info = ({ article }) => {
                     />
 
                 </div>
-                <h3 className={`${comfortaa.className} text-slate-700 text-2xl mb-10 font-[700] text-center`}>La Fiesta</h3>
+                <h3 className={`${comfortaa.className} text-slate-700 sm:text-2xl xs:text-xl  mb-10 font-[700] text-center`}>La Fiesta</h3>
 
                 <Image
                     src={article.foto_salon}
