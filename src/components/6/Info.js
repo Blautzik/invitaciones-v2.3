@@ -20,7 +20,7 @@ const Info = ({ article }) => {
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
     return (
         <div className='flex md:flex-row md:justify-evenly md:items-start flex-col'>
-            <div className='md:mt-4 flex flex-col items-center justify-center'>
+            <div className='md:mt-4 flex flex-col items-center justify-center text-center'>
                 <div className='h-16 w-16 relative mb-6'>
                     <Image
                         src={ceremoniaIcon}
@@ -28,7 +28,7 @@ const Info = ({ article }) => {
                     />
 
                 </div>
-                <h3 className={`${comfortaa.className} text-slate-700 text-2xl mb-10 font-[700]`}>La Ceremonia</h3>
+                <h3 className={`${comfortaa.className} text-slate-700 text-2xl mb-10 font-[700] text-center`}>La Ceremonia</h3>
 
                 <Image
                     src='https://res.cloudinary.com/fedexx/image/upload/v1694286992/03-ceremonia-1_reblw1.jpg'
