@@ -42,7 +42,6 @@ export default async function handler(
             }
         })
 
-        //------res
         return NextResponse.status(201).json({
             data: response.data
         })

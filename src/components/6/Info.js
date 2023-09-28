@@ -12,7 +12,7 @@ const Info = ({ article }) => {
 
     const fechaCeremonia = new Date(article.fecha_evento)
     fechaCeremonia.setDate(fechaCeremonia.getDate() + 1);
-    const formattedDate = format(fechaCeremonia, "EEEE d 'de' MMMM", { locale: es });// Cambia 'es' por tu idioma si es diferente
+    const formattedDate = format(fechaCeremonia, "EEEE d 'de' MMMM", { locale: es });
     console.log(formattedDate);
 
 
@@ -77,7 +77,7 @@ const Info = ({ article }) => {
 
 
 
-            <div className='md:mt-4 flex flex-col items-center justify-center'>
+            <div className='md:mt-4 flex flex-col items-center justify-center text-center'>
                 <div className='h-16 w-16 relative mb-6'>
                     <Image
                         src={fiestaIcon}
@@ -85,7 +85,7 @@ const Info = ({ article }) => {
                     />
 
                 </div>
-                <h3 className={`${comfortaa.className} text-slate-700 text-2xl mb-10 font-[700]`}>La Fiesta</h3>
+                <h3 className={`${comfortaa.className} text-slate-700 text-2xl mb-10 font-[700] text-center`}>La Fiesta</h3>
 
                 <Image
                     src={article.foto_salon}

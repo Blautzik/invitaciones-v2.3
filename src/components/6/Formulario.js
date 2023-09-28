@@ -90,7 +90,7 @@ const Formulario = ({ form_id }) => {
                             <input value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" className={inputCN} placeholder="Email" />
                         </div>
                         <div className="flex items-center justify-center">
-                            <label htmlFor="phone" className="sr-only">Phone</label>
+                            <label htmlFor="phone" className="sr-only"></label>
                             <input value={phone} onChange={e => setPhone(e.target.value)} type="text" name="phone" id="phone" className={inputCN} placeholder="Si venís con Chicos escribi aquí sus nombres" />
                         </div>
 
@@ -98,9 +98,9 @@ const Formulario = ({ form_id }) => {
                         <div className="flex items-center justify-center">
 
 
-                            <select name="select" className={`${inputCN}  text-gray-500`} onChange={e => setMenu(e.target.value)} defaultValue={'Menú Principal'} >
+                            <select name="select" className={`${inputCN}  text-gray-500`} onChange={e => setMenu(e.target.value)} defaultValue={'Elegí tu Menú'} >
 
-                                <option value="Menú Principal" className="text-gray-500" defaultValue>Menú Principal </option>
+                                <option value="Menú Principal">Menú Principal </option>
                                 <option value="Menú Vegetariano">Menú Vegetariano</option>
                                 <option value="Menú Vegano">Menú Vegano</option>
                                 <option value="Menú Celíaco">Menú Celíaco</option>
