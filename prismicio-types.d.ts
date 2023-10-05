@@ -953,6 +953,17 @@ interface QuinceDocumentData {
    */
   link_twitter: prismic.KeyTextField;
   /**
+   * foto pc field in *quince*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.foto_pc
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  foto_pc: prismic.ImageField<never>;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

@@ -135,6 +135,10 @@
         "type": "Text",
         "config": { "label": "link twitter", "placeholder": "" }
       },
+      "foto_pc": {
+        "type": "Image",
+        "config": { "label": "foto pc", "constraint": {}, "thumbnails": [] }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
