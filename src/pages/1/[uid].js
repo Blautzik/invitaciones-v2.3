@@ -36,6 +36,7 @@ const Invitacion = ({ article }) => {
                 coverImage={prismic.asImageSrc(article.data.foto)}
                 date={article.data.fecha}
                 content={article.data.frase}
+                foto_pc={prismic.asImageSrc(article.data.foto_pc)}
 
               />
 

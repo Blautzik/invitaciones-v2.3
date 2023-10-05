@@ -4,7 +4,7 @@ import moment from "moment/moment";
 import Image from 'next/image';
 
 
-const Header = ({ coverImage, title, date, content }) => {
+const Header = ({ coverImage, title, date, content, foto_pc }) => {
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 5%',
@@ -18,7 +18,7 @@ const Header = ({ coverImage, title, date, content }) => {
     return (
         <div className="">
 
-            <div className="relative top-0 w-full h-[60vh] md:h-[70vh] bg-center bg-cover ">
+            <div className="md:hidden relative top-0 w-full h-[60vh] md:h-[70vh] bg-center bg-cover ">
                 <div className=" top-0 bg-slate-800"></div>
                 <Image
                     src={coverImage}
@@ -30,6 +30,16 @@ const Header = ({ coverImage, title, date, content }) => {
                 />
                 <div className='absolute bottom-0 left-0 md:bg-none bg-cover bg-footer-texture translate-y-1 h-24 w-full z-50'></div>
             </div>
+            <div className='hidden md:block h-[70vh] bg-center bg-cover relative top-0 w-full'>
+            <div className=" top-0 bg-slate-800"></div>
+                    <Image
+                        src={foto_pc}
+                        fill
+                        quality={100}
+                        style={imageStyle}
+                        alt='portada'
+                    />
+                </div>
             <div className='w-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>
                     <div className='flex w-full justify-center '> 
