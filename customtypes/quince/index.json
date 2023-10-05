@@ -143,6 +143,10 @@
         "type": "Text",
         "config": { "label": "dress code", "placeholder": "" }
       },
+      "foto_regalos": {
+        "type": "Text",
+        "config": { "label": "foto regalos", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

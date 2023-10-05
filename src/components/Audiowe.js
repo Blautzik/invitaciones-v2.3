@@ -11,12 +11,14 @@ import {
   MediaMuteButton,
   MediaTextDisplay,
 } from 'media-chrome/dist/react';
-import music from '../../public/music.mp3'
+
 import { FaPlayCircle } from 'react-icons/fa';
 
 
-export const Audiowe = () => {
+export const Audiowe = ({music}) => {
   return (
+    <> 
+    
     <MediaController className='h-0' audio>
       <audio
         src={music}
@@ -30,6 +32,7 @@ export const Audiowe = () => {
         <MediaVolumeRange className='rounded-full h-8'></MediaVolumeRange>
       </MediaControlBar>
     </MediaController>
+    </>
   );
 };
 

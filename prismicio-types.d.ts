@@ -975,6 +975,17 @@ interface QuinceDocumentData {
    */
   dress_code: prismic.KeyTextField;
   /**
+   * foto regalos field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.foto_regalos
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto_regalos: prismic.KeyTextField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

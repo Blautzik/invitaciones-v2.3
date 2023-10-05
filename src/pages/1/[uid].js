@@ -11,6 +11,7 @@ import Footer from '@/components/4/Footer';
 import { easeIn, motion } from "framer-motion"
 import Formulario from '@/components/1/Formulario';
 import Agendar from '@/components/1/Agendar';
+import Audiowe from '@/components/Audiowe';
 
 const Invitacion = ({ article }) => {
 
@@ -25,6 +26,13 @@ const Invitacion = ({ article }) => {
           <meta property="og:description" content={article.data.frase} />
 
         </Head>
+
+
+        {article.data.music &&
+          <div className='fixed bottom-4 right-0 z-50'>
+            <Audiowe music={article.data.music} />
+          </div>
+        }
         <div className='flex flex-col  justify-center items-center'>
 
           <main className="bg-[#fff]">
@@ -77,8 +85,8 @@ const Invitacion = ({ article }) => {
 
 
               {
-              
-              article.data.galeria[0].foto1 &&
+
+                article.data.galeria[0].foto1 &&
                 <section className="bg-[#fff] mt-12  text-center flex justify-center ">
                   <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
                 </section>
@@ -90,9 +98,9 @@ const Invitacion = ({ article }) => {
               </div>
 
               {article.data.cbu &&
-                <section className=" bg-[#fff]  z-50">
-                  <Regalos />
-                </section>
+                <div>
+                  <Regalos article={article.data} />
+                </div>
               }
 
               <section>
