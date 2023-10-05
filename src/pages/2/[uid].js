@@ -2,14 +2,7 @@ import React from 'react'
 import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import Head from 'next/head';
-import Header from '@/components/2/Header';
-import Image from 'next/image';
-import Countdown from '@/components/2/Countdown';
-import Info from '@/components/2/Info';
-import Gallery from '@/components/2/Gallery';
-import Regalo from '@/components/1/Regalo';
-import Footer from '@/components/1/Footer';
-import ondas from '../../../public/img_ondas02.svg'
+
 
 const Invitacion = ({article}) => {
 
