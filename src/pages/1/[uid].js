@@ -63,9 +63,6 @@ const Invitacion = ({ article }) => {
                 <Countdown date={article.data.fecha} />
               </motion.div>
 
-
-
-
               <section className=' overflow-x-hidden  '>
                 <motion.div
 
