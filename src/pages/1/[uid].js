@@ -1,19 +1,18 @@
-
-import Head from "next/head";
-
-import Header from "@/components/1/Header";
-import Countdown from "@/components/1/Countdown";
-import Info from "@/components/1/Info";
-import Image from "next/image";
-import Gallery from "@/components/1/Gallery";
-import Regalo from "@/components/1/Regalo";
-import Footer from "@/components/1/Footer";
+import React from 'react'
 import * as prismic from "@prismicio/client";
-import { createClient } from "../../prismicio";
-import { DotLottiePlayer } from "@dotlottie/react-player";
+import { createClient } from "@/prismicio";
+import Head from 'next/head';
+import Header from '@/components/1/Header';
+import Countdown from '@/components/1/Countdown';
+import Info from '@/components/1/Info';
+import Gallery from '@/components/1/Gallery';
+import Regalos from '@/components/1/Regalos';
+import Footer from '@/components/4/Footer';
+import { easeIn, motion } from "framer-motion"
+import Formulario from '@/components/1/Formulario';
+import Agendar from '@/components/1/Agendar';
 
-
-export default function Article({ article }) {
+const Invitacion = ({ article }) => {
 
   if (article) {
     return (
@@ -22,99 +21,111 @@ export default function Article({ article }) {
           <title>
             {article.data.title}
           </title>
-          <meta property="og:image" content={article.data.foto} />
-          <meta property="og:description" content="Nos Casamos y queremos compartir este momento con vos!" />
+          <meta property="og:image" content={prismic.asImageSrc(article.data.foto)} />
+          <meta property="og:description" content={article.data.frase} />
+
         </Head>
+        <div className='flex flex-col  justify-center items-center'>
+
+          <main className="bg-[#fff]">
+
+            <section className='z-10'>
+
+              <Header
+                title={article.data.title}
+                coverImage={prismic.asImageSrc(article.data.foto)}
+                date={article.data.fecha}
+                content={article.data.frase}
+
+              />
+
+
+            </section>
 
 
 
-        <main className="bg-[#EFEDE7] flex flex-col justify-center items-center">
+            <div className=''>
 
+              <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 2,
+                  easeIn
+                }}
+                whileInView={{
+                  x: 0, opacity: 1
+                }}
+                className='overflow-hidden'>
 
-          <section className='h-screen'>
-
-            <Header
-              title={article.data.title}
-              coverImage={prismic.asImageSrc(article.data.foto)}
-              coverImagePc={prismic.asImageSrc(article.data.portadapc)}
-              date={article.data.fecha}
-              content={article.data.frase}
-            />
-
-
-          </section>
-
-          <section className='h-[45vh] mt-20 bg-[#EFEDE7]'>
-            <Countdown date={article.data.fecha_evento} />
-          </section>
-
-
-          <section className=' m-auto bg-[#EFEDE7]'>
-            <Info
-
-            />
-
-          </section>
+                <Countdown date={article.data.fecha} />
+              </motion.div>
 
 
 
-          <section className="text-center p-2">
-            <Gallery />
-          </section>
+              <section className=' overflow-x-hidden  '>
+                <motion.div
+
+                  className=''>
+
+                  <Info className=' '
+                    article={article.data}
+                  />
+                </motion.div>
+
+              </section>
 
 
-          <section className="m-auto ">
-            <Regalo />
-          </section>
-
-          <section className="block">
-            <Footer />
-
-
-          </section>
+              {article.data.galeria.foto1 &&
+                <section className="bg-[#fff] mt-12  text-center flex justify-center ">
+                  <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
+                </section>
+              }
 
 
-          <section className="h-24 mt-8">
+              <div>
+                <Formulario form_id={article.data.form_id} />
+              </div>
 
-            <a href='https://janoseventos.com' target='_blank'>
-              <Image
-                src={'https://res.cloudinary.com/fedexx/image/upload/v1692357541/invi/LOGO_PNG_HORIZONTAL_VIOLETA_iwuny5.png'}
-                width={250}
-                height={100}
-                quality={25}
-                alt='logo'
-                />
+              {article.data.cbu &&
+                <section className=" bg-[#fff]  z-50">
+                  <Regalos />
+                </section>
+              }
 
-            </a>
-          </section>
+              <section>
+                <Agendar foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
+              </section>
 
+              <section className='bg-[#fff] mt-5'>
+                <Footer />
+                <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
+              </section>
+            </div>
+          </main>
 
-                    
-          <div className="w-full max-w-xl  ">
-            <DotLottiePlayer
-              src='/flores.lottie'
-              autoplay
-              loop
-              speed={0.5}>
-            </DotLottiePlayer>
-          </div>
-
-         
-        </main>
-
+        </div>
       </>
+
     )
   }
 
 }
 
+export default Invitacion
+
+
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
 
-  const article = await client.getByUID("boda", params.uid);
+  const article = await client.getByUID("quince", params.uid);
+  console.log(article)
+  console.log(article.data)
+
   return {
     props: {
-      article,
+      article
     },
   };
 }
@@ -122,23 +133,19 @@ export async function getStaticProps({ params, previewData }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const articles = await client.getAllByType("boda");
+  const articles = await client.getAllByType("quince");
 
   const linkResolver = (doc) => {
-    if (doc.type === 'boda') {
+    if (doc.type === 'quince') {
       return `/1/${doc.uid}/`
     } else {
       return `false`
     }
   }
 
+
   return {
     paths: articles.map((article) => prismic.asLink(article, { linkResolver })),
     fallback: false,
   };
-
 }
-
-
-
-

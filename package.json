@@ -25,6 +25,7 @@
     "date-fns": "^2.30.0",
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.5.0",
+    "formik": "^2.4.5",
     "framer-motion": "^10.12.16",
     "googleapis": "^126.0.1",
     "gsap": "^3.12.2",

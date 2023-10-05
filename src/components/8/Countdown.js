@@ -1,12 +1,7 @@
 import moment from 'moment'
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
-import circulo from '../../assets/contador.webp'
 import { openSans, roboto } from '../../utils/fonts';
-import { BsFillHeartFill } from 'react-icons/bs'
 
-import { DotLottiePlayer } from '@dotlottie/react-player';
-import '@dotlottie/react-player/dist/index.css'
 
 
 

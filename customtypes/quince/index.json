@@ -67,17 +67,73 @@
         "type": "Text",
         "config": { "label": "ubicacion", "placeholder": "" }
       },
+      "direccion_salon": {
+        "type": "Text",
+        "config": { "label": "direccion salon", "placeholder": "" }
+      },
+      "foto_salon": {
+        "type": "Text",
+        "config": { "label": "foto salon", "placeholder": "" }
+      },
+      "hora_string": {
+        "type": "Text",
+        "config": { "label": "hora string", "placeholder": "" }
+      },
       "formulario": {
         "type": "Text",
         "config": { "label": "formulario", "placeholder": "" }
+      },
+      "titulo_galeria": {
+        "type": "Text",
+        "config": { "label": "titulo galeria", "placeholder": "" }
       },
       "alias": {
         "type": "Text",
         "config": { "label": "alias regalos", "placeholder": "" }
       },
-      "titulo_galeria": {
+      "dni": {
         "type": "Text",
-        "config": { "label": "titulo galeria", "placeholder": "" }
+        "config": { "label": "dni", "placeholder": "" }
+      },
+      "titular": {
+        "type": "Text",
+        "config": { "label": "titular", "placeholder": "" }
+      },
+      "cbu": {
+        "type": "Text",
+        "config": { "label": "cbu", "placeholder": "" }
+      },
+      "video_id": {
+        "type": "Text",
+        "config": { "label": "video id", "placeholder": "" }
+      },
+      "foto_agendar": {
+        "type": "Text",
+        "config": { "label": "foto agendar", "placeholder": "" }
+      },
+      "form_id": {
+        "type": "Text",
+        "config": { "label": "form_id", "placeholder": "" }
+      },
+      "music": {
+        "type": "Text",
+        "config": { "label": "music", "placeholder": "" }
+      },
+      "link_salon": {
+        "type": "Text",
+        "config": { "label": "link salon", "placeholder": "" }
+      },
+      "link_face": {
+        "type": "Text",
+        "config": { "label": "link face", "placeholder": "" }
+      },
+      "link_ig": {
+        "type": "Text",
+        "config": { "label": "link ig", "placeholder": "" }
+      },
+      "link_twitter": {
+        "type": "Text",
+        "config": { "label": "link twitter", "placeholder": "" }
       },
       "slices": {
         "type": "Slices",

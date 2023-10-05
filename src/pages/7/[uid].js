@@ -3,23 +3,16 @@ import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import Head from 'next/head';
 import Header from '@/components/4/Header';
-import Image from 'next/image';
 import Countdown from '@/components/4/Countdown';
-import Info from '@/components/4/Info';
+import Info from '@/components/7/Info';
 import Gallery from '@/components/4/Gallery';
 import Regalo from '@/components/4/Regalo';
 import Footer from '@/components/4/Footer';
-import ondas from '../../../public/img_ondas02.svg'
 import { easeIn, motion } from "framer-motion"
-import { useState, useEffect } from 'react';
-
 import Audiowe from '@/components/Audiowe';
 
 
 const Invitacion = ({ article }) => {
-
-
-    const [loading, setLoading] = useState(true)
 
 
     if (article) {
@@ -33,11 +26,11 @@ const Invitacion = ({ article }) => {
                     <meta property="og:description" content={article.data.frase} />
 
                 </Head>
-
-                <div className='fixed bottom-4 right-0 z-50'>
-
-                    <Audiowe />
-                </div>
+                {article.data.music &&
+                    <div className='fixed bottom-4 right-0 z-50'>
+                        <Audiowe />
+                    </div>
+                }
 
                 <div className='flex flex-col  justify-center items-center'>
 
@@ -74,20 +67,18 @@ const Invitacion = ({ article }) => {
                                 <Countdown date={article.data.fecha} />
                             </motion.div>
 
-                            {/* 
-                 */}
 
-                            <section className=' overflow-x-hidden  '>
-                                <motion.div
 
-                                    className=''>
 
-                                    <Info className=' '
 
-                                    />
-                                </motion.div>
-
+                            <section className=' overflow-x-hidden'>
+                                <div>
+                                    <Info article={article.data}/>
+                                </div>
                             </section>
+
+
+
 
                             <section className="bg-[#fff] mt-12 h-[75vh] text-center flex justify-center ">
                                 <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />

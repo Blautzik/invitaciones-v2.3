@@ -24,8 +24,7 @@ export default async function handler(
             ]
         })
 
-        
-        console.log(req.body)
+
         const sheets = google.sheets({
             auth, 
             version:'v4'
@@ -47,7 +46,7 @@ export default async function handler(
         })
 
     }catch(e){
-        return res.status(e.code).send({message: e.message})
+        return NextResponse.status(e.code).send({message: e.message})
     }
 
 }

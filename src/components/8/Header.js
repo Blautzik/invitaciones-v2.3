@@ -28,7 +28,7 @@ const Header = ({ coverImage, title, date, content }) => {
                     alt='portada'
                     
                 />
-                <div className='absolute bottom-0 left-0 md:bg-none bg-cover bg-footer-texture h-24 w-full z-50'></div>
+                <div className='absolute bottom-0 left-0 md:bg-none bg-cover bg-footer-texture translate-y-1 h-24 w-full z-50'></div>
             </div>
             <div className='w-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>

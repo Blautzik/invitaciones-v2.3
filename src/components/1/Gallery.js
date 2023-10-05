@@ -1,71 +1,125 @@
-import { great_vives } from '@/utils/fonts'
-import {useState} from 'react'
+import { AiOutlinePlayCircle } from "react-icons/ai";
+
+import { useState } from 'react'
+import { easeInOut, easeIn, motion } from "framer-motion"
+import Image from 'next/image'
+import { Button, Modal } from 'flowbite-react';
+import GallerySlider from './GallerySlider';
+import { openSans } from "@/utils/fonts";
 
 
-export default function Gallery() {
-  const [modalOpen, setModalOpen] = useState(false)
+
+
+export default function Gallery({ imagenes, titulo }) {
   const [index, setIndex] = useState(0)
+  const [openModal, setOpenModal] = useState();
+  const [showVideo, setShowVideo] = useState()
+
+  const props = { openModal, setOpenModal };
 
   const openClose = (index) => {
-    setModalOpen(!modalOpen)
     setIndex(index)
+    props.setOpenModal('default')
+
   }
 
   const handleScroll = () => {
     setModalOpen(false)
   }
 
-  if (process.browser) {
-    if(modalOpen === true) {
-      document.body.style.overflow = 'hidden';
-    }else{
-      document.body.style.overflow = 'unset';
-    }
-  }
 
-  
 
   const images = [
-  "https://res.cloudinary.com/fedexx/image/upload/v1666209423/janete/1_vumqpb.jpg",
-  "https://res.cloudinary.com/fedexx/image/upload/v1666209423/janete/2_cqbqpn.jpg",
-  "https://res.cloudinary.com/fedexx/image/upload/v1666209423/janete/4_hdtwju.jpg",
-  "https://res.cloudinary.com/fedexx/image/upload/v1666209422/janete/3_vcj7ju.jpg",
-  "https://res.cloudinary.com/fedexx/image/upload/v1666209422/janete/5_svsttn.jpg",
-  "https://res.cloudinary.com/fedexx/image/upload/v1666209421/janete/7_dveuq7.jpg",
-  "https://res.cloudinary.com/fedexx/image/upload/v1666209419/janete/8_xvnlzh.jpg",
-  "https://res.cloudinary.com/fedexx/image/upload/v1666209419/janete/6_odxhvl.jpg",
-    ]
+    imagenes[0].foto1,
+    imagenes[0].foto2,
+    imagenes[0].foto3,
+    imagenes[0].foto4,
+    imagenes[0].foto5,
+    imagenes[0].foto6,
+
+  ]
+
+  const portadaVideo = imagenes[0].foto7
+
+
+  const customTheme = {
+    content: {
+      "base": "relative h-full w-full p-4 md:h-auto",
+      "inner": "relative rounded-lg bg-transparent shadow flex flex-col max-h-[90vh]"
+    },
+    header: {
+      close: {
+        base: " inline-flex items-center rounded-lg bg-transparent p-1.5 text-lg text-gray-900 ",
+        icon: "h-8 w-8"
+      }
+    },
+  }
+
 
 
 
   return (
     <>
-    <div className="flex flex-col items-center bg-[#EFEDE7] z-10">
-    <h2 className={`${great_vives.className} text-gray-600 text-7xl mb-5`} >Nuestros Momentos</h2>
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-1 md:gap-2  md:w-4/5 center">
-        
-      {images.map(e=> <div key={e} className='rounded md:hover:scale-[1.02] drop-shadow-2xl hover:z-10 transition-all' onClick={() => openClose(images.indexOf(e))}>
-        <img className="rounded" key={e}  src={e} alt="" layout="fill"/>
+
+      <motion.div
+        className="flex flex-col items-center bg-[#fff] z-10 w-screen text center">
+          <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
+
+
+
+
+        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
+
+          {images.map(e => <motion.div
+            initial={{
+              opacity: 0,
+
+            }}
+            transition={{
+              duration: 0.9,
+
+            }}
+            whileInView={{
+              opacity: 1,
+              
+            }}
+            key={e}
+            className='rounded drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-[24rem] md:w-[40%] md:gap-1'
+
+            onClick={() => openClose(images.indexOf(e))}>
+            <Image
+              src={e}
+              fill
+              alt='foto'
+              quality={50}
+              style={{ objectFit: "cover", borderRadius: '5px', objectPosition:'top'}}
+            />
+          </motion.div>
+          )}
         </div>
-        )}
-    </div>
-    </div>
-    {modalOpen ? (
-                <>
-                    <div className="fixed inset-0 z-10 overflow-y-auto">
-                        <div
-                            className="fixed inset-0 w-full h-full bg-silver opacity-40"
-                            onClick={() => openClose(0)}
-                        ></div>
-                        
-                        <div className="flex items-center min-h-screen px-4 py-8">
-                            <div className="flex relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg">
-                                <img src={images[index]} onClick={()=>openClose(0)} onScroll={handleScroll}/>
-                            </div>
-                        </div>
-                    </div>
-                </>
-            ) : null}
+      </motion.div>
+
+      <>
+        <Modal
+          show={props.openModal === 'default'}
+          onClose={() => props.setOpenModal(undefined)}
+          className='pt-20'
+          theme={customTheme}
+        >
+
+
+          <Modal.Body className='p-0 bg-transparent'>
+            <div className='h-96'>
+              <GallerySlider images={images} index={index} />
+            </div>
+          </Modal.Body>
+          <Modal.Footer className='justify-center '>
+            <Button className='bg-[#772c87] text-white' onClick={() => props.setOpenModal(undefined)}>Cerrar</Button>
+          </Modal.Footer>
+
+        </Modal>
+      </>
+
     </>
   );
 }

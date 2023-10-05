@@ -766,6 +766,39 @@ interface QuinceDocumentData {
    */
   ubicacion: prismic.KeyTextField;
   /**
+   * direccion salon field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.direccion_salon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  direccion_salon: prismic.KeyTextField;
+  /**
+   * foto salon field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.foto_salon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto_salon: prismic.KeyTextField;
+  /**
+   * hora string field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.hora_string
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  hora_string: prismic.KeyTextField;
+  /**
    * formulario field in *quince*
    *
    * - **Field Type**: Text
@@ -776,6 +809,17 @@ interface QuinceDocumentData {
    *
    */
   formulario: prismic.KeyTextField;
+  /**
+   * titulo galeria field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.titulo_galeria
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  titulo_galeria: prismic.KeyTextField;
   /**
    * alias regalos field in *quince*
    *
@@ -788,16 +832,126 @@ interface QuinceDocumentData {
    */
   alias: prismic.KeyTextField;
   /**
-   * titulo galeria field in *quince*
+   * dni field in *quince*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: quince.titulo_galeria
+   * - **API ID Path**: quince.dni
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
-  titulo_galeria: prismic.KeyTextField;
+  dni: prismic.KeyTextField;
+  /**
+   * titular field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.titular
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  titular: prismic.KeyTextField;
+  /**
+   * cbu field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.cbu
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  cbu: prismic.KeyTextField;
+  /**
+   * video id field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.video_id
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  video_id: prismic.KeyTextField;
+  /**
+   * foto agendar field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.foto_agendar
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto_agendar: prismic.KeyTextField;
+  /**
+   * form_id field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.form_id
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  form_id: prismic.KeyTextField;
+  /**
+   * music field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.music
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  music: prismic.KeyTextField;
+  /**
+   * link salon field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.link_salon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_salon: prismic.KeyTextField;
+  /**
+   * link face field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.link_face
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_face: prismic.KeyTextField;
+  /**
+   * link ig field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.link_ig
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_ig: prismic.KeyTextField;
+  /**
+   * link twitter field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.link_twitter
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_twitter: prismic.KeyTextField;
   /**
    * Slice Zone field in *quince*
    *

@@ -3,20 +3,16 @@ import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import Head from 'next/head';
 import Header from '@/components/4/Header';
-import Image from 'next/image';
 import Countdown from '@/components/4/Countdown';
 import Info from '@/components/4/Info';
 import Gallery from '@/components/4/Gallery';
 import Regalo from '@/components/4/Regalo';
 import Footer from '@/components/4/Footer';
-import ondas from '../../../public/img_ondas02.svg'
 import { easeIn, motion } from "framer-motion"
-import { useState, useEffect } from 'react';
+
+
 
 const Invitacion = ({ article }) => {
-
-
-  const [loading, setLoading] = useState(true)
 
 
   if (article) {
@@ -64,8 +60,7 @@ const Invitacion = ({ article }) => {
               <Countdown date={article.data.fecha} />
             </motion.div>
 
- {/* 
-               */}
+
 
             <section className=' overflow-x-hidden  '>
               <motion.div
