@@ -65,6 +65,7 @@ const Invitacion = ({ article }) => {
 
 
 
+
               <section className=' overflow-x-hidden  '>
                 <motion.div
 
