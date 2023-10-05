@@ -34,7 +34,7 @@ const Invitacion = ({article}) => {
   
         </Head>
         
-        <main className="bg-[#EFEDE7] w-screen ">
+        {/* <main className="bg-[#EFEDE7] w-screen ">
   
           <section className='h-screen w-screen'>
   
@@ -74,9 +74,9 @@ const Invitacion = ({article}) => {
   
           <section>
             <Footer />
-            {/* <Footermio /> */}
+
           </section>
-        </main>
+        </main> */}
       </>
   
           )
