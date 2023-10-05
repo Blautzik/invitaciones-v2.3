@@ -9,7 +9,7 @@ const Header = ({ coverImage, title, date, content, foto_pc }) => {
         objectFit: 'cover',
         objectPosition: '50% 5%',
         zIndex: 0,
-        opacity: 0.7,
+        opacity: 0.95,
         backgroundColor: '#555',
     }
 
