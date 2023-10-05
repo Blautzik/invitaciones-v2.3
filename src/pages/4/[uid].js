@@ -85,7 +85,7 @@ const Invitacion = ({ article }) => {
 
               {article.data.cbu &&
                 <section className="lg:max-w-[60vw] bg-[#fff]  z-50">
-                  <Regalos />
+                  <Regalos article={article.data} />
                 </section>}
 
               <section className='bg-[#fff] '>
