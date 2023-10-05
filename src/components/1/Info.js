@@ -199,7 +199,7 @@ const Info = ({ article }) => {
 
                                 <div className='flex flex-col items-center mt-6'>
                                     <h3 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
-                                    <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> Elegante </h4>
+                                    <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code? article.dress_code : "Elegante"} </h4>
                                     <div className='h-16 w-16 relative m-6'>
 
                                         <Image

@@ -139,6 +139,10 @@
         "type": "Image",
         "config": { "label": "foto pc", "constraint": {}, "thumbnails": [] }
       },
+      "dress_code": {
+        "type": "Text",
+        "config": { "label": "dress code", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
