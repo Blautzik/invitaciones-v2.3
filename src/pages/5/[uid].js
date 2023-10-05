@@ -10,6 +10,7 @@ import Regalo from '@/components/5/Regalo';
 import Footer from '@/components/4/Footer';
 import { easeIn, motion } from "framer-motion"
 import { useState, useEffect } from 'react';
+import Regalos from '@/components/1/Regalos';
 
 const Invitacion = ({ article }) => {
 
@@ -75,15 +76,20 @@ const Invitacion = ({ article }) => {
 
             </section>
 
-            <section className="bg-[#fff] mt-12 h-[75vh] text-center flex justify-center ">
-              <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
-            </section>
+
+            {
+                article.data.galeria.foto1 &&
+                <section className="bg-[#fff] mt-12 h-[75vh] text-center flex justify-center ">
+                  <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
+                </section>}
 
 
 
-            <section className="lg:max-w-[60vw] bg-[#fff]  z-50">
-              <Regalo />
-            </section>
+              {article.data.cbu &&
+                <section className="lg:max-w-[60vw] bg-[#fff]  z-50">
+                  <Regalos />
+                </section>}
+
 
             <section className='bg-[#fff] '>
               <Footer />

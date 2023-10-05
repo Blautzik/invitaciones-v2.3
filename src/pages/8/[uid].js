@@ -27,77 +27,85 @@ const Invitacion = ({ article }) => {
         </Head>
         <div className='flex flex-col  justify-center items-center'>
 
-        <main className="bg-[#fff]">
+          <main className="bg-[#fff]">
 
-          <section className='z-10'>
+            <section className='z-10'>
 
-            <Header
-              title={article.data.title}
-              coverImage={prismic.asImageSrc(article.data.foto)}
-              date={article.data.fecha}
-              content={article.data.frase}
+              <Header
+                title={article.data.title}
+                coverImage={prismic.asImageSrc(article.data.foto)}
+                date={article.data.fecha}
+                content={article.data.frase}
 
-            />
-
-
-          </section>
-          <div className=''>
-
-            <motion.div
-              initial={{
-                opacity: 0,
-              }}
-              transition={{
-                duration: 2,
-                easeIn
-              }}
-              whileInView={{
-                x: 0, opacity: 1
-              }}
-              className='overflow-hidden'>
-
-              <Countdown date={article.data.fecha} />
-            </motion.div>
+              />
 
 
+            </section>
+            <div className=''>
 
-            <section className=' overflow-x-hidden  '>
               <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 2,
+                  easeIn
+                }}
+                whileInView={{
+                  x: 0, opacity: 1
+                }}
+                className='overflow-hidden'>
 
-                className=''>
-
-                <Info className=' '
-                  article={article.data}
-                />
+                <Countdown date={article.data.fecha} />
               </motion.div>
 
-            </section>
 
-            <section className="bg-[#fff] mt-12  text-center flex justify-center ">
-              <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
-            </section>
 
-               
-            <section>
+              <section className=' overflow-x-hidden  '>
+                <motion.div
+
+                  className=''>
+
+                  <Info className=' '
+                    article={article.data}
+                  />
+                </motion.div>
+
+              </section>
+
+              {
+                article.data.galeria.foto1 &&
+                <section className="bg-[#fff] mt-12 h-[75vh] text-center flex justify-center ">
+                  <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
+                </section>}
+
+
+
+
+
+
+              <section>
                 <Formulario />
-            </section>
+              </section>
 
-            <section className=" bg-[#fff]  z-50">
-              <Regalos />
-            </section>
 
-            <section>
-              <Agendar/>
-            </section>
+              {article.data.cbu &&
+                <section className="lg:max-w-[60vw] bg-[#fff]  z-50">
+                  <Regalos />
+                </section>}
 
-            <section className='bg-[#fff] mt-5'>
-              <Footer />
-              <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
-            </section>
-          </div>
-        </main>
+              <section>
+                <Agendar />
+              </section>
 
-      </div>
+              <section className='bg-[#fff] mt-5'>
+                <Footer />
+                <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
+              </section>
+            </div>
+          </main>
+
+        </div>
       </>
 
     )
@@ -114,7 +122,7 @@ export async function getStaticProps({ params, previewData }) {
   const article = await client.getByUID("quince", params.uid);
   console.log(article)
   console.log(article.data)
-  
+
   return {
     props: {
       article

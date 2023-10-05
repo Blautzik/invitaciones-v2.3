@@ -9,6 +9,7 @@ import Gallery from '@/components/4/Gallery';
 import Regalo from '@/components/4/Regalo';
 import Footer from '@/components/4/Footer';
 import { easeIn, motion } from "framer-motion"
+import Regalos from '@/components/1/Regalos';
 
 
 
@@ -28,70 +29,74 @@ const Invitacion = ({ article }) => {
         </Head>
         <div className='flex flex-col  justify-center items-center'>
 
-        <main className="bg-[#fff] w-2xl">
+          <main className="bg-[#fff] w-2xl">
 
-          <section className='h-screen z-10'>
+            <section className='h-screen z-10'>
 
-            <Header
-              title={article.data.title}
-              coverImage={prismic.asImageSrc(article.data.foto)}
-              date={article.data.fecha}
-              content={article.data.frase}
+              <Header
+                title={article.data.title}
+                coverImage={prismic.asImageSrc(article.data.foto)}
+                date={article.data.fecha}
+                content={article.data.frase}
 
-            />
-
-
-          </section>
-          <div className=' z-50'>
-
-            <motion.div
-              initial={{
-                opacity: 0,
-              }}
-              transition={{
-                duration: 2,
-                easeIn
-              }}
-              whileInView={{
-                x: 0, opacity: 1
-              }}
-              className='overflow-hidden'>
-
-              <Countdown date={article.data.fecha} />
-            </motion.div>
+              />
 
 
+            </section>
+            <div className=' z-50'>
 
-            <section className=' overflow-x-hidden  '>
               <motion.div
+                initial={{
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 2,
+                  easeIn
+                }}
+                whileInView={{
+                  x: 0, opacity: 1
+                }}
+                className='overflow-hidden'>
 
-                className=''>
-
-                <Info className=' '
-
-                />
+                <Countdown date={article.data.fecha} />
               </motion.div>
 
-            </section>
-
-            <section className="bg-[#fff] mt-12 h-[75vh] text-center flex justify-center ">
-              <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
-            </section>
 
 
+              <section className=' overflow-x-hidden  '>
+                <motion.div
 
-            <section className="lg:max-w-[60vw] bg-[#fff]  z-50">
-              <Regalo />
-            </section>
+                  className=''>
 
-            <section className='bg-[#fff] '>
-              <Footer />
+                  <Info className=' '
 
-            </section>
-          </div>
-        </main>
+                  />
+                </motion.div>
 
-      </div>
+              </section>
+
+
+              {
+                article.data.galeria.foto1 &&
+                <section className="bg-[#fff] mt-12 h-[75vh] text-center flex justify-center ">
+                  <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
+                </section>}
+
+
+
+              {article.data.cbu &&
+                <section className="lg:max-w-[60vw] bg-[#fff]  z-50">
+                  <Regalos />
+                </section>}
+
+              <section className='bg-[#fff] '>
+                <Footer />
+
+              </section>
+            </div>
+          </main>
+
+        </div>
       </>
 
     )
