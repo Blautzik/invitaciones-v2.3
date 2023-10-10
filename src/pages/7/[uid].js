@@ -6,7 +6,6 @@ import Header from '@/components/4/Header';
 import Countdown from '@/components/4/Countdown';
 import Info from '@/components/7/Info';
 import Gallery from '@/components/4/Gallery';
-import Regalo from '@/components/4/Regalo';
 import Footer from '@/components/4/Footer';
 import { easeIn, motion } from "framer-motion"
 import Audiowe from '@/components/Audiowe';
@@ -104,7 +103,7 @@ const Invitacion = ({ article }) => {
                                 </section>
                                 
                                 
-                                
+
                             }
 
 

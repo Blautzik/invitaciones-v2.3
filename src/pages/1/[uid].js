@@ -12,8 +12,25 @@ import { easeIn, motion } from "framer-motion"
 import Formulario from '@/components/1/Formulario';
 import Agendar from '@/components/1/Agendar';
 import Audiowe from '@/components/Audiowe';
+import Image from 'next/image';
 
 const Invitacion = ({ article }) => {
+
+
+  const imageStyle = {
+    objectFit: 'cover',
+    objectPosition: '50% 0%',
+    zIndex: -1000,
+    opacity: 0.65,
+  }
+
+  const imageStyleFlipped = {
+    objectFit: 'cover',
+    objectPosition: '50% 100%',
+    zIndex: -1000,
+    opacity: 0.65,
+    transform: 'scaleY(-1)'
+  }
 
   if (article) {
     return (
@@ -35,7 +52,7 @@ const Invitacion = ({ article }) => {
         }
         <div className='flex flex-col  justify-center items-center'>
 
-          <main className="bg-[#fff]">
+          <main className="" >
 
             <section className='z-10'>
 
@@ -55,6 +72,7 @@ const Invitacion = ({ article }) => {
 
             <div className=''>
 
+
               <motion.div
                 initial={{
                   opacity: 0,
@@ -71,19 +89,33 @@ const Invitacion = ({ article }) => {
                 <Countdown date={article.data.fecha} />
               </motion.div>
 
+
+
+
               <section className=' overflow-x-hidden  '>
                 <motion.div
 
                   className=''>
 
-                  <Info className=' '
-                    article={article.data}
-                  />
+                  <div className="h-full  w-full flex flex-col relative items-center justify-between ">
+                    {
+                      article.data.fondo_sugerido &&
+                      <Image
+                        src={article.data.fondo_sugerido}
+                        fill
+                        quality={100}
+                        style={imageStyle}
+                        alt='portada'
+                      />
+                    }
+                    <Info className=' '
+                      article={article.data}
+                    />
+
+                  </div>
                 </motion.div>
 
               </section>
-
-
               {
 
                 article.data.galeria[0].foto1 &&
@@ -91,7 +123,6 @@ const Invitacion = ({ article }) => {
                   <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
                 </section>
               }
-
 
               <div>
                 <Formulario form_id={article.data.form_id} />
@@ -103,11 +134,34 @@ const Invitacion = ({ article }) => {
                 </div>
               }
 
-              <section>
-                <Agendar foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
+              <section className='relative'>
+                {
+                  article.data.fondo_sugerido &&
+                  <Image
+                    src={article.data.fondo_sugerido}
+                    fill
+                    quality={100}
+                    style={imageStyle}
+                    alt='portada'
+                  />
+                }
+                <div className='z-50'>
+
+                  <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
+                </div>
               </section>
 
-              <section className='bg-[#fff] mt-5'>
+              <section className='relative pt-5'>
+                {
+                  article.data.fondo_sugerido &&
+                  <Image
+                    src={article.data.fondo_sugerido}
+                    fill
+                    quality={100}
+                    style={{...imageStyleFlipped }}
+                    alt='portada'
+                  />
+                }
                 <Footer />
                 <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
               </section>

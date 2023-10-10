@@ -35,7 +35,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
+    "react-slick": "^0.29.0",
     "react-youtube": "^10.1.0",
+    "slick-carousel": "^1.8.1",
     "tw-elements": "^1.0.0",
     "tw-elements-react": "^1.0.0-alpha1",
     "url-loader": "^4.1.1"

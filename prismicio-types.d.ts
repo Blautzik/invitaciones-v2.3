@@ -986,6 +986,17 @@ interface QuinceDocumentData {
    */
   foto_regalos: prismic.KeyTextField;
   /**
+   * fondo sugerido field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.fondo_sugerido
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  fondo_sugerido: prismic.KeyTextField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

@@ -147,6 +147,10 @@
         "type": "Text",
         "config": { "label": "foto regalos", "placeholder": "" }
       },
+      "fondo_sugerido": {
+        "type": "Text",
+        "config": { "label": "fondo sugerido", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
