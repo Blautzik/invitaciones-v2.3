@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import FullscreenSlider from '@/components/FulscreenSlider';
 
 const smartphoneMockup = 'https://res.cloudinary.com/fedexx/image/upload/v1696787444/invi/pngwing.com_ddzl1w.png';
 
@@ -34,6 +35,9 @@ function ProductCard({ product }) {
     </div>
   );
 }
+
+
+
 
 function LandingPage() {
   const products1 = [
@@ -82,6 +86,21 @@ function LandingPage() {
     },
   ];
 
+  const slides = [
+    {
+      id: 1,
+      title: 'slide 1',
+      description: 'Description for Product 5',
+      bgImg: 'https://res.cloudinary.com/fedexx/image/upload/v1695161045/regalos-chicas-15-anos-ideas_qzipkj.webp'
+    },
+    {
+      id: 2,
+      title: 'slide 1',
+      description: 'Description for Product 5',
+      bgImg: 'https://res.cloudinary.com/fedexx/image/upload/v1694460733/A-1191-480x543_gjlyce.jpg'
+    },
+  ]
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -92,8 +111,10 @@ function LandingPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      {/* ... (unchanged) ... */}
+      
+
+    <FullscreenSlider slides={slides}/>
+
 
       {/* Product Slider 1 */}
       <section className="py-16 bg-gray-100">
