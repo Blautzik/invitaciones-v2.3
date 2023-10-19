@@ -1,0 +1,21 @@
+.slick-dots {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .slick-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc; /* Inactive dot color */
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.7s;
+  }
+.slick-active  {
+    background-color: #000; /* Active dot color */
+  }

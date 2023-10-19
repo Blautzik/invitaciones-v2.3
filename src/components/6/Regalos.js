@@ -9,7 +9,7 @@ const Regalos = ({article}) => {
 
 
     const imageStyle = {
-        objectFit: 'contain',
+        objectFit: 'cover',
         objectPosition: '50% 0%',
         zIndex: 0,
         opacity: 0.65,

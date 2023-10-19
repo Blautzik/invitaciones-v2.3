@@ -1,4 +1,4 @@
-import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display, Open_Sans, Comfortaa, Alegreya, Urbanist } from 'next/font/google'
+import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display, Open_Sans, Comfortaa, Alegreya, Urbanist, Pacifico, Amatic_SC, Roboto } from 'next/font/google'
 import localFont from '@next/font/local'
 
 
@@ -14,6 +14,18 @@ export const minion = localFont({
   variable:'--minion'
 })
 
+
+export const amatic = Amatic_SC({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '700']
+}) 
+
+export const roboto = Roboto({
+  subsets: ['latin'],
+  display:'swap',
+  weight: ['100', '300','400','500','700','900'],
+})
 
 
 
@@ -32,7 +44,7 @@ export const great_vives = Great_Vibes({
   weight: '400'
 })
 
-export const roboto = Roboto_Serif({
+export const roboto_serif = Roboto_Serif({
     subsets: ['latin'],
     display: 'swap',
     weight: '500'
@@ -63,4 +75,11 @@ export const alegreya = Alegreya({
   subsets: ['latin'],
   display:'swap',
   weight: ['500','400','600','700'],
+})
+
+
+export const pacifico = Pacifico({
+  subsets: ['latin'],
+  display:'swap',
+  weight: ['400'],
 })

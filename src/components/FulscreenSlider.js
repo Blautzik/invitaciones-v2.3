@@ -1,41 +1,63 @@
+'use client'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import styles from './FullScreenSlider.module.css'
+import { pacifico } from '@/utils/fonts';
+import { useState } from 'react';
 
-const FullscreenSlider = ({slides}) => {
+const FullscreenSlider = ({ slides }) => {
+    const [activeSlide, setActiveSlide] = useState(0);
+
     const settings = {
-        dots: true,
+        dotsClass: styles['slick-dots'],
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
         autoplay: true,
-        fade:true, // Adjust the speed as needed
-        autoplaySpeed: 1000,
+        fade: true,
+        autoplaySpeed: 5000,
+        beforeChange: (current, next) => setActiveSlide(next),
     };
 
 
     return (
-        <Slider {...settings}>
-            {slides.map((slide, index) => (
-                <div key={index} className="relative h-screen flex items-center justify-center">
-                    <div
-                        className="absolute top-0 left-0 right-0 bottom-0 bg-cover bg-center opacity-75"
-                        style={{ backgroundImage: `url(${slide.bgImg})` }}
-                    ></div>
-                    <div className="text-white z-10 text-center">
-                        <h2 className="text-2xl m-0">{slide.title}</h2>
-                        <p className="text-lg my-2">{slide.text}</p>
-                        <div className="mt-4">
-                            <button className="bg-white text-black px-4 py-2 mx-2 border-none cursor-pointer">Button 1</button>
-                            <button className="bg-white text-black px-4 py-2 mx-2 border-none cursor-pointer">Button 2</button>
+        <div className='bg-slate-500'>
+
+            <Slider {...settings}>
+                {slides.map((slide, index) => (
+                    <>
+                        <div key={index} className="relative h-screen flex items-center justify-center">
+                            <div className="text-white z-20 text-center">
+                                <h2 className={`${pacifico.className} text-slate-50 text-center text-6xl mb-6`}>{slide.title}</h2>
+                                <p className="text-lg my-2">{slide.text}</p>
+                                <div className="mt-4">
+                                    <button className="bg-white text-black px-4 py-2 mx-2 border-none cursor-pointer">Button 1</button>
+                                    <button className="bg-white text-black px-4 py-2 mx-2 border-none cursor-pointer">Button 2</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            ))}
-        </Slider>
-    );
-};
+                        <div
+                            style={{ backgroundImage: `url(${slide.bgImg}) ` }}
+                            className="absolute top-0 left-0 right-0 bottom-0 bg-cover bg-center -z-10 flex items-center justify-center text-center opacity-50 "
+                        >
+                        </div>
+                    </>
+                ))}
+            </Slider>
+            <div className={styles['slick-dots']}>
+                {slides.map((_, index) => (
+                    <div
+                        key={index}
+                        className={`${styles['slick-dot']} ${index === activeSlide ? styles['slick-active'] : ''}`}
+                    ></div>
+                ))}
+            </div>
+
+        </div>
+    )
+}
 
 export default FullscreenSlider;
