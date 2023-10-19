@@ -30,7 +30,7 @@ function ProductCard({ product }) {
         className="max-h-[11.1rem] mx-auto mb-7"
       />
       <h3 className={`${amatic.className} text-slate-900 font-bold text-center text-2xl leading-[0.7]`}>{product.name}</h3>
-      <ul className="text-gray-600 list-disc mt-3 max-w-[75%]">{product.description.map((e) => <li className={`${roboto.className} md:w-8/12 text-sm `}>{e}</li>)}</ul>
+      <ul className="text-gray-600 list-disc mt-3 max-w-[75%]">{product.description.map((e) => <li key={e} className={`${roboto.className} md:w-8/12 text-sm `}>{e}</li>)}</ul>
         <div className={`${roboto.className} bg-black text-white flex justify-evenly items-cente text-[14px] font-[600] px-6 py-4 rounded-full w-[75%] z-50`}>
       <a href={product.demo}
       >
