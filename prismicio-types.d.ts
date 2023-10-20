@@ -1008,6 +1008,17 @@ interface QuinceDocumentData {
    */
   frase_extra: prismic.KeyTextField;
   /**
+   * frase regalos field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.frase_regalos
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  frase_regalos: prismic.KeyTextField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

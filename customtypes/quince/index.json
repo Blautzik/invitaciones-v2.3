@@ -155,6 +155,10 @@
         "type": "Text",
         "config": { "label": "fraseExtra", "placeholder": "" }
       },
+      "frase_regalos": {
+        "type": "Text",
+        "config": { "label": "frase regalos", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
