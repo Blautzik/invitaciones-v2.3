@@ -997,6 +997,17 @@ interface QuinceDocumentData {
    */
   fondo_sugerido: prismic.KeyTextField;
   /**
+   * fraseExtra field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.frase_extra
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  frase_extra: prismic.KeyTextField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

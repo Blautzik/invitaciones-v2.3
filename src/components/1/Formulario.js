@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { GoCheckCircle } from 'react-icons/go'
 
-const Formulario = ({ form_id }) => {
+const Formulario = ({ form_id, frase_extra }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -110,7 +110,7 @@ const Formulario = ({ form_id }) => {
                         </div>
                         <div className="flex items-center justify-center">
                             <label htmlFor="message" className="sr-only">Message</label>
-                            <textarea value={message} onChange={e => setMessage(e.target.value)} id="message" className={`${inputCN} pt-4 !h-40`} placeholder="Comentarios y saludos" />
+                            <textarea value={message} onChange={e => setMessage(e.target.value)} id="message" className={`${inputCN} pt-4 !h-40`} placeholder={frase_extra || "Comentarios y saludos"} />
                         </div>
 
                         <div className="flex items-end  justify-end mr-">

@@ -42,10 +42,12 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
 
                 {
                     tw_link &&
+                    <a href={tw_link} target="_blank" >
                     <div className=" border-black text-black flex items-center border rounded-full h-16 w-16">
 
                         <RiTwitterLine className="text-xl m-auto" />
                     </div>
+                    </a>
                 }
 
                 {
