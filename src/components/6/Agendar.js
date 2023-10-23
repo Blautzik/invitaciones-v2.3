@@ -24,15 +24,17 @@ const Agendar = ({foto, links}) => {
             </a>
                 </div>
             <div className="shadow-2xl">
-
-                <Image
+                {
+                    foto &&
+                    <Image
                     src={foto}
                     width={300}
                     height={80}
                     style={{
                         borderRadius: 5,
                     }}
-                />
+                    />
+                }
             </div>
 
 
