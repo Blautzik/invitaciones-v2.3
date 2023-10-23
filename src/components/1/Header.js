@@ -4,7 +4,7 @@ import moment from "moment/moment";
 import Image from 'next/image';
 
 
-const Header = ({ coverImage, title, date, content, foto_pc }) => {
+const Header = ({ coverImage, title, date, content, foto_pc, frase_portada }) => {
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 5%',
@@ -51,7 +51,7 @@ const Header = ({ coverImage, title, date, content, foto_pc }) => {
 
                 <div className='bg-[#fff] text-center '>
                     <h1 className={`${minion.className} text-slate-900 font-[100] text-center text-8xl leading-[0.7]`}>{title.toUpperCase()}</h1>
-                    <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>MIS 15 AÑOS</h3>
+                    <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>{ frase_portada || 'MIS 15 AÑOS'}</h3>
                     <p className={`${openSans.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>
                 </div>
             </div>           

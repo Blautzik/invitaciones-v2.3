@@ -62,6 +62,7 @@ const Invitacion = ({ article }) => {
                 date={article.data.fecha}
                 content={article.data.frase}
                 foto_pc={prismic.asImageSrc(article.data.foto_pc)}
+                frase_portada={article.data.frase_portada}
 
               />
 
@@ -145,10 +146,15 @@ const Invitacion = ({ article }) => {
                     alt='portada'
                   />
                 }
+
+                
                 <div className='z-50'>
 
-                  <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
+                  {/* <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} /> */}
                 </div>
+
+
+
               </section>
 
               <section className='relative pt-5'>

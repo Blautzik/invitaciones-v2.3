@@ -159,6 +159,10 @@
         "type": "Text",
         "config": { "label": "frase regalos", "placeholder": "" }
       },
+      "frase_portada": {
+        "type": "Text",
+        "config": { "label": "frase portada", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
