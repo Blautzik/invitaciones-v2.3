@@ -22,15 +22,17 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
                 </a>
             </div>
             <div className="shadow-2xl mb-4">
-
-                <Image
+                {
+                    foto_agendar &&
+                    <Image
                     src={foto_agendar}
                     width={300}
                     height={80}
                     style={{
                         borderRadius: 5,
                     }}
-                />
+                    />
+                }
             </div>
             <div className="md:w-96 w-10/12 flex items-center justify-evenly pb-24 mt-10">
                 {
