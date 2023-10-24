@@ -42,6 +42,7 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
                     </div>
                 }
 
+
                 {
                     tw_link &&
                     <a href={tw_link} target="_blank" >
