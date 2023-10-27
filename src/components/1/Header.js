@@ -26,23 +26,23 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada }) =>
                     quality={100}
                     style={imageStyle}
                     alt='portada'
-                    
+
                 />
                 <div className='absolute bottom-0 left-0 md:bg-none bg-cover bg-footer-texture translate-y-1 h-24 w-full z-50'></div>
             </div>
             <div className='hidden md:block h-[70vh] bg-center bg-cover relative top-0 w-full'>
-            <div className=" top-0 bg-slate-800"></div>
-                    <Image
-                        src={foto_pc}
-                        fill
-                        quality={100}
-                        style={imageStyle}
-                        alt='portada'
-                    />
-                </div>
+                <div className=" top-0 bg-slate-800"></div>
+                <Image
+                    src={foto_pc}
+                    fill
+                    quality={100}
+                    style={imageStyle}
+                    alt='portada'
+                />
+            </div>
             <div className='w-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>
-                    <div className='flex w-full justify-center '> 
+                    <div className='flex w-full justify-center '>
                         <span className='border-b w-1/4 border-b-[#3b1b55] h-5 mx-3'></span>
                         <h3 className={`${playFair.className} text-slate-600 text-2xl mb-6`}>{dateFormated}</h3>
                         <span className='border-b w-1/4 border-b-[#3b1b55] h-5 mx-3'></span>
@@ -50,11 +50,13 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada }) =>
                 </div>
 
                 <div className='bg-[#fff] text-center '>
-                    <h1 className={`${minion.className} text-slate-900 font-[100] text-center text-8xl leading-[0.7]`}>{title.toUpperCase()}</h1>
-                    <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>{ frase_portada || 'MIS 15 AÑOS'}</h3>
+                    <h1 className={`${minion.className} text-slate-900 ${title.length > 6 ? 'text-7xl' : 'text-8xl'  } font-[100] text-center leading-[0.7]`}>
+                        {title.toUpperCase()}
+                    </h1>
+                    <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>{frase_portada || 'MIS 15 AÑOS'}</h3>
                     <p className={`${openSans.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>
                 </div>
-            </div>           
+            </div>
 
         </div>
     )

@@ -27,17 +27,17 @@ export default function Gallery({ imagenes, titulo }) {
     setModalOpen(false)
   }
 
+  
 
-
-  const images = [
-    imagenes[0].foto1,
-    imagenes[0].foto2,
-    imagenes[0].foto3,
-    imagenes[0].foto4,
-    imagenes[0].foto5,
-    imagenes[0].foto6,
-
-  ]
+  const images = [];
+  const imagenesArr = imagenes[0];
+  
+  for (let i = 1; i <= 6; i++) {
+    const foto = imagenesArr[`foto${i}`];
+    if (foto) {
+      images.push(foto);
+    }
+  }
 
   const portadaVideo = imagenes[0].foto7
 

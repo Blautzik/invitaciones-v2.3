@@ -103,14 +103,26 @@ function LandingPage() {
     {
       id: 1,
       title: 'Invitaciones Interactivas',
-      description: 'Description for Product 5',
-      bgImg: 'https://res.cloudinary.com/fedexx/image/upload/v1695161045/regalos-chicas-15-anos-ideas_qzipkj.webp'
+      text: 'Conocé nuestros modelos y elegí el mejor para tu evento',
+      btn1: 'Bodas',
+      btn2: 'Quince',
+      bgImg: 'https://res.cloudinary.com/fedexx/image/upload/v1697037352/invi/ORYCJZ0-e1556109570462_jyrwvy.jpg'
     },
     {
       id: 2,
       title: 'Tarjetas Movedizas',
-      description: 'Description for Product 5',
+      text: 'Una opción moderna y ecológica para invitar a los que mas querés',
+      btn1: 'Bodas',
+      btn2: 'Quince',
       bgImg: 'https://res.cloudinary.com/fedexx/image/upload/v1694460733/A-1191-480x543_gjlyce.jpg'
+    },
+    {
+      id: 3,
+      text: 'Eventos personalizados: Sabemos cada evento es único y tenemos una opción para cada uno',
+      title: 'Invitaciones Interactivas',
+      btn1: 'Empresariales',
+      btn2: 'Personalizadas',
+      bgImg: 'https://res.cloudinary.com/fedexx/image/upload/v1698410332/invi/Header_Image_BLOG_ES_-_CON_Logo_ES_17_fbpwl9.webp'
     },
   ]
 
@@ -132,7 +144,7 @@ function LandingPage() {
 
 
       {/* Product Slider 1 */}
-      <section className="py-16 bg-[#fafafa]">
+      <section className="py-16">
         <div className="container mx-auto">
           <h2 className={`${amatic.className} text-slate-900  text-5xl leading-[0.7] text-center`}>BODAS</h2>
           <Slider {...sliderSettings} className="slider">

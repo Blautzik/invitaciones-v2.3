@@ -24,18 +24,18 @@ const FullscreenSlider = ({ slides }) => {
 
 
     return (
-        <div className='bg-slate-500'>
+        <div className='bg-slate-600'>
 
             <Slider {...settings}>
                 {slides.map((slide, index) => (
                     <>
                         <div key={index} className="relative h-screen flex items-center justify-center">
-                            <div className="text-white z-20 text-center">
-                                <h2 className={`${pacifico.className} text-slate-50 text-center text-6xl mb-6`}>{slide.title}</h2>
-                                <p className="text-lg my-2">{slide.text}</p>
+                            <div className="text-white z-20 text-center flex flex-col items-center">
+                                <h2 className={`${pacifico.className} text-slate-50 text-center text-6xl mb-6`}>Invitaciones Interactivas</h2>
+                                <p className="text-lg my-2 w-9/12">{slide.text}</p>
                                 <div className="mt-4">
-                                    <button className="bg-white text-black px-4 py-2 mx-2 border-none cursor-pointer">Button 1</button>
-                                    <button className="bg-white text-black px-4 py-2 mx-2 border-none cursor-pointer">Button 2</button>
+                                    <button className="border-solid rounded-md border-2 border-white text-white px-4 py-2 mx-2 font-bold cursor-pointer">{slide.btn1}</button>
+                                    <button className="border-solid rounded-md border-2 border-white text-white px-4 py-2 mx-2 font-bold cursor-pointer">{slide.btn2}</button>
                                 </div>
                             </div>
                         </div>
