@@ -16,7 +16,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada }) =>
     const dateFormated = moment(date).format('DD-MM-YYYY')
 
     return (
-        <div className="">
+        <div className=" ">
 
             <div className="md:hidden relative top-0 w-full h-[60vh] md:h-[70vh] bg-center bg-cover ">
                 <div className=" top-0 bg-slate-800"></div>
