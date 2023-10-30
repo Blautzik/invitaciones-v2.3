@@ -24,6 +24,7 @@ const Invitacion = ({ article }) => {
     opacity: 0.65,
   }
 
+  
   const imageStyleFlipped = {
     objectFit: 'cover',
     objectPosition: '50% 100%',
