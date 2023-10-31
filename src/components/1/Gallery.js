@@ -20,15 +20,9 @@ export default function Gallery({ imagenes, titulo }) {
 
   }
 
-  const handleScroll = () => {
-    setModalOpen(false)
-  }
-
-  
-
   const images = [];
   const imagenesArr = imagenes[0];
-  
+
   for (let i = 1; i <= 6; i++) {
     const foto = imagenesArr[`foto${i}`];
     if (foto) {
@@ -41,7 +35,7 @@ export default function Gallery({ imagenes, titulo }) {
   const customTheme = {
     content: {
       "base": "h-full w-full p-4 md:h-auto",
-      "inner": "rounded-lg bg-transparent shadow flex flex-col max-h-[90vh]"
+      "inner": "rounded-lg bg-transparent shadow flex flex-col "
     },
     header: {
       close: {
@@ -54,29 +48,29 @@ export default function Gallery({ imagenes, titulo }) {
   return (
     <>
 
-      <div
-        className="flex flex-col items-center bg-[#fff] z-10 w-screen text-center">
-          <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
+      <div className="flex flex-col items-center bg-[#fff] z-10 w-screen text-center">
+        <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
         <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
           {images.map(e => <div
-            initial={{
-              opacity: 0,
-            }}
-            transition={{
-              duration: 0.9,
-            }}
-            whileInView={{
-              opacity: 1,
-            }}
             key={e}
-            className='rounded drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-[24rem] md:w-[40%] md:gap-1'
+            className='rounded drop-shadow-2xl hover:z-10 transition-all relative'
+            style={{
+              width: '100%', // Set a fixed width (adjust as needed)
+              height: '160px', // Set a fixed height (adjust as needed)
+              overflow: 'hidden', // Ensure consistent sizing
+              objectFit: 'cover', // Ensure consistent image display
+            }}
             onClick={() => openClose(images.indexOf(e))}>
             <Image
               src={e}
-              fill
               alt='foto'
               quality={50}
-              style={{ objectFit: "cover", borderRadius: '5px', objectPosition:'top'}}
+              fill // Use 'layout="fill"' to fill the container
+              style={{
+                borderRadius: '5px',
+                objectFit:"cover", // Ensure consistent image display
+                objectPosition:'top'
+              }}
             />
           </div>
           )}
