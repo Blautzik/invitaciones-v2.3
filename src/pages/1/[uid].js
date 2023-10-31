@@ -63,6 +63,7 @@ const Invitacion = ({ article }) => {
                 content={article.data.frase}
                 foto_pc={prismic.asImageSrc(article.data.foto_pc)}
                 frase_portada={article.data.frase_portada}
+                sin_ondas={article.data.sin_ondas}
               />
             </section>
 

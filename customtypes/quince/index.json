@@ -163,6 +163,15 @@
         "type": "Text",
         "config": { "label": "frase portada", "placeholder": "" }
       },
+      "sin_ondas": {
+        "type": "Boolean",
+        "config": {
+          "label": "sin ondas",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

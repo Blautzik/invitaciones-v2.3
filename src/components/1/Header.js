@@ -4,7 +4,7 @@ import moment from "moment/moment";
 import Image from 'next/image';
 
 
-const Header = ({ coverImage, title, date, content, foto_pc, frase_portada }) => {
+const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_ondas }) => {
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 5%',
@@ -28,7 +28,10 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada }) =>
                     alt='portada'
 
                 />
-                <div className='absolute bottom-0 left-0 md:bg-none bg-cover bg-footer-texture translate-y-1 h-24 w-full z-50'></div>
+                {
+                    !sin_ondas &&
+                    <div className='absolute bottom-0 left-0 md:bg-none bg-cover bg-footer-texture translate-y-1 h-24 w-full z-50'></div>  
+                }
             </div>
             <div className='hidden md:block h-[70vh] bg-center bg-cover relative top-0 w-full'>
                 <div className=" top-0 bg-slate-800"></div>

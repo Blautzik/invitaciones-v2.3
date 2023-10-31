@@ -55,7 +55,7 @@ export default function Gallery({ imagenes, titulo }) {
             key={e}
             className='rounded drop-shadow-2xl hover:z-10 transition-all relative'
             style={{
-              width: '100%', // Set a fixed width (adjust as needed)
+              width: '98%', // Set a fixed width (adjust as needed)
               height: '160px', // Set a fixed height (adjust as needed)
               overflow: 'hidden', // Ensure consistent sizing
               objectFit: 'cover', // Ensure consistent image display
