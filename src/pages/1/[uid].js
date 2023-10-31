@@ -68,7 +68,7 @@ const Invitacion = ({ article }) => {
 
 
 
-            <div className=''>
+            <div>
 
 
               <motion.div
@@ -90,9 +90,9 @@ const Invitacion = ({ article }) => {
 
 
 
-              <section className='overflow-x-hidden'>
+              <section>
                 <motion.div>
-                  <div className="h-full w-full flex flex-col relative items-center justify-between ">
+                  <div className="h-full w-full flex flex-col items-center justify-between ">
                     {
                       article.data.fondo_sugerido &&
                       <Image
@@ -165,7 +165,6 @@ const Invitacion = ({ article }) => {
               </section>
             </div>
           </main>
-
         </div>
       </>
 

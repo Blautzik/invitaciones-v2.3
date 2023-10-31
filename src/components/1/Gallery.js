@@ -1,5 +1,4 @@
 import { AiOutlinePlayCircle } from "react-icons/ai";
-
 import { useState } from 'react'
 import { easeInOut, easeIn, motion } from "framer-motion"
 import Image from 'next/image'
@@ -41,12 +40,12 @@ export default function Gallery({ imagenes, titulo }) {
 
   const customTheme = {
     content: {
-      "base": " h-full w-full p-4 md:h-auto",
+      "base": "h-full w-full p-4 md:h-auto",
       "inner": "rounded-lg bg-transparent shadow flex flex-col max-h-[90vh]"
     },
     header: {
       close: {
-        base: " inline-flex items-center rounded-lg bg-transparent p-1.5 text-lg text-gray-900 ",
+        base: " ",
         icon: "h-8 w-8"
       }
     },
