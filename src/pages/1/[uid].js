@@ -24,7 +24,7 @@ const Invitacion = ({ article }) => {
     opacity: 0.65,
   }
 
-  
+
   const imageStyleFlipped = {
     objectFit: 'cover',
     objectPosition: '50% 100%',
@@ -51,12 +51,11 @@ const Invitacion = ({ article }) => {
             <Audiowe music={article.data.music} />
           </div>
         }
-        <div className='flex flex-col  justify-center items-center'>
+        <div className='flex flex-col justify-center items-center'>
 
           <main className="" >
 
             <section className='z-10'>
-
               <Header
                 title={article.data.title}
                 coverImage={prismic.asImageSrc(article.data.foto)}
@@ -64,10 +63,7 @@ const Invitacion = ({ article }) => {
                 content={article.data.frase}
                 foto_pc={prismic.asImageSrc(article.data.foto_pc)}
                 frase_portada={article.data.frase_portada}
-
               />
-
-
             </section>
 
 
@@ -94,12 +90,9 @@ const Invitacion = ({ article }) => {
 
 
 
-              <section className=' overflow-x-hidden  '>
-                <motion.div
-
-                  className=''>
-
-                  <div className="h-full  w-full flex flex-col relative items-center justify-between ">
+              <section className='overflow-x-hidden'>
+                <motion.div>
+                  <div className="h-full w-full flex flex-col relative items-center justify-between ">
                     {
                       article.data.fondo_sugerido &&
                       <Image
@@ -110,19 +103,17 @@ const Invitacion = ({ article }) => {
                         alt='portada'
                       />
                     }
-                    <Info className=' '
+                    <Info
                       article={article.data}
                     />
-
                   </div>
                 </motion.div>
-
               </section>
+              
               {
-
                 article.data.galeria[0].foto1 &&
-                <section className="bg-[#fff] mt-12  text-center flex justify-center ">
-                  <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
+                <section className="bg-[#fff] mt-12 text-center flex justify-center ">
+                  <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} />
                 </section>
               }
 

@@ -8,8 +8,6 @@ import GallerySlider from './GallerySlider';
 import { openSans } from "@/utils/fonts";
 
 
-
-
 export default function Gallery({ imagenes, titulo }) {
   const [index, setIndex] = useState(0)
   const [openModal, setOpenModal] = useState();
@@ -41,11 +39,10 @@ export default function Gallery({ imagenes, titulo }) {
 
   const portadaVideo = imagenes[0].foto7
 
-
   const customTheme = {
     content: {
-      "base": "relative h-full w-full p-4 md:h-auto",
-      "inner": "relative rounded-lg bg-transparent shadow flex flex-col max-h-[90vh]"
+      "base": " h-full w-full p-4 md:h-auto",
+      "inner": "rounded-lg bg-transparent shadow flex flex-col max-h-[90vh]"
     },
     header: {
       close: {
@@ -55,37 +52,25 @@ export default function Gallery({ imagenes, titulo }) {
     },
   }
 
-
-
-
   return (
     <>
 
-      <motion.div
-        className="flex flex-col items-center bg-[#fff] z-10 w-screen text center">
+      <div
+        className="flex flex-col items-center bg-[#fff] z-10 w-screen text-center">
           <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
-
-
-
-
         <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
-
-          {images.map(e => <motion.div
+          {images.map(e => <div
             initial={{
               opacity: 0,
-
             }}
             transition={{
               duration: 0.9,
-
             }}
             whileInView={{
               opacity: 1,
-              
             }}
             key={e}
             className='rounded drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-[24rem] md:w-[40%] md:gap-1'
-
             onClick={() => openClose(images.indexOf(e))}>
             <Image
               src={e}
@@ -94,10 +79,10 @@ export default function Gallery({ imagenes, titulo }) {
               quality={50}
               style={{ objectFit: "cover", borderRadius: '5px', objectPosition:'top'}}
             />
-          </motion.div>
+          </div>
           )}
         </div>
-      </motion.div>
+      </div>
 
       <>
         <Modal
@@ -106,8 +91,6 @@ export default function Gallery({ imagenes, titulo }) {
           className='pt-20'
           theme={customTheme}
         >
-
-
           <Modal.Body className='p-0 bg-transparent'>
             <div className='h-96'>
               <GallerySlider images={images} index={index} />
@@ -116,7 +99,6 @@ export default function Gallery({ imagenes, titulo }) {
           <Modal.Footer className='justify-center '>
             <Button className='bg-[#772c87] text-white' onClick={() => props.setOpenModal(undefined)}>Cerrar</Button>
           </Modal.Footer>
-
         </Modal>
       </>
 
