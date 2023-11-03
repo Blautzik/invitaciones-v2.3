@@ -48,15 +48,14 @@ export default function Gallery({ imagenes, titulo }) {
   return (
     <>
 
-      <div className="flex flex-col items-center bg-[#fff] z-10 w-screen text-center">
+      <div className="flex flex-col items-center bg-[#fff] z-10 w-screen md:max-w-4xl text-center">
         <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
-        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
+        <div className="grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
           {images.map(e => <div
             key={e}
-            className='rounded drop-shadow-2xl hover:z-10 transition-all relative'
+            className='rounded drop-shadow-2xl relative h-52 md:h-[350px]'
             style={{
               width: '98%', // Set a fixed width (adjust as needed)
-              height: '160px', // Set a fixed height (adjust as needed)
               overflow: 'hidden', // Ensure consistent sizing
               objectFit: 'cover', // Ensure consistent image display
             }}
