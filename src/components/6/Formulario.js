@@ -1,4 +1,5 @@
 'use client'
+import { openSans } from '@/utils/fonts';
 import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 
@@ -75,8 +76,8 @@ const Formulario = ({ form_id, frase_extra }) => {
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
           <GoCheckCircle className="text-[66px] font-thin text-white" />
-          <h3 className="text-white text-2xl pt-6">Confirmar Asistencia</h3>
-          <p className="text-white text-md max-w-2xl font-[500] pt-20">
+          <h3 className={`${openSans.className} text-white text-2xl my-4 text-center w-10/12 leading-7`}>Confirmar Asistencia</h3>
+          <p  className={`${openSans.className} text-white text-md max-w-2xl font-[500]`}>
             Por favor completá el formulario con tus datos y comentarios para organizar la mejor fiesta
           </p>
         </div>
@@ -125,7 +126,7 @@ const Formulario = ({ form_id, frase_extra }) => {
             />
           </div>
 
-          <h3 className="text-white text-md max-w-2xl font-[500] pl-2">Opciones de menú</h3>
+          <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
           <div className="flex items-center justify-center">
             <select
               name="select"
