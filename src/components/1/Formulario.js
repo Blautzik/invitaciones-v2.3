@@ -112,7 +112,7 @@ const Formulario = ({ form_id, frase_extra }) => {
           </div>
           <div className="flex items-center justify-center">
             <label htmlFor="chicos" className="sr-only">
-              Teléfono
+              Chicos
             </label>
             <input
               value={chicos}

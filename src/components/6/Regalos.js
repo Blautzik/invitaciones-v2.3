@@ -53,7 +53,7 @@ const Regalos = ({article}) => {
                             <p className='pb-2'><strong>Titular: </strong> {article.titular_cuenta}</p>
                             <p className='pb-2'><strong>CBU:</strong> {article.cbu} </p>
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
-                            <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>
+                            <p className='pb-2'><strong>CUIL: </strong> {article.dni}</p>
                         </div>
 
                     </Accordion>

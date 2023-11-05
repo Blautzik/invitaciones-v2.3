@@ -27,16 +27,15 @@ export default function Gallery({ imagenes, titulo, videoId }) {
     setModalOpen(false)
   }
 
+  const images = [];
+  const imagenesArr = imagenes[0];
 
-
-  const images = [
-    imagenes[0].foto1,
-    imagenes[0].foto2,
-    imagenes[0].foto3,
-    imagenes[0].foto4,
-    imagenes[0].foto5,
-    imagenes[0].foto6,
-  ]
+  for (let i = 1; i <= 10; i++) {
+    const foto = imagenesArr[`foto${i}`];
+    if (foto) {
+      images.push(foto);
+    }
+  }
 
   const portadaVideo = imagenes[0].foto7
 
@@ -65,7 +64,9 @@ export default function Gallery({ imagenes, titulo, videoId }) {
     <>
 
     <GalleryTitle titulo={titulo}/>
-      <div className='bg-gray-500 my-12'>
+      {
+        videoId &&
+        <div className='bg-gray-500 my-12'>
         {!showVideo ? <div >
           <div className='w-full relative bg-cover opacity-70 flex flex-col items-center justify-center' onClick={() => setShowVideo(!showVideo)}>
             <Image 
@@ -79,13 +80,14 @@ export default function Gallery({ imagenes, titulo, videoId }) {
           : <YouTubePlayer videoId={videoId} className='' />
         }
       </div>
+        }
       <motion.div
         className="flex flex-col items-center bg-[#fff] z-10 w-screen text center">
 
 
 
 
-        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
+        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10 relative">
 
           {images.map(e => <motion.div
             initial={{
@@ -102,7 +104,7 @@ export default function Gallery({ imagenes, titulo, videoId }) {
               
             }}
             key={e}
-            className='rounded  drop-shadow-2xl hover:z-10 transition-all object-cover h-40 w-[98%] md:h-[40rem] md:w-[45%]'
+            className='rounded  drop-shadow-2xl hover:z-10 transition-all object-cover h-52 w-[98%] md:h-[40rem] md:w-[45%]'
 
             onClick={() => openClose(images.indexOf(e))}>
             <Image

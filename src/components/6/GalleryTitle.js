@@ -21,7 +21,7 @@ const GalleryTitle = ({titulo}) => {
                     opacity: 1,
                     scale: 1,
                 }}
-                className={`${comfortaa.className} text-gray-500 leading-10 text-[1.5rem] w-10/12 text-center mt-6 mb-8 font-[400]`}>{titulo}...
+                className={`${comfortaa.className} text-gray-500 leading-10 text-[1.5rem] w-10/12 text-center mt-6 mb-8 font-[400]`}>{titulo}
             </motion.div>
         </div>
     )

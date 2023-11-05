@@ -30,17 +30,31 @@ const Info = ({ article }) => {
                 </div>
                 <h3 className={`${comfortaa.className} text-slate-700 sm:text-2xl xs:text-xl mb-10 font-[700] text-center`}>La Ceremonia</h3>
 
+{
+                article.foto_ceremonia ?
                 <Image
-                    src='https://res.cloudinary.com/fedexx/image/upload/v1694286992/03-ceremonia-1_reblw1.jpg'
-                    height={10}
-                    width={300}
-                    style={{
-                        objectFit: 'cover',
-                        position: 'relative',
-                        marginBottom: 48,
-                        borderRadius: 5
-                    }}
+                src={article.foto_ceremonia}
+                height={10}
+                width={300}
+                style={{
+                    objectFit: 'cover',
+                    position: 'relative',
+                    marginBottom: 48,
+                    borderRadius: 5
+                }}
+                />:
+                <Image
+                src='https://res.cloudinary.com/fedexx/image/upload/v1694286992/03-ceremonia-1_reblw1.jpg'
+                height={10}
+                width={300}
+                style={{
+                    objectFit: 'cover',
+                    position: 'relative',
+                    marginBottom: 48,
+                    borderRadius: 5
+                }}
                 />
+        }
 
                 <div className={`${openSans.className}my-4 text-center leading-7`}>
 

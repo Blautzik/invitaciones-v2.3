@@ -398,6 +398,28 @@ interface BodaDocumentData {
    */
   form_id: prismic.KeyTextField;
   /**
+   * link salon field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.link_salon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  link_salon: prismic.KeyTextField;
+  /**
+   * foto ceremonia field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.foto_ceremonia
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto_ceremonia: prismic.KeyTextField;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

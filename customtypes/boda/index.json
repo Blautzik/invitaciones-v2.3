@@ -163,6 +163,14 @@
         "type": "Text",
         "config": { "label": "form_id", "placeholder": "" }
       },
+      "link_salon": {
+        "type": "Text",
+        "config": { "label": "link salon", "placeholder": "" }
+      },
+      "foto_ceremonia": {
+        "type": "Text",
+        "config": { "label": "foto ceremonia", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
