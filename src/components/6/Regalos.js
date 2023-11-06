@@ -50,7 +50,7 @@ const Regalos = ({article}) => {
                 <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 opacity-70`}>
                     <Accordion open header="Datos Bancarios" className='bg-violeta'>
                         <div className={`${openSans.className} text-sm font-thin opacity-100`}>
-                            <p className='pb-2'><strong>Titular: </strong> {article.titular_cuenta}</p>
+                            {article.titular_cuenta && <p className='pb-2'><strong>Titular: </strong> {article.titular_cuenta}</p>}
                             <p className='pb-2'><strong>CBU:</strong> {article.cbu} </p>
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
                             <p className='pb-2'><strong>CUIL: </strong> {article.dni}</p>
