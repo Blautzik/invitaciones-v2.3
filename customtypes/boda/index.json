@@ -171,6 +171,10 @@
         "type": "Text",
         "config": { "label": "foto ceremonia", "placeholder": "" }
       },
+      "music": {
+        "type": "Text",
+        "config": { "label": "music", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

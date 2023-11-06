@@ -420,6 +420,17 @@ interface BodaDocumentData {
    */
   foto_ceremonia: prismic.KeyTextField;
   /**
+   * music field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.music
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  music: prismic.KeyTextField;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

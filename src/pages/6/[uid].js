@@ -8,6 +8,7 @@ import Formulario from "@/components/6/Formulario";
 import Agendar from "src/components/6/Agendar";
 import Gallery from "src/components/6/Gallery";
 import Head from 'next/head';
+import Audiowe from "@/components/Audiowe";
 
 
 
@@ -26,6 +27,14 @@ const seis = ({ article }) => {
                 <meta property="og:description" content={article.data.title} />
 
             </Head>
+
+
+            {article.data.music &&
+                <div className='fixed bottom-4 right-0 z-50'>
+                    <Audiowe music={article.data.music} />
+                </div>
+            }
+
             <div className="mb-16">
                 <Header title={article.data.title}
                     coverImage={prismic.asImageSrc(article.data.foto)}
@@ -41,7 +50,7 @@ const seis = ({ article }) => {
 
 
             <div>
-                <Regalos article={article.data}/>
+                <Regalos article={article.data} />
             </div>
 
             <div>
@@ -49,7 +58,7 @@ const seis = ({ article }) => {
             </div>
 
             <div>
-                <Formulario form_id={article.data.form_id}/>
+                <Formulario form_id={article.data.form_id} />
             </div>
 
 
