@@ -87,7 +87,7 @@ export default function Gallery({ imagenes, titulo, videoId }) {
 
 
 
-        <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10 relative">
+        <div className="grid grid-cols-2  gap-y-1 md:justify-center md:gap-1 md:max-w-3xl w-full pl-1 mb-10 relative">
 
         {images.map(e => <div
             key={e}
