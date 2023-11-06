@@ -132,6 +132,7 @@ export default function Gallery({ imagenes, titulo, videoId }) {
             <button className={`${openSans.className} bg-black text-white flex justify-evenly items-center  text-[14px] font-[600] px-4 py-3 rounded-full `} onClick={() => props.setOpenModal(undefined)}>CERRAR X</button>
           </Modal.Footer>
 
+
         </Modal>
       </>
 
