@@ -89,32 +89,27 @@ export default function Gallery({ imagenes, titulo, videoId }) {
 
         <div className="md:flex md:flex-wrap grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10 relative">
 
-          {images.map(e => <motion.div
-            initial={{
-              opacity: 0,
-
-
-            }}
-            transition={{
-              duration: 0.9,
-
-            }}
-            whileInView={{
-              opacity: 1,
-              
-            }}
+        {images.map(e => <div
             key={e}
-            className='rounded  drop-shadow-2xl hover:z-10 transition-all object-cover h-52 w-[98%] md:h-[40rem] md:w-[45%]'
-
+            className='rounded drop-shadow-2xl relative h-52 md:h-[350px]'
+            style={{
+              width: '98%', // Set a fixed width (adjust as needed)
+              overflow: 'hidden', // Ensure consistent sizing
+              objectFit: 'cover', // Ensure consistent image display
+            }}
             onClick={() => openClose(images.indexOf(e))}>
             <Image
               src={e}
-              fill
               alt='foto'
-              quality={10}
-              style={{ objectFit: "cover", borderRadius: '5px', objectPosition:'top'}}
+              quality={50}
+              fill // Use 'layout="fill"' to fill the container
+              style={{
+                borderRadius: '5px',
+                objectFit:"cover", // Ensure consistent image display
+                objectPosition:'top'
+              }}
             />
-          </motion.div>
+          </div>
           )}
         </div>
       </motion.div>
