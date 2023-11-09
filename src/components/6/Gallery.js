@@ -133,6 +133,7 @@ export default function Gallery({ imagenes, titulo, videoId }) {
           </Modal.Footer>
 
         </Modal>
+        
       </>
 
     </>
