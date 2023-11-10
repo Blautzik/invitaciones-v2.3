@@ -175,6 +175,18 @@
         "type": "Text",
         "config": { "label": "music", "placeholder": "" }
       },
+      "fecha_string": {
+        "type": "Text",
+        "config": { "label": "fecha string", "placeholder": "" }
+      },
+      "dress_code": {
+        "type": "Text",
+        "config": { "label": "dress code", "placeholder": "" }
+      },
+      "fecha_ceremonia_string": {
+        "type": "Text",
+        "config": { "label": "fecha ceremonia string", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -431,6 +431,39 @@ interface BodaDocumentData {
    */
   music: prismic.KeyTextField;
   /**
+   * fecha string field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.fecha_string
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  fecha_string: prismic.KeyTextField;
+  /**
+   * dress code field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.dress_code
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  dress_code: prismic.KeyTextField;
+  /**
+   * fecha ceremonia string field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.fecha_ceremonia_string
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  fecha_ceremonia_string: prismic.KeyTextField;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

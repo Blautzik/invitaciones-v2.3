@@ -6,7 +6,7 @@ import ceremoniaIcon from '../../../public/fiestas-11.png'
 import fiestaIcon from '../../../public/fiestas-12.png'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
-
+import suitIcon from '../../../public/suit (1).png'
 
 const Info = ({ article }) => {
 
@@ -30,35 +30,35 @@ const Info = ({ article }) => {
                 </div>
                 <h3 className={`${comfortaa.className} text-slate-700 sm:text-2xl xs:text-xl mb-10 font-[700] text-center`}>La Ceremonia</h3>
 
-{
-                article.foto_ceremonia ?
-                <Image
-                src={article.foto_ceremonia}
-                height={10}
-                width={300}
-                style={{
-                    objectFit: 'cover',
-                    position: 'relative',
-                    marginBottom: 48,
-                    borderRadius: 5
-                }}
-                />:
-                <Image
-                src='https://res.cloudinary.com/fedexx/image/upload/v1694286992/03-ceremonia-1_reblw1.jpg'
-                height={10}
-                width={300}
-                style={{
-                    objectFit: 'cover',
-                    position: 'relative',
-                    marginBottom: 48,
-                    borderRadius: 5
-                }}
-                />
-        }
+                {
+                    article.foto_ceremonia ?
+                        <Image
+                            src={article.foto_ceremonia}
+                            height={10}
+                            width={300}
+                            style={{
+                                objectFit: 'cover',
+                                position: 'relative',
+                                marginBottom: 48,
+                                borderRadius: 5
+                            }}
+                        /> :
+                        <Image
+                            src='https://res.cloudinary.com/fedexx/image/upload/v1694286992/03-ceremonia-1_reblw1.jpg'
+                            height={10}
+                            width={300}
+                            style={{
+                                objectFit: 'cover',
+                                position: 'relative',
+                                marginBottom: 48,
+                                borderRadius: 5
+                            }}
+                        />
+                }
 
                 <div className={`${openSans.className}my-4 text-center leading-7`}>
 
-                    <p className={textito}><strong>Fecha: </strong> {formattedDate} </p>
+                    <p className={textito}><strong>Fecha: </strong> {article.fecha_string} </p>
                     <p className={textito}><strong>Hora: </strong> {article.hora_string}</p>
                     <p className={textito}><strong>Lugar: </strong> {article.nombre_lugar_civil}</p>
                     <p className={textito}>{article.direccion_civil}</p>
@@ -115,28 +115,28 @@ const Info = ({ article }) => {
 
                 <div className={`${openSans.className}my-4 text-center w-10/12 leading-7`}>
 
-                    <p className={textito}><strong>Fecha: </strong> {formattedDate} </p>
+                    <p className={textito}><strong>Fecha: </strong> {article.fecha_ceremonia_string} </p>
                     <p className={textito}><strong>Hora: </strong>{article.hora_fiesta_string}</p>
                     <p className={textito}><strong>Salón: </strong> {article.salon}</p>
                     <p className={textito}>{article.direccion_salon}</p>
                 </div>
 
-                <Image
-                    src='https://res.cloudinary.com/fedexx/image/upload/v1694287632/suit_vrr9ez.png'
-                    width={28}
-                    height={28}
-                    style={{
-                        objectFit: 'cover',
-                        position: 'relative',
-                        opacity: 0.8,
-                        marginBottom: 24,
-                        marginTop: 16,
-                    }}
-                />
+                <div className='flex flex-col items-center mt-6'>
+                    <h3 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
+                    <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
+                    <div className='h-16 w-16 relative m-6'>
+
+                        <Image
+                            src={suitIcon}
+                            fill
+                        />
+                    </div>
+                </div>
+
                 <a href={article.ubicacion} target='_blank'>
 
-                <button className={`${openSans.className} flex flex-row py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
-                    <PiMapPin className=' text-lg mr-1' /> LLEGAR A LA FIESTA</button>
+                    <button className={`${openSans.className} flex flex-row py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
+                        <PiMapPin className=' text-lg mr-1' /> LLEGAR A LA FIESTA</button>
                 </a>
             </div>
         </div>
