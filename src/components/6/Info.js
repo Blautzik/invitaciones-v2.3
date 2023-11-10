@@ -107,6 +107,7 @@ const Info = ({ article }) => {
                     <p className={textito}><strong>Hora: </strong>{article.hora_fiesta_string}</p>
                     <p className={textito}><strong>Salón: </strong> {article.salon}</p>
                     <p className={textito}>{article.direccion_salon}</p>
+                    
                 </div>
 
                 <div className='flex flex-col items-center mt-6'>
