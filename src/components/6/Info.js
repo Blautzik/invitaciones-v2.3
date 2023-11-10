@@ -107,7 +107,7 @@ const Info = ({ article }) => {
                     <p className={textito}><strong>Hora: </strong>{article.hora_fiesta_string}</p>
                     <p className={textito}><strong>Salón: </strong> {article.salon}</p>
                     <p className={textito}>{article.direccion_salon}</p>
-                    
+
                 </div>
 
                 <div className='flex flex-col items-center mt-6'>
@@ -125,7 +125,8 @@ const Info = ({ article }) => {
                 <a href={article.ubicacion} target='_blank'>
 
                     <button className={`${openSans.className} flex flex-row py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
-                        <PiMapPin className=' text-lg mr-1' /> LLEGAR A LA FIESTA</button>
+                        <PiMapPin className=' text-lg mr-1' /> 
+                            LLEGAR A LA FIESTA</button>
                 </a>
             </div>
         </div>

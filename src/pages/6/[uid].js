@@ -49,7 +49,7 @@ const seis = ({ article }) => {
             </div>
 
 
-            {article.data.cbu &&
+            {article.data.cbu || article.data.regalo_sin_datos &&
                 <div>
                     <Regalos article={article.data} />
                 </div>
@@ -58,7 +58,7 @@ const seis = ({ article }) => {
             <div>
 
                 <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} videoId={article.data.video_id} />
-                
+
             </div>
 
             <div>

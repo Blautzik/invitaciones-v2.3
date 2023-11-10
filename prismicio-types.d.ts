@@ -464,6 +464,18 @@ interface BodaDocumentData {
    */
   fecha_ceremonia_string: prismic.KeyTextField;
   /**
+   * regalo sin datos field in *boda*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: boda.regalo_sin_datos
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  regalo_sin_datos: prismic.BooleanField;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

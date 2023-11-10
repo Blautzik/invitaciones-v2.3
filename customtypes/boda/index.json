@@ -187,6 +187,15 @@
         "type": "Text",
         "config": { "label": "fecha ceremonia string", "placeholder": "" }
       },
+      "regalo_sin_datos": {
+        "type": "Boolean",
+        "config": {
+          "label": "regalo sin datos",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
