@@ -799,6 +799,17 @@ interface QuinceDocumentData {
    */
   fecha: prismic.DateField;
   /**
+   * fecha string field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.fecha_string
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  fecha_string: prismic.KeyTextField;
+  /**
    * galeria field in *quince*
    *
    * - **Field Type**: Group

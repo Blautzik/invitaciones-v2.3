@@ -27,6 +27,10 @@
         "type": "Date",
         "config": { "label": "Fecha", "placeholder": "" }
       },
+      "fecha_string": {
+        "type": "Text",
+        "config": { "label": "fecha string", "placeholder": "" }
+      },
       "galeria": {
         "type": "Group",
         "config": {

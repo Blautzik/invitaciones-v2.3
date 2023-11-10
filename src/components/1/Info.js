@@ -83,7 +83,7 @@ const Info = ({ article }) => {
                             >
 
                                 <h4 className={`${openSans.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)} - {article.hora_string}</p>
+                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{article.fecha_string} - {article.hora_string}</p>
 
 
                             </motion.div>

@@ -64,21 +64,9 @@ const Info = ({ article }) => {
                     <p className={textito}>{article.direccion_civil}</p>
                 </div>
 
-                <Image
-                    src='https://res.cloudinary.com/fedexx/image/upload/v1694287632/suit_vrr9ez.png'
-                    width={28}
-                    height={28}
-                    style={{
-                        objectFit: 'cover',
-                        position: 'relative',
-                        opacity: 0.8,
-                        marginBottom: 24,
-                        marginTop: 12,
-                    }}
-                />
 
                 <a href={article.ubicacion_civil} target='_blank'>
-                    <button className={`${openSans.className} flex flex-row py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
+                    <button className={`${openSans.className} flex flex-row py-4 px-8 mt-6 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
 
                         <PiMapPin className=' text-lg mr-1' /> LLEGAR A LA CEREMONIA
 
@@ -123,8 +111,8 @@ const Info = ({ article }) => {
 
                 <div className='flex flex-col items-center mt-6'>
                     <h3 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
-                    <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
-                    <div className='h-16 w-16 relative m-6'>
+                    <h4 className={`${openSans.className} text-md text-center w-80 font-bold text-slate-800`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
+                    <div className='h-12 w-12 relative m-6'>
 
                         <Image
                             src={suitIcon}
