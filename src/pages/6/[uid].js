@@ -56,7 +56,9 @@ const seis = ({ article }) => {
             }
 
             <div>
+
                 <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} videoId={article.data.video_id} />
+                
             </div>
 
             <div>
