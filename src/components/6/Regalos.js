@@ -30,7 +30,7 @@ const Regalos = ({article}) => {
                     style={imageStyle}
                     alt='portada'
                 />
-                <div className='mt-11 text-center mx-10 flex flex-col items-center text-white opacity-100 z-30'>
+                <div className={ `relative  ${ article.regalo_sin_datos ? 'pt-[75vh] ': 'mt-11'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
 
                     <Image
                         src={'https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png'}
@@ -47,7 +47,7 @@ const Regalos = ({article}) => {
                     </div>
                 </div>
 
-{  article.cbu &&              <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 opacity-70`}>
+{  article.cbu && <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 opacity-70`}>
                     <Accordion open header="Datos Bancarios" className='bg-violeta'>
                         <div className={`${openSans.className} text-sm font-thin opacity-100`}>
                             {article.titular_cuenta && <p className='pb-2'><strong>Titular: </strong> {article.titular_cuenta}</p>}
