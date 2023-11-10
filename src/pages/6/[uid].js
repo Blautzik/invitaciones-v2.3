@@ -49,10 +49,17 @@ const seis = ({ article }) => {
             </div>
 
 
-            {article.data.cbu || article.data.regalo_sin_datos &&
+            {article.data.regalo_sin_datos &&
                 <div>
                     <Regalos article={article.data} />
                 </div>
+            }
+
+            {article.data.cbu &&
+                <div>
+                    <Regalos article={article.data} />
+                </div>
+
             }
 
             <div>
