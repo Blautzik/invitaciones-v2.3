@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
+import {openSans} from '../../utils/fonts';
+import { Open_Sans } from 'next/font/google';
 
 const Formulario = ({ form_id, frase_extra }) => {
   const [name, setName] = useState('');
@@ -71,7 +73,7 @@ const Formulario = ({ form_id, frase_extra }) => {
   };
 
   return (
-    <div className="bg-violeta w-screen min-h-screen bg-opacity-80">
+    <div className={`${openSans.className} bg-violeta w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
           <GoCheckCircle className="text-[66px] font-thin text-white" />
