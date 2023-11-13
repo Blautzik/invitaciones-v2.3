@@ -30,7 +30,7 @@ const Regalos = ({article}) => {
                     style={imageStyle}
                     alt='portada'
                 />
-                <div className={ `${ article.regalo_sin_datos ? 'pt-[75vh] ': 'mt-11'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
+                <div className={ `${ article.regalo_sin_datos ? 'pt-[72vh] ': 'mt-11'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
 
                     <Image
                         src={'https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png'}
@@ -53,7 +53,7 @@ const Regalos = ({article}) => {
                     {article.cbu && <Accordion open header="Datos Bancarios" className='bg-violeta'>
                         <div className={`${openSans.className} text-sm font-thin opacity-100`}>
                             {article.titular_cuenta && <p className='pb-2'><strong>Titular: </strong> {article.titular_cuenta}</p>}
-                            <p className='pb-2'><strong>CBU:</strong> {article.cbu} </p>
+                            <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
                             <p className='pb-2'><strong>CUIL: </strong> {article.dni}</p>
                         </div>
