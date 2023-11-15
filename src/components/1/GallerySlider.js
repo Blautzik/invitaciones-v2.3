@@ -37,6 +37,7 @@ export default function GallerySlider({ images, index }) {
                     </div>
                 )
             }
+            
 
         </Carousel>
     )
