@@ -49,8 +49,8 @@ const Regalos = ({article}) => {
                         <div className={`${openSans.className} font-[500] leading-7 mt-52`}>
                         {article.frase_regalos}
                         </div>
-
                     }
+                    
                 </div>
 
                 <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 opacity-70`}>
