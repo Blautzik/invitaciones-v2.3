@@ -40,13 +40,23 @@ const Regalos = ({article}) => {
 
                     />
                     <h3 className={`${comfortaa.className} text-2xl mt-6 mb-2 font-[700]`}>Regalos</h3>
-                    <div className={`${openSans.className} font-[500] leading-7`}>
+                    {article.cbu ?
+
+                        <div className={`${openSans.className} font-[500] leading-7`}>
                        {article.frase_regalos}
-                    </div>
+                        </div>
+                        :
+                        <div className={`${openSans.className} font-[500] leading-7 mt-52`}>
+                        {article.frase_regalos}
+                        </div>
+
+                    }
                 </div>
 
                 <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 opacity-70`}>
-                    <Accordion open header="Datos Bancarios" className='bg-violeta'>
+                    {
+                        article.cbu &&
+                        <Accordion open header="Datos Bancarios" className='bg-violeta'>
                         <div className={`${openSans.className} text-sm font-thin opacity-100`}>
                             <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>
                             <p className='pb-2'><strong>CBU:</strong> {article.cbu} </p>
@@ -55,6 +65,7 @@ const Regalos = ({article}) => {
                         </div>
 
                     </Accordion>
+                    }
                     {article.lista_regalos &&
                         <Accordion open header="Lista de Regalos">
                         <div className={`${openSans.className} text-sm font-thin opacity-100`}>

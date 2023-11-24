@@ -110,7 +110,7 @@ const Invitacion = ({ article }) => {
                   </div>
                 </motion.div>
               </section>
-              
+
               {
                 article.data.galeria[0].foto1 &&
                 <section className="bg-[#fff] mt-12 text-center flex justify-center ">
@@ -122,7 +122,14 @@ const Invitacion = ({ article }) => {
                 <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
               </div>
 
-              {article.data.cbu &&
+              {/* {article.data.cbu &&
+                <div>
+                  <Regalos article={article.data} />
+                </div>
+              } */}
+
+
+              {article.data.frase_regalos &&
                 <div>
                   <Regalos article={article.data} />
                 </div>
@@ -140,7 +147,7 @@ const Invitacion = ({ article }) => {
                   />
                 }
 
-                
+
                 <div className='z-50'>
 
                   <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
@@ -157,7 +164,7 @@ const Invitacion = ({ article }) => {
                     src={article.data.fondo_sugerido}
                     fill
                     quality={100}
-                    style={{...imageStyleFlipped }}
+                    style={{ ...imageStyleFlipped }}
                     alt='portada'
                   />
                 }
