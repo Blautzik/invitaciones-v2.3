@@ -54,7 +54,6 @@ const Regalos = ({article}) => {
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
                             <p className='pb-2'><strong>CUIL: </strong> {article.dni}</p>
                         </div>
-
                     </Accordion>
 
 }
