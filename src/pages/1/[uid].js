@@ -16,7 +16,6 @@ import Image from 'next/image';
 
 const Invitacion = ({ article }) => {
 
-
   const imageStyle = {
     objectFit: 'cover',
     objectPosition: '50% 0%',
@@ -179,7 +178,6 @@ const Invitacion = ({ article }) => {
       </>
     )
   }
-
 }
 
 export default Invitacion
