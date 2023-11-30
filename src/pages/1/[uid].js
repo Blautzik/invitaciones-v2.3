@@ -177,7 +177,6 @@ const Invitacion = ({ article }) => {
           </main>
         </div>
       </>
-
     )
   }
 
