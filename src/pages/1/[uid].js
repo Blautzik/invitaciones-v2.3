@@ -135,6 +135,8 @@ const Invitacion = ({ article }) => {
                 </div>
               }
 
+
+
               <section className='relative'>
                 {
                   article.data.fondo_sugerido &&
