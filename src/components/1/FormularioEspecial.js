@@ -7,7 +7,7 @@ import { Open_Sans } from 'next/font/google';
 const FormularioEspecial = ({ form_id, frase_extra }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [chicos, setchicos] = useState('');
+  const [chicos, setchicos] = useState('Altos del Botánico');
   const [message, setMessage] = useState('');
   const [institution, setInstitution] = useState('');
   const [menu, setMenu] = useState('Menú Principal');
