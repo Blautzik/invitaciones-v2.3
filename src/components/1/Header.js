@@ -57,7 +57,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                         {title.toUpperCase()}
                     </h1>
                     <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>{frase_portada || 'MIS 15 AÑOS'}</h3>
-                    <p className={`${openSans.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>
+                    {content && <p className={`${openSans.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>}
                 </div>
             </div>
 

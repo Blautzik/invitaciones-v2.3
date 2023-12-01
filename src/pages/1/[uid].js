@@ -13,10 +13,11 @@ import Formulario from '@/components/1/Formulario';
 import Agendar from '@/components/1/Agendar';
 import Audiowe from '@/components/Audiowe';
 import Image from 'next/image';
+import FormularioEspecial from '@/components/1/FormularioEspecial';
 
 const Invitacion = ({ article }) => {
 
-  
+
   const imageStyle = {
     objectFit: 'cover',
     objectPosition: '50% 0%',
@@ -119,7 +120,11 @@ const Invitacion = ({ article }) => {
               }
 
               <div>
+                {article.data.formulario_especial?
+                <FormularioEspecial form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                  :
                 <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                }
               </div>
 
               {/* {article.data.cbu &&
@@ -170,7 +175,7 @@ const Invitacion = ({ article }) => {
                     alt='portada'
                   />
                 }
-                <Footer />
+                <Footer frase_cierre={article.data.frase_cierre} />
                 <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
               </section>
             </div>

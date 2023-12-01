@@ -7,8 +7,8 @@ import { BiCalendar, BiCalendarCheck } from "react-icons/bi";
 
 const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
     return (
-        <div className='h-screen flex flex-col items-center justify-between pb-8'>
-            <div className="flex flex-col items-center h-60 justify-between mb-4">
+        <div className=' flex flex-col items-center justify-between pb-8'>
+            <div className="flex flex-col items-center justify-between mb-4">
 
                 <BiCalendar className="h-20 w-20 text-black mt-6 " />
 
@@ -34,7 +34,7 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
                     />
                 }
             </div>
-            <div className="md:w-96 w-10/12 flex items-center justify-evenly pb-24 mt-10">
+            {ig_link && <div className="md:w-96 w-10/12 flex items-center justify-evenly pb-24 mt-10">
                 {
                     fb_link &&
                     <div className=" border-black text-black flex items-center border rounded-full h-16 w-16">
@@ -63,7 +63,7 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
                     </div>
                         </a>
                 }
-            </div>
+            </div>}
 
         </div>
     )

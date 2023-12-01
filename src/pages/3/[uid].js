@@ -108,10 +108,10 @@ export async function getStaticProps({ params, previewData }) {
 export async function getStaticPaths() {
     const client = createClient();
 
-    const articles = await client.getAllByType("quince");
+    const articles = await client.getAllByType("corporativo");
 
     const linkResolver = (doc) => {
-        if (doc.type === 'quince') {
+        if (doc.type === 'corporativo') {
             return `/3/${doc.uid}/`
         } else {
             return `false`

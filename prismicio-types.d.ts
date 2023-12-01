@@ -642,6 +642,73 @@ type BodaDocumentDataSlicesSlice = never;
  */
 export type BodaDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<BodaDocumentData>, "boda", Lang>;
+/** Content for corporativo documents */
+interface CorporativoDocumentData {
+  /**
+   * Slice Zone field in *corporativo*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: corporativo.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismic.SliceZone<CorporativoDocumentDataSlicesSlice>;
+  /**
+   * Meta Description field in *corporativo*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: corporativo.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  meta_description: prismic.RichTextField;
+  /**
+   * Meta Image field in *corporativo*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: corporativo.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  meta_image: prismic.ImageField<never>;
+  /**
+   * Meta Title field in *corporativo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: corporativo.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  meta_title: prismic.KeyTextField;
+}
+/**
+ * Slice for *corporativo → Slice Zone*
+ *
+ */
+type CorporativoDocumentDataSlicesSlice = never;
+/**
+ * corporativo document from Prismic
+ *
+ * - **API ID**: `corporativo`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CorporativoDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<CorporativoDocumentData>,
+    "corporativo",
+    Lang
+  >;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
   /**
@@ -1131,6 +1198,29 @@ interface QuinceDocumentData {
    */
   sin_ondas: prismic.BooleanField;
   /**
+   * formulario especial field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.formulario_especial
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  formulario_especial: prismic.BooleanField;
+  /**
+   * Frase cierre field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.frase_cierre
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  frase_cierre: prismic.KeyTextField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone
@@ -1333,6 +1423,7 @@ export type SettingsDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | ArticleDocument
   | BodaDocument
+  | CorporativoDocument
   | NavigationDocument
   | PageDocument
   | QuinceDocument
@@ -1614,6 +1705,9 @@ declare module "@prismicio/client" {
       BodaDocumentDataGaleriaItem,
       BodaDocumentDataSlicesSlice,
       BodaDocument,
+      CorporativoDocumentData,
+      CorporativoDocumentDataSlicesSlice,
+      CorporativoDocument,
       NavigationDocumentData,
       NavigationDocumentDataLinksItem,
       NavigationDocument,

@@ -176,6 +176,19 @@
           "placeholder_false": "false"
         }
       },
+      "formulario_especial": {
+        "type": "Boolean",
+        "config": {
+          "label": "formulario especial",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "frase_cierre": {
+        "type": "Text",
+        "config": { "label": "Frase cierre", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
