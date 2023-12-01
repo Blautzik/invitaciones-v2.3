@@ -123,7 +123,7 @@ const FormularioEspecial = ({ form_id, frase_extra }) => {
               name="institution"
               className={`${inputCN} text-gray-500`}
               onChange={(e) => setchicos(e.target.value)}
-              value={institution}
+              value={chicos}
             >
               <option value="Altos del Botánico">Altos del Botánico</option>
               <option value="Serranía">Serranía</option>
