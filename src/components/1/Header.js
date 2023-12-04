@@ -42,6 +42,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                     style={imageStyle}
                     alt='portada'
                 />
+                
             </div>
             <div className='w-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>
