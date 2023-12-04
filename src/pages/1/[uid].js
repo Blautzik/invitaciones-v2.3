@@ -25,7 +25,6 @@ const Invitacion = ({ article }) => {
     opacity: 0.65,
   }
 
-
   const imageStyleFlipped = {
     objectFit: 'cover',
     objectPosition: '50% 100%',
@@ -52,9 +51,9 @@ const Invitacion = ({ article }) => {
             <Audiowe music={article.data.music} />
           </div>
         }
-        <div className='flex flex-col justify-center items-center'>
+        <div className='flex flex-col justify-center items-center w-screen'>
 
-          <main className="" >
+          <main className="w-screen" >
 
             <section className='z-10'>
               <Header

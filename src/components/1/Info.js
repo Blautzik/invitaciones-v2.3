@@ -164,14 +164,14 @@ const Info = ({ article }) => {
                                 </div>
                             </motion.div>
 
-                            <motion.div className='flex w-[75vw] justify-evenly mt-5'>
+                            <motion.div className='flex w-[75vw]  justify-evenly mt-5'>
 
                                 <a href={article.link_salon} target="_blank">
-                                    <button className={`${openSans.className} text-base text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-7 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
+                                    <button className={`${openSans.className} text-base text-center mt-2 mb-3 w-36 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
                                 </a>
                                 <a href={article.ubicacion} target="_blank">
 
-                                    <button className={`${openSans.className} text-base text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-7 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
+                                    <button className={`${openSans.className} text-base text-center mt-2 mb-3 w-36 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                                 </a>
                             </motion.div>
 
