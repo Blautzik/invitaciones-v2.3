@@ -189,6 +189,15 @@
         "type": "Text",
         "config": { "label": "Frase cierre", "placeholder": "" }
       },
+      "sin_janos": {
+        "type": "Boolean",
+        "config": {
+          "label": "sin janos",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

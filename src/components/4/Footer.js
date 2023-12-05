@@ -3,7 +3,10 @@ import { great_vives } from '@/utils/fonts'
 import Image from 'next/image'
 import React from 'react'
 
-const Footer = ({frase_cierre}) => {
+
+
+
+const Footer = ({frase_cierre, sin_janos}) => {
     return (
         <div className='flex flex-col items-center justify-center text-center  '>
             
@@ -11,6 +14,7 @@ const Footer = ({frase_cierre}) => {
             <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10 `}>
                { frase_cierre || "Gracias por acompañarme en este momento tan importante!!"}
             </h2>
+            { !sin_janos &&
             <a href='https://janoseventos.com' target='_blank'>
                 <div className='object-contain mt-8 mb-8'>
                     <Image
@@ -22,7 +26,7 @@ const Footer = ({frase_cierre}) => {
                     />
 
                 </div>
-            </a>
+            </a>}
         </div>
     )
 }
