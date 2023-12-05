@@ -16,6 +16,7 @@ const Info = ({ article }) => {
     console.log(formattedDate);
 
 
+
     const imgstyle = {
         objectFit: 'cover',
         objectPosition: '50% 0%',
@@ -174,8 +175,6 @@ const Info = ({ article }) => {
                                     <button className={`${openSans.className} sm:text-sm  text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                                 </a>
                             </div>
-
-
 
 
                             <motion.div
