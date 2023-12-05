@@ -13,11 +13,11 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
                 <BiCalendar className="h-20 w-20 text-black mt-6 " />
 
                 <h3 className={`${comfortaa.className} text-4xl mb-4`}>Agendar</h3>
-                <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center w-72 text-[14px] font-[600] px-6 py-4 rounded-full `}
+                <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}
                     href='https://calendar.google.com/calendar'
                     target="_blank"
                 >
-                    <BiCalendarCheck className="text-[20px] " />
+                    <BiCalendarCheck className=" text-[20px] " />
                     AGREGAR AL CALENDARIO
                 </a>
             </div>

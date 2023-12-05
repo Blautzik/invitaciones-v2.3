@@ -42,14 +42,14 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                     style={imageStyle}
                     alt='portada'
                 />
-                
+
             </div>
             <div className='w-full bg-[#fff]'>
                 <div className='w-full flex justify-center  pt-14'>
                     <div className='flex w-full justify-center '>
-                        <span className='border-b w-1/4 border-b-[#3b1b55] h-5 mx-3'></span>
-                        <h3 className={`${playFair.className} text-slate-600 text-2xl mb-6`}>{dateFormated}</h3>
-                        <span className='border-b w-1/4 border-b-[#3b1b55] h-5 mx-3'></span>
+                        <span className='border-b flex-grow-0 w-1/12 border-b-[#3b1b55] h-5 mx-3'></span>
+                        <h3 className={`${playFair.className} flex-grow-1 text-slate-600 text-2xl mb-6`}>{dateFormated}</h3>
+                        <span className='border-b w-1/12 flex-grow-0 border-b-[#3b1b55] h-5 mx-3'></span>
                     </div>
                 </div>
 
