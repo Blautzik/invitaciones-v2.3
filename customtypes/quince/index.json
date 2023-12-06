@@ -198,6 +198,10 @@
           "placeholder_false": "false"
         }
       },
+      "hora_fin": {
+        "type": "Text",
+        "config": { "label": "hora fin", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

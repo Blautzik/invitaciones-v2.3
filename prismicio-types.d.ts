@@ -1233,6 +1233,17 @@ interface QuinceDocumentData {
    */
   sin_janos: prismic.BooleanField;
   /**
+   * hora fin field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.hora_fin
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  hora_fin: prismic.KeyTextField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone
