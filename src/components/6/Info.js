@@ -121,6 +121,7 @@ const Info = ({ article }) => {
                         />
                     </div>
                 </div>
+                
 
                 <a href={article.ubicacion} target='_blank'>
 
