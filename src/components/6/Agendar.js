@@ -14,13 +14,13 @@ const Agendar = ({foto, links}) => {
 
             <BiCalendar className="h-20 w-20 text-black mt-6 " />
 
-            <h3 className={`${comfortaa.className} text-4xl `}>Agendar</h3>
-            <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center w-72 text-[14px] font-[600] px-6 py-4 rounded-full `}
+            <h3 className={`${comfortaa.className} text-4xl text-center pb-4`}>Agregalo a tu calendario</h3>
+            <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center md:w-72 w-68 text-[14px] font-[600] px-6 py-4 rounded-full `}
                 href='https://calendar.google.com/calendar'
                 target="_blank"
                 >
                 <BiCalendarCheck className="text-[20px]" />
-                AGREGAR AL CALENDARIO
+                AGENDAR
             </a>
                 </div>
             <div className="shadow-2xl">
