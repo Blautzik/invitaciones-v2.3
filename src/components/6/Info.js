@@ -128,6 +128,7 @@ const Info = ({ article }) => {
                             />
                         }
                     </div>
+                    
                 </div>
 
 
