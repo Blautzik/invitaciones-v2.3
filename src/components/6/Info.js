@@ -27,7 +27,6 @@ const Info = ({ article }) => {
                         src={ceremoniaIcon}
                         fill
                     />
-
                 </div>
                 <h3 className={`${comfortaa.className} text-slate-700 sm:text-2xl xs:text-xl mb-10 font-[700] text-center`}>La Ceremonia</h3>
 
@@ -64,8 +63,6 @@ const Info = ({ article }) => {
                     <p className={textito}><strong>Lugar: </strong> {article.nombre_lugar_civil}</p>
                     <p className={textito}>{article.direccion_civil}</p>
                 </div>
-
-
                 <a href={article.ubicacion_civil} target='_blank'>
                     <button className={`${openSans.className} flex flex-row py-4 px-8 mt-6 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
 
