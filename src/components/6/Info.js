@@ -7,6 +7,7 @@ import fiestaIcon from '../../../public/fiestas-12.png'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
 import suitIcon from '../../../public/suit (1).png'
+import ropa from '../../../public/ropa.png'
 
 const Info = ({ article }) => {
 
@@ -114,11 +115,18 @@ const Info = ({ article }) => {
                     <h3 className={`${openSans.className} text-xl text-center w-68 text-slate-600`}> Dress Code </h3>
                     <h4 className={`${openSans.className} text-md text-center w-68 font-bold text-slate-800`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
                     <div className='h-12 w-12 relative m-6'>
-
-                        <Image
+                        {
+                            article.otro_iconito?
+                            <Image
+                            src={ropa}
+                            fill
+                            />
+                            :
+                            <Image
                             src={suitIcon}
                             fill
-                        />
+                            />
+                        }
                     </div>
                 </div>
 

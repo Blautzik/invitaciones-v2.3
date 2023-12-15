@@ -476,6 +476,18 @@ interface BodaDocumentData {
    */
   regalo_sin_datos: prismic.BooleanField;
   /**
+   * otro iconito field in *boda*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: boda.otro_iconito
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  otro_iconito: prismic.BooleanField;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

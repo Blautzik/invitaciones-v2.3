@@ -196,6 +196,15 @@
           "placeholder_false": "false"
         }
       },
+      "otro_iconito": {
+        "type": "Boolean",
+        "config": {
+          "label": "otro iconito",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
