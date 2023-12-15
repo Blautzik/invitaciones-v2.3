@@ -4,7 +4,7 @@ import { createClient } from "@/prismicio";
 import Header from '@/components/6/Header';
 import Info from "@/components/6/Info";
 import Regalos from "@/components/6/Regalos";
-import Formulario from "@/components/1/Formulario";
+import Formulario from "@/components/6/Formulario";
 import Agendar from "src/components/6/Agendar";
 import Gallery from "src/components/6/Gallery";
 import Head from 'next/head';

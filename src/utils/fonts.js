@@ -1,5 +1,5 @@
 import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display, Open_Sans, Comfortaa, Alegreya, Urbanist, Pacifico, Amatic_SC, Roboto } from 'next/font/google'
-import localFont from '@next/font/local'
+import localFont from "next/font/local"
 
 
 export const twcen = localFont({ 

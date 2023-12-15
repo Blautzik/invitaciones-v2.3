@@ -105,7 +105,7 @@ const Info = ({ article }) => {
                 <div className={`${openSans.className}my-4 text-center w-10/12 leading-7`}>
 
                     <p className={textito}><strong>Fecha: </strong> {article.fecha_ceremonia_string} </p>
-                    <p className={textito}><strong>Hora: </strong>{article.hora_fiesta_string}</p>
+                    {article.hora_fiesta_string !== 'sin' && <p className={textito}><strong>Hora: </strong>{article.hora_fiesta_string}</p>}
                     <p className={textito}><strong>Salón: </strong> {article.salon}</p>
                     <p className={textito}>{article.direccion_salon}</p>
 
