@@ -80,6 +80,8 @@ const Info = ({ article }) => {
 
 
 
+
+
             <div className='md:mt-4 flex flex-col items-center justify-center text-center'>
                 <div className='h-16 w-16 relative mb-6'>
                     <Image
