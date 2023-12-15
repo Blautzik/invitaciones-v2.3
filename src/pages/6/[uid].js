@@ -74,7 +74,7 @@ const seis = ({ article }) => {
 
 
             <div>
-                <Agendar foto={article.data.foto_agendar} />
+                <Agendar foto={article.data.foto_agendar} fecha={article.data.fecha_evento} />
             </div>
         </>
     )
