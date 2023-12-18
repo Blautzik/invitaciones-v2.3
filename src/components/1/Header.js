@@ -33,7 +33,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                     <div className='absolute bottom-0 left-0 md:bg-none bg-cover bg-footer-texture translate-y-1 h-24 w-full z-50'></div>  
                 }
             </div>
-            <div className='hidden md:block h-[70vh] bg-center bg-cover relative top-0 w-full'>
+            <div className='hidden md:block h-[90vh] bg-center bg-cover relative top-0 w-full'>
                 <div className=" top-0 bg-slate-800"></div>
                 <Image
                     src={foto_pc}
