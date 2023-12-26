@@ -23,6 +23,7 @@ function ProductCard({ product }) {
           alt="Smartphone Mockup"
           className="w-auto h-48 "
         />
+        
       </div>
       <img
         src={productImageURL} // Use the provided Cloudinary URL for the product image
