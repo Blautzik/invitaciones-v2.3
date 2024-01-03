@@ -488,6 +488,18 @@ interface BodaDocumentData {
    */
   otro_iconito: prismic.BooleanField;
   /**
+   * es civil field in *boda*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: boda.es_civil
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  es_civil: prismic.BooleanField;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

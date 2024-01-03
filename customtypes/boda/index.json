@@ -205,6 +205,15 @@
           "placeholder_false": "false"
         }
       },
+      "es_civil": {
+        "type": "Boolean",
+        "config": {
+          "label": "es civil",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
