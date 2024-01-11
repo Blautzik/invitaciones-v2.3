@@ -123,7 +123,7 @@ const Formulario = ({ form_id, frase_extra }) => {
               name="chicos"
               id="chicos"
               className={inputCN}
-              placeholder="Si venís con chicos, escribí aquí sus nombres"
+              placeholder="Si venís con niños menores a 5, escribí sus nombres"
             />
           </div>
 
