@@ -55,11 +55,11 @@ const Regalos = ({article}) => {
 
                 <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 opacity-70`}>
                     {
-                        article.cbu &&
+                        article.alias &&
                         <Accordion open header="Datos Bancarios" className='bg-violeta'>
                         <div className={`${openSans.className} text-sm font-thin opacity-100`}>
                             <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>
-                            <p className='pb-2'><strong>CBU:</strong> {article.cbu} </p>
+                            { article.cbu && <p className='pb-2'><strong>CBU:</strong> {article.cbu} </p>}
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                         </div>
