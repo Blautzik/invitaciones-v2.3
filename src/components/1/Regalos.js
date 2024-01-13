@@ -64,6 +64,8 @@ const Regalos = ({article}) => {
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                         </div>
 
+
+
                     </Accordion>
                     }
                     {article.lista_regalos &&
