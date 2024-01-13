@@ -40,7 +40,7 @@ const Regalos = ({article}) => {
 
                     />
                     <h3 className={`${comfortaa.className} text-2xl mt-6 mb-2 font-[700]`}>Regalos</h3>
-                    {article.cbu ?
+                    {article.alias ?
 
                         <div className={`${openSans.className} font-[500] leading-7`}>
                        {article.frase_regalos}
