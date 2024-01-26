@@ -500,6 +500,17 @@ interface BodaDocumentData {
    */
   es_civil: prismic.BooleanField;
   /**
+   * bg_color field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.bg_color
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  bg_color: prismic.KeyTextField;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

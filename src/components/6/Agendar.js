@@ -9,7 +9,7 @@ import { es } from "date-fns/locale";
 
 
 
-const Agendar = ({foto, links, fecha}) => {
+const Agendar = ({foto, links, fecha, bg}) => {
     const fechaCeremonia = new Date(fecha);
     const formattedDate = format(fechaCeremonia, 'yyyy/MM/dd', { locale: es });
 
@@ -58,7 +58,7 @@ const Agendar = ({foto, links, fecha}) => {
             </div>
             }
 
-            <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
+            <div className={`w-screen ${bg? bg : 'bg-violeta'}  h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
         </div>
     )
 }

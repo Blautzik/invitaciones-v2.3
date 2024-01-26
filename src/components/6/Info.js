@@ -21,7 +21,11 @@ const Info = ({ article }) => {
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
     return (
         <div className='flex md:flex-row md:justify-evenly md:items-start flex-col'>
-            <div className='md:mt-4 flex flex-col items-center justify-center text-center'>
+
+
+            {article.foto_ceremonia &&
+
+                <div className='md:mt-4 flex flex-col items-center justify-center text-center'>
                 <div className='h-16 w-16 relative mb-6'>
                     <Image
                         src={ceremoniaIcon}
@@ -73,7 +77,8 @@ const Info = ({ article }) => {
             </div>
 
 
-
+            }
+            
 
 
             <div className='md:mt-4 flex flex-col items-center justify-center text-center'>

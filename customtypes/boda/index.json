@@ -214,6 +214,10 @@
           "placeholder_false": "false"
         }
       },
+      "bg_color": {
+        "type": "Text",
+        "config": { "label": "bg_color", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

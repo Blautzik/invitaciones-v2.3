@@ -69,12 +69,12 @@ const seis = ({ article }) => {
             </div>
 
             <div>
-                <Formulario form_id={article.data.form_id} />
+                <Formulario form_id={article.data.form_id} bg={article.data.bg_color} />
             </div>
 
 
             <div>
-                <Agendar foto={article.data.foto_agendar} fecha={article.data.fecha_evento} />
+                <Agendar foto={article.data.foto_agendar} fecha={article.data.fecha_evento} bg={article.data.bg_color} />
             </div>
         </>
     )
