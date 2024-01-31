@@ -30,7 +30,7 @@ const Regalos = ({article}) => {
                     style={imageStyle}
                     alt='portada'
                 />
-                <div className={ `${ article.regalo_sin_datos ? 'pt-[72vh] ': 'mt-11'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
+                <div className={ `${ article.regalo_sin_datos ? 'pt-[72vh] ': 'mt-6'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
 
                     <Image
                         src={'https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png'}
@@ -39,8 +39,8 @@ const Regalos = ({article}) => {
                         style={iconStyle}
 
                     />
-                    <h3 className={`${comfortaa.className} text-2xl mt-6 mb-2 font-[700]`}>Regalos</h3>
-                    <div className={`${openSans.className} font-[500] leading-7`}>
+                    <h3 className={`${comfortaa.className} text-2xl mt-4 mb-2 font-[700]`}>Regalos</h3>
+                    <div className={`${openSans.className} font-[500] leading-5`}>
                        {article.frase}
                     </div>
                 </div>
