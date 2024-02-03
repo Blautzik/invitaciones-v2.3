@@ -62,11 +62,14 @@ const seis = ({ article }) => {
 
             }
 
-            <div>
+            {article.data.galeria &&
+
+                <div>
 
                 <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} videoId={article.data.video_id} />
 
             </div>
+            }
 
             <div>
                 <Formulario form_id={article.data.form_id} bg={article.data.bg_color} />
