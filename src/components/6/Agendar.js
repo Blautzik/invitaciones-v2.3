@@ -15,13 +15,13 @@ const Agendar = ({foto, links, fecha, bg}) => {
 
 
     return (
-        <div className='h-screen flex flex-col items-center justify-between'>
+        <div className='max-h-screen flex flex-col items-center justify-between'>
             <div className="flex flex-col items-center h-60 justify-between">
 
             <BiCalendar className="h-20 w-20 text-black mt-6 " />
 
             <h3 className={`${comfortaa.className} text-4xl text-center pb-4`}>Agregalo a tu calendario</h3>
-            <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center md:w-72 w-68 text-[14px] font-[600] px-6 py-4 rounded-full `}
+            <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center mb-8 md:w-72 w-68 text-[14px] font-[600] px-6 py-4 rounded-full `}
                 href={`https://calendar.google.com/calendar/u/0/r/week/${formattedDate}`}
                 target="_blank"
                 >
@@ -58,7 +58,7 @@ const Agendar = ({foto, links, fecha, bg}) => {
             </div>
             }
 
-            <div className={`w-screen ${bg? bg : 'bg-violeta'}  h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+            <div className={`w-screen ${bg? bg : 'bg-violeta'} mt-8 h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
         </div>
     )
 }
