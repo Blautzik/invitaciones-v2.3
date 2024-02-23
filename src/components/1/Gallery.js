@@ -84,7 +84,7 @@ export default function Gallery({ imagenes, titulo }) {
           theme={customTheme}
         >
           <Modal.Body className='p-0 bg-transparent'>
-            <div className='h-96'>
+            <div className='h-96 w-full'>
               <GallerySlider images={images} index={index} />
             </div>
           </Modal.Body>

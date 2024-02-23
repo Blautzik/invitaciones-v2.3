@@ -59,7 +59,6 @@ const seis = ({ article }) => {
                 <div>
                     <Regalos article={article.data} />
                 </div>
-
             }
 
             {article.data.galeria &&
