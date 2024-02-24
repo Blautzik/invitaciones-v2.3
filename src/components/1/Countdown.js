@@ -20,6 +20,7 @@ const Countdown = ({ date }) => {
         const interval = setInterval(() => {
 
             const difference = target - now
+            console.log('difference', difference)
 
             const d = Math.floor(difference / (1000 * 60 * 60 * 24));
             setDays( d < 10 ? "0" + d : d);
@@ -48,8 +49,11 @@ const Countdown = ({ date }) => {
     return (
         <div className='flex items-center justify-center h-60 mt-10'>
             <div className='w-60 text-center'>
+                {days >= 0 ? 
+                <>
                 <h3 className={`${openSans.className} font-thin text-2xl`}>Faltan</h3>
                 <div className={`${openSans.className} flex font-[100] justify-between items-center opacity-80 mb-10 mt-2 `}>
+
 
                     <div className="flex flex-col items center">
                         <span className={cuentaStyle}>{days} </span>
@@ -71,7 +75,11 @@ const Countdown = ({ date }) => {
                         <span className={textitoStyle}>segundos</span>
                     </div>
                 </div>
-            </div>
+                </>
+        : <>
+            <h2 className={`${openSans.className}  font-thin text-2xl`}>Llegó el día!!</h2>
+        </>}
+        </div>
         </div>
     );
 };
