@@ -48,7 +48,6 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
                     <div className=' pt-56'>
                         <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}>{titulo}</h1>
                         <h3 className={`${minion.className}  text-gray-50 max-w-sm text-center text-2xl font-[200]`}>MIS 15 AÑOS</h3>
-                        <p className={`${minion.className} text-gray-50 max-w-sm text-center uppercase pt-4 text-md font-[200]`}  > Te espero para compartir la alegría de esta noche inolvidable y única </p>
                     </div>
 
                     <div className='flex flex-col items-center'>
