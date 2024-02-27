@@ -9,7 +9,7 @@ import Gallery from '@/components/1/Gallery';
 import Regalos from '@/components/3/Regalos';
 import Footer from '@/components/2/Footer';
 import { easeIn, motion } from "framer-motion"
-import Formulario from '@/components/2/Formulario';
+import Formulario from '@/components/3/Formulario';
 import Agendar from '@/components/1/Agendar';
 import Audiowe from '@/components/Audiowe';
 import Image from 'next/image';
