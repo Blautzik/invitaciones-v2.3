@@ -3,124 +3,194 @@ import * as prismic from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import Head from 'next/head';
 import Header from '@/components/3/Header';
+import Countdown from '@/components/1/Countdown';
+import Info from '@/components/2/Info';
+import Gallery from '@/components/1/Gallery';
+import Regalos from '@/components/3/Regalos';
+import Footer from '@/components/2/Footer';
+import { easeIn, motion } from "framer-motion"
+import Formulario from '@/components/2/Formulario';
+import Agendar from '@/components/1/Agendar';
+import Audiowe from '@/components/Audiowe';
 import Image from 'next/image';
-import Countdown from '@/components/3/Countdown';
-import Info from '@/components/3/Info';
-import Gallery from '@/components/3/Gallery';
-import Regalo from '@/components/3/Regalo';
-import Footer from '@/components/3/Footer';
-import ondas from '../../../public/img_ondas02.svg'
+import FormularioEspecial from '@/components/1/FormularioEspecial';
 
 const Invitacion = ({ article }) => {
 
-    const imageStyle = {
-        objectFit: 'cover',
-        objectPosition: '50% 50%',
-        opacity: 0.7,
-        position: 'relative',
-        top: '-140px',
-        background: '#EFEDE7'
-    }
 
-    if (article) {
-        return (
-            <>
-                <Head>
-                    <title>
-                        {article.data.title}
-                    </title>
-                    <meta property="og:image" content={prismic.asImageSrc(article.data.foto)} />
-                    <meta property="og:description" content={article.data.frase} />
+  const imageStyle = {
+    objectFit: 'cover',
+    objectPosition: '50% 0%',
+    zIndex: -1000,
+    opacity: 0.65,
+  }
 
-                </Head>
+  const imageStyleFlipped = {
+    objectFit: 'cover',
+    objectPosition: '50% 100%',
+    zIndex: -1000,
+    opacity: 0.65,
+    transform: 'scaleY(-1)'
+  }
 
-                <main className="bg-[#f6f2e3] ">
+  if (article) {
+    return (
+      <>
+        <Head>
+          <title>
+            {article.data.title}
+          </title>
+          <meta property="og:image" content={prismic.asImageSrc(article.data.foto)} />
+          <meta property="og:description" content={article.data.frase} />
 
-                    <section className='h-screen z-10'>
-
-                        <Header
-                            title={article.data.title}
-                            coverImage={prismic.asImageSrc(article.data.foto)}
-                            date={article.data.fecha}
-                            content={article.data.frase}
-                        />
+        </Head>
 
 
-                    </section>
-                    <div className='md:-translate-y-64  z-50'>
+        {article.data.music &&
+          <div className='fixed bottom-4 right-0 z-50'>
+            <Audiowe music={article.data.music} />
+          </div>
+        }
+        <div className='flex flex-col justify-center items-center w-screen'>
 
-                        
-                        <Countdown date={article.data.fecha} />
+          <main className="w-screen" >
+
+            <section className='z-10'>
+              <Header
+                title={article.data.title}
+                coverImage={prismic.asImageSrc(article.data.foto)}
+                date={article.data.fecha}
+                content={article.data.frase}
+                coverImagePc={prismic.asImageSrc(article.data.foto_pc)}
+                frase_portada={article.data.frase_portada}
+                sin_ondas={article.data.sin_ondas}
+              />
+            </section>
+
+            <div>
+
+              <section>
+                <motion.div>
+                  <div className="h-full w-full flex flex-col items-center justify-between ">
+                    {
+                      article.data.fondo_sugerido &&
+                      <Image
+                        src={article.data.fondo_sugerido}
+                        fill
+                        quality={100}
+                        style={imageStyle}
+                        alt='portada'
+                      />
+                    }
+                    <Info
+                      article={article.data}
+                    />
+                  </div>
+                </motion.div>
+              </section>
+
+              {
+                article.data.galeria[0].foto1 &&
+                <section className="bg-[#fff] mt-12 text-center flex justify-center ">
+                  <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} />
+                </section>
+              }
+
+              <div>
+                {article.data.formulario_especial?
+                <FormularioEspecial form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                  :
+                <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                }
+              </div>
 
 
 
-                        <section className=' md:h-[50rem] md:-asdasd-36 md:w-full bg-[#f6f2e3]  '>
-                            <div className='md:flex md:justify-center'>
-
-                                <Info className='bg-[#f6f2e3] '
-
-                                />
-                            </div>
-
-                        </section>
-
-                        <section className="bg-[#f6f2e3] mt-12 md:z-40 h-[75vh] md:h-auto relative text-center -translate-y-1">
-                            <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} className='' />
-                        </section>
+              {article.data.frase_regalos &&
+                <div className='mb-8'>
+                  <Regalos article={article.data} />
+                </div>
+              }
 
 
 
-                        <section className="lg:max-w-[60vw] m-auto  relative  bg-[#f6f2e3] md:z-0 z-50 -translate-y-2">
-                            <Regalo />
-                        </section>
+              <section className='relative'>
+                {
+                  article.data.fondo_sugerido &&
+                  <Image
+                    src={article.data.fondo_sugerido}
+                    fill
+                    quality={100}
+                    style={imageStyle}
+                    alt='portada'
+                  />
+                }
 
-                        <section className='bg-[#f6f2e3] -translate-y-4'>
-                            <Footer />
-                            {/* <Footermio /> */}
-                        </section>
-                    </div>
-                    <div className=" relative bottom-0 py-4 text-center w-screen lg:w-full text-white z-50 bg-neutral-900">
-                        © 2023 Copyright: Federico Blautzik
-                    </div>
-                </main>
-            </>
 
-        )
-    }
+                <div className='z-50'>
 
+                  <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
+                </div>
+
+
+
+              </section>
+
+              <section className='relative pt-5'>
+                {
+                  article.data.fondo_sugerido &&
+                  <Image
+                    src={article.data.fondo_sugerido}
+                    fill
+                    quality={100}
+                    style={{ ...imageStyleFlipped }}
+                    alt='portada'
+                  />
+                }
+                <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} />
+                <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
+              </section>
+            </div>
+          </main>
+        </div>
+      </>
+    )
+  }
 }
 
 export default Invitacion
 
 
 export async function getStaticProps({ params, previewData }) {
-    const client = createClient({ previewData });
+  const client = createClient({ previewData });
 
-    const article = await client.getByUID("quince", params.uid);
-    console.log(article)
-    return {
-        props: {
-            article
-        },
-    };
+  const article = await client.getByUID("quince", params.uid);
+  console.log(article)
+  console.log(article.data)
+
+  return {
+    props: {
+      article
+    },
+  };
 }
 
 export async function getStaticPaths() {
-    const client = createClient();
+  const client = createClient();
 
-    const articles = await client.getAllByType("corporativo");
+  const articles = await client.getAllByType("quince");
 
-    const linkResolver = (doc) => {
-        if (doc.type === 'corporativo') {
-            return `/3/${doc.uid}/`
-        } else {
-            return `false`
-        }
+  const linkResolver = (doc) => {
+    if (doc.type === 'quince') {
+      return `/3/${doc.uid}/`
+    } else {
+      return `false`
     }
+  }
 
 
-    return {
-        paths: articles.map((article) => prismic.asLink(article, { linkResolver })),
-        fallback: false,
-    };
+  return {
+    paths: articles.map((article) => prismic.asLink(article, { linkResolver })),
+    fallback: false,
+  };
 }
