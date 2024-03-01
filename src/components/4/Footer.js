@@ -6,7 +6,9 @@ import React from 'react'
 
 
 
-const Footer = ({frase_cierre, sin_janos}) => {
+const Footer = ({frase_cierre, sin_janos, color_fondo}) => {
+
+    const color = `bg-[${color_fondo.toLowerCase()}]`
     return (
         <div className='flex flex-col items-center justify-center text-center  '>
             

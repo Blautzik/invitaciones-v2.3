@@ -202,6 +202,10 @@
         "type": "Text",
         "config": { "label": "hora fin", "placeholder": "" }
       },
+      "color_fondo": {
+        "type": "Color",
+        "config": { "label": "color fondo", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

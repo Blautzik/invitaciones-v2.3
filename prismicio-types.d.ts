@@ -1279,6 +1279,17 @@ interface QuinceDocumentData {
    */
   hora_fin: prismic.KeyTextField;
   /**
+   * color fondo field in *quince*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.color_fondo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/color
+   *
+   */
+  color_fondo: prismic.ColorField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

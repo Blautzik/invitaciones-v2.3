@@ -4,7 +4,7 @@ import { GoCheckCircle } from 'react-icons/go';
 import {openSans} from '../../utils/fonts';
 import { Open_Sans } from 'next/font/google';
 
-const Formulario = ({ form_id, frase_extra }) => {
+const Formulario = ({ form_id, frase_extra, color_fondo }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
@@ -12,7 +12,9 @@ const Formulario = ({ form_id, frase_extra }) => {
   const [menu, setMenu] = useState('Menú Principal');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const id = form_id;
-
+  console.log(color_fondo)
+  const [color, setColor] = useState(`bg-[${color_fondo.toLowerCase()}]`)
+  console.log(color)
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
 
@@ -73,7 +75,7 @@ const Formulario = ({ form_id, frase_extra }) => {
   };
 
   return (
-    <div className={`${openSans.className} bg-violeta w-screen min-h-screen bg-opacity-80`}>
+    <div className={`${openSans.className} ${ color_fondo ? color : 'bg-violeta' } bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
           <GoCheckCircle className="text-[66px] font-thin text-white" />
