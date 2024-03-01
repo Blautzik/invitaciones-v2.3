@@ -175,8 +175,8 @@ const Invitacion = ({ article }) => {
                     alt='portada'
                   />
                 }
-                <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} color_fondo={article.data.color_fondo} />
-                <div className={`w-screen ${article.data.color_fondo ? `bg-[${article.data.color_fondo.toLowerCase()}] ` : 'bg-violeta'  }h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+                <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} />
+                <div className={`w-screen bg-violeta  h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
               </section>
             </div>
           </main>
