@@ -5,9 +5,6 @@ import { comfortaa, openSans } from '../../utils/fonts';
 
 
 const Regalos = ({ article }) => {
-
-
-
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 0%',
@@ -15,7 +12,6 @@ const Regalos = ({ article }) => {
         opacity: 0.65,
         backgroundColor: '#fff',
     }
-
     const iconStyle = {
         filter: 'invert(1)',
     }
@@ -45,8 +41,6 @@ const Regalos = ({ article }) => {
                     }
                 </div>
             </div>
-
-
         </div>
     )
 }

@@ -22,7 +22,7 @@ const Info = ({ article }) => {
         objectPosition: '50% 0%',
         zIndex: 0,
         borderRadius: '5px',
-    } 
+    }
 
     return (
         <div className=" relative w-full mt-4 -globals-36 overflow-x-hidden">
@@ -85,8 +85,8 @@ const Info = ({ article }) => {
 
                                 <h4 className={`${openSans.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
                                 <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{article.fecha_string} - {article.hora_string}</p>
-                                { article.hora_fin &&
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Hasta Las: {article.hora_fin}</p>
+                                {article.hora_fin &&
+                                    <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Hasta Las: {article.hora_fin}</p>
 
                                 }
 
@@ -158,27 +158,30 @@ const Info = ({ article }) => {
                             >
                                 <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
 
-
-                                    <Image
-                                        src={article.foto_salon}
-                                        fill
-                                        quality={50}
-                                        style={imgstyle}
-                                    />
+                                    {
+                                        article.foto_salon &&
+                                        <Image
+                                            src={article.foto_salon}
+                                            fill
+                                            quality={50}
+                                            style={imgstyle}
+                                        />
+                                    }
 
                                 </div>
                             </motion.div>
 
-                            <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly'>
+                            {article.link_salon &&
+                                <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly'>
+                                    <a href={article.link_salon} target="_blank">
+                                        <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
+                                    </a>
+                                    <a href={article.ubicacion} target="_blank">
 
-                                <a href={article.link_salon} target="_blank">
-                                    <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
-                                </a>
-                                <a href={article.ubicacion} target="_blank">
-
-                                    <button className={`${openSans.className} sm:text-sm  text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
-                                </a>
-                            </div>
+                                        <button className={`${openSans.className} sm:text-sm  text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
+                                    </a>
+                                </div>
+                            }
 
 
                             <motion.div
@@ -201,7 +204,7 @@ const Info = ({ article }) => {
 
                                 <div className='flex flex-col items-center mt-6'>
                                     <h3 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
-                                    <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code? article.dress_code : "Elegante"} </h4>
+                                    <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
                                     <div className='h-16 w-16 relative m-6'>
 
                                         <Image

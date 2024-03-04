@@ -120,10 +120,10 @@ const Invitacion = ({ article }) => {
               }
 
               <div>
-                {article.data.formulario_especial?
-                <FormularioEspecial form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                {article.data.formulario_especial ?
+                  <FormularioEspecial form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
                   :
-                <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color_fondo={article.data.color_fondo} />
+                  <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color_fondo={article.data.color_fondo} />
                 }
               </div>
 
@@ -175,8 +175,16 @@ const Invitacion = ({ article }) => {
                     alt='portada'
                   />
                 }
-                <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} />
-                <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+
+                {article.data.link_salon?
+                  <>
+                    <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} />
+                    <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+                  </>
+                  :
+                  <>
+                  </>
+                }
               </section>
             </div>
           </main>
