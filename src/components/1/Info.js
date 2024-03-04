@@ -189,7 +189,6 @@ const Info = ({ article }) => {
                                     <h3 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
                                     <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
                                     <div className='h-16 w-16 relative m-6'>
-
                                         <Image
                                             src={suitIcon}
                                             fill
