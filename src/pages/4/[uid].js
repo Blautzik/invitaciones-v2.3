@@ -69,8 +69,9 @@ const Invitacion = ({ article }) => {
             </section>
 
             <div>
+              {article.data.foto_salon &&
 
-              <section>
+                <section>
                 <motion.div>
                   <div className="h-full w-full flex flex-col items-center justify-between ">
                     {
@@ -90,6 +91,7 @@ const Invitacion = ({ article }) => {
                 </motion.div>
               </section>
 
+              }
               {
                 article.data.galeria[0].foto1 &&
                 <section className="bg-[#fff] mt-12 text-center flex justify-center ">
