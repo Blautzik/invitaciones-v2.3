@@ -51,9 +51,8 @@ const Header = ({ coverImage, title, date, coverImagePc, letra_oscura }) => {
                     </div>
 
                     <div className='flex flex-col items-center'>
-                        <h2 className={`${openSans.className} text-gray-50 max-w-xs text-center text-xl tracking-widest font-[100]`}> Faltan </h2>
+                        <h2 className={`${openSans.className} ${letra_oscura? 'text-slate-900' : 'text-gray-50'} max-w-xs text-center text-xl tracking-widest font-[100]`}> Faltan </h2>
                         <Countdown date={date} letra_oscura={letra_oscura} />
-
 
                     </div>
                 </div>

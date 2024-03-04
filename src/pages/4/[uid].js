@@ -6,7 +6,7 @@ import Header from '@/components/4/Header';
 import Countdown from '@/components/1/Countdown';
 import Info from '@/components/4/Info';
 import Gallery from '@/components/1/Gallery';
-import Regalos from '@/components/3/Regalos';
+import Regalos from '@/components/4/Regalos';
 import Footer from '@/components/2/Footer';
 import { easeIn, motion } from "framer-motion"
 import Formulario from '@/components/1/Formulario';
