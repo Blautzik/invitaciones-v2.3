@@ -206,6 +206,15 @@
         "type": "Color",
         "config": { "label": "color fondo", "placeholder": "" }
       },
+      "letra_oscura": {
+        "type": "Boolean",
+        "config": {
+          "label": "letra oscura",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -1290,6 +1290,18 @@ interface QuinceDocumentData {
    */
   color_fondo: prismic.ColorField;
   /**
+   * letra oscura field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.letra_oscura
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  letra_oscura: prismic.BooleanField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone
