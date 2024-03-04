@@ -29,9 +29,6 @@ const Info = ({ article }) => {
             <div className="flex-col items-center  w-full ">
                 <div className="flex flex-col md:flex-row md:w-10/12 w-full justify-between md:items-center md:justify-center items-center lg:items-start m-auto">
                     <div className="flex flex-col justify-center items-center w-5/12">
-
-
-
                         <motion.div
                             initial={{
                                 scale: 0.8,
@@ -184,21 +181,7 @@ const Info = ({ article }) => {
                             }
 
 
-                            <motion.div
-                                initial={{
-                                    scale: 0.8,
-                                    opacity: 0,
-
-                                }}
-                                transition={{
-                                    duration: 1.2,
-
-                                }}
-                                whileInView={{
-                                    x: 0,
-                                    opacity: 1,
-                                    scale: 1,
-                                }}
+                            <div
                                 className="flex flex-col justify-center items-center"
                             >
 
@@ -213,12 +196,7 @@ const Info = ({ article }) => {
                                         />
                                     </div>
                                 </div>
-
-
-
-
-                            </motion.div>
-
+                            </div>
 
                         </div>
                     </div>

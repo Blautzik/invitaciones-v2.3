@@ -133,14 +133,11 @@ const Invitacion = ({ article }) => {
                 </div>
               } */}
 
-
               {article.data.frase_regalos &&
                 <div>
                   <Regalos article={article.data} />
                 </div>
               }
-
-
 
               <section className='relative'>
                 {
@@ -154,13 +151,9 @@ const Invitacion = ({ article }) => {
                   />
                 }
 
-
                 <div className='z-50'>
-
                   <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
                 </div>
-
-
 
               </section>
 
