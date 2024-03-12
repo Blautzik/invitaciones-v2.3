@@ -172,7 +172,6 @@ export async function getStaticProps({ params, previewData }) {
 
 export async function getStaticPaths() {
   const client = createClient();
-
   const articles = await client.getAllByType("quince");
 
   const linkResolver = (doc) => {
@@ -182,7 +181,6 @@ export async function getStaticPaths() {
       return `false`
     }
   }
-
 
   return {
     paths: articles.map((article) => prismic.asLink(article, { linkResolver })),
