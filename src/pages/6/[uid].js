@@ -61,12 +61,9 @@ const seis = ({ article }) => {
                 </div>
             }
 
-            {article.data.galeria &&
-
+            {article.data.galeria[0].foto1 != null &&
                 <div>
-
                 <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} videoId={article.data.video_id} />
-
             </div>
             }
 
