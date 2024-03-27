@@ -15,6 +15,7 @@ import Audiowe from '@/components/Audiowe';
 import Image from 'next/image';
 import FormularioEspecial from '@/components/1/FormularioEspecial';
 import { Viaoda_Libre } from 'next/font/google';
+import FormularioSinNino from '@/components/1/FormularioSinNino';
 
 const Invitacion = ({ article }) => {
 
@@ -121,7 +122,7 @@ const Invitacion = ({ article }) => {
 
               <div>
                 {article.data.formulario_especial ?
-                  <FormularioEspecial form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                  <FormularioSinNino form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
                   :
                   <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color_fondo={article.data.color_fondo} />
                 }
