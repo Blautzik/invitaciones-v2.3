@@ -3,9 +3,16 @@ import { comfortaa, openSans } from "@/utils/fonts";
 import Image from "next/image";
 import { RiFacebookLine, RiTwitterLine, RiInstagramLine } from "react-icons/ri";
 import { BiCalendar, BiCalendarCheck } from "react-icons/bi";
+import {format} from 'date-fns';
+import {es} from 'date-fns/locale';
 
 
-const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
+const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha}) => {
+
+
+    const fechaCeremonia = new Date(fecha);
+    const formattedDate = format(fechaCeremonia, 'yyyy/MM/dd', { locale: es });
+
     return (
         <div className=' flex flex-col items-center justify-between pb-8'>
             <div className="flex flex-col items-center justify-between mb-4">
@@ -14,7 +21,7 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link }) => {
 
                 <h3 className={`${comfortaa.className} text-4xl mb-4`}>Agendar</h3>
                 <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}
-                    href='https://calendar.google.com/calendar'
+                    href={`https://calendar.google.com/calendar/u/0/r/day/${formattedDate}`}
                     target="_blank"
                 >
                     <BiCalendarCheck className=" text-[20px] " />
