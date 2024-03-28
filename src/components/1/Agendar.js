@@ -10,11 +10,13 @@ import {es} from 'date-fns/locale';
 const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha}) => {
 
 
+    
+
     const fechaCeremonia = new Date(fecha);
     const formattedDate = format(fechaCeremonia, 'yyyy/MM/dd', { locale: es });
 
 
-    
+
 
     return (
         <div className=' flex flex-col items-center justify-between pb-8'>
