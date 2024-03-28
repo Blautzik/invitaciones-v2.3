@@ -129,7 +129,7 @@ const Invitacion = ({ article }) => {
 
                 <div className='z-50'>
 
-                  <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
+                  <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} fecha={article.data.fecha} />
                 </div>
 
 

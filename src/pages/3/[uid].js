@@ -97,11 +97,9 @@ const Invitacion = ({ article }) => {
               }
 
               <div>
-                {article.data.formulario_especial?
-                <FormularioEspecial form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
-                  :
+
                 <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
-                }
+
               </div>
 
 
@@ -128,7 +126,7 @@ const Invitacion = ({ article }) => {
 
 
                 <div className='z-50'>
-                  <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} />
+                  <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} fecha={article.data.fecha} />
                 </div>
               </section>
 
