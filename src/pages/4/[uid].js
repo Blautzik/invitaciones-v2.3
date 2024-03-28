@@ -100,11 +100,9 @@ const Invitacion = ({ article }) => {
               }
 
               <div>
-                {article.data.formulario_especial?
-                <FormularioEspecial form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
-                  :
+                  
                 <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
-                }
+
               </div>
 
 
