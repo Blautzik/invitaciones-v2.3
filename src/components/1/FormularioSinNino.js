@@ -114,20 +114,6 @@ const FormularioSinNino = ({ form_id, frase_extra, color_fondo }) => {
               placeholder="Email"
             />
           </div>
-          <div className="flex items-center justify-center">
-            <label htmlFor="chicos" className="sr-only">
-              Chicos
-            </label>
-            <input
-              value={chicos}
-              onChange={(e) => setchicos(e.target.value)}
-              type="text"
-              name="chicos"
-              id="chicos"
-              className={inputCN}
-              placeholder="Si venís con niños menores a 5, escribí sus nombres"
-            />
-          </div>
 
           <h3 className="text-white text-md max-w-2xl font-[500] pl-2">Opciones de menú</h3>
           <div className="flex items-center justify-center">
