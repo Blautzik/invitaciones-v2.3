@@ -1302,6 +1302,18 @@ interface QuinceDocumentData {
    */
   letra_oscura: prismic.BooleanField;
   /**
+   * menu antinino field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.menu_antinino
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  menu_antinino: prismic.BooleanField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

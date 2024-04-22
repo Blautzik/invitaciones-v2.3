@@ -141,7 +141,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo }) => {
               <option value="Menú Vegetariano">Menú Vegetariano</option>
               <option value="Menú Vegano">Menú Vegano</option>
               <option value="Menú Celíaco">Menú Celíaco</option>
-              <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>
+              {!menu_antinino && <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>}
               <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
             </select>
           </div>
