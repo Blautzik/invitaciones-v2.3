@@ -4,7 +4,7 @@ import { GoCheckCircle } from 'react-icons/go';
 import {openSans} from '../../utils/fonts';
 import { Open_Sans } from 'next/font/google';
 
-const Formulario = ({ form_id, frase_extra, color_fondo }) => {
+const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
