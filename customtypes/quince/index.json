@@ -215,15 +215,23 @@
           "placeholder_false": "false"
         }
       },
+<<<<<<< HEAD
       "es_bat": {
         "type": "Boolean",
         "config": {
           "label": "es bat",
+=======
+      "menu_antinino": {
+        "type": "Boolean",
+        "config": {
+          "label": "menu antinino",
+>>>>>>> bade5044bec42cee281572a903fe1692a14c5ec2
           "default_value": false,
           "placeholder_true": "true",
           "placeholder_false": "false"
         }
       },
+<<<<<<< HEAD
       "direccion_bat": {
         "type": "Text",
         "config": { "label": "direccion bat", "placeholder": "" }
@@ -236,6 +244,8 @@
         "type": "Text",
         "config": { "label": "fecha bat", "placeholder": "" }
       },
+=======
+>>>>>>> bade5044bec42cee281572a903fe1692a14c5ec2
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -4,7 +4,7 @@ import { GoCheckCircle } from 'react-icons/go';
 import {openSans} from '../../utils/fonts';
 import { Open_Sans } from 'next/font/google';
 
-const Formulario = ({ form_id, frase_extra, color_fondo }) => {
+const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
@@ -141,7 +141,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo }) => {
               <option value="Menú Vegetariano">Menú Vegetariano</option>
               <option value="Menú Vegano">Menú Vegano</option>
               <option value="Menú Celíaco">Menú Celíaco</option>
-              <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>
+              {!menu_antinino && <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>}
               <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
             </select>
           </div>
