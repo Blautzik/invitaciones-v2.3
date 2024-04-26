@@ -16,6 +16,7 @@ import Image from 'next/image';
 import FormularioEspecial from '@/components/1/FormularioEspecial';
 import { Viaoda_Libre } from 'next/font/google';
 import FormularioSinNino from '@/components/1/FormularioSinNino';
+import InfoBat from '@/components/1/infoBat';
 
 const Invitacion = ({ article }) => {
 
@@ -106,9 +107,16 @@ const Invitacion = ({ article }) => {
                         alt='portada'
                       />
                     }
+
+
                     <Info
                       article={article.data}
                     />
+
+                    {
+                      article.data.es_bat && 
+                      <InfoBat article={article.data} />
+                    }
                   </div>
                 </motion.div>
               </section>

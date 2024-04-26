@@ -215,6 +215,27 @@
           "placeholder_false": "false"
         }
       },
+      "es_bat": {
+        "type": "Boolean",
+        "config": {
+          "label": "es bat",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "direccion_bat": {
+        "type": "Text",
+        "config": { "label": "direccion bat", "placeholder": "" }
+      },
+      "foto_bat": {
+        "type": "Text",
+        "config": { "label": "foto bat", "placeholder": "" }
+      },
+      "fecha_bat": {
+        "type": "Text",
+        "config": { "label": "fecha bat", "placeholder": "" }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

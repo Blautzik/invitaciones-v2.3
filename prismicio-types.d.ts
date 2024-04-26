@@ -1302,6 +1302,51 @@ interface QuinceDocumentData {
    */
   letra_oscura: prismic.BooleanField;
   /**
+   * es bat field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.es_bat
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  es_bat: prismic.BooleanField;
+  /**
+   * direccion bat field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.direccion_bat
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  direccion_bat: prismic.KeyTextField;
+  /**
+   * foto bat field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.foto_bat
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  foto_bat: prismic.KeyTextField;
+  /**
+   * fecha bat field in *quince*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: quince.fecha_bat
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  fecha_bat: prismic.KeyTextField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone
