@@ -1302,25 +1302,20 @@ interface QuinceDocumentData {
    */
   letra_oscura: prismic.BooleanField;
   /**
-<<<<<<< HEAD
+
    * es bat field in *quince*
-=======
    * menu antinino field in *quince*
->>>>>>> bade5044bec42cee281572a903fe1692a14c5ec2
+
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-<<<<<<< HEAD
    * - **API ID Path**: quince.es_bat
-=======
    * - **API ID Path**: quince.menu_antinino
->>>>>>> bade5044bec42cee281572a903fe1692a14c5ec2
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
    *
    */
-<<<<<<< HEAD
   es_bat: prismic.BooleanField;
   /**
    * direccion bat field in *quince*
@@ -1355,9 +1350,7 @@ interface QuinceDocumentData {
    *
    */
   fecha_bat: prismic.KeyTextField;
-=======
   menu_antinino: prismic.BooleanField;
->>>>>>> bade5044bec42cee281572a903fe1692a14c5ec2
   /**
    * Slice Zone field in *quince*
    *
