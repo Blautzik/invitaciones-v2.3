@@ -219,6 +219,10 @@
         "type": "Boolean",
         "config": {
           "label": "es bat",
+      "menu_antinino": {
+        "type": "Boolean",
+        "config": {
+          "label": "menu antinino",
           "default_value": false,
           "placeholder_true": "true",
           "placeholder_false": "false"
