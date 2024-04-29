@@ -125,7 +125,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino }) => {
               name="chicos"
               id="chicos"
               className={inputCN}
-              placeholder="Si venís con niños menores a 5, escribí sus nombres"
+              placeholder="Si venís con niños escribí sus nombres aqui"
             />
           </div>
 
