@@ -80,13 +80,8 @@ const InfoBat = ({ article }) => {
                                 className="flex flex-col justify-center items-center"
                             >
 
-                                <h4 className={`${openSans.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{article.fecha_bat}</p>
-                                {article.hora_fin &&
-                                    <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Hasta Las: {article.hora_fin}</p>
-
-                                }
-
+                                <h4 className={`${openSans.className} text-xl text-center w-80 mt-3 text-slate-600`}>Ceremonia Bat Mitzva</h4>
+                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{article.direccion_bat}</p>
 
                             </motion.div>
 
@@ -110,8 +105,8 @@ const InfoBat = ({ article }) => {
                                 }}
                                 className="flex flex-col justify-center items-center"
                             >
-                                <h4 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}>Dirección</h4>
-                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.direccion_bat}</p>
+                                <h4 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}>Ceremonia Kabalat Shabat</h4>
+                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}>{article.fecha_bat}</p>
                             </motion.div>
 
                             <motion.div
