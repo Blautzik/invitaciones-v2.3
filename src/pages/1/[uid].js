@@ -42,7 +42,7 @@ const Invitacion = ({ article }) => {
         <Head>
           <title>
             {article.data.title} 
-            {article.data.frase_portada && article.data.frase_portada}
+            {article.data.frase_portada && (" "+ article.data.frase_portada)}
           </title>
           <meta property="og:image" content={prismic.asImageSrc(article.data.foto)} />
           <meta property="og:description" content={article.data.frase} />
