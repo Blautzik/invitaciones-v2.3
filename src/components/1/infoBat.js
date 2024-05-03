@@ -9,10 +9,6 @@ import { es } from 'date-fns/locale'
 
 
 const InfoBat = ({ article }) => {
-
-   
-
-
     const imgstyle = {
         objectFit: 'cover',
         objectPosition: '50% 0%',
@@ -43,9 +39,7 @@ const InfoBat = ({ article }) => {
                             className="flex flex-col justify-center items-center">
 
                             <h3 className={`${openSans.className} text-slate-700 sm:text-2xl xs:text-xl mb-4 font-[700] text-center`}>Ceremonia</h3>
-
                         </motion.div>
-
 
                         <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
                         
@@ -84,9 +78,6 @@ const InfoBat = ({ article }) => {
                                 <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{article.direccion_bat}</p>
 
                             </motion.div>
-
-
-
 
                             <motion.div
                                 initial={{

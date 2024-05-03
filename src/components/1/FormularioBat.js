@@ -4,7 +4,7 @@ import { GoCheckCircle } from 'react-icons/go';
 import {openSans} from '../../utils/fonts';
 import { Open_Sans } from 'next/font/google';
 
-const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_ninos }) => {
+const FormularioBat = ({ form_id, frase_extra, color_fondo, menu_antinino }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
@@ -102,24 +102,21 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
           </div>
           <div className="flex items-center justify-center">
             <label htmlFor="email" className="sr-only">
-              Email
+              Teléfono
             </label>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              type="email"
+              type="text"
               name="email"
               id="email"
               className={inputCN}
-              placeholder="Email"
+              placeholder="teléfono"
             />
           </div>
-          {
-            !sin_ninos &&
-         
           <div className="flex items-center justify-center">
             <label htmlFor="chicos" className="sr-only">
-              Chicos
+              Comentarios
             </label>
             <input
               value={chicos}
@@ -128,10 +125,9 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
               name="chicos"
               id="chicos"
               className={inputCN}
-              placeholder="Si venís con niños escribí sus nombres aqui"
+              placeholder="Comentarios"
             />
           </div>
-           }
 
           <h3 className="text-white text-md max-w-2xl font-[500] pl-2">Opciones de menú</h3>
           <div className="flex items-center justify-center">
@@ -179,4 +175,4 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
   );
 };
 
-export default Formulario;
+export default FormularioBat;

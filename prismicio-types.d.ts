@@ -1302,16 +1302,12 @@ interface QuinceDocumentData {
    */
   letra_oscura: prismic.BooleanField;
   /**
-
    * es bat field in *quince*
-   * menu antinino field in *quince*
-
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
    * - **API ID Path**: quince.es_bat
-   * - **API ID Path**: quince.menu_antinino
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
    *
@@ -1350,7 +1346,42 @@ interface QuinceDocumentData {
    *
    */
   fecha_bat: prismic.KeyTextField;
+  /**
+   * formularioBat field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.formulariobat
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  formulariobat: prismic.BooleanField;
+  /**
+   * menu antinino field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.menu_antinino
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
   menu_antinino: prismic.BooleanField;
+  /**
+   * sin ninos field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.sin_ninos
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  sin_ninos: prismic.BooleanField;
   /**
    * Slice Zone field in *quince*
    *

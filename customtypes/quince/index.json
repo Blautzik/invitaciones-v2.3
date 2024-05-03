@@ -224,7 +224,6 @@
           "placeholder_false": "false"
         }
       },
-      
       "direccion_bat": {
         "type": "Text",
         "config": { "label": "direccion bat", "placeholder": "" }
@@ -236,6 +235,33 @@
       "fecha_bat": {
         "type": "Text",
         "config": { "label": "fecha bat", "placeholder": "" }
+      },
+      "formulariobat": {
+        "type": "Boolean",
+        "config": {
+          "label": "formularioBat",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "menu_antinino": {
+        "type": "Boolean",
+        "config": {
+          "label": "menu antinino",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
+      "sin_ninos": {
+        "type": "Boolean",
+        "config": {
+          "label": "sin ninos",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
       },
       "slices": {
         "type": "Slices",
@@ -259,16 +285,6 @@
         },
         "type": "Image"
       },
-      "menu_antinino": {
-        "type": "Boolean",
-        "config": {
-          "label": "menu antinino",
-          "default_value": false,
-          "placeholder_true": "true",
-          "placeholder_false": "false"
-        }
-      },
-
       "meta_title": {
         "config": {
           "label": "Meta Title",
