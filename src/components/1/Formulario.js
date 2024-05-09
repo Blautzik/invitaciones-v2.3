@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 import {openSans} from '../../utils/fonts';
-import { Open_Sans } from 'next/font/google';
 
 const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_ninos }) => {
   const [name, setName] = useState('');
