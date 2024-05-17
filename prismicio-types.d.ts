@@ -511,6 +511,29 @@ interface BodaDocumentData {
    */
   bg_color: prismic.KeyTextField;
   /**
+   * otra frase ninos field in *boda*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: boda.otra_frase_ninos
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   *
+   */
+  otra_frase_ninos: prismic.KeyTextField;
+  /**
+   * h1 centrado field in *boda*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: boda.h1_centrado
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  h1_centrado: prismic.BooleanField;
+  /**
    * Slice Zone field in *boda*
    *
    * - **Field Type**: Slice Zone

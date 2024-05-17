@@ -3,7 +3,7 @@ import { openSans } from '@/utils/fonts';
 import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 
-const Formulario = ({ form_id, frase_extra, bg }) => {
+const Formulario = ({ form_id, frase_extra, bg, otra_frase }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
@@ -72,12 +72,12 @@ const Formulario = ({ form_id, frase_extra, bg }) => {
   };
 
   return (
-    <div className={`${ bg ? bg:'bg-violeta' } w-screen min-h-screen bg-opacity-80`}>
+    <div className={`${bg ? bg : 'bg-violeta'} w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
           <GoCheckCircle className="text-[66px] font-thin text-white" />
           <h3 className={`${openSans.className} text-white text-2xl my-4 text-center w-10/12 leading-7`}>Confirmar Asistencia</h3>
-          <p  className={`${openSans.className} text-white text-md max-w-2xl font-[500]`}>
+          <p className={`${openSans.className} text-white text-md max-w-2xl font-[500]`}>
             Por favor completá el formulario con tus datos y comentarios para organizar la mejor fiesta
           </p>
         </div>
@@ -111,20 +111,40 @@ const Formulario = ({ form_id, frase_extra, bg }) => {
               placeholder="Email"
             />
           </div>
-          <div className="flex items-center justify-center">
-            <label htmlFor="chicos" className="sr-only">
-              Chicos
-            </label>
-            <input
-              value={chicos}
-              onChange={(e) => setchicos(e.target.value)}
-              type="text"
-              name="chicos"
-              id="chicos"
-              className={inputCN}
-              placeholder="Si venís con chicos, escribí aquí sus nombres"
-            />
-          </div>
+          {otra_frase ?
+            <>
+              <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Acompañantes</h3>
+              <div className="flex items-center justify-center">
+                <label htmlFor="chicos" className="sr-only">
+                  Chicos
+                </label>
+                <input
+                  value={chicos}
+                  onChange={(e) => setchicos(e.target.value)}
+                  type="text"
+                  name="chicos"
+                  id="chicos"
+                  className={`${inputCN} `}
+                  placeholder={otra_frase}
+                />
+              </div>
+            </>
+            :
+            <div className="flex items-center justify-center">
+              <label htmlFor="chicos" className="sr-only">
+                Chicos
+              </label>
+              <input
+                value={chicos}
+                onChange={(e) => setchicos(e.target.value)}
+                type="text"
+                name="chicos"
+                id="chicos"
+                className={inputCN}
+                placeholder="Si venís con chicos, escribí aquí sus nombres"
+              />
+            </div>
+          }
 
           <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
           <div className="flex items-center justify-center">
@@ -158,9 +178,8 @@ const Formulario = ({ form_id, frase_extra, bg }) => {
           <div className="flex items-end justify-end">
             <button
               type="submit"
-              className={`${
-                isSubmitting || !isFormValid ? 'opacity-50 cursor-not-allowed' : ''
-              } bg-white text-black flex justify-evenly items-center w-36 text-[14px] font-[600] px-6 py-3 rounded-full`}
+              className={`${isSubmitting || !isFormValid ? 'opacity-50 cursor-not-allowed' : ''
+                } bg-white text-black flex justify-evenly items-center w-36 text-[14px] font-[600] px-6 py-3 rounded-full`}
               disabled={isSubmitting || !isFormValid}
             >
               {isSubmitting ? 'Enviando...' : 'CONFIRMAR'}

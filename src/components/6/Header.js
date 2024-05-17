@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 
 
-const Header = ({ coverImage, title, date, coverImagePc }) => {
+const Header = ({ coverImage, title, date, coverImagePc, h1_centrado }) => {
 
     const imageStyle = {
         objectFit: 'cover',
@@ -46,7 +46,12 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
 
                     <div className=' pt-8'>
-                        <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}>{titulo}</h1>
+                        {
+                            h1_centrado ?
+                                <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center pt-96 text-5xl font-[200]`}>{titulo}</h1>
+                                :
+                                <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}>{titulo}</h1>
+                        }
                     </div>
 
                     <div className='flex flex-col items-center'>

@@ -218,6 +218,19 @@
         "type": "Text",
         "config": { "label": "bg_color", "placeholder": "" }
       },
+      "otra_frase_ninos": {
+        "type": "Text",
+        "config": { "label": "otra frase ninos", "placeholder": "" }
+      },
+      "h1_centrado": {
+        "type": "Boolean",
+        "config": {
+          "label": "h1 centrado",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

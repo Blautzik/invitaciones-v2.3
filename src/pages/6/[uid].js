@@ -41,6 +41,7 @@ const seis = ({ article }) => {
                     coverImagePc={prismic.asImageSrc(article.data.portadapc)}
                     date={article.data.fecha_evento}
                     content={article.data.frase}
+                    h1_centrado={article.data.h1_centrado}
                 />
             </div>
 
@@ -68,7 +69,7 @@ const seis = ({ article }) => {
             }
 
             <div>
-                <Formulario form_id={article.data.form_id} bg={article.data.bg_color} />
+                <Formulario form_id={article.data.form_id} bg={article.data.bg_color} otra_frase={article.data.otra_frase_ninos}/>
             </div>
 
 
