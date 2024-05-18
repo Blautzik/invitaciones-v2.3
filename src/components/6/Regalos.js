@@ -10,7 +10,7 @@ const Regalos = ({article}) => {
 
     const imageStyle = {
         objectFit: 'cover',
-        objectPosition: '50% 0%',
+        objectPosition: 'center',
         zIndex: 0,
         opacity: 0.65,
         backgroundColor: '#fff',
@@ -22,7 +22,7 @@ const Regalos = ({article}) => {
 
     return (
         <div className='h-screen w-full'>
-            <div className="h-full  w-full flex flex-col relative items-center justify-between bg-gray-600">
+            <div className="h-full w-full flex flex-col relative items-center justify-between bg-gray-600">
                 <Image
                     src={article.fondo_regalos}
                     fill
