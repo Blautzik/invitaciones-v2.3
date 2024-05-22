@@ -1,11 +1,8 @@
-import { getFirestore, doc, getDoc, collection, getDocs } from 'firebase/firestore';
 import Header from '@/components/6/Header';
 import Head from 'next/head';
-import { db } from '../../firebase/config';
 import Info from '@/components/6/Info';
 import Gallery from '@/components/6/Gallery';
 import Agendar from '@/components/6/Agendar';
-import Footer from '../../components/6/Footer';
 import Regalos from '@/components/6/Regalos';
 import Formulario from '@/components/6/Formulario';
 
