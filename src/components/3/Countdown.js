@@ -49,7 +49,6 @@ const Countdown = ({ date }) => {
                   <div className='w-full h-[20rem] flex justify-center'>
 
                     <div style={{
-                        backgroundImage: `url(${circulo.src})`,
                         backgroundSize: 'contain',
                         backgroundPositionX:'center',
                         height: '20rem',
@@ -59,15 +58,15 @@ const Countdown = ({ date }) => {
                         className='w-full z-50 md:flex-col'
                     >
                         <div className='flex flex-col w-[12rem] h-[12rem] items-center justify-around  -z-20 m-auto mt-auto md:-mt-8 '>
-                            <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-600 mt-20 md:mt-40 z-50`}>Faltan:</h2>
+                            <h2 className={`${roboto.className} text-2xl lg:text-4xl text-slate-200 mt-20 md:mt-40 z-50`}>Faltan:</h2>
                             <div className="flex h-[4rem] w-[12rem] justify-between items-center">
                                 <div className="flex flex-col items-center md:w-1/12 pl-4 lg:pr-6 border-r">
-                                    <span className={`${roboto.className} text-slate-600 text-2xl rounded-full w-10 h-10 text-center flex items-center justify-center`}>{days}</span>
-                                    <span className="md:text-lg text-base text-slate-600">Dias</span>
+                                    <span className={`${roboto.className} text-slate-200 text-2xl rounded-full w-10 h-10 text-center flex items-center justify-center`}>{days}</span>
+                                    <span className="md:text-lg text-base text-slate-200">Dias</span>
                                 </div>
                                 <div className="flex flex-col items-center md:w-1/12 lg:pr-8 border-r ">
-                                    <span className={`${roboto.className} text-slate-600 text-2xl rounded-full w-10 h-10 text-center flex items-center justify-center`}>{hours}</span>
-                                    <span className="md:text-lg text-base text-slate-600">Hs</span>
+                                    <span className={`${roboto.className} text-slate-200 text-2xl rounded-full w-10 h-10 text-center flex items-center justify-center`}>{hours}</span>
+                                    <span className="md:text-lg text-base text-slate-200">Hs</span>
                                 </div>
                                 <div className="flex flex-col items-center md:w-1/12 lg:pr-8 border-r">
                                     <span className={`${roboto.className} text-slate-600 text-2xl rounded-full w-10 h-10 text-center flex items-center justify-center`}>{minutes}</span>

@@ -98,7 +98,7 @@ const Invitacion = ({ article }) => {
 
               <div>
 
-                <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color={article.data.color_fondo} />
 
               </div>
 
@@ -142,7 +142,11 @@ const Invitacion = ({ article }) => {
                   />
                 }
                 <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} />
-                <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
+                  {article.data.color_fondo ?  
+                    <div className="w-screen h-8 text-center pt-2 text-white" style={{backgroundColor: article.data.color_fondo}} >Invitaciones Jano's </div>
+                    :
+                    <div className="w-screen bg-violeta h-8 text-center pt-2 text-white" >Invitaciones Jano's </div>
+                  }
               </section>
             </div>
           </main>

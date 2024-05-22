@@ -13,7 +13,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
         objectFit: 'cover',
         objectPosition: '50% 10%',
         zIndex: 0,
-        opacity: 0.7,
+        opacity: 0.9,
         backgroundColor: '#555',
     }
 
@@ -21,7 +21,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
 
 
     return (
-        <div className=" h-[100dvh] bg-slate-800 ">
+        <div className=" h-[100dvh]  ">
             <div className="top-0 w-full h-full ">
                 
                 <div className='md:hidden h-full'>
