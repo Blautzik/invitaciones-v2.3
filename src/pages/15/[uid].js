@@ -30,7 +30,6 @@ const Invitacion = ({ article }) => {
     return `https://drive.google.com/uc?export=view&id=${fileId[0]}`;
     }
 
-    article = false
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 0%',
