@@ -13,7 +13,7 @@ const Info = ({ article }) => {
     const fechaCeremonia = new Date(article.fecha)
     fechaCeremonia.setDate(fechaCeremonia.getDate() + 1);
     const formattedDate = format(fechaCeremonia, "EEEE d 'de' MMMM", { locale: es });
-    console.log(formattedDate);
+
 
 
 

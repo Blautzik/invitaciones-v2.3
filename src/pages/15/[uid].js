@@ -19,7 +19,7 @@ import { getGoogleDriveImageUrl } from '@/helpers';
 
 
 const Invitacion = ({ article }) => {
-    console.log(article)
+  
 
 
 

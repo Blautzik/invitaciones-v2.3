@@ -34,8 +34,6 @@ export default function Gallery({imagenes, titulo}) {
     imagenes[0].foto6
     ]
 
-    console.log(imagenes)
-
 
 
   return (

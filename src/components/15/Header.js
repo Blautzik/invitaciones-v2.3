@@ -10,7 +10,7 @@ import Link from 'next/link';
 const Header = ({ coverImage, title, date, coverImagePc, h1_centrado }) => {
 
 
-    console.log(date,"date in header<<<<<<-<<<<<<<<<<<<<<<<<<<<<<")
+  
 
     const imageStyle = {
         objectFit: 'cover',

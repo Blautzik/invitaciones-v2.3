@@ -12,9 +12,9 @@ const FormularioSinNino = ({ form_id, frase_extra, color_fondo }) => {
   const [menu, setMenu] = useState('Menú Principal');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const id = form_id;
-  console.log(color_fondo)
+  
   const [color, setColor] = useState(`bg-[${color_fondo && color_fondo.toLowerCase()}]`)
-  console.log(color)
+  
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
 

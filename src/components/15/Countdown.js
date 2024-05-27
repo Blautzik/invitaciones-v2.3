@@ -11,11 +11,11 @@ const Countdown = ({ date }) => {
     });
 
     useEffect(() => {
-        console.log("date ----->>>>",date)
+
 
         const target = moment(date);
 
-        console.log("target ----> ",target._d.getDay())
+
 
         const updateCountdown = () => {
             const now = moment();

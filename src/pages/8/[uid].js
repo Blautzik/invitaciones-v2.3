@@ -120,8 +120,7 @@ export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
 
   const article = await client.getByUID("quince", params.uid);
-  console.log(article)
-  console.log(article.data)
+
 
   return {
     props: {

@@ -20,7 +20,7 @@ const Countdown = ({ date }) => {
         const interval = setInterval(() => {
 
             const difference = target - now
-            console.log('difference', difference)
+            
 
             const d = Math.floor(difference / (1000 * 60 * 60 * 24));
             setDays( d < 10 ? "0" + d : d);
