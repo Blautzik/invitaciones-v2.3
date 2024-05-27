@@ -42,7 +42,7 @@ const Invitacion = ({ article }) => {
         const portada = getGoogleDriveImageUrl(article.foto_portada)
         let galeria = false
         let foto_agendar = false
-        let regalos = false
+        let foto_regalos = false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
