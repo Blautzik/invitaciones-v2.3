@@ -40,9 +40,9 @@ const Invitacion = ({ article }) => {
 
     if (article) {
         const portada = getGoogleDriveImageUrl(article.foto_portada)
-        const regalos = getGoogleDriveImageUrl(article.foto_regalos)
         let galeria = false
         let foto_agendar = false
+        let regalos = false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -53,7 +53,9 @@ const Invitacion = ({ article }) => {
             foto_agendar = getGoogleDriveImageUrl(article.foto_agendar)
         }
 
-
+        if(article.foto_regalos) {
+            foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
+        }
         return (
             <>
                 <Head>
@@ -129,9 +131,12 @@ const Invitacion = ({ article }) => {
 
                 </div>
 
+
+        
                 <div className='z-50 mb-10'>
                     <Agendar className='z-40' foto={foto_agendar} ig_link={article.link_ig} fb_link={article.link_face} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
                 </div>
+
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
 
 
