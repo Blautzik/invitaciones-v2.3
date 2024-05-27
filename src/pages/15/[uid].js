@@ -1,9 +1,9 @@
-import Header from '@/components/6/Header';
+import Header from '@/components/15/Header';
 import Head from 'next/head';
-import Info from '@/components/6/Info';
-import Gallery from '@/components/6/Gallery';
-import Agendar from '@/components/6/Agendar';
-import Regalos from '@/components/6/Regalos';
+import Info from '@/components/15/Info';
+import Gallery from '@/components/15/Gallery';
+import Agendar from '@/components/15/Agendar';
+import Regalos from '@/components/15/Regalos';
 import Formulario from '@/components/6/Formulario';
 import * as prismic from '@prismicio/client';
 import Countdown from '../../components/1/Countdown';
@@ -14,21 +14,14 @@ import Image from 'next/image';
 import FormularioSinNino from '../../components/1/FormularioSinNino';
 import InfoBat from '../../components/1/infoBat';
 import FormularioBat from '../../components/1/FormularioBat';
+import { getGoogleDriveImageUrl } from '@/helpers';
 
 
 
 const Invitacion = ({ article }) => {
     console.log(article)
 
-    function getGoogleDriveImageUrl(driveUrl) {
-    const fileId = driveUrl.match(/[-\w]{25,}/);
 
-    if (!fileId) {
-        throw new Error("Invalid Google Drive URL");
-    }
-
-    return `https://drive.google.com/uc?export=view&id=${fileId[0]}`;
-    }
 
     const imageStyle = {
         objectFit: 'cover',
@@ -46,27 +39,121 @@ const Invitacion = ({ article }) => {
     }
 
     if (article) {
-        const portada  = getGoogleDriveImageUrl(article.foto_portada)
+        const portada = getGoogleDriveImageUrl(article.foto_portada)
+        const regalos = getGoogleDriveImageUrl(article.foto_regalos)
+        let galeria = false
+        let foto_agendar = false
+
+        if (article.galeria) {
+            const urlsArray = article.galeria.split(',').map(url => url.trim())
+            galeria = urlsArray.map(url => getGoogleDriveImageUrl(url));
+        }
+
+        if (article.foto_agendar) {
+            foto_agendar = getGoogleDriveImageUrl(article.foto_agendar)
+        }
+
+
         return (
             <>
                 <Head>
                     <title>
                         {article.nombre}
                         {article.frase_portada ? (" " + article.frase_portada)
-                            : "Te invito a compartir la alegría de esta noche inolvidable y única"
+                            : "Mis quince"
                         }
                     </title>
                     <meta property="og:image" content={portada} />
-                    <meta property="og:description" content={"Mis quince"} />
-
+                    <meta property="og:description" content={"Te invito a compartir la alegría de esta noche inolvidable y única"} />
                 </Head>
+
+
+                <div className="mb-16">
+                    <Header title={article.nombre}
+                        coverImage={portada}
+                        coverImagePc={portada}
+                        date={article.fecha}
+                        content={article.frase_portada}
+                        h1_centrado={article.h1_centrado}
+                    />
+                </div>
+
+                <section>
+                    <motion.div>
+                        <div className="h-full w-full flex flex-col items-center justify-between ">
+                            {
+                                article.fondo_sugerido &&
+                                <Image
+                                    src={article.data.fondo_sugerido}
+                                    fill
+                                    quality={100}
+                                    style={imageStyle}
+                                    alt='portada'
+                                />
+                            }
+
+
+                            <Info
+                                article={article}
+                            />
+
+                            {
+                                article.es_bat &&
+                                <InfoBat article={article} />
+                            }
+                        </div>
+                    </motion.div>
+                </section>
+
+
+                {article.cbu &&
+                    <div>
+                        <Regalos article={article} foto_regalos={regalos} />
+                    </div>
+                }
+
+                {article.galeria &&
+                    <section className="bg-[#fff] mt-12 text-center flex justify-center ">
+                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} />
+                    </section>
+                }
+
+                <div>
+                    {article.sin_ninos ?
+                        <FormularioSinNino form_id={article.form_id} frase_extra={article.frase_extra} />
+                        :
+                        <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
+                    }
+
+
+
+                </div>
+
+                <div className='z-50 mb-10'>
+                    <Agendar className='z-40' foto={foto_agendar} ig_link={article.link_ig} fb_link={article.link_face} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
+                </div>
+                <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
+
+
+                <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+
+
+
+
+
+
+
+
             </>
+
+
+
 
 
         )
 
     }
-}    
+}
 
 
 export default Invitacion
