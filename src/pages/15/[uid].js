@@ -110,7 +110,7 @@ const Invitacion = ({ article }) => {
 
                 {article.cbu &&
                     <div>
-                        <Regalos article={article} foto_regalos={regalos} />
+                        <Regalos article={article} foto_regalos={foto_regalos} />
                     </div>
                 }
 
