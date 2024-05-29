@@ -20,7 +20,9 @@ import { getGoogleDriveImageUrl } from '@/helpers';
 
 const Invitacion = ({ article }) => {
   
-
+    if(!article){
+        return null
+    }
 
 
     const imageStyle = {
