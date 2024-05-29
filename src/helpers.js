@@ -7,3 +7,11 @@ export function getGoogleDriveImageUrl(driveUrl) {
 
     return `https://drive.google.com/uc?export=view&id=${fileId[0]}`;
 }
+
+
+
+export const getOptimizedGoogleDriveImageUrl = (url, size = 300) => {
+    const match = url.match(/(?:\/d\/|id=)([a-zA-Z0-9_-]+)/);
+    const fileId = match ? match[1] : null;
+    return fileId ? `https://drive.google.com/thumbnail?id=${fileId}&sz=w${size}` : null;
+  };

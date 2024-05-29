@@ -14,7 +14,7 @@ import Image from 'next/image';
 import FormularioSinNino from '../../components/1/FormularioSinNino';
 import InfoBat from '../../components/1/infoBat';
 import FormularioBat from '../../components/1/FormularioBat';
-import { getGoogleDriveImageUrl } from '@/helpers';
+import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 
 
 
@@ -43,6 +43,7 @@ const Invitacion = ({ article }) => {
     if (article) {
 
         const portada = getGoogleDriveImageUrl(article.foto_portada)
+        const thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
@@ -68,7 +69,7 @@ const Invitacion = ({ article }) => {
                             : " Mis quince"
                         }
                     </title>
-                    <meta property="og:image" content={portada + "&w=300"} />
+                    <meta property="og:image" content={thumb} />
                     <meta property="og:description" content={"Te invito a compartir la alegría de esta noche inolvidable y única"} />
                     <meta property="og:image:type" content="image/jpeg" />
 
