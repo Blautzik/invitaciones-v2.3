@@ -213,7 +213,7 @@ export async function getStaticPaths() {
         };
     }
 
-    const res = await fetch('https://script.google.com/macros/s/AKfycbzLZe2MiUp-aeZYnkncQ3pw5SIWG-s4oU27BvlPZX5zeeOrK-tljz08MiLv1q-V1RNoIQ/exec');
+    const res = await fetch('https://script.google.com/macros/s/AKfycbz1A7uZm14jx_Zm5LB-fLd9jKbD3Z1JrSeE-LRgVfainCvu-9T86pKvQ5E7FgGqZTRvbQ/exec');
     const posts = await res.json();
 
 
