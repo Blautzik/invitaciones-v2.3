@@ -94,7 +94,7 @@ const Info = ({ article }) => {
                             >
 
                                 <h4 className={`${openSans.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate) + " - " + hora }</p>
+                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate) + " - " + hora.slice(0, 5) }</p>
                                 {article.hora_fin &&
                                     <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Hasta Las: {article.hora_fin}</p>
 
