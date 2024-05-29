@@ -164,8 +164,13 @@ export default Invitacion
 export async function getStaticProps({ params, previewData }) {
     const { uid } = params; 
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbzLZe2MiUp-aeZYnkncQ3pw5SIWG-s4oU27BvlPZX5zeeOrK-tljz08MiLv1q-V1RNoIQ/exec');
+    if (!uid) {
+        return {
+            notFound: true,
+        };
+    }
 
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzLZe2MiUp-aeZYnkncQ3pw5SIWG-s4oU27BvlPZX5zeeOrK-tljz08MiLv1q-V1RNoIQ/exec');
 
     if (!response.ok) {
         return {
@@ -175,16 +180,9 @@ export async function getStaticProps({ params, previewData }) {
 
     const articles = await response.json();
 
-
     const articleData = articles.find(article => String(article.nombre) === uid);
 
     if (!articleData) {
-        return {
-            notFound: true,
-        };
-    }
-
-    if (uid == undefined) {
         return {
             notFound: true,
         };
@@ -205,7 +203,6 @@ export async function getStaticProps({ params, previewData }) {
 
 
 export async function getStaticPaths() {
-
     if (process.env.SKIP_BUILD_STATIC_GENERATION) {
         return {
             paths: [],
@@ -216,11 +213,19 @@ export async function getStaticPaths() {
     const res = await fetch('https://script.google.com/macros/s/AKfycbz1A7uZm14jx_Zm5LB-fLd9jKbD3Z1JrSeE-LRgVfainCvu-9T86pKvQ5E7FgGqZTRvbQ/exec');
     const posts = await res.json();
 
+    // Verificar que los datos son correctos
+    if (!Array.isArray(posts) || posts.length === 0) {
+        return {
+            paths: [],
+            fallback: false,
+        };
+    }
 
-    const paths = posts.map((post) => ({
-        params: { uid: String(post.nombre) }, // Asegúrate de que el parámetro uid sea una cadena
-    }));
-
+    const paths = posts
+        .filter(post => post.nombre) // Asegúrate de filtrar los posts que tienen el nombre definido
+        .map(post => ({
+            params: { uid: String(post.nombre) }, // Asegúrate de que el parámetro uid sea una cadena
+        }));
 
     return { paths, fallback: false };
 }
