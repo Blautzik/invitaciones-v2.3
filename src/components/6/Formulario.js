@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 
 const Formulario = ({ form_id, frase_extra, bg, otra_frase }) => {
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
