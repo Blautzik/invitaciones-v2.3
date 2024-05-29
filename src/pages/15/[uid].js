@@ -170,7 +170,7 @@ export async function getStaticProps({ params, previewData }) {
         };
     }
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbzLZe2MiUp-aeZYnkncQ3pw5SIWG-s4oU27BvlPZX5zeeOrK-tljz08MiLv1q-V1RNoIQ/exec');
+    const response = await fetch('https://script.google.com/macros/s/AKfycbxd1bRHTk0UfmL7oafrkhCHXn2XbR6ec8bjZ-v-YnWOkS74eRdfChne9Zs2AC4-kSihqw/exec');
 
     if (!response.ok) {
         return {
