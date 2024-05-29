@@ -170,7 +170,7 @@ export async function getStaticProps({ params, previewData }) {
         };
     }
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbxd1bRHTk0UfmL7oafrkhCHXn2XbR6ec8bjZ-v-YnWOkS74eRdfChne9Zs2AC4-kSihqw/exec');
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzLZe2MiUp-aeZYnkncQ3pw5SIWG-s4oU27BvlPZX5zeeOrK-tljz08MiLv1q-V1RNoIQ/exec');
 
     if (!response.ok) {
         return {
@@ -179,6 +179,9 @@ export async function getStaticProps({ params, previewData }) {
     }
 
     const articles = await response.json();
+
+    // Log de los artículos obtenidos para verificación
+    console.log('Articles:', articles);
 
     const articleData = articles.find(article => String(article.nombre) === uid);
 
@@ -192,6 +195,9 @@ export async function getStaticProps({ params, previewData }) {
         uid, 
         ...articleData,
     };
+
+    // Log de los datos del artículo para verificación
+    console.log('Article:', article);
 
     return {
         props: {
@@ -213,7 +219,9 @@ export async function getStaticPaths() {
     const res = await fetch('https://script.google.com/macros/s/AKfycbz1A7uZm14jx_Zm5LB-fLd9jKbD3Z1JrSeE-LRgVfainCvu-9T86pKvQ5E7FgGqZTRvbQ/exec');
     const posts = await res.json();
 
-    // Verificar que los datos son correctos
+    // Log de los datos obtenidos para verificación
+    console.log('Posts:', posts);
+
     if (!Array.isArray(posts) || posts.length === 0) {
         return {
             paths: [],
@@ -226,6 +234,9 @@ export async function getStaticPaths() {
         .map(post => ({
             params: { uid: String(post.nombre) }, // Asegúrate de que el parámetro uid sea una cadena
         }));
+
+    // Log de las rutas generadas para verificación
+    console.log('Paths:', paths);
 
     return { paths, fallback: false };
 }
