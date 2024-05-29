@@ -68,7 +68,7 @@ const Invitacion = ({ article }) => {
                             : " Mis quince"
                         }
                     </title>
-                    <meta property="og:image" content={portada + "w=300"} />
+                    <meta property="og:image" content={portada + "&w=300"} />
                     <meta property="og:description" content={"Te invito a compartir la alegría de esta noche inolvidable y única"} />
                     <meta property="og:image:type" content="image/jpeg" />
 
