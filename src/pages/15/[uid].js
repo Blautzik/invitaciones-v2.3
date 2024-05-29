@@ -149,18 +149,7 @@ const Invitacion = ({ article }) => {
 
                 <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
 
-
-
-
-
-
-
-
             </>
-
-
-
-
 
         )
 
@@ -193,6 +182,11 @@ export async function getStaticProps({ params, previewData }) {
         };
     }
 
+    if (uid == undefined) {
+        return {
+            notFound: true,
+        };
+    }
 
     const article = {
         uid, 
