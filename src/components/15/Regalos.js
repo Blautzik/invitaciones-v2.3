@@ -44,10 +44,10 @@ const Regalos = ({ article, foto_regalos }) => {
                 <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 opacity-70`}>
                     {article.cbu && <Accordion open header="Datos Bancarios" bg={article.bg_color}>
                         <div className={`${openSans.className} text-sm font-thin opacity-100`}>
-                            {article.titular_cuenta && <p className='pb-2'><strong>Titular: </strong> {article.titular_cuenta}</p>}
+                            {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
-                            {article.dni && <p className='pb-2'><strong>CUIL: </strong> {article.dni}</p>}
+                            {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                         </div>
                     </Accordion>
                     }
