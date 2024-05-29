@@ -16,7 +16,19 @@ export const getOptimizedGoogleDriveImageUrl = (url, size = 300) => {
     return fileId ? `https://drive.google.com/thumbnail?id=${fileId}&sz=w${size}` : null;
   };
 
-export function convertirHoraArgentina(fechaISO) {
+
+
+
+
+
+
+
+
+
+
+
+
+ export function obtenerHoraArgentina(fechaISO) {
     // Crear un objeto Date a partir de la cadena de fecha ISO
     const fechaUTC = new Date(fechaISO);
 
@@ -26,15 +38,14 @@ export function convertirHoraArgentina(fechaISO) {
     // Obtener la hora en milisegundos y ajustar la diferencia de zona horaria
     const horaArgentina = new Date(fechaUTC.getTime() + (diferenciaHoras * 60 * 60 * 1000));
 
-    // Formatear la fecha y hora en Argentina
-    const opciones = { 
-        year: 'numeric', month: '2-digit', day: '2-digit', 
-        hour: '2-digit', minute: '2-digit', second: '2-digit',
-        hour12: false, timeZone: 'UTC'
-    };
+    // Formatear solo la hora en Argentina
+    const horaArgentinaString = horaArgentina.toLocaleTimeString('es-AR', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+        timeZone: 'UTC'
+    });
 
-    // Convertir la fecha a la hora Argentina en un string legible
-    const fechaArgentinaString = horaArgentina.toLocaleString('en-GB', opciones).replace(",", "");
-
-    return fechaArgentinaString;
+    return horaArgentinaString;
 }

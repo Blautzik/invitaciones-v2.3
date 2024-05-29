@@ -6,7 +6,7 @@ import suitIcon from '../../../public/suit (1).png'
 import salones, { encontrarSalon } from "../../data/salones"
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
-import { convertirHoraArgentina } from '@/helpers';
+import { obtenerHoraArgentina } from '@/helpers';
 
 
 const Info = ({ article }) => {
@@ -17,13 +17,17 @@ const Info = ({ article }) => {
         month: 'long'
     });
 
+    
+
     const salon =  encontrarSalon(article.salon)
 
     function capitalize(string) {
         return string.replace(/^\w/, match => match.toUpperCase());
     }
 
-    const hora = convertirHoraArgentina(article.fecha)
+    console.log(article.fecha)
+    const hora = obtenerHoraArgentina(article.fecha)
+    console.log(hora)
 
 
     const imgstyle = {
@@ -90,7 +94,7 @@ const Info = ({ article }) => {
                             >
 
                                 <h4 className={`${openSans.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate) + " - " + {hora} }</p>
+                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate) + " - " + hora }</p>
                                 {article.hora_fin &&
                                     <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Hasta Las: {article.hora_fin}</p>
 
