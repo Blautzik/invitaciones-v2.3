@@ -14,6 +14,7 @@ import Agendar from '@/components/1/Agendar';
 import Audiowe from '@/components/Audiowe';
 import Image from 'next/image';
 import FormularioEspecial from '@/components/1/FormularioEspecial';
+import InfoIcon from '@/components/3/InfoIcon';
 
 const Invitacion = ({ article }) => {
 
@@ -82,9 +83,14 @@ const Invitacion = ({ article }) => {
                         alt='portada'
                       />
                     }
-                    <Info
-                      article={article.data}
-                    />
+                    {
+                      article.data.icon ?
+                        <InfoIcon article={article.data} />
+                        :
+                        <Info
+                          article={article.data}
+                        />
+                    }
                   </div>
                 </motion.div>
               </section>
@@ -142,11 +148,11 @@ const Invitacion = ({ article }) => {
                   />
                 }
                 <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} />
-                  {article.data.color_fondo ?  
-                    <div className="w-screen h-8 text-center pt-2 text-white" style={{backgroundColor: article.data.color_fondo}} >Invitaciones Jano's </div>
-                    :
-                    <div className="w-screen bg-violeta h-8 text-center pt-2 text-white" >Invitaciones Jano's </div>
-                  }
+                {article.data.color_fondo ?
+                  <div className="w-screen h-8 text-center pt-2 text-white" style={{ backgroundColor: article.data.color_fondo }} >Invitaciones Jano's </div>
+                  :
+                  <div className="w-screen bg-violeta h-8 text-center pt-2 text-white" >Invitaciones Jano's </div>
+                }
               </section>
             </div>
           </main>
