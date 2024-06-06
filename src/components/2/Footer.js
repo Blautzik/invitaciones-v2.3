@@ -14,7 +14,7 @@ const Footer = ({frase_cierre, sin_janos, logo}) => {
             {logo && 
                 <img 
                 className='object-contain w-1/2 md:w-1/6 -top-7 relative '
-                src='https://res.cloudinary.com/fedexx/image/upload/v1717634935/TRINI_CORONA_01_ky1rjb.jpg'></img>
+                src='https://res.cloudinary.com/fedexx/image/upload/v1717640319/Dise%C3%B1o_sin_t%C3%ADtulo_2_rts2ky.png'></img>
             }
 
             {
