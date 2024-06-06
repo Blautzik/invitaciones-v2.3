@@ -15,12 +15,14 @@ const Footer = ({frase_cierre, sin_janos, logo}) => {
                 src='https://res.cloudinary.com/fedexx/image/upload/v1717694547/Dise%C3%B1o_sin_t%C3%ADtulo_2_rri6fp.png'></img>
             }
 
+
             {
                 !logo &&
                 <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10 `}>
                 
                { frase_cierre || "Nos vemos !!"}
             </h2>
+
             }
             { !sin_janos &&
             <a href='https://janoseventos.com' target='_blank'>
