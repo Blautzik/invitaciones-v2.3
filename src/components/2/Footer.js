@@ -4,8 +4,6 @@ import Image from 'next/image'
 import React from 'react'
 
 
-
-
 const Footer = ({frase_cierre, sin_janos, logo}) => {
     return (
         <div className='flex flex-col items-center justify-center text-center  '>
@@ -14,7 +12,7 @@ const Footer = ({frase_cierre, sin_janos, logo}) => {
             {logo && 
                 <img 
                 className='object-contain w-1/2 md:w-1/6 -top-7 relative '
-                src='https://res.cloudinary.com/fedexx/image/upload/v1717640319/Dise%C3%B1o_sin_t%C3%ADtulo_2_rts2ky.png'></img>
+                src='https://res.cloudinary.com/fedexx/image/upload/v1717694547/Dise%C3%B1o_sin_t%C3%ADtulo_2_rri6fp.png'></img>
             }
 
             {
