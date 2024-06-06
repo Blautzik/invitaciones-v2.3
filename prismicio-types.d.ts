@@ -1418,6 +1418,18 @@ interface QuinceDocumentData {
    */
   icon: prismic.BooleanField;
   /**
+   * logo field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  logo: prismic.BooleanField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

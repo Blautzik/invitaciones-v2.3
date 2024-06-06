@@ -272,6 +272,15 @@
           "placeholder_false": "false"
         }
       },
+      "logo": {
+        "type": "Boolean",
+        "config": {
+          "label": "logo",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

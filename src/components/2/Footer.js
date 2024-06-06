@@ -6,14 +6,24 @@ import React from 'react'
 
 
 
-const Footer = ({frase_cierre, sin_janos}) => {
+const Footer = ({frase_cierre, sin_janos, logo}) => {
     return (
         <div className='flex flex-col items-center justify-center text-center  '>
             
-            
-            <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10 `}>
+
+            {logo && 
+                <img 
+                className='object-contain w-1/2 md:w-1/6 -top-7 relative '
+                src='https://res.cloudinary.com/fedexx/image/upload/v1717634935/TRINI_CORONA_01_ky1rjb.jpg'></img>
+            }
+
+            {
+                !logo &&
+                <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10 `}>
+                
                { frase_cierre || "Nos vemos !!"}
             </h2>
+            }
             { !sin_janos &&
             <a href='https://janoseventos.com' target='_blank'>
                 <div className='object-contain mt-8 mb-8'>

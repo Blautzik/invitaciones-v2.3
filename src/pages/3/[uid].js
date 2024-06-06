@@ -147,7 +147,7 @@ const Invitacion = ({ article }) => {
                     alt='portada'
                   />
                 }
-                <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} />
+                <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} logo={article.data.logo} />
                 {article.data.color_fondo ?
                   <div className="w-screen h-8 text-center pt-2 text-white" style={{ backgroundColor: article.data.color_fondo }} >Invitaciones Jano's </div>
                   :
