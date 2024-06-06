@@ -26,26 +26,23 @@ export const getOptimizedGoogleDriveImageUrl = (url, size = 300) => {
 
 
 
+  export function obtenerHoraArgentina(fechaISO) {
+    // Convertir la cadena de fecha ISO a un objeto Date (interpretado como UTC)
+    const fecha = new Date(fechaISO);
 
+    // Obtener la hora y los minutos en UTC
+    const horaUTC = fecha.getUTCHours();
+    const minutoUTC = fecha.getUTCMinutes();
 
- export function obtenerHoraArgentina(fechaISO) {
-    // Crear un objeto Date a partir de la cadena de fecha ISO
-    const fechaUTC = new Date(fechaISO);
+    // Ajustar la hora para el horario de Argentina (UTC-3)
+    let horaArgentina = horaUTC - 3;
 
-    // Calcular la diferencia de horas entre UTC y Argentina (UTC-3)
-    const diferenciaHoras = -3;
+    // Si la hora es negativa, agregar 24 horas para obtener el formato de 24 horas
+    horaArgentina += 12
 
-    // Obtener la hora en milisegundos y ajustar la diferencia de zona horaria
-    const horaArgentina = new Date(fechaUTC.getTime() + (diferenciaHoras * 60 * 60 * 1000));
+    // Formatear la hora y los minutos en formato de 24 horas
+    const horaFormateada = horaArgentina.toString().padStart(2, '0') + ':' + minutoUTC.toString().padStart(2, '0');
 
-    // Formatear solo la hora en Argentina
-    const horaArgentinaString = horaArgentina.toLocaleTimeString('es-AR', {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: false,
-        timeZone: 'UTC'
-    });
-
-    return horaArgentinaString;
+    return horaFormateada;
 }
+
