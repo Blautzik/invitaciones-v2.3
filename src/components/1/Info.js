@@ -153,19 +153,7 @@ const Info = ({ article }) => {
                                     scale: 1,
                                 }}
                             >
-                                <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
 
-                                    {
-                                        article.foto_salon &&
-                                        <Image
-                                            src={article.foto_salon}
-                                            fill
-                                            quality={50}
-                                            style={imgstyle}
-                                        />
-                                    }
-
-                                </div>
                             </motion.div>
 
                             {article.link_salon &&

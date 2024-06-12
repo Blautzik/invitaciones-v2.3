@@ -1,10 +1,7 @@
-import { GiChurch } from "react-icons/gi";
-import { GiGlassCelebration, GiPartyPopper } from "react-icons/gi";
+import {  GiPartyPopper } from "react-icons/gi";
 import { inter, roboto } from '../../utils/fonts';
 import Image from "next/image";
-import ondas from '../../../public/img_ondas02.svg'
 import ropa from '../../../public/ropa.png'
-
 
 
 const Info = ({ dia, lugar, direccion }) => {
