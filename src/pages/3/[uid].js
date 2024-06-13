@@ -104,7 +104,7 @@ const Invitacion = ({ article }) => {
 
               <div>
 
-                <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color={article.data.color_fondo} />
+                <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color={article.data.color_fondo} sin_menu={article.data.sin_menu} />
 
               </div>
 

@@ -1430,6 +1430,18 @@ interface QuinceDocumentData {
    */
   logo: prismic.BooleanField;
   /**
+   * sin menu field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.sin_menu
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  sin_menu: prismic.BooleanField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

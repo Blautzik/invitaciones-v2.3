@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
-import {openSans} from '../../utils/fonts';
+import { openSans } from '../../utils/fonts';
 import { Open_Sans } from 'next/font/google';
 
-const Formulario = ({ form_id, frase_extra, color }) => {
+const Formulario = ({ form_id, frase_extra, color, sin_menu }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
@@ -73,7 +73,7 @@ const Formulario = ({ form_id, frase_extra, color }) => {
   };
 
   return (
-    <div className={`${openSans.className} bg-slate-900 w-screen min-h-screen bg-opacity-80`} style={{backgroundColor: color}}>
+    <div className={`${openSans.className} bg-slate-900 w-screen min-h-screen bg-opacity-80`} style={{ backgroundColor: color }}>
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
           <GoCheckCircle className="text-[66px] font-thin text-white" />
@@ -126,23 +126,28 @@ const Formulario = ({ form_id, frase_extra, color }) => {
               placeholder="Si venís con niños menores a 5, escribí sus nombres"
             />
           </div>
+          { !sin_menu &&
+            <>
+              <h3 className="text-white text-md max-w-2xl font-[500] pl-2">Opciones de menú</h3>
+              <div className="flex items-center justify-center">
+                <select
+                  name="select"
+                  className={`${inputCN} text-gray-500`}
+                  onChange={(e) => setMenu(e.target.value)}
+                  value={menu}
+                >
+                  <option value="Menú Principal">Menú Principal</option>
+                  <option value="Menú Vegetariano">Menú Vegetariano</option>
+                  <option value="Menú Vegano">Menú Vegano</option>
+                  <option value="Menú Celíaco">Menú Celíaco</option>
+                  <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>
+                  <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
+                </select>
+              </div>
+            </>
 
-          <h3 className="text-white text-md max-w-2xl font-[500] pl-2">Opciones de menú</h3>
-          <div className="flex items-center justify-center">
-            <select
-              name="select"
-              className={`${inputCN} text-gray-500`}
-              onChange={(e) => setMenu(e.target.value)}
-              value={menu}
-            >
-              <option value="Menú Principal">Menú Principal</option>
-              <option value="Menú Vegetariano">Menú Vegetariano</option>
-              <option value="Menú Vegano">Menú Vegano</option>
-              <option value="Menú Celíaco">Menú Celíaco</option>
-              <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>
-              <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
-            </select>
-          </div>
+          }
+
           <div className="flex items-center justify-center">
             <label htmlFor="message" className="sr-only">
               Mensaje
@@ -159,9 +164,8 @@ const Formulario = ({ form_id, frase_extra, color }) => {
           <div className="flex items-end justify-end">
             <button
               type="submit"
-              className={`${
-                isSubmitting || !isFormValid ? 'opacity-50 cursor-not-allowed' : ''
-              } bg-white text-black flex justify-evenly items-center w-36 text-[14px] font-[600] px-6 py-3 rounded-full`}
+              className={`${isSubmitting || !isFormValid ? 'opacity-50 cursor-not-allowed' : ''
+                } bg-white text-black flex justify-evenly items-center w-36 text-[14px] font-[600] px-6 py-3 rounded-full`}
               disabled={isSubmitting || !isFormValid}
             >
               {isSubmitting ? 'Enviando...' : 'CONFIRMAR'}

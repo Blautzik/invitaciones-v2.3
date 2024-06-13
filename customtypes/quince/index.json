@@ -281,6 +281,15 @@
           "placeholder_false": "false"
         }
       },
+      "sin_menu": {
+        "type": "Boolean",
+        "config": {
+          "label": "sin menu",
+          "default_value": false,
+          "placeholder_true": "true",
+          "placeholder_false": "false"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
