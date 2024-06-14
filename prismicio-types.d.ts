@@ -1442,6 +1442,18 @@ interface QuinceDocumentData {
    */
   sin_menu: prismic.BooleanField;
   /**
+   * no conozcas field in *quince*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: quince.no_conozcas
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  no_conozcas: prismic.BooleanField;
+  /**
    * Slice Zone field in *quince*
    *
    * - **Field Type**: Slice Zone

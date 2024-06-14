@@ -174,10 +174,12 @@ const Info = ({ article }) => {
                             </motion.div>
 
                             <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly'>
-
-                                <a href={article.link_salon} target="_blank">
-                                    <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
-                                </a>
+                                {
+                                    !article.no_conozcas &&
+                                    <a href={article.link_salon} target="_blank">
+                                        <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
+                                    </a>
+                                }
                                 <a href={article.ubicacion} target="_blank">
 
                                     <button className={`${openSans.className} sm:text-sm  text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none  shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
