@@ -15,6 +15,8 @@ import Audiowe from '@/components/Audiowe';
 import Image from 'next/image';
 import FormularioEspecial from '@/components/1/FormularioEspecial';
 import InfoIcon from '@/components/3/InfoIcon';
+import FormularioSinNino from '@/components/1/FormularioSinNino';
+import FormularioSinNinoMenu from '@/components/1/FormularioSinNinoMenu';
 
 const Invitacion = ({ article }) => {
 
@@ -103,21 +105,17 @@ const Invitacion = ({ article }) => {
               }
 
               <div>
-
-                <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color={article.data.color_fondo} sin_menu={article.data.sin_menu} />
-
+                {
+                  article.data.no_conozcas ?
+                  <FormularioSinNinoMenu form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                  :<Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color={article.data.color_fondo} sin_menu={article.data.sin_menu} />
+                }
               </div>
-
-
-
               {article.data.frase_regalos &&
                 <div className='mb-8'>
                   <Regalos article={article.data} />
                 </div>
               }
-
-
-
               <section className='relative'>
                 {
                   article.data.fondo_sugerido &&
