@@ -5,8 +5,6 @@ import Accordion from '../6/Accordion'
 
 const Regalos = ({ article, foto_regalos }) => {
 
-
-
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: 'center',
