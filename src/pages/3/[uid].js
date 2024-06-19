@@ -13,14 +13,12 @@ import Formulario from '@/components/3/Formulario';
 import Agendar from '@/components/1/Agendar';
 import Audiowe from '@/components/Audiowe';
 import Image from 'next/image';
-import FormularioEspecial from '@/components/1/FormularioEspecial';
 import InfoIcon from '@/components/3/InfoIcon';
-import FormularioSinNino from '@/components/1/FormularioSinNino';
 import FormularioSinNinoMenu from '@/components/1/FormularioSinNinoMenu';
 
+
+
 const Invitacion = ({ article }) => {
-
-
   const imageStyle = {
     objectFit: 'cover',
     objectPosition: '50% 0%',
