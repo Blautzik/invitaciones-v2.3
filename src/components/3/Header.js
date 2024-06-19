@@ -11,18 +11,17 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
 
     const imageStyle = {
         objectFit: 'cover',
-        objectPosition: '50% 10%',
+        objectPosition: '50% 0%',
         zIndex: 0,
-        opacity: 0.9,
-        backgroundColor: '#555',
+        opacity: 1,
     }
 
     const titulo = title.toUpperCase()
 
 
     return (
-        <div className=" h-[100dvh]  ">
-            <div className="top-0 w-full h-full ">
+        <div className=" h-[100vh]  ">
+            <div className="w-full ">
                 
                 <div className='md:hidden h-full'>
 
@@ -43,7 +42,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
                         alt='portada'
                     />
                 </div>
-                <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
+                <div className='absolute left-0 w-full h-full flex flex-col justify-between items-center '>
 
                     <div className=' pt-56'>
                         <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}> </h1>
@@ -54,7 +53,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
                         <h2 className={`${openSans.className} text-gray-50 max-w-xs text-center text-xl tracking-widest font-[100]`}> Faltan </h2>
                         <Countdown date={date} />
                         <Link href='#info' scroll={false}>
-                            <button className={`${openSans.className} py-3 px-9 bg-white rounded-full text-gray-900 font-[900] text-center mb-16 `}>MÁS INFO</button>
+                            <button className={`${openSans.className} py-3 px-9 bg-transparent rounded-full text-gray-900 font-[900] text-center mb-16 `}></button>
                         </Link>
 
                     </div>

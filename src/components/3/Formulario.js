@@ -73,8 +73,8 @@ const Formulario = ({ form_id, frase_extra, color, sin_menu }) => {
   };
 
   return (
-    <div className={`${openSans.className} bg-slate-900 w-screen min-h-screen bg-opacity-80`} style={{ backgroundColor: color }}>
-      <div className="mx-auto py-10 ">
+    <div className={`${openSans.className} bg-slate-900 w-screen min-h-screen bg-opacity-80 `} style={{ backgroundColor: color }}>
+      <div className="mx-auto  ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
           <GoCheckCircle className="text-[66px] font-thin text-white" />
           <h3 className="text-white text-2xl pt-6">Confirmar Asistencia</h3>

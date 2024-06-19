@@ -52,7 +52,7 @@ const Invitacion = ({ article }) => {
             <Audiowe music={article.data.music} />
           </div>
         }
-        <div className='flex flex-col justify-center items-center w-screen'>
+        <div className=''>
 
           <main className="w-screen" >
 
@@ -69,20 +69,9 @@ const Invitacion = ({ article }) => {
             </section>
 
             <div>
-
-              <section>
-                <motion.div>
-                  <div className="h-full w-full flex flex-col items-center justify-between ">
-                    {
-                      article.data.fondo_sugerido &&
-                      <Image
-                        src={article.data.fondo_sugerido}
-                        fill
-                        quality={100}
-                        style={imageStyle}
-                        alt='portada'
-                      />
-                    }
+              <div>
+              
+                
                     {
                       article.data.icon ?
                         <InfoIcon article={article.data} />
@@ -91,18 +80,18 @@ const Invitacion = ({ article }) => {
                           article={article.data}
                         />
                     }
-                  </div>
-                </motion.div>
-              </section>
+                  
+              
+              </div>
 
               {
                 article.data.galeria[0].foto1 &&
-                <section className="bg-[#fff] mt-12 text-center flex justify-center ">
+                <section className="bg-[#fff] mt-12 text-center flex justify-center relative -top-[1px] ">
                   <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} />
                 </section>
               }
 
-              <div>
+              <div className='relative -top-[1px]'>
                 {
                   article.data.no_conozcas ?
                   <FormularioSinNinoMenu form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
@@ -110,21 +99,12 @@ const Invitacion = ({ article }) => {
                 }
               </div>
               {article.data.cbu &&
-                <div className='mb-8'>
+                <div className='mb-8 relative -top-[1px]'>
                   <Regalos article={article.data} />
                 </div>
               }
-              <section className='relative'>
-                {
-                  article.data.fondo_sugerido &&
-                  <Image
-                    src={article.data.fondo_sugerido}
-                    fill
-                    quality={100}
-                    style={imageStyle}
-                    alt='portada'
-                  />
-                }
+              <section className='relative '>
+
 
 
                 <div className='z-50'>
@@ -136,16 +116,6 @@ const Invitacion = ({ article }) => {
               </section>
 
               <section className='relative pt-5'>
-                {
-                  article.data.fondo_sugerido &&
-                  <Image
-                    src={article.data.fondo_sugerido}
-                    fill
-                    quality={100}
-                    style={{ ...imageStyleFlipped }}
-                    alt='portada'
-                  />
-                }
                 <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} logo={article.data.logo} />
                 {article.data.color_fondo ?
                   <div className="w-screen h-8 text-center pt-2 text-white" style={{ backgroundColor: article.data.color_fondo }} >Invitaciones Jano's </div>
