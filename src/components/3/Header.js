@@ -20,7 +20,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
 
 
     return (
-        <div className=" h-screen  ">
+        <div className=" h-[90vh]  ">
             <div className="w-full ">
                 
                 <div className='md:hidden h-full'>

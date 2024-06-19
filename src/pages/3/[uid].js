@@ -56,7 +56,7 @@ const Invitacion = ({ article }) => {
             </section>
 
             <div>
-              <div>
+              <div id='info'>
               
                 
                     {
