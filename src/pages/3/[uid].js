@@ -19,20 +19,7 @@ import FormularioSinNinoMenu from '@/components/1/FormularioSinNinoMenu';
 
 
 const Invitacion = ({ article }) => {
-  const imageStyle = {
-    objectFit: 'cover',
-    objectPosition: '50% 0%',
-    zIndex: -1000,
-    opacity: 0.65,
-  }
-
-  const imageStyleFlipped = {
-    objectFit: 'cover',
-    objectPosition: '50% 100%',
-    zIndex: -1000,
-    opacity: 0.65,
-    transform: 'scaleY(-1)'
-  }
+  
 
   if (article) {
     return (
