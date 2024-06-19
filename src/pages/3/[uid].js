@@ -102,12 +102,12 @@ const Invitacion = ({ article }) => {
                 </div>
               </section>
 
-              <section className='relative pt-5'>
+              <section className=''>
                 <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} logo={article.data.logo} />
                 {article.data.color_fondo ?
-                  <div className="w-screen h-8 text-center pt-2 text-white" style={{ backgroundColor: article.data.color_fondo }} >Invitaciones Jano's </div>
+                  <div className="w-screen h-8 text-center pt-2 mt-3 text-white" style={{ backgroundColor: article.data.color_fondo }} >Invitaciones Jano's </div>
                   :
-                  <div className="w-screen bg-violeta h-8 text-center pt-2 text-white" >Invitaciones Jano's </div>
+                  <div className="w-screen bg-violeta h-8 mt-3 text-center pt-2 text-white" >Invitaciones Jano's </div>
                 }
               </section>
             </div>
