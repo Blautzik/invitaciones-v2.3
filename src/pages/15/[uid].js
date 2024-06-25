@@ -218,7 +218,7 @@ export async function getStaticPaths() {
         };
     }
 
-    const res = await fetch('https://script.google.com/macros/s/AKfycbz1A7uZm14jx_Zm5LB-fLd9jKbD3Z1JrSeE-LRgVfainCvu-9T86pKvQ5E7FgGqZTRvbQ/exec');
+    const res = await fetch('https://script.google.com/macros/s/AKfycby4SXrqWFSAr9T1Aou5ocCpgfKMntQFesRyL2wO_vc3I53hoKRfnL9F5a-Z8R3h3HSuvw/exec');
     const posts = await res.json();
 
     // Log de los datos obtenidos para verificación
