@@ -81,7 +81,7 @@ const Invitacion = ({ article }) => {
               <div className='relative -top-[1px]'>
                 {
                   article.data.no_conozcas ?
-                  <FormularioSinNinoMenu form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
+                  <FormularioSinNinoMenu form_id={article.data.form_id} frase_extra={article.data.frase_extra} color_fondo={article.data.color_fondo} no_fondo={article.data.fondo_sugerido} />
                   :<Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color={article.data.color_fondo} sin_menu={article.data.sin_menu} />
                 }
               </div>

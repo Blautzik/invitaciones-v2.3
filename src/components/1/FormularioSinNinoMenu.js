@@ -4,7 +4,7 @@ import { GoCheckCircle } from 'react-icons/go';
 import {openSans} from '../../utils/fonts';
 import { Open_Sans } from 'next/font/google';
 
-const FormularioSinNinoMenu = ({ form_id, frase_extra, color_fondo }) => {
+const FormularioSinNinoMenu = ({ form_id, frase_extra, color_fondo, no_fondo }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
@@ -13,7 +13,9 @@ const FormularioSinNinoMenu = ({ form_id, frase_extra, color_fondo }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const id = form_id;
   
+
   const [color, setColor] = useState(`bg-[${color_fondo && color_fondo.toLowerCase()}]`)
+  console.log(color)
   
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
@@ -75,7 +77,7 @@ const FormularioSinNinoMenu = ({ form_id, frase_extra, color_fondo }) => {
   };
 
   return (
-    <div className={`${openSans.className} ${ color_fondo ? color : 'bg-violeta' } bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
+    <div className={`${openSans.className} bg-violeta w-screen `}style={{backgroundColor:color_fondo, backgroundImage: `url(${no_fondo})`, backgroundSize:'cover' , }} > 
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
           <GoCheckCircle className="text-[66px] font-thin text-white" />
