@@ -153,12 +153,12 @@ const Invitacion = ({ article }) => {
                                 </motion.div>
                             </section>
 
-                            {
-                                article.galeria[0].foto1 &&
+                            {article.galeria &&
                                 <section className="bg-[#fff] mt-12 text-center flex justify-center ">
-                                    <Gallery imagenes={article.galeria} titulo={article.titulo_galeria} />
+                                    <Gallery imagenes={galeria} titulo={"Book de Fotos"} />
                                 </section>
                             }
+
 
                             <div>
                                 {article.formulario_especial ?
@@ -179,7 +179,7 @@ const Invitacion = ({ article }) => {
 
                             {article.frase_regalos &&
                                 <div>
-                                    <Regalos article={article} foto_regalos={foto_regalos}/>
+                                    <Regalos article={article} foto_regalos={foto_regalos} />
                                 </div>
                             }
 
@@ -213,12 +213,12 @@ const Invitacion = ({ article }) => {
                                     />
                                 }
 
-                               
-                                    <>
-                                        <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
-                                        <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
-                                    </>
-                                    
+
+                                <>
+                                    <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
+                                    <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+                                </>
+
                             </section>
                         </div>
                     </main>
