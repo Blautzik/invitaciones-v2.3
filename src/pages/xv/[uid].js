@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Header from '@/components/1/Header';
 import Countdown from '@/components/1/Countdown';
 import Info from '@/components/15/Info';
-import Gallery from '@/components/1/Gallery';
+import Gallery from '@/components/15/Gallery';
 import Regalos from '@/components/15/Regalos';
 import Footer from '@/components/4/Footer';
 import { easeIn, motion } from "framer-motion"
