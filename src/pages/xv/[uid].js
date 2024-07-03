@@ -40,8 +40,13 @@ const Invitacion = ({ article }) => {
 
     if (article) {
 
-        const portada = getGoogleDriveImageUrl(article.foto_portada)
-        const thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+        let portada = false
+        let thumb = false
+
+        if(article.foto_portada){
+             portada = getGoogleDriveImageUrl(article.foto_portada)
+             thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+        }
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
