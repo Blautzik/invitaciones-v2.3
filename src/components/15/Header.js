@@ -4,13 +4,12 @@ import Image from 'next/image';
 import { alegreya, comfortaa, minion, openSans, roboto } from '../../utils/fonts';
 import Countdown from './Countdown';
 import Link from 'next/link';
+import PortadaSinFoto from './PortadaSinFoto';
 
 
 
 const Header = ({ coverImage, title, date, coverImagePc, h1_centrado }) => {
 
-
-  
 
     const imageStyle = {
         objectFit: 'cover',
@@ -22,9 +21,14 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado }) => {
 
     const titulo = title.toUpperCase()
 
+    if(!coverImage){
+        return(
+            <PortadaSinFoto title={title} date={date} />
+        )
+    }
 
     return (
-        <div className=" h-[100dvh] bg-slate-800 ">
+        <div className=" h-[100vh] bg-slate-800 mb-16">
             <div className="top-0 w-full h-full ">
                 
                 <div className='md:hidden h-full'>

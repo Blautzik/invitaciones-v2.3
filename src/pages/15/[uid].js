@@ -41,9 +41,14 @@ const Invitacion = ({ article }) => {
     }
 
     if (article) {
+        let portada = false
+        let thumb = false
 
-        const portada = getGoogleDriveImageUrl(article.foto_portada)
-        const thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+        if(article.foto_portada){
+             portada = getGoogleDriveImageUrl(article.foto_portada)
+             thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+        }
+        
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
@@ -76,7 +81,7 @@ const Invitacion = ({ article }) => {
                 </Head>
 
 
-                <div className="mb-16">
+                <div >
                     <Header title={article.nombre}
                         coverImage={portada}
                         coverImagePc={portada}
@@ -86,7 +91,7 @@ const Invitacion = ({ article }) => {
                     />
                 </div>
 
-                <section>
+                <section id='info'>
                     <motion.div>
                         <div className="h-full w-full flex flex-col items-center justify-between ">
                             {
