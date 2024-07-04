@@ -1,6 +1,4 @@
 import React from 'react'
-import * as prismic from "@prismicio/client";
-import { createClient } from "@/prismicio";
 import Head from 'next/head';
 import Header from '@/components/1/Header';
 import Countdown from '@/components/1/Countdown';
@@ -13,8 +11,6 @@ import Formulario from '@/components/1/Formulario';
 import Agendar from '@/components/1/Agendar';
 import Audiowe from '@/components/Audiowe';
 import Image from 'next/image';
-import FormularioEspecial from '@/components/1/FormularioEspecial';
-import { Viaoda_Libre } from 'next/font/google';
 import FormularioSinNino from '@/components/1/FormularioSinNino';
 import InfoBat from '@/components/1/infoBat';
 import FormularioBat from '@/components/1/FormularioBat';
@@ -176,11 +172,7 @@ const Invitacion = ({ article }) => {
                                 }
                             </div>
 
-                            {/* {article.cbu &&
-                <div>
-                  <Regalos article={article} />
-                </div>
-              } */}
+
 
                             {article.frase_regalos &&
                                 <div>
