@@ -172,8 +172,6 @@ const Invitacion = ({ article }) => {
                                 }
                             </div>
 
-
-
                             {article.frase_regalos &&
                                 <div>
                                     <Regalos article={article} foto_regalos={foto_regalos} />
