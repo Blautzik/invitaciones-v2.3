@@ -46,7 +46,7 @@ const Invitacion = ({ article }) => {
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
-        let frase = "Te espero para compartir la alegría de esta noche inolvidable y única"
+        let frase =  article.qwe  || "Te espero para compartir la alegría de esta noche inolvidable y única"
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -77,9 +77,6 @@ const Invitacion = ({ article }) => {
                     <meta property="og:image:type" content="image/jpeg" />
 
                 </Head>
-
-
-
 
 
                 {article.music &&
