@@ -28,7 +28,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado }) => {
     }
 
     return (
-        <div className=" h-[100vh] bg-slate-800 mb-16">
+        <div className=" h-[100vh] ">
             <div className="top-0 w-full h-full ">
                 
                 <div className='md:hidden h-full'>
