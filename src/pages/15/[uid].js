@@ -62,8 +62,8 @@ const Invitacion = ({ article }) => {
             foto_agendar = getGoogleDriveImageUrl(article.foto_agendar)
         }
 
-        if(article.foto_regalos) {
-            foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
+        if(article['foto seccion regalos (opcional)']) {
+            foto_regalos = getGoogleDriveImageUrl(article['foto seccion regalos (opcional)'])
         }
         return (
             <>
