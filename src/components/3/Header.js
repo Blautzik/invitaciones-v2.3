@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { alegreya, comfortaa, minion, openSans, roboto } from '../../utils/fonts';
 import Countdown from '../6/Countdown';
 import Link from 'next/link';
+import NewCountdown from './NewCountdown';
 
 
 
@@ -15,6 +16,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
         zIndex: 0,
         opacity: 1,
     }
+    console.log(date)
 
     const titulo = title.toUpperCase()
 
@@ -51,7 +53,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
 
                     <div className='flex flex-col items-center'>
                         <h2 className={`${openSans.className} text-gray-50 max-w-xs text-center text-xl tracking-widest font-[100]`}> Faltan </h2>
-                        <Countdown date={date} />
+                        <NewCountdown date={date} />
                         <Link href='#info' scroll={false}>
                             <button className={`${openSans.className} py-3 px-9 bg-transparent rounded-full text-gray-900 font-[900] text-center mb-16 `}></button>
                         </Link>
