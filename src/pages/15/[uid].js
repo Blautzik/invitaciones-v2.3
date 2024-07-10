@@ -119,11 +119,6 @@ const Invitacion = ({ article }) => {
                 </section>
 
 
-                {article.alias &&
-                    <div>
-                        <Regalos article={article} foto_regalos={foto_regalos} />
-                    </div>
-                }
 
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
@@ -146,6 +141,14 @@ const Invitacion = ({ article }) => {
 
 
                 </div>
+                
+
+                {article.alias &&
+                    <div>
+                        <Regalos article={article} foto_regalos={foto_regalos} />
+                    </div>
+                }
+
 
 
         
@@ -177,7 +180,7 @@ export async function getStaticProps({ params, previewData }) {
         };
     }
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycby4SXrqWFSAr9T1Aou5ocCpgfKMntQFesRyL2wO_vc3I53hoKRfnL9F5a-Z8R3h3HSuvw/exec');
+    const response = await fetch('https://script.google.com/macros/s/AKfycbzoCjNfx0GeGNW3v1jIV_J3a0_QIOWiKau4nNQQg5CyLvh82UsBsz26aNaa0O9PxVmGxA/exec');
 
     if (!response.ok) {
         return {
@@ -190,7 +193,7 @@ export async function getStaticProps({ params, previewData }) {
     // Log de los artículos obtenidos para verificación
     console.log('Articles:', articles);
 
-    const articleData = articles.find(article => String(article.nombre) === uid);
+    const articleData = articles.find(article => String(article.url) === uid);
 
     if (!articleData) {
         return {
@@ -239,7 +242,7 @@ export async function getStaticPaths() {
     const paths = posts
         .filter(post => post.nombre) // Asegúrate de filtrar los posts que tienen el nombre definido
         .map(post => ({
-            params: { uid: String(post.nombre) }, // Asegúrate de que el parámetro uid sea una cadena
+            params: { uid: String(post.url) }, // Asegúrate de que el parámetro uid sea una cadena
         }));
 
     // Log de las rutas generadas para verificación
