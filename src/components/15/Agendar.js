@@ -13,6 +13,8 @@ const Agendar = ({foto, links, fecha, bg}) => {
     const fechaCeremonia = new Date(fecha);
     const formattedDate = format(fechaCeremonia, 'yyyy/MM/dd', { locale: es });
 
+    console.log("FOTOTAGENDAR",foto)
+
 
     return (
         <div className='max-h-screen flex flex-col items-center justify-between'>
