@@ -243,7 +243,6 @@ export async function getStaticProps({ params, previewData }) {
     const articles = await response.json();
 
     // Log de los artículos obtenidos para verificación
-    console.log('Articles:', articles);
 
     const articleData = articles.find(article => String(article.url) === uid);
 
@@ -259,7 +258,7 @@ export async function getStaticProps({ params, previewData }) {
     };
 
     // Log de los datos del artículo para verificación
-    console.log('Article:', article);
+
 
     return {
         props: {
@@ -281,8 +280,6 @@ export async function getStaticPaths() {
     const res = await fetch('https://script.google.com/macros/s/AKfycby4SXrqWFSAr9T1Aou5ocCpgfKMntQFesRyL2wO_vc3I53hoKRfnL9F5a-Z8R3h3HSuvw/exec');
     const posts = await res.json();
 
-    // Log de los datos obtenidos para verificación
-    console.log('Posts:', posts);
 
     if (!Array.isArray(posts) || posts.length === 0) {
         return {

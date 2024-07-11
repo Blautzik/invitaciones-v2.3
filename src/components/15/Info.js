@@ -25,9 +25,9 @@ const Info = ({ article }) => {
         return string.replace(/^\w/, match => match.toUpperCase());
     }
 
-    console.log(salon)
+
     const hora = obtenerHoraArgentina(article.fecha)
-    console.log(hora)
+
 
 
     const imgstyle = {

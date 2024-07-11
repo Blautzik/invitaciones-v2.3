@@ -17,7 +17,7 @@ const Regalos = ({ article, foto_regalos }) => {
         filter: 'invert(1)',
     }
 
-    console.log("FOTO REGALOSSS!!!!!!$$$$$$$$$$$$$$$$$$$$$$$$$$$$", foto_regalos)
+
 
     return (
         <div className='h-screen w-full'>

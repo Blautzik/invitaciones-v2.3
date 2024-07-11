@@ -16,7 +16,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
         zIndex: 0,
         opacity: 1,
     }
-    console.log(date)
+
 
     const titulo = title.toUpperCase()
 
