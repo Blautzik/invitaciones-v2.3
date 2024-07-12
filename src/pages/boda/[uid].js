@@ -1,6 +1,6 @@
 
 
-import Header from '@/components/15/Header';
+import Header from '@/components/6/Header';
 import Head from 'next/head';
 import Info from '@/components/15/Info';
 import Gallery from '@/components/15/Gallery';
@@ -9,7 +9,7 @@ import Regalos from '@/components/15/Regalos';
 import Formulario from '@/components/6/Formulario';
 import * as prismic from '@prismicio/client';
 import Countdown from '../../components/1/Countdown';
-import Footer from '../../components/4/Footer';
+import Footer from '../../components/boda/Footer';
 import { easeIn, motion } from 'framer-motion';
 import Audiowe from '../../components/Audiowe';
 import Image from 'next/image';
@@ -21,6 +21,8 @@ import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpe
 
 
 const Invitacion = ({ article }) => {
+
+    console.log(article)
   
     if(!article){
         return null
@@ -66,11 +68,69 @@ const Invitacion = ({ article }) => {
 
         if(article.foto_regalos) {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
+            console.log("********************************", foto_regalos)
         }
         return (
             <>
-                <h1>{article.nombre}</h1>
-            </>
+                <Head>
+                    <title>
+                        {article.nombre}
+                        {article.frase_portada ? (" " + article.frase_portada)
+                            : " Mis quince"
+                        }
+                    </title>
+                    <meta property="og:image" content={thumb} />
+                    <meta property="og:description" content={"Te invito a compartir la alegría de esta noche inolvidable y única"} />
+                    <meta property="og:image:type" content="image/jpeg" />
+
+                </Head>
+
+
+            <div className="mb-16">
+                <Header title={article.nombre}
+                    coverImage={portada}
+                    coverImagePc={portada}
+                    date={article.fecha}
+                    content={article.frase}
+                    h1_centrado={article.h1_centrado}
+                />
+            </div>
+
+            <div id="info">
+                <Info article={article} />
+            </div>
+
+
+            {article.regalo_sin_datos &&
+                <div>
+                    <Regalos article={article} />
+                </div>
+            }
+
+            {article.cbu &&
+                <div>
+                    <Regalos article={article} foto_regalos={foto_regalos} />
+                </div>
+            }
+                {article.galeria &&
+                    <section className="bg-[#fff] mt-12 text-center flex justify-center ">
+                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} />
+                    </section>
+                }
+
+            <div>
+                <Formulario form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos}/>
+            </div>
+
+
+            <div className='mb-5'>
+                <Agendar foto={foto_agendar} fecha={article.fecha} bg={article.bg_color} />
+            </div>
+            <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
+
+
+<div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+        </>
 
         )
 
@@ -114,6 +174,7 @@ export async function getStaticProps({ params, previewData }) {
         uid, 
         ...articleData,
     };
+    console.log(article)
 
     // Log de los datos del artículo para verificación
 

@@ -8,14 +8,14 @@ import PortadaSinFoto from './PortadaSinFoto';
 
 
 
-const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_custom }) => {
+const Header = ({ coverImage, title, date, coverImagePc, h1_centrado }) => {
 
 
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 10%',
         zIndex: 0,
-        opacity: 0.99,
+        opacity: 0.7,
         backgroundColor: '#555',
     }
 
@@ -51,13 +51,13 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
                     />
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
-                    
+
                     <div className=' pt-8'>
                         {
                             h1_centrado ?
-                                <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center pt-96 text-5xl font-[200]`}>{!portada_custom && titulo}</h1>
+                                <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center pt-96 text-5xl font-[200]`}>{titulo}</h1>
                                 :
-                                <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}>{!portada_custom && titulo}</h1>
+                                <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}>{titulo}</h1>
                         }
                     </div>
 

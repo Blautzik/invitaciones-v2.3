@@ -105,6 +105,13 @@ export const salones = [
         link: 'https://www.janoseventos.com/salones.php?q=janos-hipódromo-de-la-plata'
     },
     {
+        nombre: "Jano's Pilar Boutique",
+        direccion: "Emilio Casella 125, Pilar",
+        link_maps: "https://maps.app.goo.gl/CfvnwJoSz7mgCZiF7",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1720749730/salones/17157913673J7A3229-Pano_sncctj.jpg',
+        link: 'https://www.janoseventos.com/salones.php?q=Pilar-boutique'
+    },
+    {
         nombre: "Jano’s Playa Grande",
         direccion: "Av. Patricio Peralta Ramos 5050",
         link_maps: "http://maps.google.com/?q=Jano's+Playa+Grande",

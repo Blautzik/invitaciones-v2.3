@@ -23,6 +23,8 @@ const Info = ({ article }) => {
 
     const salon = encontrarSalon(article.salon);
 
+    console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", salon)
+
     function capitalize(string) {
         return string.replace(/^\w/, match => match.toUpperCase());
     }

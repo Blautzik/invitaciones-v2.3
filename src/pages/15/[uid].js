@@ -88,6 +88,7 @@ const Invitacion = ({ article }) => {
                         date={article.fecha}
                         content={article.frase_portada}
                         h1_centrado={article.h1_centrado}
+                        portada_custom={article.portada_custom}
                     />
                 </div>
 
