@@ -29,14 +29,14 @@ export const salones = [
     },
     {
         nombre: "Jano’s Darwin",
-        direccion: "Darwin 1351, CABA",
+        direccion: "Cnel. Niceto Vega 5350, CABA",
         link_maps: "http://maps.google.com/?q=Jano's+Darwin",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987873/salones/darwin.png',
         link: 'https://www.janoseventos.com/salones.php?q=janos-darwin'
     },
     {
         nombre: "Jano’s Darwin 2",
-        direccion: "Cnel. Niceto Vega 5350, C1414 Ciudad Autónoma de Buenos Aires",
+        direccion: "Darwin 1351, CABA",
         link_maps: "http://maps.google.com/?q=Jano's+Darwin",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987888/salones/darwin%202.png',
         link: 'https://www.janoseventos.com/salones.php?q=janos-darwin2'
