@@ -75,11 +75,11 @@ const WeddingInvitation = ({ article }) => {
 
     // Process images
     const portada = foto_portada ? getGoogleDriveImageUrl(foto_portada) : '';
-    const thumb = foto_portada ? getOptimizedGoogleDriveImageUrl(foto_portada) : '';
     const agendarImage = foto_agendar ? getGoogleDriveImageUrl(foto_agendar) : '';
-
+    
     const regalosImage = foto_regalos ? getGoogleDriveImageUrl(foto_regalos) : '';
     const galeriaImages = galeria ? galeria.split(',').map(url => getGoogleDriveImageUrl(url.trim())) : [];
+    const thumb = foto_portada ? getOptimizedGoogleDriveImageUrl(foto_agendar) : '';
 
 
     // Format date
@@ -135,9 +135,18 @@ const WeddingInvitation = ({ article }) => {
 
     return (
         <>
-            <Head>
-                {/* ... (Head content remains the same) */}
-            </Head>
+                <Head>
+                    <title>
+                        {article.nombre}
+                        {article.frase_portada ? (" " + article.frase_portada)
+                            : " Nos Casamos!"
+                        }
+                    </title>
+                    <meta property="og:image" content={thumb} />
+                    <meta property="og:description" content={"Comenzamos un nuevo capítulo de nuestra historia y queremos festejarlo con vos"} />
+                    <meta property="og:image:type" content="image/jpeg" />
+
+                </Head>
 
             <div className="relative min-h-screen">
                 {!imageError && (
