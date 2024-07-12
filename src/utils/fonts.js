@@ -19,6 +19,16 @@ export const ClickerScript = localFont({
   subsets:['latin'],
   variable:'--minion'
 })
+export const EyesomeRegular = localFont({
+  src:'./Eyesome-Regular.woff2',
+  subsets:['latin'],
+  variable:'--eyesome-regular'
+})
+export const EyesomeScript = localFont({
+  src:'./Eyesome-Script.woff2',
+  subsets:['latin'],
+  variable:'--eyesome-script'
+})
 
 
 export const amatic = Amatic_SC({

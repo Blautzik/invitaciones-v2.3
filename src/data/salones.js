@@ -57,7 +57,7 @@ export const salones = [
     },
     {
         nombre: "Jano’s Merlo",
-        direccion: "Pringles 780, Merlo, 1722 Merlo, Buenos Aires",
+        direccion: "Pringles 780, Merlo",
         link_maps: "http://maps.google.com/?q=Jano's+Merlo",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987936/salones/merlo.png',
         link: 'https://www.janoseventos.com/salones.php?q=janos-merlo'
