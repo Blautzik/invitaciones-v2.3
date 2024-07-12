@@ -148,7 +148,7 @@ const WeddingInvitation = ({ article }) => {
 
                 </Head>
 
-            <div className="relative min-h-screen">
+            <div className="relative min-h-[100dvh]">
                 {!imageError && (
                     <div className="fixed inset-0 z-0">
                         <Image
@@ -167,7 +167,7 @@ const WeddingInvitation = ({ article }) => {
                         {/* Fallback content */}
                     </div>
                 )}
-                <main className={`relative z-10 min-h-screen ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+                <main className={`relative z-10 min-h-[100dvh] ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
 
                     <motion.div
                         className="fixed inset-0 bg-transparent z-50 flex items-center justify-center"
