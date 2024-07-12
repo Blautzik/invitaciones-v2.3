@@ -9,6 +9,7 @@ import { useInView } from 'react-intersection-observer';
 import { encontrarSalon } from '@/data/salones';
 import Formulario from '@/components/love/Formulario';
 import { BiCalendarCheck } from 'react-icons/bi';
+import { Countdown } from '@/components/love/Countdown';
 
 const FadeInSection = ({ children }) => {
     const [ref, inView] = useInView({
@@ -28,46 +29,12 @@ const FadeInSection = ({ children }) => {
     );
 };
 
-// ... (Countdown component remains the same)
-const Countdown = ({ targetDate }) => {
-    const [timeLeft, setTimeLeft] = useState({});
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            const now = new Date();
-            const difference = new Date(targetDate) - now;
-
-            if (difference > 0) {
-                setTimeLeft({
-                    Dias: Math.floor(difference / (1000 * 60 * 60 * 24)),
-                    Horas: Math.floor((difference / (1000 * 60 * 60)) % 24),
-                    Min: Math.floor((difference / 1000 / 60) % 60),
-                    Seg: Math.floor((difference / 1000) % 60),
-                });
-            } else {
-                clearInterval(timer);
-            }
-        }, 1000);
-
-        return () => clearInterval(timer);
-    }, [targetDate]);
-
-    return (
-        <div className={`grid grid-cols-4 gap-4 ${EyesomeRegular.className}`}>
-            {Object.entries(timeLeft).map(([unit, value]) => (
-                <div key={unit} className="text-center">
-                    <div className="text-4xl font-bold text-gray-800">{value}</div>
-                    <div className="text-lg font-bold text-slate-900">{unit}</div>
-                </div>
-            ))}
-        </div>
-    );
-};
 
 
 const WeddingInvitation = ({ article }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
     const [imageError, setImageError] = useState(false);
+    const [copyMessage, setCopyMessage] = useState('');
 
     if (!article) {
         return <div>Invitation not found</div>;
@@ -101,7 +68,7 @@ const WeddingInvitation = ({ article }) => {
     const portada = foto_portada ? getGoogleDriveImageUrl(foto_portada) : '';
     const thumb = foto_portada ? getOptimizedGoogleDriveImageUrl(foto_portada) : '';
     const agendarImage = foto_agendar ? getGoogleDriveImageUrl(foto_agendar) : '';
-    const [copyMessage, setCopyMessage] = useState('');
+
     const regalosImage = foto_regalos ? getGoogleDriveImageUrl(foto_regalos) : '';
     const galeriaImages = galeria ? galeria.split(',').map(url => getGoogleDriveImageUrl(url.trim())) : [];
 
