@@ -139,8 +139,8 @@ const WeddingInvitation = ({ article }) => {
                 <meta property="og:image:type" content="image/jpeg" />
             </Head>
 
-            <div className="relative min-h-[100vh]">
-                {!imageError && (
+            <div className="relative min-h-[120vh]">
+                {/* {!imageError && (
                     <div className="fixed inset-0 z-0">
                         <Image
                             src={portada}
@@ -152,13 +152,14 @@ const WeddingInvitation = ({ article }) => {
                             alt="Background"
                         />
                     </div>
-                )}
+                )} */}
                 {imageError && (
                     <div className="fixed inset-0 bg-gray-200 z-0">
                         {/* Fallback content */}
                     </div>
                 )}
-                <main className={`relative z-10 min-h-[100vh] ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+                <main className={`relative z-10 min-h-screen ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+
                     <motion.div
                         className="fixed inset-0 bg-transparent z-50 flex items-center justify-center"
                         initial={{ opacity: 1 }}
