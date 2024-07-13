@@ -156,7 +156,7 @@ const WeddingInvitation = ({ article }) => {
 
 
                 {!imageError && (
-                    <div className="fixed -inset-20 h-[120lvh] z-0 opacity-85">
+                    <div className="fixed -inset-20 h-[120lvh] h-[120%] z-0 opacity-85">
                         <Image
                             src={portada}
                             fill
