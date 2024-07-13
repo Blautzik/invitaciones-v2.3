@@ -152,7 +152,7 @@ const WeddingInvitation = ({ article }) => {
             <div className="min-h-[120vh]">
 
                 {!imageError && (
-                    <div className="fixed -top-1 h-[120vh] h-[120%] z-0 opacity-85 overflow-y-scroll">
+                    <div className="sticky -top-1 h-[120vh] h-[120%] z-0 opacity-85 overflow-y-scroll">
                         <Image
                             src={portada}
                             width={10000}
