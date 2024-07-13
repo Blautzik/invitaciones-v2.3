@@ -2,6 +2,7 @@ import Header from '@/components/1/Header';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import Head from 'next/head';
 import Image from 'next/image';
+
 import React, { useState, useEffect } from 'react';
 import { alegreya, comfortaa, minion, openSans, roboto, EyesomeScript, EyesomeRegular } from '../../utils/fonts';
 import { motion } from 'framer-motion';
@@ -148,9 +149,9 @@ const WeddingInvitation = ({ article }) => {
 
                 </Head>
 
-            <div className="relative min-h-[100dvh]">
+            <div className="relative min-h-[100vh]">
                 {!imageError && (
-                    <div className="fixed h-[100dvh] inset-0 z-0">
+                    <div className="fixed-background fixed h-[100vh] inset-0 z-0">
                         <Image
                             src={portada}
                             fill
