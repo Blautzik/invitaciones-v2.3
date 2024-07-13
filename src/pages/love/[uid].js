@@ -52,6 +52,7 @@ const WeddingInvitation = ({ article }) => {
 
     const palabrasPositivas = ["Amor", "Gratitud", "Unión", "Alegría", "Felicidad", "Armonía"];
 
+
     const {
         nombre,
         fecha,
@@ -74,12 +75,13 @@ const WeddingInvitation = ({ article }) => {
     } = article;
 
     // Process images
-    const portada = foto_portada ? getGoogleDriveImageUrl(foto_portada) : '';
+    const portada = 'https://res.cloudinary.com/fedexx/image/upload/v1720841240/WhatsApp_Image_2024-07-03_at_5.57.00_PM_bsdcbb.png';
     const agendarImage = foto_agendar ? getGoogleDriveImageUrl(foto_agendar) : '';
     
     const regalosImage = foto_regalos ? getGoogleDriveImageUrl(foto_regalos) : '';
     const galeriaImages = galeria ? galeria.split(',').map(url => getGoogleDriveImageUrl(url.trim())) : [];
     const thumb = foto_portada ? getOptimizedGoogleDriveImageUrl(foto_agendar) : '';
+
 
     // Format date
     const formattedDate = new Date(fecha).toLocaleDateString('es-ES', {
@@ -88,6 +90,7 @@ const WeddingInvitation = ({ article }) => {
         day: 'numeric'
     });
 
+
     const hour = new Date(fecha).toLocaleTimeString("es-ES", {
         hour: '2-digit',
         minute: '2-digit',
@@ -95,6 +98,8 @@ const WeddingInvitation = ({ article }) => {
     });
 
     const salonFound = encontrarSalon(article.salon);
+
+
 
     const renderPolaroidImage = (img, index) => (
         <FadeInSection key={index}>
@@ -115,6 +120,8 @@ const WeddingInvitation = ({ article }) => {
         </FadeInSection>
     );
 
+
+
     const copyToClipboard = (text, type) => {
         navigator.clipboard.writeText(text).then(() => {
             setCopyMessage(`${type} copiado al portapapeles`);
@@ -125,40 +132,45 @@ const WeddingInvitation = ({ article }) => {
         });
     };
 
+
+
     return (
         <>
-            <Head>
-                <title>
-                    {article.nombre}
-                    {article.frase_portada ? (" " + article.frase_portada)
-                        : " Nos Casamos!"
-                    }
-                </title>
-                <meta property="og:image" content={thumb} />
-                <meta property="og:description" content={"Comenzamos un nuevo capítulo de nuestra historia y queremos festejarlo con vos"} />
-                <meta property="og:image:type" content="image/jpeg" />
-            </Head>
+                <Head>
+                    <title>
+                        {article.nombre}
+                        {article.frase_portada ? (" " + article.frase_portada)
+                            : " Nos Casamos!"
+                        }
+                    </title>
+                    <meta property="og:image" content={thumb} />
+                    <meta property="og:description" content={"Comenzamos un nuevo capítulo de nuestra historia y queremos festejarlo con vos"} />
+                    <meta property="og:image:type" content="image/jpeg" />
 
-            <div className="relative min-h-[120vh]">
-                {/* {!imageError && (
-                    <div className="fixed inset-0 z-0">
+                </Head>
+
+            <div className="min-h-[120vh]">
+
+                {!imageError && (
+                    <div className="fixed -top-1 h-[120vh] h-[120%] z-0 opacity-85 overflow-y-scroll">
                         <Image
                             src={portada}
-                            layout="fill"
-                            objectFit="cover"
+                            width={10000}
+                            height={1000000}
+                            style={{ objectFit: 'contain',  }}
                             quality={100}
                             onLoad={() => setImageLoaded(true)}
                             onError={() => setImageError(true)}
                             alt="Background"
                         />
                     </div>
-                )} */}
+                )}
                 {imageError && (
                     <div className="fixed inset-0 bg-gray-200 z-0">
                         {/* Fallback content */}
                     </div>
                 )}
-                <main className={`relative z-10 min-h-screen ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+                <main className={`relative z-10 min-h-[100vh] ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
 
                     <motion.div
                         className="fixed inset-0 bg-transparent z-50 flex items-center justify-center"
@@ -182,6 +194,7 @@ const WeddingInvitation = ({ article }) => {
                         <h1 className="text-6xl font-thin text-gray-900 mb-2 tracking-tighter">{nombre}</h1>
                         <p className={`${EyesomeRegular.className} text-3xl font-bold text-gray-900`}>{formattedDate}</p>
 
+
                         <div className="container mx-auto px-4 mt-8 py-8">
                             <FadeInSection>
                                 <section className={`text-center py-12 ${EyesomeRegular.className} p-6 mt-8  bg-opacity-80`}>
@@ -196,6 +209,8 @@ const WeddingInvitation = ({ article }) => {
                                 </div>
                             )}
 
+
+
                             <FadeInSection>
                                 <section className={`text-center py-12 ${EyesomeRegular.className} font-bold border border-gray-800 p-6 mt-8 bg-white bg-opacity-80`}>
                                     <p className="text-xl text-gray-800 font-bold">
@@ -204,11 +219,14 @@ const WeddingInvitation = ({ article }) => {
                                 </section>
                             </FadeInSection>
 
+
+
                             <FadeInSection>
                                 <section className={`text-center py-12 ${openSans.className} border border-gray-800 p-6 mt-8 bg-white bg-opacity-80`}>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div>
                                             <div className='flex justify-center '>
+
                                                 <img src='https://res.cloudinary.com/fedexx/image/upload/v1720805445/salones/6_it4kfk.webp' className='h-24 w-24 grayscale' />
                                             </div>
                                             <h3 className={` ${EyesomeScript.className} text-4xl text-gray-800 mb-4`}>Ceremonia y Fiesta</h3>
@@ -241,6 +259,7 @@ const WeddingInvitation = ({ article }) => {
                                         <h3 className={` ${EyesomeScript.className} text-4xl text-gray-800 mb-4`}>Dress code</h3>
                                         <p className="text-xl text-gray-800">{dress_code}</p>
                                         <div className='flex justify-center '>
+
                                             <img src='https://res.cloudinary.com/fedexx/image/upload/v1720813290/icono_edited_lgekr1.webp' className='mt-4 h-14 w-14 grayscale' />
                                         </div>
                                     </section>
@@ -252,21 +271,27 @@ const WeddingInvitation = ({ article }) => {
                                     </div>
                                 )}
 
+
                                 <FadeInSection>
                                     <section className={`text-center py-12 ${openSans.className} border border-gray-800 p-6 mt-8 bg-white bg-opacity-80`}>
                                         <h3 className={` ${EyesomeScript.className} text-4xl text-gray-800 mb-4`}>Confirma tu asistencia</h3>
                                         <p className="text-gray-800 mb-4">Agradecemos que confirmes tu asistencia.</p>
+
+
                                         <Formulario />
                                     </section>
                                 </FadeInSection>
 
                                 <FadeInSection>
                                     <section className={`text-center py-12 ${openSans.className} border border-gray-800 p-6 mt-8 bg-white bg-opacity-80`}>
+
                                         <div>
                                             <div className='flex justify-center '>
+
                                                 <img src='https://res.cloudinary.com/fedexx/image/upload/v1720817855/4_edited_uvv719.webp' className='h-24 w-24 grayscale' />
                                             </div>
                                             <h3 className={` ${EyesomeScript.className} text-4xl text-gray-800 mb-4`}>Regalos</h3>
+
                                             <p className="text-gray-800 text-sm">
                                                 {frase_regalos}<br /><br />
                                                 CBU:<br /> {cbu}<br />
@@ -281,8 +306,14 @@ const WeddingInvitation = ({ article }) => {
                                             </button>
                                         </div>
                                     </section>
+
+
                                 </FadeInSection>
+
+
+
                             </FadeInSection>
+
 
                             {galeriaImages.length > 4 && (
                                 <div className="space-y-16 my-16">
