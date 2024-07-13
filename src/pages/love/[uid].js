@@ -149,9 +149,9 @@ const WeddingInvitation = ({ article }) => {
 
                 </Head>
 
-            <div className="relative min-h-[110dvh]">
+            <div className="relative min-h-[120lvh]">
                 {!imageError && (
-                    <div className="fixed inset-0 h-[110dvh] z-0">
+                    <div className="fixed inset-0 h-[120lvh] z-0">
                         <Image
                             src={portada}
                             fill
