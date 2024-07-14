@@ -75,7 +75,7 @@ const WeddingInvitation = ({ article }) => {
     } = article;
 
     // Process images
-    const portada = 'https://res.cloudinary.com/fedexx/image/upload/v1720841240/WhatsApp_Image_2024-07-03_at_5.57.00_PM_bsdcbb.png';
+    const portada = foto_portada ? getGoogleDriveImageUrl(foto_portada) : '';
     const agendarImage = foto_agendar ? getGoogleDriveImageUrl(foto_agendar) : '';
     
     const regalosImage = foto_regalos ? getGoogleDriveImageUrl(foto_regalos) : '';
@@ -149,28 +149,30 @@ const WeddingInvitation = ({ article }) => {
 
                 </Head>
 
-            <div className="min-h-[120vh]">
+            <div className="relative h-[120lvh] bg-fondo-turquesa -top-44">
+
+
+
+
 
                 {!imageError && (
-                    <div className="sticky -top-1 h-[120vh] h-[120%] z-0 opacity-85 overflow-y-scroll">
+                    <div className="fixed -inset-20 h-[120lvh] h-[120%] z-0 opacity-85 overflow-y-scroll bg-fondo-turquesa bg-top">
                         <Image
                             src={portada}
-                            width={10000}
-                            height={1000000}
-                            style={{ objectFit: 'contain',  }}
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            
                             quality={100}
                             onLoad={() => setImageLoaded(true)}
                             onError={() => setImageError(true)}
                             alt="Background"
                         />
                     </div>
+
+                   
                 )}
-                {imageError && (
-                    <div className="fixed inset-0 bg-gray-200 z-0">
-                        {/* Fallback content */}
-                    </div>
-                )}
-                <main className={`relative z-10 min-h-[100vh] ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}>
+
+                <main className={`relative z-10 min-h-[100vh] ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 top-44`}>
 
                     <motion.div
                         className="fixed inset-0 bg-transparent z-50 flex items-center justify-center"
@@ -323,7 +325,7 @@ const WeddingInvitation = ({ article }) => {
 
                             <FadeInSection>
                                 <section className={`text-center py-12 flex flex-col items-center ${comfortaa.className}`}>
-                                    <h2 className="text-3xl font-semibold text-gray-800 ">¡Te Esperamos!</h2>
+                                    <h2 className="text-3xl font-semibold text-gray-800 ">¡Te esperamos!</h2>
                                     <h3 className={`text-center text-6xl py-12 ${EyesomeScript.className}`}>{nombre}</h3>
                                     <a className={`${comfortaa.className} bg-gray-800 text-white w-44 flex justify-evenly items-center mb-8 text-[14px] font-[600] px-6 py-4 rounded-full `}
                                         href={`https://calendar.google.com/calendar/u/0/r/week/${formattedDate}`}

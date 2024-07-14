@@ -31,7 +31,9 @@ module.exports = {
       },
       backgroundImage: {
         'footer-texture': "url('https://res.cloudinary.com/fedexx/image/upload/v1692113799/invi/curva01_violeta_tkziux.png')",
+        'fondo-turquesa': "url('https://res.cloudinary.com/fedexx/image/upload/v1720983212/WhatsApp_Image_2024-07-03_at_5.57.00_PM_qqqvwv.jpg')"
       },
+
       colors: {
         violeta: '#772c87',
       }
