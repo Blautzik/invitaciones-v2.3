@@ -77,7 +77,7 @@ const WeddingInvitation = ({ article }) => {
     // Process images
     const portada = foto_portada ? getGoogleDriveImageUrl(foto_portada) : '';
     const agendarImage = foto_agendar ? getGoogleDriveImageUrl(foto_agendar) : '';
-    
+
     const regalosImage = foto_regalos ? getGoogleDriveImageUrl(foto_regalos) : '';
     const galeriaImages = galeria ? galeria.split(',').map(url => getGoogleDriveImageUrl(url.trim())) : [];
     const thumb = foto_portada ? getOptimizedGoogleDriveImageUrl(foto_agendar) : '';
@@ -136,18 +136,18 @@ const WeddingInvitation = ({ article }) => {
 
     return (
         <>
-                <Head>
-                    <title>
-                        {article.nombre}
-                        {article.frase_portada ? (" " + article.frase_portada)
-                            : " Nos Casamos!"
-                        }
-                    </title>
-                    <meta property="og:image" content={thumb} />
-                    <meta property="og:description" content={"Comenzamos un nuevo capítulo de nuestra historia y queremos festejarlo con vos"} />
-                    <meta property="og:image:type" content="image/jpeg" />
+            <Head>
+                <title>
+                    {article.nombre}
+                    {article.frase_portada ? (" " + article.frase_portada)
+                        : " Nos Casamos!"
+                    }
+                </title>
+                <meta property="og:image" content={thumb} />
+                <meta property="og:description" content={"Comenzamos un nuevo capítulo de nuestra historia y queremos festejarlo con vos"} />
+                <meta property="og:image:type" content="image/jpeg" />
 
-                </Head>
+            </Head>
 
             <div className="relative h-[120lvh] bg-fondo-turquesa -top-44">
 
@@ -161,7 +161,7 @@ const WeddingInvitation = ({ article }) => {
                             src={portada}
                             fill
                             style={{ objectFit: 'cover' }}
-                            
+
                             quality={100}
                             onLoad={() => setImageLoaded(true)}
                             onError={() => setImageError(true)}
@@ -169,7 +169,7 @@ const WeddingInvitation = ({ article }) => {
                         />
                     </div>
 
-                   
+
                 )}
 
                 <main className={`relative z-10 min-h-[100vh] ${imageLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 top-44`}>
@@ -232,17 +232,29 @@ const WeddingInvitation = ({ article }) => {
                                                 <img src='https://res.cloudinary.com/fedexx/image/upload/v1720805445/salones/6_it4kfk.webp' className='h-24 w-24 grayscale' />
                                             </div>
                                             <h3 className={` ${EyesomeScript.className} text-4xl text-gray-800 mb-4`}>Ceremonia y Fiesta</h3>
-                                            <p className="text-gray-800">
-                                                {ceremonia === "La ceremonia es en el salón" && (
+                                            <div className="text-gray-800">
+                                                {ceremonia === "La ceremonia es en el salón" ? (
                                                     <>
                                                         {formattedDate} <br />
                                                         Hora: {hour} <br />
                                                         Lugar: {salon}<br />
                                                         Dirección: {salonFound.direccion}<br /><br />
                                                     </>
-                                                )}
-                                                Fiesta: {salon}<br />
-                                            </p>
+                                                ) : (
+                                                    <>
+                                                        <h3 className='font-bold my-2'>Ceremonia</h3>
+                                                        {fecha_ceremonia} <br />
+                                                        Hora: {hora} <br />
+                                                        Lugar: {lugar}<br />
+                                                        Dirección: {direccion_ceremonia}
+                                                        <h3 className='font-bold my-2 mt-4'>Fiesta</h3>
+                                                        Fiesta: {salon}<br />
+                                                        Hora: {hour} <br />
+                                                        Dirección: {salonFound.direccion}<br /><br />
+                                                    </>
+                                                )
+                                                }
+                                            </div>
                                             <img src={salonFound.foto_salon} />
                                             <div className='h-32 flex flex-col items-center justify-center'>
                                                 <a className="mt-4 bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-slate-700 transition-colors" href={salonFound.link_maps}>
