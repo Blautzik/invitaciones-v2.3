@@ -292,7 +292,7 @@ const WeddingInvitation = ({ article }) => {
                                         <p className="text-gray-800 mb-4">Agradecemos que confirmes tu asistencia.</p>
 
 
-                                        <Formulario />
+                                        <Formulario form_id={form_id}/>
                                     </section>
                                 </FadeInSection>
 
