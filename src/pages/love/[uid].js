@@ -296,7 +296,6 @@ const WeddingInvitation = ({ article }) => {
                                     </section>
                                 </FadeInSection>
                                 
-
                                 <FadeInSection>
                                     <section className={`text-center py-12 ${openSans.className} border border-gray-800 p-6 mt-8 bg-white bg-opacity-80`}>
 
