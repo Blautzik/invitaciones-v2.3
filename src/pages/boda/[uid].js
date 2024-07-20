@@ -76,11 +76,11 @@ const Invitacion = ({ article }) => {
                     <title>
                         {article.nombre}
                         {article.frase_portada ? (" " + article.frase_portada)
-                            : " Mis quince"
+                            : " Nos Casamos!"
                         }
                     </title>
                     <meta property="og:image" content={thumb} />
-                    <meta property="og:description" content={"Te invito a compartir la alegría de esta noche inolvidable y única"} />
+                    <meta property="og:description" content={"Te invitamos a compartir la alegría de esta noche inolvidable y única"} />
                     <meta property="og:image:type" content="image/jpeg" />
 
                 </Head>
