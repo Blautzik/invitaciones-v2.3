@@ -119,7 +119,7 @@ const Invitacion = ({ article }) => {
                 }
 
             <div>
-                <Formulario form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos}/>
+                <Formulario form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario}/>
             </div>
 
 
@@ -149,7 +149,7 @@ export async function getStaticProps({ params, previewData }) {
         };
     }
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbwkiLCPIUWZt57bEVdlwyOKRW6C36etkeckMHgrczFYlLD06qFXM5JRpTSGpJBWEdM/exec');
+    const response = await fetch('https://script.google.com/macros/s/AKfycbwmHj6frc5-xZaHRLHIOVgE1iY_d75FizjIyEquORZkJozgISCXav5pFQLNJGXqSIv1/exec');
 
     if (!response.ok) {
         return {
@@ -194,7 +194,7 @@ export async function getStaticPaths() {
         };
     }
 
-    const res = await fetch('https://script.google.com/macros/s/AKfycbwkiLCPIUWZt57bEVdlwyOKRW6C36etkeckMHgrczFYlLD06qFXM5JRpTSGpJBWEdM/exec');
+    const res = await fetch('https://script.google.com/macros/s/AKfycbwmHj6frc5-xZaHRLHIOVgE1iY_d75FizjIyEquORZkJozgISCXav5pFQLNJGXqSIv1/exec');
     const posts = await res.json();
 
 

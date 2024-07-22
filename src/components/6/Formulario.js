@@ -3,7 +3,7 @@ import { openSans } from '@/utils/fonts';
 import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 
-const Formulario = ({ form_id, frase_extra, bg, otra_frase }) => {
+const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -172,7 +172,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase }) => {
               onChange={(e) => setMessage(e.target.value)}
               id="message"
               className={`${inputCN} pt-4 !h-40`}
-              placeholder={frase_extra || 'Comentarios y saludos'}
+              placeholder={frase_formulario || 'Comentarios y saludos'}
             />
           </div>
 
