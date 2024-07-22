@@ -54,7 +54,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                 </div>
 
                 <div className='bg-[#fff] text-center '>
-                    <h1 className={`${minion.className} text-slate-900 ${title.length > 6 ? 'text-5xl' : 'text-8xl'  } font-[100] text-center leading-[0.7]`}>
+                    <h1 className={`${minion.className} text-slate-900 ${title.length >= 6 ? 'text-5xl' : 'text-8xl'  } font-[100] text-center leading-[0.7]`}>
                         {title.toUpperCase()}
                     </h1>
                     <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>{frase_portada || 'MIS 15 AÑOS'}</h3>
