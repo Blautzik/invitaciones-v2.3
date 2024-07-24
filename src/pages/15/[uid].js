@@ -15,6 +15,7 @@ import FormularioSinNino from '../../components/1/FormularioSinNino';
 import InfoBat from '../../components/1/infoBat';
 import FormularioBat from '../../components/1/FormularioBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
+import FormularioSimple from '@/components/15/FormularioSimple';
 
 
 
@@ -128,8 +129,10 @@ const Invitacion = ({ article }) => {
                 }
 
                 <div>
-                    {article.sin_ninos ?
-                        <FormularioSinNino form_id={article.form_id} frase_extra={article.frase_extra} />
+                    {console.log("$$$$$$$$$$$$$$$", article.mfmf == "formulario_simple")}
+                    {
+                        article.mfmf == "formulario_simple" ?
+                        <FormularioSimple form_id={article.form_id} frase_extra={article.frase_extra} />
                         :
                         <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
                     }
@@ -158,7 +161,7 @@ const Invitacion = ({ article }) => {
                     <Agendar className='z-40' foto={foto_agendar} ig_link={article.link_ig} fb_link={article.link_face} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
                 </div>
 
-                <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
+                <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} mfmf={article.mfmf} />
 
 
                 <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
@@ -209,7 +212,7 @@ export async function getStaticProps({ params, previewData }) {
     };
 
     // Log de los datos del artículo para verificación
-
+    console.log(article)
 
     return {
         props: {
