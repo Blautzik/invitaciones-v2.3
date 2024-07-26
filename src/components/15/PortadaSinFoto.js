@@ -15,7 +15,7 @@ const PortadaSinFoto = ({ title, date }) => {
                 <div className='h-full' style={{backgroundImage: "url('https://res.cloudinary.com/fedexx/image/upload/v1720026301/P_1_v2bdzc.png')", backgroundSize:'cover'}}>
 
                 <h1 className={`${ClickerScript.className} z-10 text-gray-50 max-w-sm text-center pt-72 text-8xl font-[200]`}>{title}</h1>
-                <h1 className={`${ClickerScript.className} z-10 mt-0 mb-28 text-gray-50 max-w-sm text-center text-3xl font-[200]`}>Mis Quince</h1>
+                <h1 className={`${ClickerScript.className} z-10 mt-0 mb-28 text-gray-50 max-w-sm text-center text-3xl font-[200]`}>{title === "Dionisio" ? "": "Mis Quince"}</h1>
                 <div className='flex flex-col items-center'>
                         <h2 className={`${openSans.className} text-gray-50 max-w-xs text-center text-xl tracking-widest font-[100]`}> Faltan</h2>
                         <Countdown date={date} />

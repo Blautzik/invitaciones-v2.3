@@ -5,7 +5,7 @@ export function getGoogleDriveImageUrl(driveUrl) {
         throw new Error("Invalid Google Drive URL");
     }
 
-    return `https://drive.google.com/uc?export=view&id=${fileId[0]}`;
+    return `https://lh3.googleusercontent.com/d/${fileId[0]}=s660?authuser=0`;
 }
 
 

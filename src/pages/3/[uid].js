@@ -41,7 +41,7 @@ const Invitacion = ({ article }) => {
         }
         <div className=''>
 
-          <main className="w-screen" >
+          <main className={`${article.data.title === "Mati & Geor" && "bg-black"}`} >
 
             <section className='z-10'>
               <Header

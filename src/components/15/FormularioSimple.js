@@ -75,7 +75,7 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
           <GoCheckCircle className="text-[66px] font-thin text-white" />
           <h3 className="text-white text-2xl pt-6">Confirmar Asistencia</h3>
           <p className="text-white text-md max-w-2xl font-[500] pt-20">
-            Por favor completá el formulario con tus datos y comentarios para organizar la mejor fiesta
+            Por favor completá el formulario con tus datos
           </p>
         </div>
 

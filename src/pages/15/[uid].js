@@ -20,8 +20,8 @@ import FormularioSimple from '@/components/15/FormularioSimple';
 
 
 const Invitacion = ({ article }) => {
-  
-    if(!article){
+
+    if (!article) {
         return null
     }
 
@@ -45,11 +45,11 @@ const Invitacion = ({ article }) => {
         let portada = false
         let thumb = false
 
-        if(article.foto_portada){
-             portada = getGoogleDriveImageUrl(article.foto_portada)
-             thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+        if (article.foto_portada) {
+            portada = getGoogleDriveImageUrl(article.foto_portada)
+            thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
         }
-        
+
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
@@ -63,7 +63,7 @@ const Invitacion = ({ article }) => {
             foto_agendar = getGoogleDriveImageUrl(article.foto_agendar)
         }
 
-        if(article.foto_regalos) {
+        if (article.foto_regalos) {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
         }
         return (
@@ -110,12 +110,19 @@ const Invitacion = ({ article }) => {
 
                             <Info
                                 article={article}
-                            />
+                                />
+                                {
+                                    article.mfmf === "bar_dionisio" &&
+                                    <>
+                                    <InfoBat article={article}/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    </>
 
-                            {
-                                article.es_bat &&
-                                <InfoBat article={article} />
-                            }
+                                }
+
                         </div>
                     </motion.div>
                 </section>
@@ -132,9 +139,9 @@ const Invitacion = ({ article }) => {
                     {console.log("$$$$$$$$$$$$$$$", article.mfmf == "formulario_simple")}
                     {
                         article.mfmf == "formulario_simple" ?
-                        <FormularioSimple form_id={article.form_id} frase_extra={article.frase_extra} />
-                        :
-                        <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
+                            <FormularioSimple form_id={article.form_id} frase_extra={article.frase_extra} />
+                            :
+                            <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
                     }
 
 
@@ -145,7 +152,7 @@ const Invitacion = ({ article }) => {
 
 
                 </div>
-                
+
 
                 {article.alias &&
 
@@ -156,7 +163,7 @@ const Invitacion = ({ article }) => {
 
 
 
-        
+
                 <div className='z-50 mb-10'>
                     <Agendar className='z-40' foto={foto_agendar} ig_link={article.link_ig} fb_link={article.link_face} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
                 </div>
@@ -177,7 +184,7 @@ const Invitacion = ({ article }) => {
 export default Invitacion
 
 export async function getStaticProps({ params, previewData }) {
-    const { uid } = params; 
+    const { uid } = params;
 
     if (!uid) {
         return {
@@ -207,7 +214,7 @@ export async function getStaticProps({ params, previewData }) {
     }
 
     const article = {
-        uid, 
+        uid,
         ...articleData,
     };
 

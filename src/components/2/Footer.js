@@ -6,7 +6,7 @@ import React from 'react'
 
 const Footer = ({frase_cierre, sin_janos, logo}) => {
     return (
-        <div className='flex flex-col items-center justify-center text-center  '>
+        <div className='flex flex-col items-center justify-center text-center bg-transparent text-white'>
             
 
             {logo && 
@@ -18,7 +18,7 @@ const Footer = ({frase_cierre, sin_janos, logo}) => {
 
             {
                 !logo &&
-                <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10 `}>
+                <h2 className={`${great_vives.className} text-gray-100 md:text-5xl text-4xl mx-10 `}>
                 
                { frase_cierre || "Nos vemos !!"}
             </h2>

@@ -86,27 +86,16 @@ const Regalos = ({ article }) => {
                 <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 mt-24 opacity-70`}>
                     {
                         article.titular &&
-                        <Accordion open header="Datos Bancarios" className='bg-violeta'>
+                        <Accordion open={true} header="Datos Bancarios" className='bg-violeta'>
                         <div className={`${openSans.className} text-sm opacity-100`}>
                             <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>
                             { article.cbu && <p className='pb-2'><strong>CBU/CVU:</strong> {article.cbu} </p>}
                             { article.alias && <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>}
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                         </div>
-
-
-
                     </Accordion>
                     }
-                    {article.lista_regalos &&
-                        <Accordion open header="Lista de Regalos">
-                        <div className={`${openSans.className} text-sm font-thin opacity-100`}>
-                            <p className='pb-2'><strong>Lista 1: </strong> Fravega</p>
-                            <p className='pb-2'><strong>Lista 2: </strong> Avon </p>
-                            
-                        </div>
-                    </Accordion>
-                    }
+                   
                 </div>
             </div>
 
