@@ -151,8 +151,8 @@ const Info = ({ article }) => {
                                     {
                                         article.mfmf != "sin_janos" &&
                                         <a href={salon.link} target="_blank">
-                                        <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
-                                    </a>
+                                            <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
+                                        </a>
                                     }
                                     <a href={salon.link_maps} target="_blank">
                                         <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
@@ -160,16 +160,19 @@ const Info = ({ article }) => {
                                 </div>
                             }
                             <div className="flex flex-col justify-center items-center">
-                                <div className='flex flex-col items-center mt-6'>
-                                    <h3 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
-                                    <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
-                                    <div className='h-16 w-16 relative m-6'>
-                                        <Image
-                                            src={suitIcon}
-                                            fill
-                                        />
+                                { article.nombre != "Noe" &&
+
+                                    <div className='flex flex-col items-center mt-6'>
+                                        <h3 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
+                                        <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
+                                        <div className='h-16 w-16 relative m-6'>
+                                            <Image
+                                                src={suitIcon}
+                                                fill
+                                            />
+                                        </div>
                                     </div>
-                                </div>
+                                }
                             </div>
                         </div>
                     </div>
