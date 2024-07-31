@@ -16,6 +16,7 @@ import InfoBat from '@/components/1/infoBat';
 import FormularioBat from '@/components/1/FormularioBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import { SwiperGallery} from '@/components/15/Swiper';
+import FormularioPlaylist from '@/components/15/FormularioPlaylist';
 
 const Invitacion = ({ article }) => {
 
@@ -74,7 +75,7 @@ const Invitacion = ({ article }) => {
                         }
                     </title>
                     <meta property="og:image" content={thumb} />
-                    <meta property="og:description" content={"Te invito a compartir la alegría de esta noche inolvidable y única"} />
+                    <meta property="og:description" content={article.qwe ? article.qwe : "Te invito a compartir la alegría de esta noche inolvidable y única"} />
                     <meta property="og:image:type" content="image/jpeg" />
 
                 </Head>
@@ -164,13 +165,11 @@ const Invitacion = ({ article }) => {
 
 
                             <div>
-                                {article.mfmf ?
-                                    <FormularioSinNino form_id={article.form_id} frase_extra={article.frase_extra} />
-                                    : article.es_bat
-                                        ? <FormularioBat form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} />
-                                        :
-                                        <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
-
+                                {article.mfmf == "sin_nino" 
+                                ? <FormularioSinNino form_id={article.form_id} frase_extra={article.frase_extra} />
+                                : article.mfmf == "playlist" 
+                                    ? <FormularioPlaylist form_id={article.form_id} frase_extra={article.frase_extra} />   
+                                    : <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
                                 }
                             </div>
 
