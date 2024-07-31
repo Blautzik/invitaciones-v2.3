@@ -107,6 +107,8 @@ const Invitacion = ({ article }) => {
                                 />
                             }
 
+                            
+
 
                             <Info
                                 article={article}
