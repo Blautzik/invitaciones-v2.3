@@ -29,7 +29,7 @@ const Regalos = ({ article, foto_regalos }) => {
                     style={imageStyle}
                     alt='portada'
                 />
-                <div className={`${article.regalo_sin_datos ? 'pt-[72vh] ' : 'mt-6'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
+                <div className={`${article.mfmf === "regalo_sin_datos" ? 'pt-[72vh] ' : 'mt-6'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
                     <Image
                         src={'https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png'}
                         height={65}

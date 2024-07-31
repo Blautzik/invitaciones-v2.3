@@ -58,12 +58,12 @@ const InfoBat = ({ article }) => {
                             >
 
     
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}> Jueves 12 de septiembre 8:30</p>
+                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}> Jueves 12 de septiembre 8:00</p>
                                 <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}> Amijai, Arribeños 2355</p>
 
                             </motion.div>
 
-                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}>Viernes 13 de septiembre 19:30</p>
+                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}>Viernes 13 de septiembre 19:00</p>
                                 <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}> Amijai, Arribeños 2355</p>
                          
 

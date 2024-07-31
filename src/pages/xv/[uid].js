@@ -15,6 +15,7 @@ import FormularioSinNino from '@/components/1/FormularioSinNino';
 import InfoBat from '@/components/1/infoBat';
 import FormularioBat from '@/components/1/FormularioBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
+import { SwiperGallery} from '@/components/15/Swiper';
 
 const Invitacion = ({ article }) => {
 
@@ -153,7 +154,11 @@ const Invitacion = ({ article }) => {
 
                             {article.galeria &&
                                 <section className="bg-[#fff] mt-12 text-center flex justify-center ">
-                                    <Gallery imagenes={galeria} titulo={"Book de Fotos"} />
+                                    {
+                                        article.mfmf == "swiper" ? 
+                                        <SwiperGallery galeria={galeria} />
+                                        : <Gallery imagenes={galeria} titulo={"Book de Fotos"} />
+                                    }
                                 </section>
                             }
 
