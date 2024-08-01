@@ -107,7 +107,7 @@ const Invitacion = ({ article }) => {
                                 />
                             }
 
-                            
+
 
 
                             <Info
@@ -138,7 +138,7 @@ const Invitacion = ({ article }) => {
                 }
 
                 <div>
-                    {console.log("$$$$$$$$$$$$$$$", article.mfmf == "formulario_simple")}
+
                     {
                         article.mfmf == "formulario_simple" ?
                             <FormularioSimple form_id={article.form_id} frase_extra={article.frase_extra} />
