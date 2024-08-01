@@ -165,7 +165,7 @@ const Invitacion = ({ article }) => {
 
 
                             <div>
-                                {article.mfmf == "sin_nino" 
+                                {article.mfmf == "sin_ninos" 
                                 ? <FormularioSinNino form_id={article.form_id} frase_extra={article.frase_extra} />
                                 : article.mfmf == "playlist" 
                                     ? <FormularioPlaylist form_id={article.form_id} frase_extra={article.frase_extra} />   

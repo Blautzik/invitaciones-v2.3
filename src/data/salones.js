@@ -53,14 +53,14 @@ export const salones = [
         direccion: "Av Acoyte 754, CABA",
         link_maps: "https://maps.app.goo.gl/7WTewoS2JCaLkiRW7",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1722026885/salones/2481_7933fotoalgr_nlu09m.jpg',
-        link: 'https://www.janoseventos.com/salones.php'
+        link: 'https://www.janoseventos.com/salones.php?q=janos-caballito'
     },
     {
         nombre: "Jano’s Caballito 2",
         direccion: "Av Acoyte 754",
         link_maps: "https://maps.app.goo.gl/7WTewoS2JCaLkiRW7",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1722026885/salones/2481_7933fotoalgr_nlu09m.jpg',
-        link: 'https://www.janoseventos.com/salones.php'
+        link: 'https://www.janoseventos.com/salones.php?q=janos-caballito'
     },
     {
         nombre: "Jano’s Morón",
