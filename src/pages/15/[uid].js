@@ -5,15 +5,13 @@ import Gallery from '@/components/15/Gallery';
 import Agendar from '@/components/15/Agendar';
 import Regalos from '@/components/15/Regalos';
 import Formulario from '@/components/6/Formulario';
-import * as prismic from '@prismicio/client';
-import Countdown from '../../components/1/Countdown';
 import Footer from '../../components/4/Footer';
 import { easeIn, motion } from 'framer-motion';
 import Audiowe from '../../components/Audiowe';
 import Image from 'next/image';
 import FormularioSinNino from '../../components/1/FormularioSinNino';
 import InfoBat from '../../components/1/infoBat';
-import FormularioBat from '../../components/1/FormularioBat';
+
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import FormularioSimple from '@/components/15/FormularioSimple';
 
@@ -45,6 +43,7 @@ const Invitacion = ({ article }) => {
         let portada = false
         let thumb = false
 
+
         if (article.foto_portada) {
             portada = getGoogleDriveImageUrl(article.foto_portada)
             thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
@@ -53,7 +52,6 @@ const Invitacion = ({ article }) => {
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
-
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
             galeria = urlsArray.map(url => getGoogleDriveImageUrl(url));
@@ -66,7 +64,6 @@ const Invitacion = ({ article }) => {
         if (article.foto_regalos) {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
         }
-
 
         const ig_link = article['Link Instagram (opcional)']
         return (
@@ -207,8 +204,6 @@ export async function getStaticProps({ params, previewData }) {
 
     const articles = await response.json();
 
-    // Log de los artículos obtenidos para verificación
-
 
     const articleData = articles.find(article => String(article.url) === uid);
 
@@ -223,7 +218,7 @@ export async function getStaticProps({ params, previewData }) {
         ...articleData,
     };
 
-    // Log de los datos del artículo para verificación
+
     console.log(article)
 
     return {
@@ -253,12 +248,12 @@ export async function getStaticPaths() {
     }
 
     const paths = posts
-        .filter(post => post.url) // Asegúrate de filtrar los posts que tienen el nombre definido
+        .filter(post => post.url) 
         .map(post => ({
-            params: { uid: String(post.url) }, // Asegúrate de que el parámetro uid sea una cadena
+            params: { uid: String(post.url) }, 
         }));
 
-    // Log de las rutas generadas para verificación
+
     console.log('Paths:', paths);
 
     return { paths, fallback: false };

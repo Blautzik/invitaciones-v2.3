@@ -63,7 +63,7 @@ const Invitacion = ({ article }) => {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
         }
 
-
+        const ig_link = article['Link Instagram (opcional)']
 
         return (
             <>
@@ -192,7 +192,7 @@ const Invitacion = ({ article }) => {
                                 }
 
                                 <div className='z-50'>
-                                    <Agendar className='z-40' foto_agendar={foto_agendar} ig_link={article.link_ig} fb_link={article.link_face} tw_link={article.link_twitter} fecha={article.fecha} />
+                                    <Agendar className='z-40' foto_agendar={foto_agendar} ig_link={ig_link} fb_link={article.link_face} tw_link={article.link_twitter} fecha={article.fecha} />
                                 </div>
 
                             </section>
