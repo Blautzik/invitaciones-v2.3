@@ -43,7 +43,7 @@ const Invitacion = ({ article }) => {
 
           <main className={`${article.data.title === "Mati & Geor" && "bg-black"}`} >
 
-            <section className='z-10'>
+            <section className='z-10 bg-black'>
               <Header
                 title={article.data.title}
                 coverImage={prismic.asImageSrc(article.data.foto)}
@@ -94,7 +94,7 @@ const Invitacion = ({ article }) => {
 
 
 
-                <div className='z-50'>
+                <div className='z-50 bg-black'>
                   { 
                     !article.data.no_conozcas &&
                   <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} fecha={article.data.fecha} />

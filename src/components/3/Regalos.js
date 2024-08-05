@@ -3,6 +3,7 @@ import { PiGiftThin } from "react-icons/pi";
 import React from 'react'
 import { comfortaa, openSans } from '../../utils/fonts';
 import Accordion from '../1/Accordion';
+import Accordion2 from '../1/Accordion2';
 
 
 const Regalos = ({ article }) => {
@@ -59,10 +60,10 @@ const Regalos = ({ article }) => {
     
             </div>
         )
-    }else if(!article.frase_regalos){
+    }else if(article.frase_regalos == "Y si nos regalamos una buena noche... Todo lo que juntemos va 100% para la banda..."){
         return (
 <div className='w-full'>
-            <div className="h-full  w-full flex flex-col relative items-center justify-between bg-gray-600">
+            <div className="h-1/2  w-full flex flex-col relative items-center justify-between bg-gray-600">
                 <Image
                     src={article.foto_regalos}
                     fill
@@ -86,14 +87,14 @@ const Regalos = ({ article }) => {
                 <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 mt-24 opacity-70`}>
                     {
                         article.titular &&
-                        <Accordion open={true} header="Datos Bancarios" className='bg-violeta'>
+                        <Accordion2 open={true} header="Datos Bancarios" className='bg-black'>
                         <div className={`${openSans.className} text-sm opacity-100`}>
                             <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>
                             { article.cbu && <p className='pb-2'><strong>CBU/CVU:</strong> {article.cbu} </p>}
                             { article.alias && <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>}
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                         </div>
-                    </Accordion>
+                    </Accordion2>
                     }
                    
                 </div>
