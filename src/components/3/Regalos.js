@@ -81,7 +81,9 @@ const Regalos = ({ article }) => {
 
                     />
                     <h3 className={`${comfortaa.className} text-xl mt-2 mb-2 font-[700]`}>Regalos</h3>
-                    
+                    <div className={`${openSans.className} font-[400] leading-5 mt-44`}>
+                        {article.frase_regalos}
+                        </div>  
                 </div>
 
                 <div className={`${comfortaa.className} z-30 w-10/12 md:w-1/4 mb-24 mt-24 opacity-70`}>
@@ -133,9 +135,9 @@ const Regalos = ({ article }) => {
                        {article.frase_regalos}
                         </div>
                         :
-                        <div className={`${openSans.className} font-[400] leading-5 mt-44`}>
+                     <div className={`${openSans.className} font-[400] leading-5 mt-44`}>
                         {article.frase_regalos}
-                        </div>
+                        </div>   
                     }
                     
                 </div>
