@@ -23,6 +23,8 @@ const Info = ({ article }) => {
 
     const salon = encontrarSalon(article.salon);
 
+    console.log("SALON ENCONTRADO: ------->" , salon)
+
 
     function capitalize(string) {
         return string.replace(/^\w/, match => match.toUpperCase());
@@ -119,7 +121,7 @@ const Info = ({ article }) => {
                                 className="flex flex-col justify-center items-center"
                             >
                                 <h4 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}>Dirección</h4>
-                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {salon.direccion}</p>
+                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {salon?.direccion}</p>
                             </motion.div>
                             <motion.div
                                 initial={{
@@ -136,7 +138,7 @@ const Info = ({ article }) => {
                                 }}
                             >
                                 <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
-                                    {salon.foto_salon &&
+                                    {salon?.foto_salon &&
                                         <Image
                                             src={salon.foto_salon}
                                             fill
@@ -146,11 +148,11 @@ const Info = ({ article }) => {
                                     }
                                 </div>
                             </motion.div>
-                            {salon.link &&
+                            {salon?.link &&
                                 <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly'>
                                     {
                                         article.mfmf != "sin_janos" &&
-                                        <a href={salon.link} target="_blank">
+                                        <a href={salon?.link} target="_blank">
                                             <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
                                         </a>
                                     }

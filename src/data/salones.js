@@ -28,7 +28,7 @@ export const salones = [
         link: 'https://www.janoseventos.com/salones.php?q=janos-nunez'
     },
     {
-        nombre: "Jano’s Darwin",
+        nombre: "Jano's Darwin",
         direccion: "Cnel. Niceto Vega 5350, CABA",
         link_maps: "http://maps.google.com/?q=Jano's+Darwin",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987873/salones/darwin.png',
