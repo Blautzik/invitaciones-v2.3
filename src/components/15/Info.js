@@ -23,7 +23,6 @@ const Info = ({ article }) => {
 
     const salon = encontrarSalon(article.salon);
 
-    console.log("SALON ENCONTRADO: ------->" , salon)
 
 
     function capitalize(string) {
