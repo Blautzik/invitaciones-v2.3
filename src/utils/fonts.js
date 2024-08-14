@@ -30,6 +30,12 @@ export const EyesomeScript = localFont({
   variable:'--eyesome-script'
 })
 
+export const Amsterdam = localFont({
+  src:'./Amsterdam-Four.woff2',
+  subsets:['latin'],
+  variable:'--amsterdam'
+})
+
 
 export const amatic = Amatic_SC({
   subsets: ['latin'],

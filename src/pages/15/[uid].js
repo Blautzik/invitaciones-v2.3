@@ -14,6 +14,7 @@ import InfoBat from '../../components/1/infoBat';
 
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import FormularioSimple from '@/components/15/FormularioSimple';
+import {encontrarSalon} from '../../data/salones';
 
 
 
@@ -44,9 +45,12 @@ const Invitacion = ({ article }) => {
         let thumb = false
 
 
+        const salon = encontrarSalon(article.salon);
+
+
         if (article.foto_portada) {
             portada = getGoogleDriveImageUrl(article.foto_portada)
-            thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+            thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada) || salon.foto_salon
         }
 
         let galeria = false
