@@ -8,7 +8,7 @@ import PortadaSinFoto from './PortadaSinFoto';
 
 
 
-const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_custom }) => {
+const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_custom, article }) => {
 
 
     const imageStyle = {
@@ -23,7 +23,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
 
     if(!coverImage){
         return(
-            <PortadaSinFoto title={title} date={date} />
+            <PortadaSinFoto title={title} date={date}, article={article} />
         )
     }
 
