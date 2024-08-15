@@ -10,7 +10,7 @@ const PortadaSinFoto = ({ title, date ,article}) => {
             <div className="top-0 w-full h-screen">
                 <div className='h-full flex flex-col items-center justify-center' style={{ backgroundImage: "url('https://res.cloudinary.com/fedexx/image/upload/v1720026301/P_1_v2bdzc.png')", backgroundSize: 'cover' }}>
                     <div className='text-center'>
-                        <h1 className={`${article.qwe ==="brunella" ?  Amsterdam.className : ClickerScript.className } z-10 text-gray-50 text-7xl mb-12 -translate-x-1 font-[100] -rotate-6`}>{title}</h1>
+                        <h1 className={`${article.qwe ==="brunella" ?  Amsterdam.className : ClickerScript.className } z-10 text-gray-50 -translate-x-1 font-[100] -rotate-6 ${article.qwe ==="brunella" ? "translate-x-1 mb-12 -rotate-6 text-7xl" : "text-9xl"}`}>{title}</h1>
                         {   article.frase_portada ?
                             <h1 className={`${openSans.className} z-10 mt-0 mb-28 text-gray-50 text-3xl font-[100]`}>{title === "Dionisio" ? "": article.frase_portada}</h1>
                             :
