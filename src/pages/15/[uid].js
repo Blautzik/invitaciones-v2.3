@@ -50,7 +50,9 @@ const Invitacion = ({ article }) => {
 
         if (article.foto_portada) {
             portada = getGoogleDriveImageUrl(article.foto_portada)
-            thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada) || salon.foto_salon
+            thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+        }else{
+            thumb = salon.foto_salon
         }
 
         let galeria = false
