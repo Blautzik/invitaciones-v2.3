@@ -4,7 +4,7 @@ import { GoCheckCircle } from 'react-icons/go';
 import {openSans} from '../../utils/fonts';
 import { Open_Sans } from 'next/font/google';
 
-const FormularioSinNino = ({ form_id, frase_extra, color_fondo }) => {
+const FormularioSinNino = ({ form_id, frase_extra, color_fondo , article}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
@@ -12,6 +12,7 @@ const FormularioSinNino = ({ form_id, frase_extra, color_fondo }) => {
   const [menu, setMenu] = useState('Menú Principal');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const id = form_id;
+  let frase_saludos = ""
   
   const [color, setColor] = useState(`bg-[${color_fondo && color_fondo.toLowerCase()}]`)
   
@@ -19,6 +20,13 @@ const FormularioSinNino = ({ form_id, frase_extra, color_fondo }) => {
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
 
   const isFormValid = name && email && menu;
+
+  if(article.mail === "bzerrizuela@gmail.com"){
+    frase_saludos = "Tenemos servicio de transporte ida y vuelta al salon desde Country Abril Club de Campo. Asegurá y reservá tu lugar, ingresando tu nombre en este espacio" 
+  }
+
+  console.log(frase_saludos)
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -138,7 +146,7 @@ const FormularioSinNino = ({ form_id, frase_extra, color_fondo }) => {
               onChange={(e) => setMessage(e.target.value)}
               id="message"
               className={`${inputCN} pt-4 !h-40`}
-              placeholder={frase_extra || 'Comentarios y saludos'}
+              placeholder={frase_extra || frase_saludos || "Saludos y comentarios"}
             />
           </div>
 

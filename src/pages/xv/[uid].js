@@ -169,8 +169,8 @@ const Invitacion = ({ article }) => {
 
 
                             <div>
-                                {article.mfmf == "sin_ninos" 
-                                ? <FormularioSinNino form_id={article.form_id} frase_extra={article.frase_extra} />
+                                {article.mfmf == "sin_ninos" || article.mfmf == "sin_ninostransporte"
+                                ? <FormularioSinNino form_id={article.form_id} frase_extra={article.qwe} article={article} />
                                 : article.mfmf == "playlist" 
                                     ? <FormularioPlaylist form_id={article.form_id} frase_extra={article.frase_extra} />   
                                     : <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
@@ -212,7 +212,6 @@ const Invitacion = ({ article }) => {
                                         alt='portada'
                                     />
                                 }
-
 
                                 <>
                                     <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
