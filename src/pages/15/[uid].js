@@ -15,6 +15,7 @@ import InfoBat from '../../components/1/infoBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import FormularioSimple from '@/components/15/FormularioSimple';
 import {encontrarSalon} from '../../data/salones';
+import InfoBatDan from '@/components/1/infoBatDan';
 
 
 
@@ -129,8 +130,18 @@ const Invitacion = ({ article }) => {
                                     <br/>
                                     <br/>
                                     </>
-
                                 }
+                                {
+                                    article.mfmf === "bar_dan" &&
+                                    <>
+                                    <InfoBatDan article={article}/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    </>
+                                }
+                                
 
                         </div>
                     </motion.div>
@@ -152,13 +163,6 @@ const Invitacion = ({ article }) => {
                             :
                             <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
                     }
-
-
-
-
-
-
-
 
                 </div>
 

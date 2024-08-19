@@ -73,10 +73,7 @@ const Invitacion = ({ article }) => {
             <>
                 <Head>
                     <title>
-                        {article.nombre}
-                        {article.frase_portada ? (" " + article.frase_portada)
-                            : " Mis quince"
-                        }
+                        {article.nombre+ " "} {article.frase_portada ? ` ${article.frase_portada}`: "Mis quince"}
                     </title>
                     <meta property="og:image" content={thumb} />
                     <meta property="og:description" content={article.qwe ? article.qwe : "Te invito a compartir la alegría de esta noche inolvidable y única"} />
@@ -263,8 +260,6 @@ export async function getStaticProps({ params, previewData }) {
         uid,
         ...articleData,
     };
-
-    // Log de los datos del artículo para verificación
 
 
     return {
