@@ -15,15 +15,6 @@ export const getOptimizedGoogleDriveImageUrl = (url, size = 300) => {
 };
 
 
-
-
-
-
-
-
-
-
-
  export function obtenerHoraArgentina(fechaISO) {
     // Crear un objeto Date a partir de la cadena de fecha ISO
     const fechaUTC = new Date(fechaISO);

@@ -17,6 +17,7 @@ import FormularioBat from '@/components/1/FormularioBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import { SwiperGallery} from '@/components/15/Swiper';
 import FormularioPlaylist from '@/components/15/FormularioPlaylist';
+import FormularioVIP from '@/components/1/FormularioVIP';
 
 const Invitacion = ({ article }) => {
 
@@ -100,6 +101,7 @@ const Invitacion = ({ article }) => {
                                 foto_pc={portada}
                                 frase_portada={article.frase_portada}
                                 sin_ondas={article.sin_ondas}
+                                mail={article.mail}
                             />
                         </section>
 
@@ -165,7 +167,12 @@ const Invitacion = ({ article }) => {
                             }
 
 
-                            <div>
+
+                            {
+                                article.mail == 'bzerrizuela@gmail.com' ? 
+                                    <FormularioVIP form_id={article.form_id}  frase_extra={article.qwe} article={article}/>
+                                :
+                                <div>
                                 {article.mfmf == "sin_ninos" || article.mfmf == "sin_ninostransporte"
                                 ? <FormularioSinNino form_id={article.form_id} frase_extra={article.qwe} article={article} />
                                 : article.mfmf == "playlist" 
@@ -174,6 +181,7 @@ const Invitacion = ({ article }) => {
                                 }
                             </div>
 
+                            }
                             {article.frase_regalos &&
                                 <div>
                                     <Regalos article={article} foto_regalos={foto_regalos} />
@@ -211,7 +219,7 @@ const Invitacion = ({ article }) => {
                                 }
 
                                 <>
-                                    <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
+                                    <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} mail={article.mail}/>
                                     <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
                                 </>
 

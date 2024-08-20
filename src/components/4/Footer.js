@@ -6,16 +6,18 @@ import React from 'react'
 
 
 
-const Footer = ({frase_cierre, sin_janos, mfmf }) => {
+const Footer = ({frase_cierre, sin_janos, mfmf, mail }) => {
 
    
     return (
         <div className='flex flex-col items-center justify-center text-center  '>
             
-            
-            <h2 className={`${mfmf == "formulario_simple" ? comfortaa.className : great_vives.className} ${mfmf == "formulario_simple" ? "hidden" :"text-gray-600  md:text-5xl text-4xl mx-10" } `}>
+            {
+                mail != 'bzerrizuela@gmail.com' &&
+                <h2 className={`${mfmf == "formulario_simple" ? comfortaa.className : great_vives.className} ${mfmf == "formulario_simple" ? "hidden" :"text-gray-600  md:text-5xl text-4xl mx-10" } `}>
                { frase_cierre || "Gracias por acompañarme en este momento tan importante!!"}
             </h2>
+            }
             { !sin_janos &&
             <a href='https://janoseventos.com' target='_blank'>
                 <div className='object-contain mt-8 mb-8'>

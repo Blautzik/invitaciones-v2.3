@@ -4,7 +4,8 @@ import moment from "moment/moment";
 import Image from 'next/image';
 
 
-const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_ondas }) => {
+const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_ondas, mail}) => {
+    console.log(mail)
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 5%',
@@ -26,7 +27,6 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                     quality={100}
                     style={imageStyle}
                     alt='portada'
-
                 />
                 {
                     !sin_ondas &&
@@ -58,7 +58,11 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                         {title.toUpperCase()}
                     </h1>
                     <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>{frase_portada || 'MIS 15 AÑOS'}</h3>
-                    {content && <p className={`${openSans.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>}
+                    { !(mail == "bzerrizuela@gmail.com") &&
+                    <>
+                        {content && <p className={`${openSans.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>}
+                    </>        
+                    }
                 </div>
             </div>
 

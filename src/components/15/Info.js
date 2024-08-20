@@ -136,16 +136,20 @@ const Info = ({ article }) => {
                                     scale: 1,
                                 }}
                             >
-                                <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
+                                {
+                                    article.mail !== 'bzerrizuela@gmail.com' ?
+                                    <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
                                     {salon?.foto_salon &&
                                         <Image
-                                            src={salon.foto_salon}
-                                            fill
-                                            quality={50}
-                                            style={imgstyle}
+                                        src={salon.foto_salon}
+                                        fill
+                                        quality={50}
+                                        style={imgstyle}
                                         />
                                     }
-                                </div>
+                                </div>  :
+                                        <></>
+                                    }
                             </motion.div>
                             {salon?.link &&
                                 <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly'>
