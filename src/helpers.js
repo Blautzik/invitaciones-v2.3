@@ -1,22 +1,18 @@
 export function getGoogleDriveImageUrl(driveUrl) {
-    const fileId = driveUrl.match(/[-\w]{25,}/);
+    const fileIdMatch = driveUrl.match(/(?:\/d\/|id=)([-\w]{25,})/);
 
-    if (!fileId) {
+    if (!fileIdMatch) {
         throw new Error("Invalid Google Drive URL");
     }
 
-    return `https://lh3.googleusercontent.com/d/${fileId[0]}=s660?authuser=0`;
+    return `https://lh3.googleusercontent.com/d/${fileIdMatch[1]}=s660?authuser=0`;
 }
 
-
-
 export const getOptimizedGoogleDriveImageUrl = (url, size = 300) => {
-    const match = url.match(/(?:\/d\/|id=)([a-zA-Z0-9_-]+)/);
+    const match = url.match(/(?:\/d\/|id=)([-\w]{25,})/);
     const fileId = match ? match[1] : null;
     return fileId ? `https://drive.google.com/thumbnail?id=${fileId}&sz=w${size}` : null;
-  };
-
-
+};
 
 
 
