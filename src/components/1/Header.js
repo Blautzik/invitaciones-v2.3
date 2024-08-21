@@ -42,12 +42,12 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                     }
                 </div>
                
-                <div className='w-full block md:hidden bg-[#fff]'>
+                <div className='w-full  md:hidden bg-[#fff]'>
                     <div className='w-full  md:hidden flex justify-center  pt-14'>
                         <div className='flex md:hidden w-full justify-center '>
-                            <span className='border-b flex-grow-0 w-1/12 border-b-[#3b1b55] h-5 mx-3'></span>
-                            <h3 className={`${playFair.className} flex-grow-1 text-slate-600 text-2xl mb-6`}>{dateFormated}</h3>
-                            <span className='border-b w-1/12 flex-grow-0 border-b-[#3b1b55] h-5 mx-3'></span>
+                            <span className='border-b md:hidden flex-grow-0 w-1/12 border-b-[#3b1b55] h-5 mx-3'></span>
+                            <h3 className={`${playFair.className} md:hidden flex-grow-1 text-slate-600 text-2xl mb-6`}>{dateFormated}</h3>
+                            <span className='border-b w-1/12 flex-grow-0 md:hidden border-b-[#3b1b55] h-5 mx-3'></span>
                         </div>
                     </div>
 
