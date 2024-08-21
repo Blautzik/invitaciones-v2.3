@@ -26,7 +26,6 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
     return (
         <>
             <div className=" block md:hidden ">
-
                 <div className="md:hidden relative top-0 w-full h-[60vh] md:h-[70vh] bg-center bg-cover ">
                     <div className=" top-0 bg-slate-800"></div>
                     <Image
