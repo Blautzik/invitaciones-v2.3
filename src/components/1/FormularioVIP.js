@@ -153,7 +153,7 @@ const FormularioVIP = ({ form_id, frase_extra, color_fondo, article }) => {
             />
           </div>
      <div className="flex items-center justify-center">
-            <label htmlFor="chicos" className="sr-only">
+            <label htmlFor="chicos" className="">
              Necesitas autorización para ingresar al Country Abril 
             </label>
             <select
@@ -161,6 +161,7 @@ const FormularioVIP = ({ form_id, frase_extra, color_fondo, article }) => {
               className={`${inputCN} text-gray-500`}
               onChange={(e) => setChicos(e.target.value)}
               value={chicos}
+              placeholder='si/no'
             >
               <option value="No">No</option>
               <option value="Sí">Sí</option>
