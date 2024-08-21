@@ -58,13 +58,13 @@ const InfoBatDan = ({ article }) => {
                             >
 
     
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}> Jueves 10/10/24 Tefilim 7:15 am</p>
+                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}> Jueves 10/10/2024 7:15-9:30 tefilin </p>
                                 <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}> Comunidad El Jai - Av. Mosconi 3845 </p>
 
                             </motion.div>
 
-                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}>Viernes 18/10/2024 Kabalat Shabat 19:15</p>
-                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}>Sábado 19/10/2024 Shajarit 9:15</p>
+                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}>Viernes 18/10/2024 kabalat Shabat 19:15-21:00 </p>
+                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}>Sábado 19/10/2024 Shajarit 9:30-11:45</p>
                                 <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}> Comunidad El Jai - Av. Mosconi 3845</p>
                          
 
