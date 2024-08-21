@@ -178,13 +178,13 @@ const FormularioVIP = ({ form_id, frase_extra, color_fondo, article }) => {
               {isSubmitting ? 'Enviando...' : 'CONFIRMAR'}
             </button>
           </div>
-          <p className='flex-end text-right text-white text-sm leading-tight'>
-          *Los residentes de Abril deberán enviar autorización de salida del country dirigida 
+          <p className='flex-end text-white text-sm leading-tight'>
+          Los residentes de Abril deberán enviar autorización de salida del country dirigida 
           a puesto1@abrilclub.com.ar
           </p>
         </form>
       </div>
-    </div>
+    </div>  
   );
 };
 
