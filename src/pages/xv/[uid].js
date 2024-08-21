@@ -70,6 +70,8 @@ const Invitacion = ({ article }) => {
         console.log("iglink", ig_link);
 
 
+
+
         return (
             <>
                 <Head>
@@ -121,7 +123,7 @@ const Invitacion = ({ article }) => {
                                 whileInView={{
                                     x: 0, opacity: 1
                                 }}
-                                className='overflow-hidden'>
+                                className='overflow-hidden md:hidden'>
 
                                 <Countdown date={article.fecha} />
                             </motion.div>
