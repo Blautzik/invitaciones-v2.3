@@ -7,7 +7,7 @@ import { Open_Sans } from 'next/font/google';
 const FormularioVIP = ({ form_id, frase_extra, color_fondo, article }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [chicos, setChicos] = useState('No');
+  const [chicos, setChicos] = useState('Si/No');
   const [message, setMessage] = useState('');
   const [menu, setMenu] = useState('Menú Principal');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -152,8 +152,9 @@ const FormularioVIP = ({ form_id, frase_extra, color_fondo, article }) => {
               placeholder={frase_extra || frase_saludos || 'Saludos y comentarios'}
             />
           </div>
+          <h3 className="text-white text-md max-w-2xl font-[500] pl-2">Necesitas autorización para ingresar al Country Abril </h3>
      <div className="flex items-center justify-center">
-            <label htmlFor="chicos" className="">
+            <label htmlFor="chicos" className="sr-only">
              Necesitas autorización para ingresar al Country Abril 
             </label>
             <select
@@ -161,7 +162,6 @@ const FormularioVIP = ({ form_id, frase_extra, color_fondo, article }) => {
               className={`${inputCN} text-gray-500`}
               onChange={(e) => setChicos(e.target.value)}
               value={chicos}
-              placeholder='si/no'
             >
               <option value="No">No</option>
               <option value="Sí">Sí</option>
@@ -178,7 +178,7 @@ const FormularioVIP = ({ form_id, frase_extra, color_fondo, article }) => {
               {isSubmitting ? 'Enviando...' : 'CONFIRMAR'}
             </button>
           </div>
-          <p className='flex-end text-right text-sm leading-tight'>
+          <p className='flex-end text-right text-white text-sm leading-tight'>
           *Los residentes de Abril deberán enviar autorización de salida del country dirigida 
           a puesto1@abrilclub.com.ar
           </p>
