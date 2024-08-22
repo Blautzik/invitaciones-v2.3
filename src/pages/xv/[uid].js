@@ -50,6 +50,7 @@ const Invitacion = ({ article }) => {
         let foto_agendar = false
         let foto_regalos = false
         let frase =  article.qwe  || "Te espero para compartir la alegría de esta noche inolvidable y única"
+        let menu_antinino = false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -69,6 +70,10 @@ const Invitacion = ({ article }) => {
         const ig_link = article["Link Instagram  (opcional)"];
         console.log("iglink", ig_link);
 
+
+        if(article.mfmf === "menu_sin_ninos"){
+            menu_antinino = true
+        }
 
 
 
@@ -182,7 +187,7 @@ const Invitacion = ({ article }) => {
                                 ? <FormularioSinNino form_id={article.form_id} frase_extra={article.qwe} article={article} />
                                 : article.mfmf == "playlist" 
                                     ? <FormularioPlaylist form_id={article.form_id} frase_extra={article.frase_extra} />   
-                                    : <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
+                                    : <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={menu_antinino} sin_ninos={article.sin_ninos} />
                                 }
                             </div>
 
