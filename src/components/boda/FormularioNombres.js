@@ -120,41 +120,7 @@ const FormularioNombre = ({ form_id, frase_extra, bg, otra_frase, frase_formular
               placeholder="Email"
             />
           </div>
-          {otra_frase ?
-            <>
-              <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Acompañantes</h3>
-              <div className="flex items-center justify-center">
-                <label htmlFor="chicos" className="sr-only">
-                  Chicos
-                </label>
-                <input
-                  value={chicos}
-                  onChange={(e) => setchicos(e.target.value)}
-                  type="text"
-                  name="chicos"
-                  id="chicos"
-                  className={`${inputCN} `}
-                  placeholder={otra_frase}
-                />
-              </div>
-            </>
-            :
-            <div className="flex items-center justify-center">
-              <label htmlFor="chicos" className="sr-only">
-                Chicos
-              </label>
-              <input
-                value={chicos}
-                onChange={(e) => setchicos(e.target.value)}
-                type="text"
-                name="chicos"
-                id="chicos"
-                className={inputCN}
-                placeholder="Si venís con niños, escribí aquí sus nombres"
-              />
-            </div>
-          }
-
+         
           <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
           <div className="flex items-center justify-center">
             <select
