@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 import { ComboboxNombres } from './Select';
 
-const FormularioNombre = ({ form_id, frase_extra, bg, otra_frase, frase_formulario, article }) => {
+const FormularioNombre = ({ form_id, frase_extra, bg, otra_frase, frase_formulario, mail }) => {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -86,7 +86,7 @@ const FormularioNombre = ({ form_id, frase_extra, bg, otra_frase, frase_formular
         <form className="py-4 space-y-4 mx-auto w-10/12" onSubmit={handleSubmit}>
           <div className="flex items-center justify-center">
             {
-                article.mail === "mercedes.matta10@gmail.com" ?
+                mail === "mercedes.matta10@gmail.com" ?
                 <ComboboxNombres value={name} setValue={setName}/>
                 :
             <>

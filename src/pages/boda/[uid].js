@@ -72,6 +72,11 @@ const Invitacion = ({ article }) => {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
             console.log("********************************", foto_regalos)
         }
+
+
+        const mail = article.mail
+
+
         return (
             <>
                 <Head>
@@ -122,8 +127,8 @@ const Invitacion = ({ article }) => {
 
                 <div>
                     {
-                        article.mail === "mercedes.matta10@gmail.com" ?
-                            <FormularioNombre form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} mail={article.mail} frase_formulario={article.frase_formulario} />
+                        mail === "mercedes.matta10@gmail.com" ?
+                            <FormularioNombre form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} mail={mail} frase_formulario={article.frase_formulario} />
                             :
                             <Formulario form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} />
                     }
