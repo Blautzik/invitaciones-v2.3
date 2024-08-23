@@ -116,14 +116,14 @@ const Invitacion = ({ article }) => {
                 }
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
-                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} article={article} />
+                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
                     </section>
                 }
 
                 <div>
                     {
                         article.mail === "mercedes.matta10@gmail.com" ?
-                            <FormularioNombre form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} article={article} frase_formulario={article.frase_formulario} />
+                            <FormularioNombre form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} mail={article.mail} frase_formulario={article.frase_formulario} />
                             :
                             <Formulario form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} />
                     }

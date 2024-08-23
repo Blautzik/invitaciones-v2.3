@@ -148,11 +148,11 @@ const Invitacion = ({ article }) => {
                     </motion.div>
                 </section>
 
-
+                                {console.log("emilio",article.mail)}
 
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
-                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} />
+                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
                     </section>
                 }
 

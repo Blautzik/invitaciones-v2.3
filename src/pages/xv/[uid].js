@@ -171,7 +171,7 @@ const Invitacion = ({ article }) => {
                                     {
                                         article.mfmf == "swiper" ? 
                                         <SwiperGallery galeria={galeria} />
-                                        : <Gallery imagenes={galeria} titulo={"Book de Fotos"} />
+                                        : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
                                     }
                                 </section>
                             }
