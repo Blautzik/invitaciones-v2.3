@@ -7,7 +7,7 @@ import GallerySlider from '../1/GallerySlider';
 import { openSans } from "@/utils/fonts";
 
 
-export default function Gallery({ imagenes, titulo }) {
+export default function Gallery({ imagenes, titulo, article }) {
   const [index, setIndex] = useState(0)
   const [openModal, setOpenModal] = useState();
   const [showVideo, setShowVideo] = useState()
@@ -42,6 +42,14 @@ export default function Gallery({ imagenes, titulo }) {
 
       <div className="flex flex-col items-center bg-[#fff] z-10 w-screen md:max-w-4xl text-center">
         <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
+        {
+          article.mail === "mercedes.matta10@gmail.com" &&
+          <p className={`${openSans.className} text-slate-700 text-sm mx-8 leading-2 mb-2 max-w-2xl font-[500]`}>
+            Nuestra historia empieza sabiendo que somos el uno para el otro y el destino así lo quiso.
+            Todo sucedió tan naturalmente, como si nos conocieramos de toda la vida, que acá estamos.
+            Tres años, tres meses y dos días después diciéndole que sí a una vida llena de amor, de compañía y de proyectos.
+          </p>
+        }
         <div className="grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
           {images.map(e => <div
             key={e}
@@ -59,8 +67,8 @@ export default function Gallery({ imagenes, titulo }) {
               fill // Use 'layout="fill"' to fill the container
               style={{
                 borderRadius: '5px',
-                objectFit:"cover", // Ensure consistent image display
-                objectPosition:'top'
+                objectFit: "cover", // Ensure consistent image display
+                objectPosition: 'top'
               }}
             />
           </div>

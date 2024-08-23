@@ -17,14 +17,16 @@ import FormularioSinNino from '../../components/1/FormularioSinNino';
 import InfoBat from '../../components/1/infoBat';
 import FormularioBat from '../../components/1/FormularioBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
+import FormularioNombre from '@/components/boda/FormularioNombres';
+import { SliderTestigos } from '@/components/boda/SliderTestigos';
 
 
 
 const Invitacion = ({ article }) => {
 
     console.log(article)
-  
-    if(!article){
+
+    if (!article) {
         return null
     }
 
@@ -48,11 +50,11 @@ const Invitacion = ({ article }) => {
         let portada = false
         let thumb = false
 
-        if(article.foto_portada){
-             portada = getGoogleDriveImageUrl(article.foto_portada)
-             thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+        if (article.foto_portada) {
+            portada = getGoogleDriveImageUrl(article.foto_portada)
+            thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
         }
-        
+
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
@@ -66,7 +68,7 @@ const Invitacion = ({ article }) => {
             foto_agendar = getGoogleDriveImageUrl(article.foto_agendar)
         }
 
-        if(article.foto_regalos) {
+        if (article.foto_regalos) {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
             console.log("********************************", foto_regalos)
         }
@@ -86,54 +88,62 @@ const Invitacion = ({ article }) => {
                 </Head>
 
 
-            <div className="mb-16">
-                <Header title={article.nombre}
-                    coverImage={portada}
-                    coverImagePc={portada}
-                    date={article.fecha}
-                    content={article.frase}
-                    h1_centrado={article.h1_centrado}
-                />
-            </div>
-
-            <div id="info">
-                <Info article={article} />
-            </div>
-
-
-            {article.regalo_sin_datos &&
-                <div>
-                    <Regalos article={article} />
+                <div className="mb-16">
+                    <Header title={article.nombre}
+                        coverImage={portada}
+                        coverImagePc={portada}
+                        date={article.fecha}
+                        content={article.frase}
+                        h1_centrado={article.h1_centrado}
+                    />
                 </div>
-            }
 
-            {article.cbu &&
-                <div>
-                    <Regalos article={article} foto_regalos={foto_regalos} />
+                <div id="info">
+                    <Info article={article} />
                 </div>
-            }
+
+
+                {article.regalo_sin_datos &&
+                    <div>
+                        <Regalos article={article} />
+                    </div>
+                }
+
+                {article.cbu &&
+                    <div>
+                        <Regalos article={article} foto_regalos={foto_regalos} />
+                    </div>
+                }
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
-                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} />
+                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} article={article} />
                     </section>
                 }
 
-            <div>
-                <Formulario form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario}/>
-            </div>
+                <div>
+                    {
+                        article.mail === "mercedes.matta10@gmail.com" ?
+                            <FormularioNombre form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} article={article} frase_formulario={article.frase_formulario} />
+                            :
+                            <Formulario form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} />
+                    }
+                </div>
 
 
-            <div className='mb-5'>
-                <Agendar foto={foto_agendar} fecha={article.fecha} bg={article.bg_color} />
-            </div>
-            <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
+                {
+                    article.mail === "mercedes.matta10@gmail.com" && <SliderTestigos />
+                }
 
 
-<div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
-        </>
+                <div className='mb-5'>
+                    <Agendar foto={foto_agendar} fecha={article.fecha} bg={article.bg_color} />
+                </div>
+                <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
 
+
+                <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+            </>
         )
-
     }
 }
 
@@ -141,7 +151,7 @@ const Invitacion = ({ article }) => {
 export default Invitacion
 
 export async function getStaticProps({ params, previewData }) {
-    const { uid } = params; 
+    const { uid } = params;
 
     if (!uid) {
         return {
@@ -171,7 +181,7 @@ export async function getStaticProps({ params, previewData }) {
     }
 
     const article = {
-        uid, 
+        uid,
         ...articleData,
     };
     console.log(article)
