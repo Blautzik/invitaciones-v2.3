@@ -171,7 +171,7 @@ const Invitacion = ({ article }) => {
                 </div>
 
 
-                {article.alias &&
+                {article.foto_regalos &&
 
                     <div>
                         <Regalos article={article} foto_regalos={foto_regalos} />
