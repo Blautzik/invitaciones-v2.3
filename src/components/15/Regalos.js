@@ -37,9 +37,17 @@ const Regalos = ({ article, foto_regalos }) => {
                         style={iconStyle}
                     />
                     <h3 className={`${comfortaa.className} text-2xl mt-4 mb-2 font-[700]`}>Regalos</h3>
+                    {
+                        article.mail === "marine"?
+
+                    <div className={`${openSans.className} font-[500] text-slate-800 leading-5`}>
+                        {article.frase_regalos}
+                    </div> :
                     <div className={`${openSans.className} font-[500] leading-5`}>
                         {article.frase_regalos}
-                    </div>
+                    </div> 
+
+                    }
                 </div>
                 <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 opacity-70`}>
                     {article.alias && <Accordion open header="Datos Bancarios" bg={article.bg_color}>

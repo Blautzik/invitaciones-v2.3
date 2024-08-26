@@ -148,6 +148,23 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
               <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
             </select>
           </div>
+
+
+          {form_id === "1rANUHdn-B7bO1ZKLJi55azzLEQNIlpNztBYCuPE5_BM" 
+          ? <div className="flex items-center justify-center">
+            <label htmlFor="message" className="sr-only">
+              Mensaje
+            </label>
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              id="message"
+              className={`${inputCN} pt-4 !h-40`}
+              placeholder={frase_extra || 'La combi sale desde la calle Valencia casi Patagones desde las 19.30 hasta las 20.15. De regreso estará disponible para la vuelta al mismo lugar'}
+            />
+          </div>
+        :
+        
           <div className="flex items-center justify-center">
             <label htmlFor="message" className="sr-only">
               Mensaje
@@ -160,6 +177,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
               placeholder={frase_extra || 'Comentarios y saludos'}
             />
           </div>
+        }
 
           <div className="flex items-end justify-end">
             <button
