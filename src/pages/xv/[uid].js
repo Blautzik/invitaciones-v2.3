@@ -15,7 +15,7 @@ import FormularioSinNino from '@/components/1/FormularioSinNino';
 import InfoBat from '@/components/1/infoBat';
 import FormularioBat from '@/components/1/FormularioBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
-import { SwiperGallery} from '@/components/15/Swiper';
+import { SwiperGallery } from '@/components/15/Swiper';
 import FormularioPlaylist from '@/components/15/FormularioPlaylist';
 import FormularioVIP from '@/components/1/FormularioVIP';
 
@@ -42,14 +42,14 @@ const Invitacion = ({ article }) => {
         let portada = false
         let thumb = false
 
-        if(article.foto_portada){
-             portada = getGoogleDriveImageUrl(article.foto_portada)
-             thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+        if (article.foto_portada) {
+            portada = getGoogleDriveImageUrl(article.foto_portada)
+            thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
         }
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
-        let frase =  article.qwe  || "Te espero para compartir la alegría de esta noche inolvidable y única"
+        let frase = article.qwe || "Te espero para compartir la alegría de esta noche inolvidable y única"
         let menu_antinino = false
 
         if (article.galeria) {
@@ -71,7 +71,7 @@ const Invitacion = ({ article }) => {
         console.log("iglink", ig_link);
 
 
-        if(article.mfmf === "menu_sin_ninos"){
+        if (article.mfmf === "menu_sin_ninos") {
             menu_antinino = true
         }
 
@@ -81,12 +81,12 @@ const Invitacion = ({ article }) => {
             <>
                 <Head>
                     <title>
-                        {article.nombre+ " "} {article.frase_portada ? ` ${article.frase_portada}`: "Mis quince"}
+                        {article.nombre + " "} {article.frase_portada ? ` ${article.frase_portada}` : "Mis quince"}
                     </title>
                     <meta property="og:image" content={thumb} />
                     {
                         article.mail !== "bzerrizuela@gmail.com" &&
-                    <meta property="og:description" content={article.qwe ? article.qwe : "Te invito a compartir la alegría de esta noche inolvidable y única"} />
+                        <meta property="og:description" content={article.qwe ? article.qwe : "Te invito a compartir la alegría de esta noche inolvidable y única"} />
                     }
                     <meta property="og:image:type" content="image/jpeg" />
 
@@ -169,29 +169,40 @@ const Invitacion = ({ article }) => {
                             {article.galeria &&
                                 <section className="bg-[#fff] mt-12 text-center flex justify-center ">
                                     {
-                                        article.mfmf == "swiper" ? 
-                                        <SwiperGallery galeria={galeria} />
-                                        : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
+                                        article.mfmf == "swiper" ?
+                                            <SwiperGallery galeria={galeria} />
+                                            : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
                                     }
                                 </section>
                             }
 
+                            {article.form_id && (
+                                article.mail === 'bzerrizuela@gmail.com' ? (
+                                    <FormularioVIP form_id={article.form_id} frase_extra={article.qwe} article={article} />
+                                ) : (
+                                    <div>
+                                        {article.mfmf === "sin_ninos" || article.mfmf === "sin_ninostransporte" ? (
+                                            <FormularioSinNino form_id={article.form_id} frase_extra={article.qwe} article={article} />
+                                        ) : article.mfmf === "playlist" ? (
+                                            <FormularioPlaylist form_id={article.form_id} frase_extra={article.frase_extra} />
+                                        ) : (
+                                            <Formulario
+                                                form_id={article.form_id}
+                                                frase_extra={article.frase_extra}
+                                                color_fondo={article.color_fondo}
+                                                menu_antinino={menu_antinino}
+                                                sin_ninos={article.sin_ninos}
+                                            />
+                                        )}
+                                    </div>
+                                )
+                            )}
 
 
-                            {
-                                article.mail == 'bzerrizuela@gmail.com' ? 
-                                    <FormularioVIP form_id={article.form_id}  frase_extra={article.qwe} article={article}/>
-                                :
-                                <div>
-                                {article.mfmf == "sin_ninos" || article.mfmf == "sin_ninostransporte"
-                                ? <FormularioSinNino form_id={article.form_id} frase_extra={article.qwe} article={article} />
-                                : article.mfmf == "playlist" 
-                                    ? <FormularioPlaylist form_id={article.form_id} frase_extra={article.frase_extra} />   
-                                    : <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={menu_antinino} sin_ninos={article.sin_ninos} />
-                                }
-                            </div>
 
-                            }
+
+
+
                             {article.frase_regalos &&
                                 <div>
                                     <Regalos article={article} foto_regalos={foto_regalos} />
@@ -229,7 +240,7 @@ const Invitacion = ({ article }) => {
                                 }
 
                                 <>
-                                    <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} mail={article.mail}/>
+                                    <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} mail={article.mail} />
                                     <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
                                 </>
 
