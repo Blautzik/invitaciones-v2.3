@@ -19,6 +19,8 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
 
   const isFormValid = name && email && menu;
 
+  sin_ninos = true 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 

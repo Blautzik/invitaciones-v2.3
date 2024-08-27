@@ -48,21 +48,18 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
       const content = await response.json();
 
       if (response.ok) {
-        // Submission was successful
-        // Clear the form fields
+
         setMessage('');
         setchicos('');
         setName('');
         setEmail('');
         setMenu('Menú Principal');
 
-        // Enable the submit button again
         setIsSubmitting(false);
 
         alert('Asistencia registrada correctamente! Muchas gracias!');
       } else {
-        // Handle errors if the submission fails
-        // Enable the submit button again
+
         setIsSubmitting(false);
         alert('Error al registrar la asistencia. Por favor, intenta nuevamente.');
       }
@@ -112,40 +109,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               placeholder="Email"
             />
           </div>
-          {otra_frase ?
-            <>
-              <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Acompañantes</h3>
-              <div className="flex items-center justify-center">
-                <label htmlFor="chicos" className="sr-only">
-                  Chicos
-                </label>
-                <input
-                  value={chicos}
-                  onChange={(e) => setchicos(e.target.value)}
-                  type="text"
-                  name="chicos"
-                  id="chicos"
-                  className={`${inputCN} `}
-                  placeholder={otra_frase}
-                />
-              </div>
-            </>
-            :
-            <div className="flex items-center justify-center">
-              <label htmlFor="chicos" className="sr-only">
-                Chicos
-              </label>
-              <input
-                value={chicos}
-                onChange={(e) => setchicos(e.target.value)}
-                type="text"
-                name="chicos"
-                id="chicos"
-                className={inputCN}
-                placeholder="Si venís con niños, escribí aquí sus nombres"
-              />
-            </div>
-          }
+
 
           <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
           <div className="flex items-center justify-center">

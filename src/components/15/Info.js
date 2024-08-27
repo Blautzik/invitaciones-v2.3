@@ -12,19 +12,20 @@ const Info = ({ article }) => {
         weekday: 'long',
         day: 'numeric',
         month: 'long',
-        timeZone: 'America/Argentina/Buenos_Aires' // Forzar zona horaria de Argentina
+        timeZone: 'America/Argentina/Buenos_Aires'
     });
 
     const hora = fechaCeremonia.toLocaleTimeString("es-ES", {
         hour: '2-digit',
         minute: '2-digit',
-        timeZone: 'America/Argentina/Buenos_Aires' // Forzar zona horaria de Argentina
+        timeZone: 'America/Argentina/Buenos_Aires' 
     });
 
     const salon = encontrarSalon(article.salon);
 
 
-    const hora_fin = article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A" ? "20:00" : false
+    let hora_fin = article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A" ? "20:00" : false
+    hora_fin = article.form_id == "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "05:00" : false
 
 
 

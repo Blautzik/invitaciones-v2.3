@@ -22,6 +22,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
 
     const color = article.mail ==="marinec" ? "black" : "text-slate-50"
 
+    const mas_alto = article.mail === "arielgov@gmail.com" ? "-translate-y-10" : ""
+
     const titulo = title.toUpperCase()
 
     if(!coverImage){
@@ -60,7 +62,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
                             h1_centrado ?
                                 <h1 className={`${minion.className}  max-w-sm text-center pt-96 text-5xl font-[200]`}>{!portada_custom && titulo}</h1>
                                 :
-                                <h1 className={`${minion.className}  ${color}  max-w-sm text-center text-5xl font-[200]`}>{!portada_custom && titulo}</h1>
+                                <h1 className={`${minion.className}  ${color} ${mas_alto}  max-w-sm text-center text-5xl font-[200]`}>{!portada_custom && titulo}</h1>
                         }
                     </div>
 
