@@ -78,6 +78,11 @@ const Invitacion = ({ article }) => {
                 </section>
               }
 
+                {article.data.cbu &&
+                  <div className='mb-8 relative -top-[1px]'>
+                    <Regalos article={article.data} />
+                  </div>
+                }
               <div className='relative -top-[1px]'>
                 {
                   article.data.no_conozcas ?
@@ -85,11 +90,6 @@ const Invitacion = ({ article }) => {
                   :<Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color={article.data.color_fondo} sin_menu={article.data.sin_menu} />
                 }
               </div>
-              {article.data.cbu &&
-                <div className='mb-8 relative -top-[1px]'>
-                  <Regalos article={article.data} />
-                </div>
-              }
               <section className='relative '>
 
 

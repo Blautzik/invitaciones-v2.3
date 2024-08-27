@@ -41,7 +41,7 @@ const Regalos = ({ article }) => {
                         <PiGiftThin className='text-8xl white' />
                         {article.alias ?
     
-                            <div className={`${openSans.className} font-[300] text-sm leading-5`}>
+                            <div className={`${openSans.className} font-[300] text-xl leading-5`}>
                                 {article.frase_regalos}
                             </div>
                             :
@@ -63,7 +63,7 @@ const Regalos = ({ article }) => {
     }else if(article.frase_regalos == "Y si nos regalamos una buena noche... Todo lo que juntemos va 100% para la banda..."){
         return (
 <div className='w-full'>
-            <div className="h-1/2  w-full flex flex-col relative items-center justify-between bg-gray-600">
+            <div className="h-3/5  w-full flex flex-col relative items-center justify-between bg-gray-600">
                 <Image
                     src={article.foto_regalos}
                     fill
@@ -81,7 +81,7 @@ const Regalos = ({ article }) => {
 
                     />
                     <h3 className={`${comfortaa.className} text-xl mt-2 mb-2 font-[700]`}>Regalos</h3>
-                    <div className={`${openSans.className} font-[400] leading-5 mt-44`}>
+                    <div className={`${openSans.className} font-[400]  leading-5 mt-44`}>
                         {article.frase_regalos}
                         </div>  
                 </div>
