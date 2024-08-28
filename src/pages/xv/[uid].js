@@ -76,7 +76,6 @@ const Invitacion = ({ article }) => {
         }
 
 
-
         return (
             <>
                 <Head>
@@ -115,11 +114,7 @@ const Invitacion = ({ article }) => {
                             />
                         </section>
 
-
-
                         <div>
-
-
                             <motion.div
                                 initial={{
                                     opacity: 0,
@@ -135,8 +130,6 @@ const Invitacion = ({ article }) => {
 
                                 <Countdown date={article.fecha} />
                             </motion.div>
-
-
 
 
                             <section>

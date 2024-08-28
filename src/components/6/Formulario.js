@@ -18,6 +18,11 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
 
   const isFormValid = name && email && menu;
 
+
+  if(form_id ==="16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0"){
+    bg = "bg-black"
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 

@@ -74,6 +74,8 @@ const Invitacion = ({ article }) => {
 
         const ig_link = article['Link Instagram (opcional)']
 
+        const bg = article.form_id === "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "bg-black" : "bg-violeta"
+
 
 
         return (
@@ -188,7 +190,7 @@ const Invitacion = ({ article }) => {
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} mfmf={article.mfmf} />
 
 
-                <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+                <div className={`w-screen ${bg} h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
 
             </>
 

@@ -16,6 +16,13 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
         opacity: 0.95,
         backgroundColor: '#555',
     }
+    const imageStylepc = {
+        objectFit: 'cover',
+        objectPosition: 'center%',
+        zIndex: 0,
+        opacity: 0.95,
+        backgroundColor: '#555',
+    }
 
     if (mail == "bzerrizuela@gmail.com") {
         foto_pc = getGoogleDriveImageUrl("https://drive.google.com/file/d/1CKjeQGTl3-PGxTsYjPJ45sf8R2GfpcOG/view?usp=sharing")
@@ -71,7 +78,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                             src={foto_pc}
                             fill
                             quality={100}
-                            style={imageStyle}
+                            style={imageStylepc}
                             alt='portada'
                         />
                     </div>

@@ -18,6 +18,13 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
         opacity: 0.99,
         backgroundColor: '#555',
     }
+    const imageStylePC = {
+        objectFit: 'cover',
+        objectPosition: 'center',
+        zIndex: 0,
+        opacity: 0.99,
+        backgroundColor: '#555',
+    }
 
 
     const color = article.mail ==="marinec" ? "black" : "text-slate-50"
@@ -48,10 +55,10 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
                 </div>
                 <div className='hidden md:block'>
                     <Image
-                        src={coverImagePc}
+                        src={coverImage}
                         fill
                         quality={100}
-                        style={imageStyle}
+                        style={imageStylePC}
                         alt='portada'
                     />
                 </div>
