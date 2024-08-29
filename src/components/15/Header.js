@@ -29,7 +29,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
 
     const color = article.mail ==="marinec" ? "black" : "text-slate-50"
 
-    const mas_alto = article.mail === "arielgov@gmail.com" ? "-translate-y-10" : ""
+    const mas_alto = article.mail === "arielgov@gmail.com" ? "-translate-y-10 text-black" : " text-slate-50"
 
     const titulo = title.toUpperCase()
 
