@@ -22,7 +22,7 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
 
 
     return (
-        <div className=" h-[90vh]  ">
+        <div className=" h-[100vh]  ">
             <div className="w-full ">
                 
                 <div className='md:hidden h-full'>
@@ -32,6 +32,11 @@ const Header = ({ coverImage, title, date, coverImagePc }) => {
                         fill
                         quality={100}
                         style={imageStyle}
+
+
+
+
+                        
                         alt='portada'
                     />
                 </div>
