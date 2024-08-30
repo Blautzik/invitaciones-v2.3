@@ -14,7 +14,7 @@ import InfoBat from '../../components/1/infoBat';
 
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import FormularioSimple from '@/components/15/FormularioSimple';
-import {encontrarSalon} from '../../data/salones';
+import { encontrarSalon } from '../../data/salones';
 import InfoBatDan from '@/components/1/infoBatDan';
 
 
@@ -52,7 +52,7 @@ const Invitacion = ({ article }) => {
         if (article.foto_portada) {
             portada = getGoogleDriveImageUrl(article.foto_portada)
             thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
-        }else{
+        } else {
             thumb = salon.foto_salon
         }
 
@@ -76,21 +76,17 @@ const Invitacion = ({ article }) => {
 
         const bg = article.form_id === "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "bg-black" : "bg-violeta"
 
+        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
+        const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
 
 
         return (
             <>
                 <Head>
-                    <title>
-                        {article.nombre}
-                        {article.frase_portada ? (" " + article.frase_portada)
-                            : " Mis quince"
-                        }
-                    </title>
-                    <meta property="og:image" itemprop="image" content={thumb} />
-                    <meta property="og:description" content={ `Te ${article.mfmf =="plural" ? "invitamos" : "invito"} a compartir la alegria de esta fiesta inolvidable y única`} />
+                    <title>{title}</title>
+                    <meta property="og:image" itemProp="image" content={thumb} />
+                    <meta property="og:description" content={description} />
                     <meta property="og:image:type" content="image/jpeg" />
-
                 </Head>
 
 
@@ -126,34 +122,34 @@ const Invitacion = ({ article }) => {
 
                             <Info
                                 article={article}
-                                />
-                                {
-                                    article.mfmf === "bar_dionisio" &&
-                                    <>
-                                    <InfoBat article={article}/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    </>
-                                }
-                                {
-                                    article.mfmf === "bar_dan" &&
-                                    <>
-                                    <InfoBatDan article={article}/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    </>
-                                }
-                                
+                            />
+                            {
+                                article.mfmf === "bar_dionisio" &&
+                                <>
+                                    <InfoBat article={article} />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                </>
+                            }
+                            {
+                                article.mfmf === "bar_dan" &&
+                                <>
+                                    <InfoBatDan article={article} />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                </>
+                            }
+
 
                         </div>
                     </motion.div>
                 </section>
 
-                                {console.log("emilio",article.mail)}
+                {console.log("emilio", article.mail)}
 
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
@@ -265,9 +261,9 @@ export async function getStaticPaths() {
     }
 
     const paths = posts
-        .filter(post => post.url) 
+        .filter(post => post.url)
         .map(post => ({
-            params: { uid: String(post.url) }, 
+            params: { uid: String(post.url) },
         }));
 
 
