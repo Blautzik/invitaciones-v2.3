@@ -5,7 +5,7 @@ export function getGoogleDriveImageUrl(driveUrl) {
         throw new Error("Invalid Google Drive URL");
     }
 
-    return `https://lh3.googleusercontent.com/d/${fileIdMatch[1]}=s660?authuser=0`;
+    return `https://lh3.googleusercontent.com/d/${fileIdMatch[1]}=s1920?authuser=0`;
 }
 
 export const getOptimizedGoogleDriveImageUrl = (url, size = 300) => {
