@@ -32,7 +32,7 @@ export function SliderTestigos() {
     return (
         <div className="w-full max-w-4xl mx-auto px-4 py-8">
             <h3 className={`${comfortaa.className} text-4xl mb-4 text-center` } >Testigos</h3>
-            <p>Ellos son los testigos de nuestra historia de amor </p>
+            <p className="text-center">Ellos son los testigos de nuestra historia de amor </p>
             <div className="hidden lg:flex justify-center items-center space-x-8">
                 {testigos.map((testigo, index) => (
                     <TestigoCard key={index} testigo={testigo} />
