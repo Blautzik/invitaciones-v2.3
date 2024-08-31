@@ -45,9 +45,7 @@ export default function Gallery({ imagenes, titulo, mail }) {
         {
           mail === "mercedes.matta10@gmail.com" &&
           <p className={`${openSans.className} text-slate-700 text-sm mx-8 leading-2 mb-2 max-w-2xl font-[500]`}>
-            Nuestra historia empieza sabiendo que somos el uno para el otro y el destino así lo quiso.
-            Todo sucedió tan naturalmente, como si nos conocieramos de toda la vida, que acá estamos.
-            Tres años, tres meses y dos días después diciéndole que sí a una vida llena de amor, de compañía y de proyectos.
+            Nuestra historia comienza sabiendo que somos el uno para el otro, el destino asi lo quiso. Todo sucedió tan naturalmente, como si nos conocieramos de toda la vida y acá estamos. Tres años, tres meses y dos días después diciendo sí a una vida llena de amor, compañía y proyectos.
           </p>
         }
         <div className="grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
