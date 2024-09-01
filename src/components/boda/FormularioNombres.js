@@ -106,7 +106,7 @@ const FormularioNombre = ({ form_id, frase_extra, bg, otra_frase, frase_formular
             }
 
           </div>
-          <div className="flex items-center justify-center">
+          {/* <div className="flex items-center justify-center">
             <label htmlFor="email" className="sr-only">
               Email
             </label>
@@ -119,7 +119,7 @@ const FormularioNombre = ({ form_id, frase_extra, bg, otra_frase, frase_formular
               className={inputCN}
               placeholder="Email"
             />
-          </div>
+          </div> */}
          
           <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
           <div className="flex items-center justify-center">
