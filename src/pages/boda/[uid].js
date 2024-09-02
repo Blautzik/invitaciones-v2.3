@@ -76,7 +76,7 @@ const Invitacion = ({ article }) => {
 
         const mail = article.mail
 
-        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : "Nos casamos!"}`;
+        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Nos casamos!"}`;
         const description = `Te invitamos a compartir la alegría de esta fiesta inolvidable y única`;
 
 
