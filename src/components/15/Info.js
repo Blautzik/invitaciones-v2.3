@@ -24,8 +24,14 @@ const Info = ({ article }) => {
     const salon = encontrarSalon(article.salon);
 
 
-    let hora_fin = article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A" ? "20:00" : false
-    hora_fin = article.form_id == "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "05:00" : false
+    let hora_fin = false
+
+    if(article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A"){
+        hora_fin = "20:00"
+    }
+    if(article.form_id == "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ){
+        hora_fin = "05:00"
+    }
 
 
 
