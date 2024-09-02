@@ -76,8 +76,8 @@ const Invitacion = ({ article }) => {
 
         const mail = article.mail
 
-        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
-        const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
+        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : "Nos casamos!"}`;
+        const description = `Te invitamos a compartir la alegría de esta fiesta inolvidable y única`;
 
 
         return (
@@ -89,7 +89,7 @@ const Invitacion = ({ article }) => {
                     <meta property="og:image:type" content="image/jpeg" />
                 </Head>
 
-                
+
 
                 <div className="mb-16">
                     <Header title={article.nombre}
