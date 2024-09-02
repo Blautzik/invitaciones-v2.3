@@ -17,7 +17,7 @@ const FormularioNombre = ({ form_id, frase_extra, bg, otra_frase, frase_formular
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
 
-  const isFormValid = name && email && menu;
+  const isFormValid = name && menu;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
