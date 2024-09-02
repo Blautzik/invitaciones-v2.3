@@ -76,22 +76,20 @@ const Invitacion = ({ article }) => {
 
         const mail = article.mail
 
+        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
+        const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
+
 
         return (
             <>
                 <Head>
-                    <title>
-                        {article.nombre}
-                        {article.frase_portada ? (" " + article.frase_portada)
-                            : " Nos Casamos!"
-                        }
-                    </title>
-                    <meta property="og:image" content={thumb} />
-                    <meta property="og:description" content={"Te invitamos a compartir la alegría de esta noche inolvidable y única"} />
+                    <title>{title}</title>
+                    <meta property="og:image" itemProp="image" content={thumb} />
+                    <meta property="og:description" content={description} />
                     <meta property="og:image:type" content="image/jpeg" />
-
                 </Head>
 
+                
 
                 <div className="mb-16">
                     <Header title={article.nombre}
