@@ -76,20 +76,24 @@ const Invitacion = ({ article }) => {
         }
 
 
+        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
+        const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
+
+
         return (
             <>
                 <Head>
-                    <title>
-                        {article.nombre + " "} {article.frase_portada ? ` ${article.frase_portada}` : "Mis quince"}
-                    </title>
-                    <meta property="og:image" content={thumb} />
+                    <title>{title}</title>
+                    <meta property="og:image" itemProp="image" content={thumb} />
                     {
                         article.mail !== "bzerrizuela@gmail.com" &&
-                        <meta property="og:description" content={article.qwe ? article.qwe : "Te invito a compartir la alegría de esta noche inolvidable y única"} />
+                        <meta property="og:description" content={description}/>
                     }
-                    <meta property="og:image:type" content="image/jpeg" />
 
+                    <meta property="og:image:type" content="image/jpeg" />
                 </Head>
+
+
 
 
                 {article.music &&
