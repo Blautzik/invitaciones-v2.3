@@ -41,7 +41,7 @@ const Info = ({ article }) => {
 
     const imgstyle = {
         objectFit: 'cover',
-        objectPosition: '50% 0%',
+        objectPosition: '50% 50%',
         zIndex: 0,
         borderRadius: '5px',
     }

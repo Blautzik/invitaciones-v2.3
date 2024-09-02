@@ -362,6 +362,13 @@ export const salones = [
         link_maps: "https://maps.app.goo.gl/WpE69NQQ5RPuGEF37",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1722389239/fotos%20salones/1713212794Recorrido_Naranjos_1_62_vwcdrb.jpg',
         link: 'https://www.janoseventos.com/salones.php?q=janos-losnaranjos'
+    },
+    {
+        nombre: "Jano's Beach",
+        direccion: "Av. de los Trabajadores 4700, Mar del Plata",
+        link_maps: "https://maps.app.goo.gl/VxBpLpx1XQEDR4cD6",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1725314568/salones/2024-01-25_elado2.jpg',
+        link: 'https://janosbeach.com.ar/'
     }
 ];
 
