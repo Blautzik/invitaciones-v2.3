@@ -20,7 +20,6 @@ import InfoBatDan from '@/components/1/infoBatDan';
 
 
 const Invitacion = ({ article }) => {
-
     if (!article) {
         return null
     }
@@ -74,7 +73,12 @@ const Invitacion = ({ article }) => {
 
         const ig_link = article['Link Instagram (opcional)']
 
-        const bg = article.form_id === "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "bg-black" : "bg-violeta"
+        let bg = article.form_id === "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "bg-black" : "bg-violeta"
+
+        if(article.form_id === "1QLYZgzByxTw1jyFIJY_u4gFlgF_CLHIM39vD3HDE1mI"){
+            bg = "bg-[##ffa4a4]"
+        }
+
 
         const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
         const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
@@ -156,18 +160,14 @@ const Invitacion = ({ article }) => {
                         <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
                     </section>
                 }
-
                 <div>
-
                     {
                         article.mfmf == "formulario_simple" ?
                             <FormularioSimple form_id={article.form_id} frase_extra={article.frase_extra} />
                             :
                             <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
                     }
-
                 </div>
-
 
                 {article.foto_regalos &&
 
@@ -175,8 +175,6 @@ const Invitacion = ({ article }) => {
                         <Regalos article={article} foto_regalos={foto_regalos} />
                     </div>
                 }
-
-
 
 
                 <div className='z-50 mb-10'>

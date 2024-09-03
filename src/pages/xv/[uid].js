@@ -21,7 +21,6 @@ import FormularioVIP from '@/components/1/FormularioVIP';
 
 const Invitacion = ({ article }) => {
 
-
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 0%',
@@ -92,8 +91,6 @@ const Invitacion = ({ article }) => {
 
                     <meta property="og:image:type" content="image/jpeg" />
                 </Head>
-
-
 
 
                 {article.music &&
@@ -197,9 +194,6 @@ const Invitacion = ({ article }) => {
 
 
 
-
-
-
                             {article.frase_regalos &&
                                 <div>
                                     <Regalos article={article} foto_regalos={foto_regalos} />
@@ -272,7 +266,6 @@ export async function getStaticProps({ params, previewData }) {
 
     const articles = await response.json();
 
-    // Log de los artículos obtenidos para verificación
 
     const articleData = articles.find(article => String(article.url) === uid);
 
@@ -317,12 +310,12 @@ export async function getStaticPaths() {
     }
 
     const paths = posts
-        .filter(post => post.url) // Asegúrate de filtrar los posts que tienen el nombre definido
+        .filter(post => post.url) 
         .map(post => ({
-            params: { uid: String(post.url) }, // Asegúrate de que el parámetro uid sea una cadena
+            params: { uid: String(post.url) },
         }));
 
-    // Log de las rutas generadas para verificación
+
     console.log('Paths:', paths);
 
     return { paths, fallback: false };
