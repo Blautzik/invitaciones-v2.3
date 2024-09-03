@@ -32,6 +32,9 @@ const Info = ({ article }) => {
     if(article.form_id == "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ){
         hora_fin = "05:00"
     }
+    if(article.form_id == "1QLYZgzByxTw1jyFIJY_u4gFlgF_CLHIM39vD3HDE1mI"){
+        hora_fin = "21:00"
+    } 
 
 
 
