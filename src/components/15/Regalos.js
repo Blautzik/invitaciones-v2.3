@@ -3,7 +3,7 @@ import React from 'react'
 import { comfortaa, openSans } from '../../utils/fonts';
 import Accordion from '../6/Accordion'
 
-const Regalos = ({ article, foto_regalos }) => {
+const Regalos = ({ article, foto_regalos, bg }) => {
 
     const imageStyle = {
         objectFit: 'cover',
@@ -49,8 +49,8 @@ const Regalos = ({ article, foto_regalos }) => {
 
                     }
                 </div>
-                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 opacity-70`}>
-                    {article.alias && <Accordion open header="Datos Bancarios" bg={article.bg_color}>
+                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg? "opacity-100": "opacity-70"} `}>
+                    {article.alias && <Accordion open header="Datos Bancarios" bg={bg}>
                         <div className={`${openSans.className} text-sm font-thin opacity-100`}>
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}

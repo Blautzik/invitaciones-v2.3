@@ -76,7 +76,7 @@ const Invitacion = ({ article }) => {
         let bg = article.form_id === "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "bg-black" : "bg-violeta"
 
         if(article.form_id === "1QLYZgzByxTw1jyFIJY_u4gFlgF_CLHIM39vD3HDE1mI"){
-            bg = "bg-[##ffa4a4]"
+            bg = "bg-[#ffa4a4]"
         }
 
 
@@ -165,14 +165,14 @@ const Invitacion = ({ article }) => {
                         article.mfmf == "formulario_simple" ?
                             <FormularioSimple form_id={article.form_id} frase_extra={article.frase_extra} />
                             :
-                            <Formulario form_id={article.form_id} frase_extra={article.frase_extra} color_fondo={article.color_fondo} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
+                            <Formulario form_id={article.form_id} frase_extra={article.frase_extra} bg={bg} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
                     }
                 </div>
 
                 {article.foto_regalos &&
 
                     <div>
-                        <Regalos article={article} foto_regalos={foto_regalos} />
+                        <Regalos article={article} foto_regalos={foto_regalos} bg={bg} />
                     </div>
                 }
 
