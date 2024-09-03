@@ -16,6 +16,7 @@ import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpe
 import FormularioSimple from '@/components/15/FormularioSimple';
 import { encontrarSalon } from '../../data/salones';
 import InfoBatDan from '@/components/1/infoBatDan';
+import { SwiperGallery } from '../../components/15/Swiper';
 
 
 
@@ -75,7 +76,7 @@ const Invitacion = ({ article }) => {
 
         let bg = article.form_id === "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "bg-black" : "bg-violeta"
 
-        if(article.form_id === "1QLYZgzByxTw1jyFIJY_u4gFlgF_CLHIM39vD3HDE1mI"){
+        if (article.form_id === "1QLYZgzByxTw1jyFIJY_u4gFlgF_CLHIM39vD3HDE1mI") {
             bg = "bg-[#ffa4a4]"
         }
 
@@ -156,9 +157,15 @@ const Invitacion = ({ article }) => {
 
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
-                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
+                        {
+                            article.mfmf == "swiper" ?
+                                <SwiperGallery galeria={galeria} />
+                                : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
+                        }
                     </section>
                 }
+
+                
                 <div>
                     {
                         article.mfmf == "formulario_simple" ?
