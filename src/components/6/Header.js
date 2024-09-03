@@ -11,10 +11,12 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado }) => {
 
     let opacity = 0.7
     let sin_nombre = false
+    let texto = "text-slate-50"
 
     if (title === "Emi y Robert") {
         sin_nombre = true
         opacity = 1
+        texto = "text-black"
     }
 
     const imageStyle = {
@@ -72,8 +74,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado }) => {
                         }
                         </div>
                     <div className='flex flex-col items-center'>
-                        <h2 className={`${openSans.className} text-gray-50 max-w-xs text-center text-xl tracking-widest font-[100]`}> Nos casamos en</h2>
-                        <Countdown date={date} />
+                        <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest font-[100]`}> Nos casamos en</h2>
+                        <Countdown date={date} texto={texto} />
                         <Link href='#info' scroll={false}>
                             <button className={`${openSans.className} py-3 px-9 bg-white rounded-full text-gray-900 font-[900] text-center mb-16 `}>MÁS INFO</button>
                         </Link>

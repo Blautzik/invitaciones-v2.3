@@ -17,10 +17,15 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
 
   const isFormValid = name && email && menu;
+  let texto = "text-white"
 
 
   if(form_id ==="16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0"){
     bg = "bg-black"
+  }
+
+  if(bg == "bg-[#f8f5ee]"){
+    texto = "text-gray-900"
   }
 
   const handleSubmit = async (e) => {
@@ -80,9 +85,9 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     <div className={`${bg ? bg : 'bg-violeta'} w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
-          <GoCheckCircle className="text-[66px] font-thin text-white" />
-          <h3 className={`${openSans.className} text-white text-2xl my-4 text-center w-10/12 leading-7`}>Confirmar Asistencia</h3>
-          <p className={`${openSans.className} text-white text-md max-w-2xl font-[500]`}>
+          <GoCheckCircle className={`${texto} text-[66px] font-thin`}/>
+          <h3 className={`${openSans.className} ${texto} text-2xl my-4 text-center w-10/12 leading-7`}>Confirmar Asistencia</h3>
+          <p className={`${openSans.className} ${texto} text-md max-w-2xl font-[500]`}>
             Por favor completá el formulario con tus datos y comentarios para organizar la mejor fiesta
           </p>
         </div>
@@ -118,7 +123,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
           </div>
 
 
-          <h3 className={`${openSans.className} text-white text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
+          <h3 className={`${openSans.className} ${texto} text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
           <div className="flex items-center justify-center">
             <select
               name="select"

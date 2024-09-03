@@ -7,10 +7,11 @@ import { BiChevronDown } from "react-icons/bi";
 const Collapsible = ({
     open,
     bg,
+    texto,
     collapsibleClassName = "collapsible-card-edonec",
-    headerClassName = `collapsible-header-edonec text-white ${bg? bg:'bg-violeta'} `,
+    headerClassName = `collapsible-header-edonec ${texto? texto : "text-white"} ${bg? bg:'bg-violeta'} `,
     titleClassName = "title-text-edonec",
-    contentClassName = `collapsible-content-edonec text-white mt-0 p-0 ${bg? bg:'bg-violeta'} ` ,
+    contentClassName = `collapsible-content-edonec  ${texto? texto : "text-white"} mt-0 p-0 ${bg? bg:'bg-violeta'} ` ,
     contentContainerClassName = "collapsible-content-padding-edonec",
     children,
     header

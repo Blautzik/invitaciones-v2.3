@@ -3,7 +3,7 @@ import { comfortaa, openSans, roboto } from '../../utils/fonts';
 import moment from 'moment';
 import {useEffect, useState} from 'react';
 
-const Countdown = ({ date }) => {
+const Countdown = ({ date, texto }) => {
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
@@ -36,14 +36,14 @@ const Countdown = ({ date }) => {
     }, [target]);
 
 
-    const cuentaStyle = `${openSans.className} text-slate-50 font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
-    const textitoStyle = "text-slate-50 text-[10px] text-center"
-    const dospu = "text-slate-50 text-3xl mb-5"
+    const cuentaStyle = `${openSans.className} font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
+    const textitoStyle = " text-[10px] text-center"
+    const dospu = " text-3xl mb-5"
 
     return (
         <div className='w-60'>
 
-        <div className = {`${openSans.className} flex font-[100] justify-between items-center opacity-80 mb-10 mt-2 `}>
+        <div className = {`${openSans.className} flex font-[100] ${texto} justify-between items-center opacity-80 mb-10 mt-2 `}>
             <div className="flex flex-col items center">
                 <span className={cuentaStyle}>{days} </span>
                 <span className={textitoStyle}>días</span>

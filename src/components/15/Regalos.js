@@ -5,17 +5,32 @@ import Accordion from '../6/Accordion'
 
 const Regalos = ({ article, foto_regalos, bg }) => {
 
+    let opacity = 0.65
+    let texto = "text-white"
+    let iconStyle = {
+        filter: 'invert(1)',
+    }
+
+    if(article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA"){
+        opacity = 1
+    }
+
+    if(bg == "bg-[#f8f5ee]"){
+        texto = "text-gray-900"
+        iconStyle = {
+            filter: "invert(0.1"
+        }
+      }
+
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: 'center',
         zIndex: 0,
-        opacity: 0.65,
+        opacity: opacity,
         backgroundColor: '#fff',
     }
 
-    const iconStyle = {
-        filter: 'invert(1)',
-    }
+
 
 
 
@@ -29,7 +44,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                     style={imageStyle}
                     alt='portada'
                 />
-                <div className={`${article.mfmf === "regalo_sin_datos" ? 'pt-[72vh] ' : 'mt-6'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
+                <div className={`${article.mfmf === "regalo_sin_datos" ? 'pt-[72vh] ' : 'mt-6'} text-center mx-10 flex flex-col items-center ${texto} opacity-100 z-30 `}>
                     <Image
                         src={'https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png'}
                         height={65}
@@ -50,8 +65,8 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                     }
                 </div>
                 <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg? "opacity-100": "opacity-70"} `}>
-                    {article.alias && <Accordion open header="Datos Bancarios" bg={bg}>
-                        <div className={`${openSans.className} text-sm font-thin opacity-100`}>
+                    {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto}>
+                        <div className={`${openSans.className} text-sm  opacity-100`}>
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>

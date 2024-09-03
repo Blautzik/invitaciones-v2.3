@@ -37,6 +37,14 @@ const Info = ({ article }) => {
     } 
 
 
+    if(article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA" ){
+        article.mfmf = "sin_janos"
+    }
+
+
+
+
+
 
     function capitalize(string) {
         return string.replace(/^\w/, match => match.toUpperCase());
@@ -75,7 +83,7 @@ const Info = ({ article }) => {
                                     fill
                                 />
                             </div>
-                            <h3 className={`${openSans.className} text-slate-700 sm:text-2xl xs:text-xl mb-10 font-[700] text-center`}>La Fiesta</h3>
+                            <h3 className={`${openSans.className} text-slate-700 sm:text-2xl xs:text-xl mb-8 font-[700] text-center`}>La Fiesta</h3>
                         </motion.div>
                         <div className="flex flex-col justify-center items-center">
                             <motion.div
@@ -93,12 +101,27 @@ const Info = ({ article }) => {
                                 }}
                                 className="flex flex-col justify-center items-center"
                             >
-                                <h4 className={`${openSans.className} text-xl text-center w-80 mt-3 text-slate-600`}>Día</h4>
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate) + " - " + hora}</p>
+                                {
+                                    article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA" ?
+                                    <>
+                                        <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 text-slate-600`}>Día</h4>
+                                        <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate)}</p>
+                                        <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Ceremonia civil 20 hs</h4>
+                                        <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Fiesta a continuación </h4>
+                                    </>
+                                    :
+                                    <>
+                                        <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 text-slate-600`}>Día</h4>
+                                        <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate) + " - " + hora}</p>
+                                    </>
+                                }
                                 {hora_fin &&
                                     <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Hasta Las: {hora_fin}</p>
                                 }
+
                             </motion.div>
+
+
                             <motion.div
                                 initial={{
                                     scale: 0.8,
@@ -114,7 +137,7 @@ const Info = ({ article }) => {
                                 }}
                                 className="flex flex-col justify-center items-center"
                             >
-                                <h4 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}>Salón</h4>
+                                <h4 className={`${openSans.className} font-semibold text-xl text-center w-80 text-slate-600`}>Salón</h4>
                                 <p className={`${openSans.className} text-base text-center w-80 mb-3 text-slate-600`}>{article.salon}</p>
                             </motion.div>
                             <motion.div
@@ -132,7 +155,7 @@ const Info = ({ article }) => {
                                 }}
                                 className="flex flex-col justify-center items-center"
                             >
-                                <h4 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}>Dirección</h4>
+                                <h4 className={`${openSans.className} font-semibold text-xl text-center w-80 text-slate-600`}>Dirección</h4>
                                 <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {salon?.direccion}</p>
                             </motion.div>
                             <motion.div

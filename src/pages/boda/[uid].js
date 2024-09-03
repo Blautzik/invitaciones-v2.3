@@ -56,6 +56,7 @@ const Invitacion = ({ article }) => {
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
+        let bg= false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -69,6 +70,12 @@ const Invitacion = ({ article }) => {
         if (article.foto_regalos) {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
         }
+
+
+        if(article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA"){
+            bg= "bg-[#f8f5ee]"
+        }
+
 
 
         const mail = article.mail
@@ -111,7 +118,7 @@ const Invitacion = ({ article }) => {
 
                 {article.foto_regalos &&
                     <div>
-                        <Regalos article={article} foto_regalos={foto_regalos} />
+                        <Regalos article={article} foto_regalos={foto_regalos} bg={bg} />
                     </div>
                 }
                 {article.galeria &&
@@ -125,7 +132,7 @@ const Invitacion = ({ article }) => {
                         mail === "mercedes.matta10@gmail.com" ?
                             <FormularioNombre form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} mail={mail} frase_formulario={article.frase_formulario} />
                             :
-                            <Formulario form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} />
+                            <Formulario form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg} />
                     }
                 </div>
 
@@ -136,12 +143,12 @@ const Invitacion = ({ article }) => {
 
 
                 <div className='mb-5'>
-                    <Agendar foto={foto_agendar} fecha={article.fecha} bg={article.bg_color} />
+                    <Agendar foto={foto_agendar} fecha={article.fecha} bg={bg} />
                 </div>
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
 
 
-                <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+                <div className={`w-screen ${bg? `${bg} text-gray-900` :"bg-violeta text-white"} h-8 text-center pt-2`}>Invitaciones Jano's </div>
             </>
         )
     }
