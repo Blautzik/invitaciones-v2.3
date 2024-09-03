@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import { openSans } from '../../utils/fonts';
 
-const Countdown = ({ date }) => {
+const Countdown = ({ date, texto }) => {
     const [timeRemaining, setTimeRemaining] = useState({
         days: '00',
         hours: '00',
@@ -51,9 +51,9 @@ const Countdown = ({ date }) => {
     }, [date]);
 
     const { days, hours, minutes, seconds } = timeRemaining;
-    const cuentaStyle = `${openSans.className} text-slate-50 font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`;
-    const textitoStyle = "text-slate-50 text-[10px] text-center";
-    const dospu = "text-slate-50 text-3xl mb-5";
+    const cuentaStyle = `${openSans.className} ${texto} font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`;
+    const textitoStyle = `${texto} text-[12px] text-center`;
+    const dospu = `${texto} text-3xl mb-5`;
 
     return (
         <div className='w-60'>
