@@ -12,9 +12,7 @@ const Countdown = ({ date }) => {
 
     useEffect(() => {
 
-
         const target = moment(date);
-
 
 
         const updateCountdown = () => {

@@ -26,7 +26,6 @@ const FormularioVIP = ({ form_id, frase_extra, color_fondo, article }) => {
       'Tenemos servicio de transporte ida y vuelta al salon desde Country Abril Club de Campo. Asegurá y reservá tu lugar, ingresando tu nombre en este espacio';
   }
 
-  console.log(frase_saludos);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -74,7 +74,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     }
   };
 
-  console.log("BG -------->",bg)
+
 
   return (
     <div className={`${bg ? bg : 'bg-violeta'} w-screen min-h-screen bg-opacity-80`}>

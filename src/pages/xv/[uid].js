@@ -64,10 +64,9 @@ const Invitacion = ({ article }) => {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
         }
 
-        console.log(article)
 
         const ig_link = article["Link Instagram  (opcional)"];
-        console.log("iglink", ig_link);
+
 
 
         if (article.mfmf === "menu_sin_ninos") {

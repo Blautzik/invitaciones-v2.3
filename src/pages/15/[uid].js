@@ -153,7 +153,6 @@ const Invitacion = ({ article }) => {
                     </motion.div>
                 </section>
 
-                {console.log("emilio", article.mail)}
 
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
@@ -230,7 +229,7 @@ export async function getStaticProps({ params, previewData }) {
     };
 
 
-    console.log(article)
+
 
     return {
         props: {

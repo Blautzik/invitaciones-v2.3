@@ -24,8 +24,6 @@ import { SliderTestigos } from '@/components/boda/SliderTestigos';
 
 const Invitacion = ({ article }) => {
 
-    console.log(article)
-
     if (!article) {
         return null
     }
@@ -70,7 +68,6 @@ const Invitacion = ({ article }) => {
 
         if (article.foto_regalos) {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
-            console.log("********************************", foto_regalos)
         }
 
 
@@ -187,9 +184,7 @@ export async function getStaticProps({ params, previewData }) {
         uid,
         ...articleData,
     };
-    console.log(article)
 
-    // Log de los datos del artículo para verificación
 
 
     return {
