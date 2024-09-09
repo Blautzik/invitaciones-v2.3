@@ -1,19 +1,26 @@
 
-import { great_vives } from '@/utils/fonts'
+import { comfortaa, great_vives } from '@/utils/fonts'
 import Image from 'next/image'
 import React from 'react'
 
 
 
 
-const Footer = ({frase_cierre, sin_janos}) => {
+const Footer = ({frase_cierre, sin_janos, form_id}) => {
 
+
+    let tipo = great_vives.className
+
+
+    if (form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k"){
+        tipo = comfortaa.className
+    }
    
     return (
         <div className='flex flex-col items-center justify-center text-center  '>
             
             
-            <h2 className={`${great_vives.className} text-gray-600 md:text-5xl text-4xl mx-10 `}>
+            <h2 className={`${tipo} text-gray-700 font-thin md:text-4xl text-2xl mx-10 `}>
                { frase_cierre || "Gracias por acompañarnos en este momento tan importante!!"}
             </h2>
             { !sin_janos &&

@@ -4,18 +4,10 @@ import Header from '@/components/6/Header';
 import Head from 'next/head';
 import Info from '@/components/15/Info';
 import Gallery from '@/components/15/Gallery';
-import Agendar from '@/components/15/Agendar';
+import Agendar from '@/components/1/Agendar';
 import Regalos from '@/components/15/Regalos';
 import Formulario from '@/components/6/Formulario';
-import * as prismic from '@prismicio/client';
-import Countdown from '../../components/1/Countdown';
 import Footer from '../../components/boda/Footer';
-import { easeIn, motion } from 'framer-motion';
-import Audiowe from '../../components/Audiowe';
-import Image from 'next/image';
-import FormularioSinNino from '../../components/1/FormularioSinNino';
-import InfoBat from '../../components/1/infoBat';
-import FormularioBat from '../../components/1/FormularioBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import FormularioNombre from '@/components/boda/FormularioNombres';
 import { SliderTestigos } from '@/components/boda/SliderTestigos';
@@ -78,16 +70,22 @@ const Invitacion = ({ article }) => {
         }
         let portadaPC = false
 
-        if(article.form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k"){
-            portadaPC = "https://res.cloudinary.com/fedexx/image/upload/c_fill_pad,w_1920,h_900,g_auto,b_gen_fill/v1725917127/FullSizeRender_-_Milagros_Blaquier_bymrxn.jpg"
-        }
 
 
 
         const mail = article.mail
 
-        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Nos casamos!"}`;
-        const description = `Te invitamos a compartir la alegría de esta fiesta inolvidable y única`;
+        let title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Nos casamos!"}`;
+        let description = `Te invitamos a compartir la alegría de esta fiesta inolvidable y única`;
+
+
+
+        
+        if(article.form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k"){
+            portadaPC = "https://res.cloudinary.com/fedexx/image/upload/c_fill_pad,w_1920,h_900,g_auto,b_gen_fill/v1725917127/FullSizeRender_-_Milagros_Blaquier_bymrxn.jpg"
+            title = "Maila & Maxi | 4-10 — 17hs"
+            description = "¡Te invitamos a nuestro civil! R.S.V.P."
+        }
 
 
         return (
@@ -162,7 +160,7 @@ const Invitacion = ({ article }) => {
                 <div className='mb-5'>
                     <Agendar foto={foto_agendar} fecha={article.fecha} bg={bg} />
                 </div>
-                <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
+                <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
 
                 <div className={`w-screen ${bg ? `${bg} text-gray-900` : "bg-violeta text-white"} h-8 text-center pt-2`}>Invitaciones Jano's </div>
@@ -192,8 +190,6 @@ export async function getStaticProps({ params, previewData }) {
     }
 
     const articles = await response.json();
-
-    // Log de los artículos obtenidos para verificación
 
 
     const articleData = articles.find(article => String(article.url) === uid);
@@ -238,12 +234,12 @@ export async function getStaticPaths() {
     }
 
     const paths = posts
-        .filter(post => post.url) // Asegúrate de filtrar los posts que tienen el nombre definido
+        .filter(post => post.url) 
         .map(post => ({
-            params: { uid: String(post.url) }, // Asegúrate de que el parámetro uid sea una cadena
+            params: { uid: String(post.url) },
         }));
 
-    // Log de las rutas generadas para verificación
+
     console.log('BODA Paths:', paths);
 
     return { paths, fallback: false };
