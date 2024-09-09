@@ -2,31 +2,35 @@ import { comfortaa, openSans } from "@/utils/fonts";
 import Image from "next/image";
 import { RiFacebookLine, RiTwitterLine, RiInstagramLine } from "react-icons/ri";
 import { BiCalendar, BiCalendarCheck } from "react-icons/bi";
-import { format, parse, isValid } from "date-fns";
+import { format, parse, parseISO, isValid } from "date-fns";
 import { es } from "date-fns/locale";
 
 const Agendar = ({ foto, links, fecha, bg }) => {
     const parseDateString = (dateString) => {
-        let parsedDate = parse(dateString, 'dd/MM/yyyy HH:mm:ss', new Date());
-        
+        let parsedDate;
 
-        if (!isValid(parsedDate)) {
-            parsedDate = parse(dateString, 'yyyy/MM/dd', new Date());
+        // Try parsing as ISO 8601
+        parsedDate = parseISO(dateString);
+        if (isValid(parsedDate)) {
+            return parsedDate;
         }
-        
-        if (!isValid(parsedDate)) {
-            parsedDate = parse(dateString, 'dd/MM/yyyy', new Date());
+
+        // Try parsing as DD/MM/YYYY HH:mm:ss
+        parsedDate = parse(dateString, 'dd/MM/yyyy HH:mm:ss', new Date());
+        if (isValid(parsedDate)) {
+            return parsedDate;
         }
-        
-        return parsedDate;
+
+        // If both parsing attempts fail, log error and return null
+        console.error(`Failed to parse date: ${dateString}`);
+        return null;
     };
 
     const fechaCeremonia = parseDateString(fecha);
     
-    const formattedDate = isValid(fechaCeremonia) 
+    const formattedDate = fechaCeremonia 
         ? format(fechaCeremonia, 'yyyy/MM/dd', { locale: es })
         : 'Fecha inválida';
-
     return (
         <div className='max-h-screen flex flex-col items-center justify-between'>
             <div className="flex flex-col items-center h-60 justify-between">
@@ -41,8 +45,15 @@ const Agendar = ({ foto, links, fecha, bg }) => {
                         <BiCalendarCheck className="text-[20px]" />
                         AGENDAR
                     </a>
-                ) : (
-                    <p className="text-red-500">Fecha no disponible</p>
+                ) :(
+                    <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center mb-8 md:w-72 w-68 text-[14px] font-[600] px-6 py-4 rounded-full `}
+                        href={`https://calendar.google.com/calendar/u/0/r/week/`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <BiCalendarCheck className="text-[20px]" />
+                        AGENDAR
+                    </a>
                 )}
             </div>
             <div className="shadow-2xl">
