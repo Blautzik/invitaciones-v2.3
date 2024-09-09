@@ -3,17 +3,37 @@ import { comfortaa, openSans } from "@/utils/fonts";
 import Image from "next/image";
 import { RiFacebookLine, RiTwitterLine, RiInstagramLine } from "react-icons/ri";
 import { BiCalendar, BiCalendarCheck } from "react-icons/bi";
-import {format} from 'date-fns';
+import {format, parse, parseISO, isValid} from 'date-fns';
 import {es} from 'date-fns/locale';
 
 
 const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha}) => {
 
+    const parseDateString = (dateString) => {
+        let parsedDate;
 
+        parsedDate = parseISO(dateString);
+        if (isValid(parsedDate)) {
+            return parsedDate;
+        }
+
+        parsedDate = parse(dateString, 'dd/MM/yyyy HH:mm:ss', new Date());
+        if (isValid(parsedDate)) {
+            return parsedDate;
+        }
+
+        console.error(`Failed to parse date: ${dateString}`);
+        return null;
+    };
+
+    const fechaCeremonia = parseDateString(fecha);
+    
+    const formattedDate = fechaCeremonia 
+        ? format(fechaCeremonia, 'yyyy/MM/dd', { locale: es })
+        : 'Fecha inválida';
 
 
     const fecha2 = new Date(fecha);
-    const formattedDate = format(fecha2, 'yyyy/MM/dd', { locale: es });
 
 
 

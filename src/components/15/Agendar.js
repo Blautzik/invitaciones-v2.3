@@ -9,19 +9,16 @@ const Agendar = ({ foto, links, fecha, bg }) => {
     const parseDateString = (dateString) => {
         let parsedDate;
 
-        // Try parsing as ISO 8601
         parsedDate = parseISO(dateString);
         if (isValid(parsedDate)) {
             return parsedDate;
         }
 
-        // Try parsing as DD/MM/YYYY HH:mm:ss
         parsedDate = parse(dateString, 'dd/MM/yyyy HH:mm:ss', new Date());
         if (isValid(parsedDate)) {
             return parsedDate;
         }
 
-        // If both parsing attempts fail, log error and return null
         console.error(`Failed to parse date: ${dateString}`);
         return null;
     };
