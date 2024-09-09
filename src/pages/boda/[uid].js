@@ -19,6 +19,7 @@ import FormularioBat from '../../components/1/FormularioBat';
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import FormularioNombre from '@/components/boda/FormularioNombres';
 import { SliderTestigos } from '@/components/boda/SliderTestigos';
+import InfoSouci from '@/components/15/InfoSouci';
 
 
 
@@ -56,7 +57,7 @@ const Invitacion = ({ article }) => {
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
-        let bg= false
+        let bg = false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -72,8 +73,8 @@ const Invitacion = ({ article }) => {
         }
 
 
-        if(article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA"){
-            bg= "bg-[#f8f5ee]"
+        if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
+            bg = "bg-[#f8f5ee]"
         }
 
 
@@ -105,9 +106,20 @@ const Invitacion = ({ article }) => {
                     />
                 </div>
 
-                <div id="info">
-                    <Info article={article} />
-                </div>
+
+                {
+
+                    article.form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k" ?
+
+                        <div id="info">
+                            <InfoSouci article={article} />
+                        </div>
+                        :
+                        <div id="info">
+                            <Info article={article} />
+                        </div>
+                }
+
 
 
                 {article.regalo_sin_datos &&
@@ -148,7 +160,7 @@ const Invitacion = ({ article }) => {
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} />
 
 
-                <div className={`w-screen ${bg? `${bg} text-gray-900` :"bg-violeta text-white"} h-8 text-center pt-2`}>Invitaciones Jano's </div>
+                <div className={`w-screen ${bg ? `${bg} text-gray-900` : "bg-violeta text-white"} h-8 text-center pt-2`}>Invitaciones Jano's </div>
             </>
         )
     }

@@ -369,6 +369,13 @@ export const salones = [
         link_maps: "https://maps.app.goo.gl/VxBpLpx1XQEDR4cD6",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1725314568/salones/2024-01-25_elado2.jpg',
         link: 'https://janosbeach.com.ar/'
+    },
+    {
+        nombre: "Palacio Sans Souci",
+        direccion: " Paz 705, Victoria, Bs As",
+        link_maps: "https://maps.app.goo.gl/kyN6ikeH3jX7hqhd6",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1722389239/fotos%20salones/1713212794Recorrido_Naranjos_1_62_vwcdrb.jpg',
+        link: 'https://palaciosanssouci.com/'
     }
 ];
 
