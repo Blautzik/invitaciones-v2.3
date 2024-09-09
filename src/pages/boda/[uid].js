@@ -76,6 +76,11 @@ const Invitacion = ({ article }) => {
         if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
             bg = "bg-[#f8f5ee]"
         }
+        let portadaPC = false
+
+        if(article.form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k"){
+            portadaPC = "https://res.cloudinary.com/fedexx/image/upload/c_fill_pad,w_1920,h_900,g_auto,b_gen_fill/v1725917127/FullSizeRender_-_Milagros_Blaquier_bymrxn.jpg"
+        }
 
 
 
@@ -99,7 +104,7 @@ const Invitacion = ({ article }) => {
                 <div className="mb-16">
                     <Header title={article.nombre}
                         coverImage={portada}
-                        coverImagePc={portada}
+                        coverImagePc={portadaPC ? portadaPC : portada}
                         date={article.fecha}
                         content={article.frase}
                         h1_centrado={article.h1_centrado}
