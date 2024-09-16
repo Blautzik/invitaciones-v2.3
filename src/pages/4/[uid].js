@@ -1,21 +1,30 @@
-import React from 'react'
-import * as prismic from "@prismicio/client";
-import { createClient } from "@/prismicio";
+import Header from '@/components/15/Header';
 import Head from 'next/head';
-import Header from '@/components/4/Header';
-import Countdown from '@/components/1/Countdown';
-import Info from '@/components/4/Info';
-import Gallery from '@/components/1/Gallery';
-import Regalos from '@/components/4/Regalos';
-import Footer from '@/components/2/Footer';
-import { easeIn, motion } from "framer-motion"
-import Formulario from '@/components/1/Formulario';
-import Agendar from '@/components/1/Agendar';
-import Audiowe from '@/components/Audiowe';
+import Info from '@/components/15/Info';
+import Gallery from '@/components/15/Gallery';
+import Agendar from '@/components/15/Agendar';
+import Regalos from '@/components/15/Regalos';
+import Formulario from '@/components/6/Formulario';
+import Footer from '../../components/4/Footer';
+import { easeIn , motion} from 'framer-motion';
+import Audiowe from '../../components/Audiowe';
 import Image from 'next/image';
-import FormularioEspecial from '@/components/1/FormularioEspecial';
+import InfoBat from '../../components/1/infoBat';
+import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
+import FormularioSimple from '@/components/15/FormularioSimple';
+import { encontrarSalon } from '../../data/salones';
+import InfoBatDan from '@/components/1/infoBatDan';
+import { SwiperGallery } from '../../components/15/Swiper';
+
+import VideoBackgroundPage from '@/components/4/convi';
+
+
+
 
 const Invitacion = ({ article }) => {
+  if (!article) {
+    return null
+  }
 
 
   const imageStyle = {
@@ -34,162 +43,264 @@ const Invitacion = ({ article }) => {
   }
 
   if (article) {
+    let portada = false
+    let thumb = false
+
+
+    const salon = encontrarSalon(article.salon);
+
+
+    if (article.foto_portada) {
+      portada = getGoogleDriveImageUrl(article.foto_portada)
+      thumb = getOptimizedGoogleDriveImageUrl(article.foto_portada)
+    } else {
+      thumb = salon.foto_salon
+    }
+
+    let galeria = false
+    let foto_agendar = false
+    let foto_regalos = false
+    if (article.galeria) {
+      const urlsArray = article.galeria.split(',').map(url => url.trim())
+      galeria = urlsArray.map(url => getGoogleDriveImageUrl(url));
+    }
+
+    if (article.foto_agendar) {
+      foto_agendar = getGoogleDriveImageUrl(article.foto_agendar)
+    }
+
+    if (article.foto_regalos) {
+      foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
+    }
+
+    const ig_link = article['Link Instagram (opcional)']
+
+    let bg = article.form_id === "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" ? "bg-black" : "bg-violeta"
+
+    if (article.form_id === "1QLYZgzByxTw1jyFIJY_u4gFlgF_CLHIM39vD3HDE1mI") {
+      bg = "bg-[#ffa4a4]"
+    }
+
+
+    const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
+    const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
+
+
+
+
     return (
       <>
         <Head>
-          <title>
-            {article.data.title}
-          </title>
-          <meta property="og:image" content={prismic.asImageSrc(article.data.foto)} />
-          <meta property="og:description" content={article.data.frase} />
-
+          <title>{title}</title>
+          <meta property="og:image" itemProp="image" content={thumb} />
+          <meta property="og:description" content={description} />
+          <meta property="og:image:type" content="image/jpeg" />
         </Head>
 
+        <VideoBackgroundPage/>
 
-        {article.data.music &&
-          <div className='fixed bottom-4 right-0 z-50'>
-            <Audiowe music={article.data.music} />
-          </div>
-        }
-        <div className='flex flex-col justify-center items-center w-screen'>
-
-          <main className="w-screen" >
-
-            <section className='z-10'>
-              <Header
-                title={article.data.title}
-                coverImage={prismic.asImageSrc(article.data.foto)}
-                date={article.data.fecha}
-                content={article.data.frase}
-                coverImagePc={prismic.asImageSrc(article.data.foto_pc)}
-                frase_portada={article.data.frase_portada}
-                sin_ondas={article.data.sin_ondas}
-                letra_oscura={article.data.letra_oscura}
-              />
-            </section>
-
-            <div>
-              {article.data.foto_salon &&
-
-                <section>
-                <motion.div>
-                  <div className="h-full w-full flex flex-col items-center justify-between ">
-                    {
-                      article.data.fondo_sugerido &&
-                      <Image
-                        src={article.data.fondo_sugerido}
-                        fill
-                        quality={100}
-                        style={imageStyle}
-                        alt='portada'
-                      />
-                    }
-                    <Info
-                      article={article.data}
-                    />
-                  </div>
-                </motion.div>
-              </section>
-
-              }
-              {
-                article.data.galeria[0].foto1 &&
-                <section className="bg-[#fff] mt-12 text-center flex justify-center ">
-                  <Gallery imagenes={article.data.galeria} titulo={article.data.titulo_galeria} />
-                </section>
-              }
-
-              <div>
-                  
-                <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} />
-
-              </div>
-
-
-
-              {article.data.frase_regalos &&
-                <div className='mb-8'>
-                  <Regalos article={article.data} />
-                </div>
-              }
-
-
-
-              <section className='relative'>
-                {
-                  article.data.fondo_sugerido &&
-                  <Image
-                    src={article.data.fondo_sugerido}
-                    fill
-                    quality={100}
-                    style={imageStyle}
-                    alt='portada'
-                  />
-                }
-
-
-                <div className='z-50'>
-
-                  <Agendar className='z-40' foto_agendar={article.data.foto_agendar} ig_link={article.data.link_ig} fb_link={article.data.link_face} tw_link={article.data.link_twitter} fecha={article.data.fecha} />
-                </div>
-
-
-
-              </section>
-
-              <section className='relative pt-5'>
-                {
-                  article.data.fondo_sugerido &&
-                  <Image
-                    src={article.data.fondo_sugerido}
-                    fill
-                    quality={100}
-                    style={{ ...imageStyleFlipped }}
-                    alt='portada'
-                  />
-                }
-                <Footer frase_cierre={article.data.frase_cierre} sin_janos={article.data.sin_janos} />
-                <div className="w-screen bg-violeta h-8 text-center pt-2 text-white">Invitaciones Jano's </div>
-              </section>
-            </div>
-          </main>
-        </div>
       </>
+
     )
+
   }
 }
 
+
 export default Invitacion
 
-
 export async function getStaticProps({ params, previewData }) {
-  const client = createClient({ previewData });
+  const { uid } = params;
 
-  const article = await client.getByUID("quince", params.uid);
+  if (!uid) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const response = await fetch('https://script.google.com/macros/s/AKfycbzoCjNfx0GeGNW3v1jIV_J3a0_QIOWiKau4nNQQg5CyLvh82UsBsz26aNaa0O9PxVmGxA/exec');
+
+  if (!response.ok) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const articles = await response.json();
+
+
+  const articleData = articles.find(article => String(article.url) === uid);
+
+  if (!articleData) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const article = {
+    uid,
+    ...articleData,
+  };
+
+
+
 
   return {
     props: {
-      article
+      article,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const client = createClient();
-
-  const articles = await client.getAllByType("quince");
-
-  const linkResolver = (doc) => {
-    if (doc.type === 'quince') {
-      return `/4/${doc.uid}/`
-    } else {
-      return `false`
-    }
+  if (process.env.SKIP_BUILD_STATIC_GENERATION) {
+    return {
+      paths: [],
+      fallback: 'blocking',
+    };
   }
 
+  const res = await fetch('https://script.google.com/macros/s/AKfycby4SXrqWFSAr9T1Aou5ocCpgfKMntQFesRyL2wO_vc3I53hoKRfnL9F5a-Z8R3h3HSuvw/exec');
+  const posts = await res.json();
 
-  return {
-    paths: articles.map((article) => prismic.asLink(article, { linkResolver })),
-    fallback: false,
-  };
+
+  if (!Array.isArray(posts) || posts.length === 0) {
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
+
+  const paths = posts
+    .filter(post => post.url)
+    .map(post => ({
+      params: { uid: String(post.url) },
+    }));
+
+
+  console.log('Paths:', paths);
+
+  return { paths, fallback: false };
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <div >
+// <Header title={article.nombre}
+//     coverImage={portada}
+//     coverImagePc={portada}
+//     date={article.fecha}
+//     content={article.frase_portada}
+//     h1_centrado={article.h1_centrado}
+//     portada_custom={article.portada_custom}
+//     article={article}
+//     mail={article.mail}
+// />
+// </div>
+
+// <section id='info'>
+// <motion.div>
+//     <div className="h-full w-full flex flex-col items-center justify-between ">
+//         {
+//             article.fondo_sugerido &&
+//             <Image
+//                 src={article.data.fondo_sugerido}
+//                 fill
+//                 quality={100}
+//                 style={imageStyle}
+//                 alt='portada'
+//             />
+//         }
+
+
+
+
+//         <Info
+//             article={article}
+//         />
+//         {
+//             article.mfmf === "bar_dionisio" &&
+//             <>
+//                 <InfoBat article={article} />
+//                 <br />
+//                 <br />
+//                 <br />
+//                 <br />
+//             </>
+//         }
+//         {
+//             article.mfmf === "bar_dan" &&
+//             <>
+//                 <InfoBatDan article={article} />
+//                 <br />
+//                 <br />
+//                 <br />
+//                 <br />
+//             </>
+//         }
+
+
+//     </div>
+// </motion.div>
+// </section>
+
+
+// {article.galeria &&
+// <section className="bg-[#fff] mt-12 text-center flex justify-center ">
+//     {
+//         article.mfmf == "swiper" ?
+//             <SwiperGallery galeria={galeria} />
+//             : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
+//     }
+// </section>
+// }
+
+
+// <div>
+// {
+//     article.mfmf == "formulario_simple" ?
+//         <FormularioSimple form_id={article.form_id} frase_extra={article.frase_extra} />
+//         :
+//         <Formulario form_id={article.form_id} frase_extra={article.frase_extra} bg={bg} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
+// }
+// </div>
+
+// {article.foto_regalos &&
+
+// <div>
+//     <Regalos article={article} foto_regalos={foto_regalos} bg={bg} />
+// </div>
+// }
+
+
+// <div className='z-50 mb-10'>
+// <Agendar className='z-40' foto={foto_agendar} ig_link={ig_link} fb_link={article.link_face} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
+// </div>
+
+// <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} mfmf={article.mfmf} />
+
+
+// <div className={`w-screen ${bg} h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>

@@ -24,10 +24,18 @@ module.exports = {
         pulse: {
           '0%, 100%': {transform: 'scale(1)'},
           '50%': {transform: 'scale(1.1)'}
+          },
+          customSpin: {
+            '0%': { transform: 'rotate(0deg)' },
+            '50%': { transform: 'rotate(340deg)' },
+            '100%': { transform: 'rotate(360deg)' }
           }
         },
+        
       animation:{
-        'pulse-grow-slow': 'pulse 2s linear infinite'
+        'pulse-grow-slow': 'pulse 2s linear infinite',
+        'spin-slow': 'spin 5s cubic-bezier(0.4, 0, 0.6, 1) ',
+        'custom-spin': 'customSpin 8s cubic-bezier(0.4, 0, 0.2, 1) forwards'
       },
       backgroundImage: {
         'footer-texture': "url('https://res.cloudinary.com/fedexx/image/upload/v1692113799/invi/curva01_violeta_tkziux.png')",
