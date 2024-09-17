@@ -19,7 +19,7 @@ const Footer = ({frase_cierre, sin_janos, mfmf, mail, form_id }) => {
 
 
     return (
-        <div className={`${bg} flex flex-col items-center justify-center text-center `}>
+        <div className={`${bg} flex flex-col items-center justify-center text-center pb-8 pt-8 `}>
             
             {
                 mail != 'bzerrizuela@gmail.com' &&

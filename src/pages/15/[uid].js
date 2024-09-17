@@ -82,6 +82,7 @@ const Invitacion = ({ article }) => {
 
         if(article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
             bg = "bg-black"
+            article.sin_janos = true
         }
 
 
