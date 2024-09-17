@@ -6,15 +6,24 @@ import React from 'react'
 
 
 
-const Footer = ({frase_cierre, sin_janos, mfmf, mail }) => {
+const Footer = ({frase_cierre, sin_janos, mfmf, mail, form_id }) => {
 
-   
+        let bg = "bg-white"
+    let text = "text-slate-700"
+
+
+    if(form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
+        bg="bg-black"
+        text="text-[#eac759]"
+    }
+
+
     return (
-        <div className='flex flex-col items-center justify-center text-center  '>
+        <div className={`${bg} flex flex-col items-center justify-center text-center `}>
             
             {
                 mail != 'bzerrizuela@gmail.com' &&
-                <h2 className={`${mfmf == "formulario_simple" ? comfortaa.className : great_vives.className} ${mfmf == "formulario_simple" ? "hidden" :"text-gray-600  md:text-5xl text-4xl mx-10" } `}>
+                <h2 className={`${mfmf == "formulario_simple" ? comfortaa.className : great_vives.className} ${mfmf == "formulario_simple" ? "hidden" :` ${text}  md:text-5xl text-4xl mx-10` } `}>
                { frase_cierre || "Gracias por acompañarme en este momento tan importante!!"}
             </h2>
             }

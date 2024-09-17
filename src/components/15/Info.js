@@ -25,6 +25,8 @@ const Info = ({ article }) => {
 
 
     let hora_fin = false
+    let bg = ""
+    let text = "text-slate-700"
 
     if(article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A"){
         hora_fin = "20:00"
@@ -47,6 +49,12 @@ const Info = ({ article }) => {
     }
 
 
+    if(article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
+        bg = "bg-black"
+        text = "text-white"
+    }
+
+
 
 
 
@@ -63,7 +71,7 @@ const Info = ({ article }) => {
     }
 
     return (
-        <div className="relative w-full mt-4 -globals-36 overflow-x-hidden">
+        <div className={`relative w-full mt-4 -globals-36 overflow-x-hidden ${bg}`}>
             <div className="flex-col items-center w-full">
                 <div className="flex flex-col md:flex-row md:w-10/12 w-full justify-between md:items-center md:justify-center items-center lg:items-start m-auto">
                     <div className="flex flex-col justify-center items-center w-5/12">
@@ -88,7 +96,7 @@ const Info = ({ article }) => {
                                     fill
                                 />
                             </div>
-                            <h3 className={`${openSans.className} text-slate-700 sm:text-2xl xs:text-xl mb-8 font-[700] text-center`}>La Fiesta</h3>
+                            <h3 className={`${openSans.className} ${text} sm:text-2xl xs:text-xl mb-8 font-[700] text-center`}>La Fiesta</h3>
                         </motion.div>
                         <div className="flex flex-col justify-center items-center">
                             <motion.div
@@ -116,12 +124,12 @@ const Info = ({ article }) => {
                                     </>
                                     :
                                     <>
-                                        <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 text-slate-600`}>Día</h4>
-                                        <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate) + " - " + hora}</p>
+                                        <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
+                                        <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora}</p>
                                     </>
                                 }
                                 {hora_fin &&
-                                    <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Hasta Las: {hora_fin}</p>
+                                    <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>Hasta Las: {hora_fin}</p>
                                 }
 
                             </motion.div>
@@ -142,8 +150,8 @@ const Info = ({ article }) => {
                                 }}
                                 className="flex flex-col justify-center items-center"
                             >
-                                <h4 className={`${openSans.className} font-semibold text-xl text-center w-80 text-slate-600`}>Salón</h4>
-                                <p className={`${openSans.className} text-base text-center w-80 mb-3 text-slate-600`}>{article.salon}</p>
+                                <h4 className={`${openSans.className} font-semibold text-xl text-center w-80 ${text}`}>Salón</h4>
+                                <p className={`${openSans.className} text-base text-center w-80 mb-3 ${text}`}>{article.salon}</p>
                             </motion.div>
                             <motion.div
                                 initial={{
@@ -160,8 +168,8 @@ const Info = ({ article }) => {
                                 }}
                                 className="flex flex-col justify-center items-center"
                             >
-                                <h4 className={`${openSans.className} font-semibold text-xl text-center w-80 text-slate-600`}>Dirección</h4>
-                                <p className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {salon?.direccion}</p>
+                                <h4 className={`${openSans.className} font-semibold text-xl text-center w-80 ${text}`}>Dirección</h4>
+                                <p className={`${openSans.className} text-base text-center w-80 ${text}`}> {salon?.direccion}</p>
                             </motion.div>
                             <motion.div
                                 initial={{
@@ -193,15 +201,15 @@ const Info = ({ article }) => {
                                     }
                             </motion.div>
                             {salon?.link &&
-                                <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly'>
+                                <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly '>
                                     {
                                         article.mfmf != "sin_janos" &&
                                         <a href={salon?.link} target="_blank">
-                                            <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
+                                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
                                         </a>
                                     }
                                     <a href={salon.link_maps} target="_blank">
-                                        <button className={`${openSans.className} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
+                                        <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                                     </a>
                                 </div>
                             }
@@ -209,9 +217,9 @@ const Info = ({ article }) => {
                                 { article.nombre != "Noe" &&
 
                                     <div className='flex flex-col items-center mt-6'>
-                                        <h3 className={`${openSans.className} text-xl text-center w-80 text-slate-600`}> Dress Code </h3>
-                                        <h4 className={`${openSans.className} text-base text-center w-80 text-slate-600`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
-                                        <div className='h-16 w-16 relative m-6'>
+                                        <h3 className={`${openSans.className} text-xl text-center w-80 ${text}`}> Dress Code </h3>
+                                        <h4 className={`${openSans.className} text-base text-center w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
+                                        <div className={`h-16 w-16 relative m-6 ${text == "text-white" && "invert"}`}>
                                             <Image
                                                 src={suitIcon}
                                                 fill

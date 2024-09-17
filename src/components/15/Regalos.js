@@ -22,6 +22,15 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         }
       }
 
+    if(article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
+        bg = "bg-black"
+        opacity=1
+        texto="text-white"
+    }
+
+
+      
+
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: 'center',

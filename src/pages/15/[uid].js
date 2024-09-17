@@ -80,6 +80,10 @@ const Invitacion = ({ article }) => {
             bg = "bg-[#ffa4a4]"
         }
 
+        if(article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
+            bg = "bg-black"
+        }
+
 
         const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
         const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
@@ -95,7 +99,7 @@ const Invitacion = ({ article }) => {
                 </Head>
 
 
-                <div >
+                <div className={bg == "bg-black" && bg }>
                     <Header title={article.nombre}
                         coverImage={portada}
                         coverImagePc={portada}
@@ -108,7 +112,7 @@ const Invitacion = ({ article }) => {
                     />
                 </div>
 
-                <section id='info'>
+                <section id='info' className={bg == "bg-black" && bg }>
                     <motion.div>
                         <div className="h-full w-full flex flex-col items-center justify-between ">
                             {
@@ -183,11 +187,11 @@ const Invitacion = ({ article }) => {
                 }
 
 
-                <div className='z-50 mb-10'>
-                    <Agendar className='z-40' foto={foto_agendar} ig_link={ig_link} fb_link={article.link_face} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
+                <div>
+                    <Agendar className='z-40' foto={foto_agendar} ig_link={ig_link} fb_link={article.link_face} form_id={article.form_id} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
                 </div>
 
-                <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} mfmf={article.mfmf} />
+                <Footer frase_cierre={article.frase_cierre} form_id={article.form_id} sin_janos={article.sin_janos} mfmf={article.mfmf} />
 
 
                 <div className={`w-screen ${bg} h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>

@@ -15,6 +15,11 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
     if (form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k"){
         tipo = comfortaa.className
     }
+
+
+    
+
+
    
     return (
         <div className='flex flex-col items-center justify-center text-center  '>
