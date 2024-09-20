@@ -10,6 +10,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     let iconStyle = {
         filter: 'invert(1)',
     }
+    let cbuCustom = false
 
     if(article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA"){
         opacity = 1
@@ -27,6 +28,12 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         opacity=1
         texto="text-white"
     }
+
+
+    if(article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA"){
+        cbuCustom = "$leo.dam95" 
+    }
+
 
 
       
@@ -78,6 +85,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                         <div className={`${openSans.className} text-sm  opacity-100`}>
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}
+                            {cbuCustom && <p><strong>Lemon tag</strong> $leo.dam95 </p>}
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                         </div>
