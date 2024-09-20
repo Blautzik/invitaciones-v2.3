@@ -42,23 +42,24 @@ const seis = ({ article }) => {
                     date={article.data.fecha_evento}
                     content={article.data.frase}
                     h1_centrado={article.data.h1_centrado}
+                    form_id={""}
                 />
             </div>
 
             <div id="info">
-                <Info article={article.data} />
+                <Info form_id={""} article={article.data} />
             </div>
 
 
             {article.data.regalo_sin_datos &&
                 <div>
-                    <Regalos article={article.data} />
+                    <Regalos form_id={""} article={article.data} />
                 </div>
             }
 
             {article.data.cbu &&
                 <div>
-                    <Regalos article={article.data} />
+                    <Regalos form_id={""} article={article.data} />
                 </div>
             }
 
@@ -74,7 +75,7 @@ const seis = ({ article }) => {
 
 
             <div>
-                <Agendar foto={article.data.foto_agendar} fecha={article.data.fecha_evento} bg={article.data.bg_color} />
+                <Agendar form_id={""} foto={article.data.foto_agendar} fecha={article.data.fecha_evento} bg={article.data.bg_color} />
             </div>
         </>
     )
