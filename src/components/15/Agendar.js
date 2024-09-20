@@ -28,16 +28,16 @@ const Agendar = ({ foto, links, fecha, form_id }) => {
     };
 
     const fechaCeremonia = parseDateString(fecha);
-    
-    const formattedDate = fechaCeremonia 
+
+    const formattedDate = fechaCeremonia
         ? format(fechaCeremonia, 'yyyy/MM/dd', { locale: es })
         : 'Fecha inválida';
 
 
 
-    if(form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
-        bg="bg-black"
-        text="text-white"
+    if (form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU") {
+        bg = "bg-black"
+        text = "text-white"
     }
 
 
@@ -56,7 +56,7 @@ const Agendar = ({ foto, links, fecha, form_id }) => {
                         <BiCalendarCheck className="text-[20px]" />
                         AGENDAR
                     </a>
-                ) :(
+                ) : (
                     <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center mb-8 md:w-72 w-68 text-[14px] font-[600] px-6 py-4 rounded-full `}
                         href={`https://calendar.google.com/calendar/u/0/r/week/`}
                         target="_blank"
@@ -69,14 +69,12 @@ const Agendar = ({ foto, links, fecha, form_id }) => {
             </div>
             <div className="shadow-2xl">
                 {foto && (
-                    <Image
+                    <img
                         src={foto}
-                        width={300}
-                        height={80}
+                        width="300"
+                        height="80"
                         alt="Evento"
-                        style={{
-                            borderRadius: 5,
-                        }}
+                        style={{ borderRadius: '5px' }}
                     />
                 )}
             </div>
@@ -86,10 +84,10 @@ const Agendar = ({ foto, links, fecha, form_id }) => {
                         <RiFacebookLine className="text-xl m-auto" />
                     </div>
                     <div className="border-black text-black flex items-center border rounded-full h-16 w-16">
-                        <RiTwitterLine className="text-xl m-auto"/>
+                        <RiTwitterLine className="text-xl m-auto" />
                     </div>
                     <div className="border-black text-black flex items-center border rounded-full h-16 w-16 ">
-                        <RiInstagramLine className="text-xl m-auto"/>
+                        <RiInstagramLine className="text-xl m-auto" />
                     </div>
                 </div>
             )}

@@ -2,7 +2,6 @@
 import { getGoogleDriveImageUrl } from "@/helpers";
 import { great_vives, inter, roboto, playFair, twcen, minion, openSans } from "../../utils/fonts";
 import moment from "moment/moment";
-import Image from 'next/image';
 import Countdown from '../15/Countdown';
 import Link from 'next/link';
 
@@ -35,11 +34,9 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
             <div className=" block md:hidden ">
                 <div className="md:hidden relative top-0 w-full h-[60vh] md:h-[70vh] bg-center bg-cover ">
                     <div className=" top-0 bg-slate-800"></div>
-                    <Image
+                    <img
                         src={coverImage}
-                        fill
-                        quality={100}
-                        style={imageStyle}
+                        style={{ ...imageStyle, width: '100%', height: '100%' }}
                         alt='portada'
                     />
                     {
@@ -47,7 +44,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                         <div className='absolute bottom-0 left-0 md:bg-none bg-cover bg-footer-texture translate-y-1 h-24 w-full z-50'></div>
                     }
                 </div>
-               
+
                 <div className='w-full  md:hidden bg-[#fff]'>
                     <div className='w-full  md:hidden flex justify-center  pt-14'>
                         <div className='flex md:hidden w-full justify-center '>
@@ -74,23 +71,21 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
             <div className=" h-[100vh] hidden md:block">
                 <div className="top-0 w-full h-full ">
                     <div className='hidden md:block'>
-                        <Image
+                        <img
                             src={foto_pc}
-                            fill
-                            quality={100}
-                            style={imageStylepc}
+                            style={{ ...imageStylepc, width: '100%', height: '100%' }}
                             alt='portada'
                         />
                     </div>
                     <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
 
                         <div className=' pt-8'>
-                        <h1 className={`${minion.className} text-gray-50 ${title.length >= 6 ? 'text-5xl' : 'text-8xl'} font-[100] text-center leading-[0.7]`}>
-                            {title.toUpperCase()}
-                        </h1>
+                            <h1 className={`${minion.className} text-gray-50 ${title.length >= 6 ? 'text-5xl' : 'text-8xl'} font-[100] text-center leading-[0.7]`}>
+                                {title.toUpperCase()}
+                            </h1>
 
-                                    <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}>{frase_portada}</h1>
-                            
+                            <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}>{frase_portada}</h1>
+
                         </div>
 
                         <div className='flex flex-col items-center'>

@@ -17,7 +17,6 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
     }
 
 
-
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 10%',
@@ -34,14 +33,14 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
     }
 
 
-    const color = article.mail ==="marinec" ? "black" : "text-slate-50"
+    const color = article.mail === "marinec" ? "black" : "text-slate-50"
 
     const mas_alto = article.mail === "arielgov@gmail.com" ? "-translate-y-10 text-black" : " text-slate-50"
 
     const titulo = title.toUpperCase()
 
-    if(!coverImage){
-        return(
+    if (!coverImage) {
+        return (
             <PortadaSinFoto title={title} date={date} article={article} />
         )
     }
@@ -49,28 +48,24 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
     return (
         <div className=" h-[100vh] ">
             <div className={`top-0 w-full h-full ${color}`}>
-                
+
                 <div className='md:hidden h-full'>
 
-                    <Image
+                    <img
                         src={coverImage}
-                        fill
-                        quality={100}
-                        style={imageStyle}
+                        style={{ ...imageStyle, width: '100%', height: '100%' }}
                         alt='portada'
                     />
                 </div>
                 <div className='hidden md:block'>
-                    <Image
+                    <img
                         src={coverImage}
-                        fill
-                        quality={100}
-                        style={imageStylePC}
+                        style={{ ...imageStylePC, width: '100%', height: '100%' }}
                         alt='portada'
                     />
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
-                    
+
                     <div className=' pt-8'>
                         {
                             h1_centrado ?

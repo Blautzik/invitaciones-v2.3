@@ -9,7 +9,7 @@ import { es } from "date-fns/locale";
 
 
 
-const Agendar = ({foto, links, fecha, bg}) => {
+const Agendar = ({ foto, links, fecha, bg }) => {
     const fechaCeremonia = new Date(fecha);
     const formattedDate = format(fechaCeremonia, 'yyyy/MM/dd', { locale: es });
 
@@ -18,47 +18,45 @@ const Agendar = ({foto, links, fecha, bg}) => {
         <div className='max-h-screen flex flex-col items-center justify-between'>
             <div className="flex flex-col items-center h-60 justify-between">
 
-            <BiCalendar className="h-20 w-20 text-black mt-6 " />
+                <BiCalendar className="h-20 w-20 text-black mt-6 " />
 
-            <h3 className={`${comfortaa.className} text-4xl text-center pb-4`}>Agregalo a tu calendario</h3>
-            <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center mb-8 md:w-72 w-68 text-[14px] font-[600] px-6 py-4 rounded-full `}
-                href={`https://calendar.google.com/calendar/u/0/r/week/${formattedDate}`}
-                target="_blank"
+                <h3 className={`${comfortaa.className} text-4xl text-center pb-4`}>Agregalo a tu calendario</h3>
+                <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center mb-8 md:w-72 w-68 text-[14px] font-[600] px-6 py-4 rounded-full `}
+                    href={`https://calendar.google.com/calendar/u/0/r/week/${formattedDate}`}
+                    target="_blank"
                 >
-                <BiCalendarCheck className="text-[20px]" />
-                AGENDAR
-            </a>
-                </div>
+                    <BiCalendarCheck className="text-[20px]" />
+                    AGENDAR
+                </a>
+            </div>
             <div className="shadow-2xl">
                 {
                     foto &&
-                    <Image
-                    src={foto}
-                    width={300}
-                    height={80}
-                    style={{
-                        borderRadius: 5,
-                    }}
+                    <img
+                        src={foto}
+                        width="300"
+                        height="80"
+                        style={{ borderRadius: '5px' }}
                     />
                 }
             </div>
             {
-                links &&    
+                links &&
                 <div className="md:w-96 w-10/12 flex items-center justify-evenly mb-">
-                <div className=" border-black text-black flex items-center border rounded-full h-16 w-16">
-                    <RiFacebookLine className="text-xl m-auto" />
-                </div>
-                <div className=" border-black text-black flex items-center border rounded-full h-16 w-16">
+                    <div className=" border-black text-black flex items-center border rounded-full h-16 w-16">
+                        <RiFacebookLine className="text-xl m-auto" />
+                    </div>
+                    <div className=" border-black text-black flex items-center border rounded-full h-16 w-16">
 
-                    <RiTwitterLine className="text-xl m-auto"/>
+                        <RiTwitterLine className="text-xl m-auto" />
+                    </div>
+                    <div className=" border-black text-black flex items-center border rounded-full h-16 w-16 ">
+                        <RiInstagramLine className="text-xl m-auto" />
+                    </div>
                 </div>
-                <div className=" border-black text-black flex items-center border rounded-full h-16 w-16 ">
-                    <RiInstagramLine className="text-xl m-auto"/>
-                </div>
-            </div>
             }
 
-            <div className={`w-screen ${bg? bg : 'bg-violeta'} mt-8 h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+            <div className={`w-screen ${bg ? bg : 'bg-violeta'} mt-8 h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
         </div>
     )
 }

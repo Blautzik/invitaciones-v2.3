@@ -56,9 +56,6 @@ const Info = ({ article }) => {
 
 
 
-
-
-
     function capitalize(string) {
         return string.replace(/^\w/, match => match.toUpperCase());
     }

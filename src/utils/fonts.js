@@ -14,6 +14,12 @@ export const minion = localFont({
   variable:'--minion'
 })
 
+export const bride = localFont({
+  src:'./Hello_Bride_Script.woff2',
+  subsets:['latin'],
+  variable:'--minion'
+})
+
 export const ClickerScript = localFont({
   src:'./ClickerScript-Regular.ttf',
   subsets:['latin'],

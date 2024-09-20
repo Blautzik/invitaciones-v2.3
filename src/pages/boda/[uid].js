@@ -106,6 +106,7 @@ const Invitacion = ({ article }) => {
                         date={article.fecha}
                         content={article.frase}
                         h1_centrado={article.h1_centrado}
+                        article={article}
                     />
                 </div>
 
