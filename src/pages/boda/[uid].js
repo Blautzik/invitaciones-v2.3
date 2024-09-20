@@ -70,6 +70,11 @@ const Invitacion = ({ article }) => {
         }
         let portadaPC = false
 
+        if (article.form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
+            bg = "bg-[#e8e4db]"
+            article.sin_janos=true
+        }
+
 
 
 
@@ -164,7 +169,7 @@ const Invitacion = ({ article }) => {
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
 
-                <div className={`w-screen ${bg ? `${bg} text-gray-900` : "bg-violeta text-white"} h-8 text-center pt-2`}>Invitaciones Jano's </div>
+                <div className={`w-screen ${bg ? `${bg} text-secondary-600 mt-8` : "bg-violeta text-white"} h-8 text-center pt-2 `}>{article.nombre} </div>
             </>
         )
     }

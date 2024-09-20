@@ -374,7 +374,7 @@ export const salones = [
         nombre: "Palacio Sans Souci",
         direccion: " Paz 705, Victoria, Bs As",
         link_maps: "https://maps.app.goo.gl/kyN6ikeH3jX7hqhd6",
-        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1722389239/fotos%20salones/1713212794Recorrido_Naranjos_1_62_vwcdrb.jpg',
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1726864753/428637044_18313570294132485_6697055707619539907_n_fsh4xe.jpg',
         link: 'https://palaciosanssouci.com/'
     }
 ];

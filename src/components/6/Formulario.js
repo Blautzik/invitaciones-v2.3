@@ -28,6 +28,11 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     texto = "text-gray-900"
   }
 
+
+  if (bg == "bg-[#e8e4db]"){
+    texto = "text-secondary-600" 
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -83,7 +88,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   return (
     <div className={`${bg ? bg : 'bg-violeta'} w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">
-        <div className="mx-auto flex flex-col items-center text-center w-[270px]">
+        <div className="mx-auto flex flex-col  items-center text-center w-[270px]">
           <GoCheckCircle className={`${texto} text-[66px] font-thin`}/>
           <h3 className={`${openSans.className} ${texto} text-2xl my-4 text-center w-10/12 leading-7`}>Confirmar Asistencia</h3>
           <p className={`${openSans.className} ${texto} text-md max-w-2xl font-[500]`}>

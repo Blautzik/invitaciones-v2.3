@@ -1,5 +1,5 @@
 
-import { comfortaa, great_vives } from '@/utils/fonts'
+import { bride, comfortaa, great_vives } from '@/utils/fonts'
 import Image from 'next/image'
 import React from 'react'
 
@@ -14,6 +14,10 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
 
     if (form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k"){
         tipo = comfortaa.className
+    }
+
+    if (form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk"){
+        tipo= bride.className
     }
 
 

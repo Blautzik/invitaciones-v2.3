@@ -27,6 +27,8 @@ const Info = ({ article }) => {
     let hora_fin = false
     let bg = ""
     let text = "text-slate-700"
+    let bgbtn = "bg-black"
+    let txtbtn = "text-slate-50"
 
     if(article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A"){
         hora_fin = "20:00"
@@ -54,6 +56,14 @@ const Info = ({ article }) => {
         text = "text-white"
     }
 
+
+    
+
+    if(article.form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk"){
+        text = "text-secondary-600"
+        bgbtn = "bg-[#e8e4db]"
+        txtbtn = "text-secondary-600"
+    }
 
 
     function capitalize(string) {
@@ -202,11 +212,11 @@ const Info = ({ article }) => {
                                     {
                                         article.mfmf != "sin_janos" &&
                                         <a href={salon?.link} target="_blank">
-                                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
+                                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 ${bgbtn} rounded-full mx-1 py-2 px-6 ${txtbtn} outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
                                         </a>
                                     }
                                     <a href={salon.link_maps} target="_blank">
-                                        <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 bg-black rounded-full mx-1 py-2 px-6 text-slate-50 outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
+                                        <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 ${bgbtn} rounded-full mx-1 py-2 px-6 ${txtbtn} outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                                     </a>
                                 </div>
                             }
@@ -216,7 +226,7 @@ const Info = ({ article }) => {
                                     <div className='flex flex-col items-center mt-6'>
                                         <h3 className={`${openSans.className} text-xl text-center w-80 ${text}`}> Dress Code </h3>
                                         <h4 className={`${openSans.className} text-base text-center w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
-                                        <div className={`h-16 w-16 relative m-6 ${text == "text-white" && "invert"}`}>
+                                        <div className={`h-16 w-16 relative m-6 ${text == "text-secondary-600" && "opacity-60"}  ${text == "text-white" && "invert"}`}>
                                             <Image
                                                 src={suitIcon}
                                                 fill

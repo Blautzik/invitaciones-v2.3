@@ -7,7 +7,7 @@ import {format, parse, parseISO, isValid} from 'date-fns';
 import {es} from 'date-fns/locale';
 
 
-const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha}) => {
+const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, bg}) => {
 
     const parseDateString = (dateString) => {
         let parsedDate;
@@ -35,6 +35,12 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha}) => {
 
     const fecha2 = new Date(fecha);
 
+    let txt = "text-black"
+
+    if(bg == "bg-[#e8e4db]"){
+        txt="text-secondary-600"
+    }
+
 
 
 
@@ -42,10 +48,10 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha}) => {
         <div className=' flex flex-col items-center justify-between pb-8'>
             <div className="flex flex-col items-center justify-between mb-4">
 
-                <BiCalendar className="h-20 w-20 text-black mt-6 " />
+                <BiCalendar className={`h-20 w-20 ${txt}  mt-6 `} />
 
-                <h3 className={`${comfortaa.className} text-4xl mb-4`}>Agendar</h3>
-                <a className={`${openSans.className} bg-black text-white flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}
+                <h3 className={`${comfortaa.className} ${txt} text-4xl mb-4`}>Agendar</h3>
+                <a className={`${openSans.className} ${bg == "bg-[#e8e4db]" ? "bg-[#e8e4db] text-secondary-600" : "bg-black text-white"}  flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}
                     href={`https://calendar.google.com/calendar/u/0/r/day/${formattedDate}`}
                     target="_blank"
                 >
