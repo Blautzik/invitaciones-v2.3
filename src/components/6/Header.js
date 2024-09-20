@@ -7,11 +7,12 @@ import Link from 'next/link';
 
 
 
-const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, article }) => {
+const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id }) => {
 
     let opacity = 0.7
     let sin_nombre = false
     let texto = "text-slate-50"
+
 
     if (title === "Emi y Robert") {
         sin_nombre = true
@@ -32,7 +33,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, article })
 
     let fuente = minion.className
 
-    if(article.form_id === "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" ){
+    if(form_id === "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" ){
         fuente = bride.className
         titulo = title
         opacity = 1

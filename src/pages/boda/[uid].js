@@ -112,6 +112,7 @@ const Invitacion = ({ article }) => {
                         content={article.frase}
                         h1_centrado={article.h1_centrado}
                         article={article}
+                        form_id={article.form_id}
                     />
                 </div>
 
