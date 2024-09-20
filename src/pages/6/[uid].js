@@ -69,7 +69,7 @@ const seis = ({ article }) => {
             }
 
             <div>
-                <Formulario form_id={article.data.form_id} bg={article.data.bg_color} otra_frase={article.data.otra_frase_ninos}/>
+                <Formulario form_id={""} bg={article.data.bg_color} otra_frase={article.data.otra_frase_ninos}/>
             </div>
 
 
