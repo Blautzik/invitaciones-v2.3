@@ -17,11 +17,9 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
     }
 
     if (form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk"){
-        tipo= bride.className
+        tipo= bride.className + " hidden"
     }
 
-
-    
 
 
    

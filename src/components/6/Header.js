@@ -12,7 +12,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     let opacity = 0.7
     let sin_nombre = false
     let texto = "text-slate-50"
-
+    let palabras = [];
 
     if (title === "Emi y Robert") {
         sin_nombre = true
@@ -29,14 +29,17 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     }
 
     let titulo = title.toUpperCase()
+    palabras = [titulo]
 
 
     let fuente = minion.className
 
-    if(form_id === "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" ){
+    if (form_id === "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
         fuente = bride.className
         titulo = title
+        palabras = title.split(" ");
         opacity = 1
+
     }
 
 
@@ -67,12 +70,19 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                     <div className=' pt-8'>
                         {
                             !sin_nombre && <>
-                                {
-                                    h1_centrado ?
-                                        <h1 className={`${minion.className}  text-gray-50 max-w-sm text-center pt-96 text-5xl font-[200]`}>{titulo}</h1>
-                                        :
-                                        <h1 className={`${fuente}  text-gray-50 max-w-sm text-center text-5xl font-[200]`}>{titulo}</h1>
-                                }
+                                {h1_centrado ? (
+                                    <h1 className={`${minion.className} text-gray-50 max-w-sm text-center pt-96 text-5xl font-[200]`}>
+                                        {palabras.map((palabra, index) => (
+                                            <div key={index}>{palabra}</div>
+                                        ))}
+                                    </h1>
+                                ) : (
+                                    <h1 className={`${fuente} text-gray-50 max-w-sm text-center text-5xl font-[200]`}>
+                                        {palabras.map((palabra, index) => (
+                                            <div key={index} className={`${index == 1 ? "relative -top-3" :"" }`}>{palabra}</div>
+                                        ))}
+                                    </h1>
+                                )}
                             </>
                         }
                     </div>

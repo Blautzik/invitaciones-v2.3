@@ -165,7 +165,7 @@ const Invitacion = ({ article }) => {
 
 
                 <div className='mb-5'>
-                    <Agendar foto={foto_agendar} fecha={article.fecha} bg={bg} />
+                    <Agendar foto_agendar={foto_agendar} fecha={article.fecha} bg={bg} />
                 </div>
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
