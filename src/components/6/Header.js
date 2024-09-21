@@ -13,6 +13,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     let sin_nombre = false
     let texto = "text-slate-50"
     let palabras = [];
+    let frase_extra = ""
+    let side = ""
 
     if (title === "Emi y Robert") {
         sin_nombre = true
@@ -39,8 +41,13 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         titulo = title
         palabras = title.split(" ");
         opacity = 1
-
+        side = "relative right-20 md:right-0"
     }
+
+
+    if (form_id === "1fxKU_AxCcsXCC9i-OXHvMeHP9HXhQFSRvHm_txKCe_4"){
+        frase_extra = "¡El mismo día, Pedri cumple 1 año!"
+    }   
 
 
 
@@ -65,9 +72,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
 
-
-
-                    <div className=' pt-8'>
+                    <div className={`pt-8 ${side}`}>
                         {
                             !sin_nombre && <>
                                 {h1_centrado ? (
@@ -89,8 +94,9 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                     <div className='flex flex-col items-center'>
                         <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest font-[100]`}> Nos casamos en</h2>
                         <Countdown date={date} texto={texto} />
+                        <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest font-[100]`}>{frase_extra}</h2>
                         <Link href='#info' scroll={false}>
-                            <button className={`${openSans.className} py-3 px-9 bg-white rounded-full text-gray-900 font-[900] text-center mb-16 `}>MÁS INFO</button>
+                            <button className={`${openSans.className} py-3 px-9 bg-white rounded-full text-gray-900 font-[900] text-center ${!frase_extra && "mt-10"} mb-16 `}>MÁS INFO</button>
                         </Link>
 
                     </div>

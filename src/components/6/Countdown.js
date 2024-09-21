@@ -43,7 +43,7 @@ const Countdown = ({ date, texto }) => {
     return (
         <div className='w-60'>
 
-        <div className = {`${openSans.className} flex font-[100] ${texto} justify-between items-center opacity-80 mb-10 mt-2 `}>
+        <div className = {`${openSans.className} flex font-[100] ${texto} justify-between items-center opacity-80  mt-2 `}>
             <div className="flex flex-col items center">
                 <span className={cuentaStyle}>{days} </span>
                 <span className={textitoStyle}>días</span>

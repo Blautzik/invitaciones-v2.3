@@ -1,8 +1,9 @@
-import { inter, minion, openSans, roboto } from '../../utils/fonts';
+import { comfortaa, inter, minion, openSans, roboto } from '../../utils/fonts';
 import { motion } from "framer-motion"
 import Image from 'next/image';
 import fiestaIcon from '../../../public/fiestas-12.png';
 import suitIcon from '../../../public/suit (1).png'
+import ceremoniaIcon from "../../../public/heartseparator1.png"
 import salones, { encontrarSalon } from "../../data/salones"
 import { obtenerHoraArgentina } from '@/helpers';
 
@@ -18,7 +19,7 @@ const Info = ({ article }) => {
     const hora = fechaCeremonia.toLocaleTimeString("es-ES", {
         hour: '2-digit',
         minute: '2-digit',
-        timeZone: 'America/Argentina/Buenos_Aires' 
+        timeZone: 'America/Argentina/Buenos_Aires'
     });
 
     const salon = encontrarSalon(article.salon);
@@ -29,37 +30,43 @@ const Info = ({ article }) => {
     let text = "text-slate-700"
     let bgbtn = "bg-black"
     let txtbtn = "text-slate-50"
+    let foto_ceremonia = false
 
-    if(article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A"){
+    if (article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A") {
         hora_fin = "20:00"
     }
-    if(article.form_id == "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" || article.form_id == "1WBw_6hjgbraJrNv_d_mNhsiQPQtIyEMCwYQz2AU9EiI" ){
+    if (article.form_id == "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0" || article.form_id == "1WBw_6hjgbraJrNv_d_mNhsiQPQtIyEMCwYQz2AU9EiI") {
         hora_fin = "05:00"
     }
-    if(article.form_id == "1QLYZgzByxTw1jyFIJY_u4gFlgF_CLHIM39vD3HDE1mI"){
+    if (article.form_id == "1QLYZgzByxTw1jyFIJY_u4gFlgF_CLHIM39vD3HDE1mI") {
         hora_fin = "21:00"
-    } 
+    }
 
 
-    if(article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA" ){
+    if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         article.mfmf = "sin_janos"
     }
 
 
-    if(article.form_id == "1gxvaHJl7vw6q-k-b4IKTlFAXINgHub3Gc3-3EwOtesc"){
+    if (article.form_id == "1gxvaHJl7vw6q-k-b4IKTlFAXINgHub3Gc3-3EwOtesc") {
         salon.foto_salon = "https://res.cloudinary.com/fedexx/image/upload/v1725450558/fotos%20salones/Imagen_de_WhatsApp_2024-09-02_a_las_12.20.25_c5dc6810_cxbybf.jpg"
     }
 
 
-    if(article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
+    if (article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU") {
         bg = "bg-black"
         text = "text-white"
     }
 
 
-    
+    if (article.form_id == "1fxKU_AxCcsXCC9i-OXHvMeHP9HXhQFSRvHm_txKCe_4") {
+        foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1701302507/jesi%20y%20maxi/descarga_mjuczu.jpg"
+    }
 
-    if(article.form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk"){
+
+
+
+    if (article.form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
         text = "text-secondary-600"
         bgbtn = "bg-[#e8e4db]"
         txtbtn = "text-secondary-600"
@@ -77,8 +84,49 @@ const Info = ({ article }) => {
         borderRadius: '5px',
     }
 
+    const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
+
     return (
         <div className={`relative w-full mt-4 -globals-36 overflow-x-hidden ${bg}`}>
+
+
+
+            {foto_ceremonia &&
+
+                <div className='md:mt-4 flex flex-col items-center justify-center text-center mb-12'>
+                    <div className='h-16 w-40 relative mb-6'>
+                        <img
+                            src="/heartseparator1.png"
+                        />
+                    </div>
+                    <h3 className={`${comfortaa.className} text-slate-700 sm:text-2xl xs:text-xl mb-10 font-[700] text-center`}>{article.es_civil ? 'El Civil' : 'La Ceremonia'}</h3>
+
+                    {
+                        foto_ceremonia &&
+                        <img
+                            src={foto_ceremonia}
+                            style={{
+                                objectFit: 'cover',
+                                position: 'relative',
+                                marginBottom: 48,
+                                borderRadius: 5,
+                                height: 150,
+                                width: 300,
+                            }}
+                            alt="Ceremonia"
+                        />
+                    }
+
+                    <div className={`${openSans.className}my-4 text-center leading-7`}>
+
+                        <p className={textito}><strong>Fecha: </strong> Domingo 1 de Diciembre</p>
+                        <p className={textito}><strong>Hora: </strong> 12:00 hs</p>
+                        <p className={textito}><strong>Lugar: </strong> Jano's Palermo Hollywood</p>
+                    </div>
+                </div>
+
+
+            }
             <div className="flex-col items-center w-full">
                 <div className="flex flex-col md:flex-row md:w-10/12 w-full justify-between md:items-center md:justify-center items-center lg:items-start m-auto">
                     <div className="flex flex-col justify-center items-center w-5/12">
@@ -97,13 +145,24 @@ const Info = ({ article }) => {
                             }}
                             className="flex flex-col justify-center items-center"
                         >
-                            <div className='h-24 w-24 relative mb-6'>
-                                <Image
-                                    src={fiestaIcon}
-                                    fill
-                                />
-                            </div>
-                            <h3 className={`${openSans.className} ${text} sm:text-2xl xs:text-xl mb-8 font-[700] text-center`}>La Fiesta</h3>
+                            {
+                                !foto_ceremonia ?
+                                    <div className='h-24 w-24 relative mb-6'>
+
+                                        <Image
+                                            src={fiestaIcon}
+                                            fill
+                                        />
+                                    </div>
+                                    :
+                                    <div className='h-16 w-40 relative mt-2'>
+                                        <img
+                                            src="/heartseparator1.png"
+                                        />
+                                    </div>
+
+                            }
+                            <h3 className={`${comfortaa.className} ${text} text-slate-700 sm:text-2xl xs:text-xl ${foto_ceremonia? "mb-0" : "mb-10"} font-[700] text-center`}>La Fiesta</h3>
                         </motion.div>
                         <div className="flex flex-col justify-center items-center">
                             <motion.div
@@ -123,17 +182,17 @@ const Info = ({ article }) => {
                             >
                                 {
                                     article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA" ?
-                                    <>
-                                        <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 text-slate-600`}>Día</h4>
-                                        <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate)}</p>
-                                        <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Ceremonia civil 20 hs</h4>
-                                        <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Fiesta a continuación </h4>
-                                    </>
-                                    :
-                                    <>
-                                        <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
-                                        <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora}</p>
-                                    </>
+                                        <>
+                                            <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 text-slate-600`}>Día</h4>
+                                            <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{capitalize(formattedDate)}</p>
+                                            <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Ceremonia civil 20 hs</h4>
+                                            <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Fiesta a continuación </h4>
+                                        </>
+                                        :
+                                        <>
+                                            <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
+                                            <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora}</p>
+                                        </>
                                 }
                                 {hora_fin &&
                                     <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>Hasta Las: {hora_fin}</p>
@@ -194,18 +253,18 @@ const Info = ({ article }) => {
                             >
                                 {
                                     article.mail !== 'bzerrizuela@gmail.com' ?
-                                    <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
-                                    {salon?.foto_salon &&
-                                        <Image
-                                        src={salon.foto_salon}
-                                        fill
-                                        quality={50}
-                                        style={imgstyle}
-                                        />
-                                    }
-                                </div>  :
+                                        <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
+                                            {salon?.foto_salon &&
+                                                <Image
+                                                    src={salon.foto_salon}
+                                                    fill
+                                                    quality={50}
+                                                    style={imgstyle}
+                                                />
+                                            }
+                                        </div> :
                                         <></>
-                                    }
+                                }
                             </motion.div>
                             {salon?.link &&
                                 <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly '>
@@ -221,7 +280,7 @@ const Info = ({ article }) => {
                                 </div>
                             }
                             <div className="flex flex-col justify-center items-center">
-                                { article.nombre != "Noe" &&
+                                {article.nombre != "Noe" &&
 
                                     <div className='flex flex-col items-center mt-6'>
                                         <h3 className={`${openSans.className} text-xl text-center w-80 ${text}`}> Dress Code </h3>
