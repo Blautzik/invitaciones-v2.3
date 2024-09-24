@@ -88,7 +88,7 @@ const InfoVip = ({ article }) => {
 
     return (
         <div className={`relative w-full mt-4 -globals-36 overflow-x-hidden ${bg}`}>
-            <h3 className={`${comfortaa.className} ${text} text-slate-700 sm:text-2xl xs:text-xl ${foto_ceremonia ? "mb-0" : "mb-10"} font-[700] text-center`}>Ceremonia y Fiesta</h3>
+            <h3 className={`${comfortaa.className} ${text} text-slate-700 sm:text-2xl xs:text-xl ${foto_ceremonia ? "mb-0" : "mb-4"} font-[700] text-center`}>Ceremonia y Fiesta</h3>
             <div className="flex flex-col justify-center items-center">
                 <motion.div
                     initial={{
@@ -187,14 +187,14 @@ const InfoVip = ({ article }) => {
                             </a>
                         }
                         <a href={salon.link_maps} target="_blank">
-                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 ${bgbtn} rounded-full mx-1 py-2 px-6 ${txtbtn} outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
+                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-5 w-44 lg:w-64 ${bgbtn} rounded-full mx-1 py-2 px-6 ${txtbtn} outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                         </a>
                     </div>
                 }
                 <div className="flex flex-col justify-center items-center">
                         <div className='flex flex-col items-center mt-6'>
-                            <h3 className={`${openSans.className} text-2xl text-center mb-4 w-80 ${text}`}> Dress Code </h3>
-                            <h4 className={`${openSans.className} text-xl text-center mb-20 w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
+                            <h3 className={`${openSans.className} text-2xl text-center mb-3 w-80 ${text}`}> Dress Code </h3>
+                            <h4 className={`${openSans.className} text-2xl text-center mb-20 w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
                         </div>
                 </div>
             </div>

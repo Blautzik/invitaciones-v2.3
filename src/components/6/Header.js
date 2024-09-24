@@ -41,7 +41,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         titulo = title
         palabras = title.split(" ");
         opacity = 1
-        side = "relative right-20 -top-10 md:right-0"
+        side = "relative right-16 -top-10 md:right-0"
     }
 
 
@@ -96,7 +96,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                     <div className='flex flex-col items-center'>
                         <h2 className={`${openSans.className} ${texto} max-w-xs  text-center text-xl tracking-widest ]`}> Nos casamos en</h2>
                         <Countdown date={date} texto={texto} />
-                        <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest font-[100]`}>{frase_extra}</h2>
+                        <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest`}>{frase_extra}</h2>
                         <Link href='#info' scroll={false}>
                             <button className={`${openSans.className} py-3 px-9 bg-white rounded-full text-gray-900 font-[900] text-center ${!frase_extra && "mt-10"} mb-16 `}>MÁS INFO</button>
                         </Link>
