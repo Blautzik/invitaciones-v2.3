@@ -12,6 +12,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   const [menu, setMenu] = useState('Menú Principal');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const id = form_id;
+  let con_menu = true
 
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
@@ -26,6 +27,10 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
 
   if(bg == "bg-[#f8f5ee]"){
     texto = "text-gray-900"
+  }
+
+  if(form_id =="13fSzKs3csXqr3iIqCWrJnLRw1gUQ7x-jF2bwZbLBhic"){
+    con_menu = false
   }
 
 
@@ -125,7 +130,9 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               placeholder="Email"
             />
           </div>
-
+          { con_menu &&
+            <>
+            
 
           <h3 className={`${openSans.className} ${texto} text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
           <div className="flex items-center justify-center">
@@ -134,7 +141,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               className={`${inputCN} text-gray-500`}
               onChange={(e) => setMenu(e.target.value)}
               value={menu}
-            >
+              >
               <option value="Menú Principal">Menú Principal</option>
               <option value="Menú Vegetariano">Menú Vegetariano</option>
               <option value="Menú Vegano">Menú Vegano</option>
@@ -143,6 +150,11 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
             </select>
           </div>
+              </>
+            }
+
+
+
           <div className="flex items-center justify-center">
             <label htmlFor="message" className="sr-only">
               Mensaje
