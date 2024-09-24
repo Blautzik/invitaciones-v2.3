@@ -29,6 +29,9 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
 
     const dateFormated = moment(date).format('DD-MM-YYYY')
 
+
+    console.log("date: ", dateFormated)
+
     return (
         <>
             <div className=" block md:hidden ">

@@ -12,6 +12,7 @@ import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpe
 import FormularioNombre from '@/components/boda/FormularioNombres';
 import { SliderTestigos } from '@/components/boda/SliderTestigos';
 import InfoSouci from '@/components/15/InfoSouci';
+import InfoCondicional from '@/components/boda/InfoCondicional';
 
 
 
@@ -73,6 +74,7 @@ const Invitacion = ({ article }) => {
         if (article.form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
             bg = "bg-[#e8e4db]"
             article.sin_janos=true
+            portadaPC="https://res.cloudinary.com/fedexx/image/upload/v1727139538/XV_1920_x_1080_px_20_hdntbw.png"
         }
 
 
@@ -117,18 +119,7 @@ const Invitacion = ({ article }) => {
                 </div>
 
 
-                {
-
-                    article.form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k" ?
-
-                        <div id="info">
-                            <InfoSouci article={article} />
-                        </div>
-                        :
-                        <div id="info">
-                            <Info article={article} />
-                        </div>
-                }
+                <InfoCondicional article={article}/>
 
 
 

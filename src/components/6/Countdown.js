@@ -36,8 +36,8 @@ const Countdown = ({ date, texto }) => {
     }, [target]);
 
 
-    const cuentaStyle = `${openSans.className} font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
-    const textitoStyle = " text-[10px] text-center"
+    const cuentaStyle = `${openSans.className} font-[200] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
+    const textitoStyle = " text-[11px]  text-center"
     const dospu = " text-3xl mb-5"
 
     return (

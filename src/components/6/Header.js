@@ -41,13 +41,13 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         titulo = title
         palabras = title.split(" ");
         opacity = 1
-        side = "relative right-20 md:right-0"
+        side = "relative right-20 -top-10 md:right-0"
     }
 
 
-    if (form_id === "1fxKU_AxCcsXCC9i-OXHvMeHP9HXhQFSRvHm_txKCe_4"){
+    if (form_id === "1fxKU_AxCcsXCC9i-OXHvMeHP9HXhQFSRvHm_txKCe_4") {
         frase_extra = "¡El mismo día, Pedri cumple 1 año!"
-    }   
+    }
 
 
 
@@ -64,10 +64,12 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                     />
                 </div>
                 <div className='hidden md:block'>
-                    <img
+                    <Image
                         src={coverImagePc}
-                        style={{ ...imageStyle, width: '100%', height: '100%' }}
+                        fill
+                        quality={100}
                         alt='portada'
+                        style={imageStyle}
                     />
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
@@ -84,7 +86,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                                 ) : (
                                     <h1 className={`${fuente} text-gray-50 max-w-sm text-center text-5xl font-[200]`}>
                                         {palabras.map((palabra, index) => (
-                                            <div key={index} className={`${index == 1 ? "relative -top-3" :"" }`}>{palabra}</div>
+                                            <div key={index} className={`${index == 1 ? "relative -top-3" : ""}`}>{palabra}</div>
                                         ))}
                                     </h1>
                                 )}
@@ -92,7 +94,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                         }
                     </div>
                     <div className='flex flex-col items-center'>
-                        <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest font-[100]`}> Nos casamos en</h2>
+                        <h2 className={`${openSans.className} ${texto} max-w-xs  text-center text-xl tracking-widest ]`}> Nos casamos en</h2>
                         <Countdown date={date} texto={texto} />
                         <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest font-[100]`}>{frase_extra}</h2>
                         <Link href='#info' scroll={false}>
