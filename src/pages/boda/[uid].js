@@ -134,6 +134,7 @@ const Invitacion = ({ article }) => {
                         <Regalos article={article} foto_regalos={foto_regalos} bg={bg} />
                     </div>
                 }
+                
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
                         <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />

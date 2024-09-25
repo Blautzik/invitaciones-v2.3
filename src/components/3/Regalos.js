@@ -61,6 +61,12 @@ const Regalos = ({ article }) => {
             </div>
         )
     }else if(article.alias == "malgioffre9"){
+
+
+
+
+
+
         return (
 <div className='w-full'>
             <div className="h-3/5  w-full flex flex-col relative items-center justify-between bg-gray-600">
@@ -94,7 +100,7 @@ const Regalos = ({ article }) => {
                             <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>
                             { article.cbu && <p className='pb-2'><strong>CBU/CVU:</strong> {article.cbu} </p>}
                             { article.alias && <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>}
-                            {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
+                            { article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                         </div>
                     </Accordion2>
                     }

@@ -29,6 +29,13 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         opacity: opacity,
         backgroundColor: '#555',
     }
+    const imageStylePC = {
+        objectFit: 'cover',
+        objectPosition: '50% 10%',
+        zIndex: 0,
+        opacity: opacity,
+        backgroundColor: '#555',
+    }
 
     let titulo = title.toUpperCase()
     palabras = [titulo]
@@ -47,6 +54,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
 
     if (form_id === "1fxKU_AxCcsXCC9i-OXHvMeHP9HXhQFSRvHm_txKCe_4") {
         frase_extra = "¡El mismo día, Pedri cumple 1 año!"
+        imageStylePC.objectPosition = "50% 40%"
     }
 
 
@@ -69,7 +77,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                         fill
                         quality={100}
                         alt='portada'
-                        style={imageStyle}
+                        style={imageStylePC}
                     />
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>

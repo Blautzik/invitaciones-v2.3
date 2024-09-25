@@ -14,7 +14,7 @@ const Info = ({ article }) => {
         day: 'numeric',
         month: 'long',
         timeZone: 'America/Argentina/Buenos_Aires'
-    });
+    }).replace(',', '');
 
     const hora = fechaCeremonia.toLocaleTimeString("es-ES", {
         hour: '2-digit',
@@ -64,8 +64,6 @@ const Info = ({ article }) => {
     }
 
 
-
-
     if (article.form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
         text = "text-secondary-600"
         bgbtn = "bg-[#e8e4db]"
@@ -88,8 +86,6 @@ const Info = ({ article }) => {
 
     return (
         <div className={`relative w-full mt-4 -globals-36 overflow-x-hidden ${bg}`}>
-
-
 
             {foto_ceremonia &&
 
@@ -191,7 +187,7 @@ const Info = ({ article }) => {
                                         :
                                         <>
                                             <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
-                                            <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora}</p>
+                                            <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora} hs</p>
                                         </>
                                 }
                                 {hora_fin &&

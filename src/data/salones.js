@@ -147,6 +147,13 @@ export const salones = [
         link: 'https://www.janoseventos.com/salones.php?q=janos-San%20Isidro'
     },
     {
+        nombre: "Jano's San Isidro 2",
+        direccion: "Dardo Rocha 1810, Martínez, Buenos Aires",
+        link_maps: "https://maps.app.goo.gl/Upj79AEbmUSPLV4b7",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702988075/salones/san%20isidro.png',
+        link: 'https://www.janoseventos.com/salones.php?q=janos-San%20Isidro'
+    },
+    {
         nombre: "Jano's San Miguel",
         direccion: "Gaspar Campos 2800",
         link_maps: "http://maps.google.com/?q=Jano's+San+Miguel",

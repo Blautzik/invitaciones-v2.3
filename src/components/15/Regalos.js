@@ -12,31 +12,23 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
     let cbuCustom = false
 
-    if(article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA"){
+    if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         opacity = 1
     }
 
-    if(bg == "bg-[#f8f5ee]"){
+    if (bg == "bg-[#f8f5ee]") {
         texto = "text-gray-900"
         iconStyle = {
             filter: "invert(0.1"
         }
-      }
+    }
 
-    if(article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
+    if (article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU") {
         bg = "bg-black"
-        opacity=1
-        texto="text-white"
+        opacity = 1
+        texto = "text-white"
     }
 
-
-    if(article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA"){
-        cbuCustom = "$leo.dam95" 
-    }
-
-
-
-      
 
     const imageStyle = {
         objectFit: 'cover',
@@ -45,6 +37,17 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         opacity: opacity,
         backgroundColor: '#fff',
     }
+
+    if (article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA") {
+        cbuCustom = "$leo.dam95"
+        imageStyle.objectPosition = "55% 50%"
+    }
+
+
+
+
+
+
 
 
 
@@ -69,18 +72,18 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                     />
                     <h3 className={`${comfortaa.className} text-2xl mt-4 mb-2 font-[700]`}>Regalos</h3>
                     {
-                        article.mail === "marine"?
+                        article.mail === "marine" ?
 
-                    <div className={`${openSans.className} font-[500] text-slate-800 leading-5`}>
-                        {article.frase_regalos}
-                    </div> :
-                    <div className={`${openSans.className} font-[500] leading-5`}>
-                        {article.frase_regalos}
-                    </div> 
+                            <div className={`${openSans.className} font-[500] text-slate-800 leading-5`}>
+                                {article.frase_regalos}
+                            </div> :
+                            <div className={`${openSans.className} font-[500] leading-5`}>
+                                {article.frase_regalos}
+                            </div>
 
                     }
                 </div>
-                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg? "opacity-100": "opacity-70"} `}>
+                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg ? "opacity-100" : "opacity-70"} `}>
                     {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto}>
                         <div className={`${openSans.className} text-sm  opacity-100`}>
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}

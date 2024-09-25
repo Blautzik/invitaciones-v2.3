@@ -49,7 +49,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
         <div className=" h-[100vh] ">
             <div className={`top-0 w-full h-full ${color}`}>
 
-                <div className='md:hidden h-full'>
+                <div className='md:hidden h-full '>
 
                     <img
                         src={coverImage}
@@ -57,10 +57,10 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
                         alt='portada'
                     />
                 </div>
-                <div className='hidden md:block'>
+                <div className='hidden md:block max-h-screen'>
                     <img
                         src={coverImage}
-                        style={{ ...imageStylePC, width: '100%', height: '100%' }}
+                        style={{ ...imageStylePC, width: '100%', height: '100%', maxHeight: '100vh' }}
                         alt='portada'
                     />
                 </div>

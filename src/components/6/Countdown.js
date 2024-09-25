@@ -37,13 +37,13 @@ const Countdown = ({ date, texto }) => {
 
 
     const cuentaStyle = `${openSans.className} font-[200] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
-    const textitoStyle = " text-[11px]  text-center"
-    const dospu = " text-3xl mb-5"
+    const textitoStyle = " text-[11px] text-white font-[300] text-center"
+    const dospu = " text-3xl text-white mb-5 font-[300]"
 
     return (
         <div className='w-60'>
 
-        <div className = {`${openSans.className} flex font-[100] ${texto} justify-between items-center opacity-80  mt-2 `}>
+        <div className = {`${openSans.className} flex font-[200] ${texto} justify-between items-center  mt-2 `}>
             <div className="flex flex-col items center">
                 <span className={cuentaStyle}>{days} </span>
                 <span className={textitoStyle}>días</span>
