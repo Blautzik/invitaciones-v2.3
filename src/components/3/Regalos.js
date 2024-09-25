@@ -60,7 +60,7 @@ const Regalos = ({ article }) => {
     
             </div>
         )
-    }else if(article.frase_regalos == "Y si nos regalamos una buena noche... Todo lo que juntemos va 100% para la banda..."){
+    }else if(article.alias == "malgioffre9"){
         return (
 <div className='w-full'>
             <div className="h-3/5  w-full flex flex-col relative items-center justify-between bg-gray-600">
