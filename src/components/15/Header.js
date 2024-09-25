@@ -39,6 +39,12 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
 
     const titulo = title.toUpperCase()
 
+
+
+    if(article.form_id == "1aLSubnXmSUuyCEA9_1XPPkjIK5bECXyKsHDl60kWxJs"){
+        imageStylePC.objectPosition = " 50% 35%"
+    }   
+
     if (!coverImage) {
         return (
             <PortadaSinFoto title={title} date={date} article={article} />

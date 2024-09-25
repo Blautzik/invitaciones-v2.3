@@ -13,6 +13,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const id = form_id;
   let con_menu = true
+  let con_mail = true
 
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
@@ -35,6 +36,10 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
 
   if(form_id =="13fSzKs3csXqr3iIqCWrJnLRw1gUQ7x-jF2bwZbLBhic"){
     con_menu = false
+  }
+
+  if(form_id == ""){
+    con_mail = false
   }
 
 
@@ -120,7 +125,10 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               placeholder="Nombre y Apellido"
             />
           </div>
-          <div className="flex items-center justify-center">
+
+          {
+            con_mail &&
+            <div className="flex items-center justify-center">
             <label htmlFor="email" className="sr-only">
               Email
             </label>
@@ -132,8 +140,9 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               id="email"
               className={inputCN}
               placeholder="Email"
-            />
+              />
           </div>
+            }
           { con_menu &&
             <>
             
