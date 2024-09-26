@@ -18,7 +18,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
 
-  const isFormValid = name && email && menu;
+  let isFormValid = name && email && menu;
   let texto = "text-white"
 
 
@@ -40,6 +40,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
 
   if(form_id == "1ris5vIvuRruQq3JPPoudwh5YuctqofYQfS3LnHYcMlk"){
     con_mail = false
+    isFormValid = name && menu
   }
 
 
