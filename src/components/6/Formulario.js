@@ -38,7 +38,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     con_menu = false
   }
 
-  if(form_id == ""){
+  if(form_id == "1ris5vIvuRruQq3JPPoudwh5YuctqofYQfS3LnHYcMlk"){
     con_mail = false
   }
 
