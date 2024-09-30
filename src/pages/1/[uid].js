@@ -52,8 +52,6 @@ const Invitacion = ({ article }) => {
 
 
 
-
-
         {article.data.music &&
           <div className='fixed bottom-4 right-0 z-50'>
             <Audiowe music={article.data.music} />

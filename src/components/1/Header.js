@@ -73,7 +73,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
             </div>
             <div className=" h-[100vh] hidden md:block">
                 <div className="top-0 w-full h-full ">
-                    <div className='hidden md:block'>
+                    <div className='hidden md:block h-screen'>
                         <img
                             src={foto_pc}
                             style={{ ...imageStylepc, width: '100%', height: '100%' }}

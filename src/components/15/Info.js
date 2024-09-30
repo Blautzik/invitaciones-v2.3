@@ -287,7 +287,7 @@ const Info = ({ article }) => {
 
                                     <div className='flex flex-col items-center mt-6'>
                                         <h3 className={`${openSans.className} text-xl text-center w-80 ${text}`}> Dress Code </h3>
-                                        <h4 className={`${openSans.className} text-base text-center w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
+                                        <h4 className={`${openSans.className} dresscode text-base text-center w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
                                         <div className={`h-16 w-16 relative m-6 ${text == "text-secondary-600" && "opacity-60"}  ${text == "text-white" && "invert"}`}>
                                             <Image
                                                 src={suitIcon}
