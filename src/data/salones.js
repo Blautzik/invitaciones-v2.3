@@ -151,7 +151,7 @@ export const salones = [
         direccion: "Dardo Rocha 1810, Martínez, Buenos Aires",
         link_maps: "https://maps.app.goo.gl/Upj79AEbmUSPLV4b7",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1727391011/16776824397_2_11zon_hczbp2.jpg',
-        link: '#'
+        link: ''
     },
     {
         nombre: "Jano's San Miguel",

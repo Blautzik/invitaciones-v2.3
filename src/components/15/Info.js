@@ -47,6 +47,10 @@ const Info = ({ article }) => {
         article.mfmf = "sin_janos"
     }
 
+    if ( article.form_id == "1xEz5o-7DzhgQaxoMWHJ_np5PwKr3FO5Z7LIyTuYwyKg"){
+        article.mfmf = "sin_janos"
+    }
+
 
     if (article.form_id == "1gxvaHJl7vw6q-k-b4IKTlFAXINgHub3Gc3-3EwOtesc") {
         salon.foto_salon = "https://res.cloudinary.com/fedexx/image/upload/v1725450558/fotos%20salones/Imagen_de_WhatsApp_2024-09-02_a_las_12.20.25_c5dc6810_cxbybf.jpg"
@@ -262,7 +266,7 @@ const Info = ({ article }) => {
                                         <></>
                                 }
                             </motion.div>
-                            {salon?.link &&
+                            {salon?.link_maps &&
                                 <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly '>
                                     {
                                         article.mfmf != "sin_janos" &&
