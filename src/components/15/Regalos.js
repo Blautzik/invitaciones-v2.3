@@ -11,6 +11,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         filter: 'invert(1)',
     }
     let cbuCustom = false
+    let frase_abajo = false
 
     if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         opacity = 1
@@ -41,6 +42,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     if (article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA") {
         cbuCustom = "$leo.dam95"
         imageStyle.objectPosition = "55% 50%"
+    }
+
+
+    if (article.form_id == "1xEz5o-7DzhgQaxoMWHJ_np5PwKr3FO5Z7LIyTuYwyKg"){
+        frase_abajo = "El salón cuenta con sector de regalos y cofre"
     }
 
 
@@ -92,6 +98,9 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                         </div>
+                        {frase_abajo && 
+                            <p>{frase_abajo}</p>
+                        }
                     </Accordion>
                     }
                 </div>

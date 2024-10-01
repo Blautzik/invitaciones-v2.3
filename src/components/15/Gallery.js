@@ -1,3 +1,4 @@
+'use client'
 import { AiOutlinePlayCircle } from "react-icons/ai";
 import { useState } from 'react'
 import { easeInOut, easeIn, motion } from "framer-motion"
