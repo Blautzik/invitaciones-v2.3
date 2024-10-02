@@ -231,6 +231,13 @@ export const salones = [
         link: 'https://www.janoseventos.com/salones.php?q=janos-san-telmo'
     },
     {
+        nombre: "Jano's San Telmo 2",
+        direccion: "Moreno 550 – San Telmo",
+        link_maps: "https://maps.app.goo.gl/urFB51TRdnsHQDf68",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1727906119/1718723513Janos_San_Telmo_2-63_j5jyc4.jpg',
+        link: 'https://www.janoseventos.com/salones.php?q=janos-san-telmo2'
+    },
+    {
         nombre: "Jano's Martinez",
         direccion: "Monseñor Larumbe 821 – Martinez",
         link_maps: "http://maps.google.com/?q=Jano's+Martinez",
