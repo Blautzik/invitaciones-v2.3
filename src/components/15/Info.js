@@ -31,6 +31,7 @@ const Info = ({ article }) => {
     let bgbtn = "bg-black"
     let txtbtn = "text-slate-50"
     let foto_ceremonia = false
+    let ceremonia = false
 
     if (article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A") {
         hora_fin = "20:00"
@@ -73,6 +74,10 @@ const Info = ({ article }) => {
         bgbtn = "bg-[#e8e4db]"
         txtbtn = "text-secondary-600"
     }
+
+    if (article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA") {
+        ceremonia = "Ceremonia en el Salón 20:00 hs"
+    }   
 
 
     
@@ -195,6 +200,7 @@ const Info = ({ article }) => {
                                         <>
                                             <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
                                             <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora} hs</p>
+                                            {ceremonia &&<h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{ceremonia}</h4>}
                                         </>
                                 }
                                 {hora_fin &&

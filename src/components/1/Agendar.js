@@ -3,7 +3,7 @@ import { comfortaa, openSans } from "@/utils/fonts";
 import Image from "next/image";
 import { RiFacebookLine, RiTwitterLine, RiInstagramLine } from "react-icons/ri";
 import { BiCalendar, BiCalendarCheck } from "react-icons/bi";
-import {format, parse, parseISO, isValid} from 'date-fns';
+import {format, parse, parseISO, isValid, addDays} from 'date-fns';
 import {es} from 'date-fns/locale';
 
 
@@ -29,19 +29,16 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, bg}) => {
     const fechaCeremonia = parseDateString(fecha);
     
     const formattedDate = fechaCeremonia 
-        ? format(fechaCeremonia, 'yyyy/MM/dd', { locale: es })
+        ? format(addDays(fechaCeremonia, 1), 'yyyy/MM/dd', { locale: es })
         : 'Fecha inválida';
-
 
     const fecha2 = new Date(fecha);
 
-    let txt = "text-black"
+    let txt = "text-black";
 
-    if(bg == "bg-[#e8e4db]"){
-        txt="text-secondary-600"
+    if (bg === "bg-[#e8e4db]") {
+        txt = "text-secondary-600";
     }
-
-
 
 
     return (

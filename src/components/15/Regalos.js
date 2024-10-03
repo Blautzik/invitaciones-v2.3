@@ -45,7 +45,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
 
 
-    if (article.form_id == "1xEz5o-7DzhgQaxoMWHJ_np5PwKr3FO5Z7LIyTuYwyKg"){
+    if (article.form_id == "1xEz5o-7DzhgQaxoMWHJ_np5PwKr3FO5Z7LIyTuYwyKg") {
         frase_abajo = "El salón cuenta con sector de regalos y cofre"
     }
 
@@ -94,11 +94,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                         <div className={`${openSans.className} text-sm  opacity-100`}>
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}
-                            {cbuCustom && <p className='pb-2'><strong>Lemon tag</strong> $leo.dam95 </p>}
                             <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
+                            {cbuCustom && <> <br /> <p className='pb-2'><strong>LEMON TAG</strong> $leo.dam95 </p>   </>  }
                         </div>
-                        {frase_abajo && 
+                        {frase_abajo &&
                             <p>{frase_abajo}</p>
                         }
                     </Accordion>
