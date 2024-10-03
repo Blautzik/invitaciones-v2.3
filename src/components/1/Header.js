@@ -27,6 +27,10 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
         foto_pc = getGoogleDriveImageUrl("https://drive.google.com/file/d/1CKjeQGTl3-PGxTsYjPJ45sf8R2GfpcOG/view?usp=sharing")
     }
 
+    if(mail == "karina_1607@yahoo.com.ar"){
+        foto_pc = "https://res.cloudinary.com/fedexx/image/upload/c_fill_pad,w_1500,h_1080,g_auto,b_gen_fill/v1727981418/Ornella-173_-_karina_celentano_h1fwhb.jpg"
+    }
+
     const dateFormated = moment(date).format('DD-MM-YYYY')
 
 
