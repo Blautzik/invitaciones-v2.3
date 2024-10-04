@@ -203,6 +203,13 @@ export const salones = [
         link: 'https://www.janoseventos.com/salones.php?q=janos-puerto-madero'
     },
     {
+        nombre: "Jano's Puerto Madero Boutique",
+        direccion: "Olga Cossettini 1031",
+        link_maps: "http://maps.google.com/?q=Jano's+Puerto+Madero",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702988208/salones/puerto%20madero.png',
+        link: 'https://www.janoseventos.com/salones.php?q=janos-puerto-madero'
+    },
+    {
         nombre: "Jano's Olivos",
         direccion: "Mariano Pelliza 310 – Olivos",
         link_maps: "http://maps.google.com/?q=Jano's+Olivos",

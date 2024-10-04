@@ -63,6 +63,10 @@ const Info = ({ article }) => {
         text = "text-white"
     }
 
+    if (article.mail == "karina_1607@yahoo.com.ar" ){
+        hora_fin = "05:00"
+    }
+
 
     if (article.form_id == "1fxKU_AxCcsXCC9i-OXHvMeHP9HXhQFSRvHm_txKCe_4") {
         foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1701302507/jesi%20y%20maxi/descarga_mjuczu.jpg"
