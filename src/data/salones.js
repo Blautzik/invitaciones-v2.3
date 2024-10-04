@@ -204,10 +204,10 @@ export const salones = [
     },
     {
         nombre: "Jano's Puerto Madero Boutique",
-        direccion: "Olga Cossettini 1031",
-        link_maps: "http://maps.google.com/?q=Jano's+Puerto+Madero",
-        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702988208/salones/puerto%20madero.png',
-        link: 'https://www.janoseventos.com/salones.php?q=janos-puerto-madero'
+        direccion: "Av. Dr. Tristán Achával Rodríguez 1353, CABA",
+        link_maps: "http://maps.google.com/?q=Jano's+Puerto+Madero+Boutique",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1728084197/1727800329WhatsApp_Image_2024-09-30_at_3.58.22_PM_11zon_ipbjyf.webp',
+        link: 'https://janoseventos.com/blog/post.php?id=107'
     },
     {
         nombre: "Jano's Olivos",
