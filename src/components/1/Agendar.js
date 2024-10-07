@@ -7,7 +7,7 @@ import {format, parse, parseISO, isValid, addDays} from 'date-fns';
 import {es} from 'date-fns/locale';
 
 
-const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, bg}) => {
+const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}) => {
 
     const parseDateString = (dateString) => {
         let parsedDate;
@@ -28,7 +28,7 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, bg}) => {
 
     const fechaCeremonia = parseDateString(fecha);
     
-    const formattedDate = fechaCeremonia 
+    let formattedDate = fechaCeremonia 
         ? format(addDays(fechaCeremonia, 1), 'yyyy/MM/dd', { locale: es })
         : 'Fecha inválida';
 
@@ -38,6 +38,11 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, bg}) => {
 
     if (bg === "bg-[#e8e4db]") {
         txt = "text-secondary-600";
+    }
+
+
+    if (agendar){
+        formattedDate = agendar
     }
 
 

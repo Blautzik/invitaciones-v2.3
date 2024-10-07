@@ -51,6 +51,7 @@ const Invitacion = ({ article }) => {
         let foto_agendar = false
         let foto_regalos = false
         let bg = false
+        let agendar = false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -75,6 +76,11 @@ const Invitacion = ({ article }) => {
             bg = "bg-[#e8e4db]"
             article.sin_janos=true
             portadaPC="https://res.cloudinary.com/fedexx/image/upload/v1727139538/XV_1920_x_1080_px_20_hdntbw.png"
+        }
+
+
+        if(article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA"){
+            agendar = "2024/10/26" 
         }
 
 
@@ -157,7 +163,7 @@ const Invitacion = ({ article }) => {
 
 
                 <div className='mb-5'>
-                    <Agendar foto_agendar={foto_agendar} fecha={article.fecha} bg={bg} />
+                    <Agendar foto_agendar={foto_agendar} fecha= { article.fecha} bg={bg} agendar={agendar} />
                 </div>
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
