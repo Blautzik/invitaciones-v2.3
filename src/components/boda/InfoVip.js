@@ -108,7 +108,7 @@ const InfoVip = ({ article }) => {
 
                             <>
                                 <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
-                                <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora}</p>
+                                <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora} hs.</p>
                             </>
                 
                 </motion.div>
