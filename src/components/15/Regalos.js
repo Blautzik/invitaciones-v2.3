@@ -50,6 +50,14 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
 
 
+    if (article.mail == "karina_1607@yahoo.com.ar") {
+        iconStyle = {
+            opacity: 0,
+            
+        }
+    }
+
+
 
 
 
