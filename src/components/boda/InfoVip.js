@@ -187,14 +187,14 @@ const InfoVip = ({ article }) => {
                             </a>
                         }
                         <a href={salon.link_maps} target="_blank">
-                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-5 w-44 lg:w-64 ${bgbtn} rounded-full mx-1 py-2 px-6 ${txtbtn} outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
+                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-7 w-44 lg:w-64 ${bgbtn} rounded-full mx-1 py-2 px-6 ${txtbtn} outline-none shadow-lg transform active:scale-90 transition-transform`}>¿Cómo llegar?</button>
                         </a>
                     </div>
                 }
                 <div className="flex flex-col justify-center items-center">
-                        <div className='flex flex-col items-center mt-6'>
+                        <div className='flex flex-col items-center mt-7'>
                             <h3 className={`${openSans.className} text-2xl text-center mb-3 w-80 ${text}`}> Dress Code </h3>
-                            <h4 className={`${openSans.className} text-2xl text-center mb-20 w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
+                            <h4 className={`${openSans.className} text-2xl text-center mb-14 w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
                         </div>
                 </div>
             </div>
