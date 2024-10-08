@@ -48,7 +48,7 @@ const Info = ({ article }) => {
         article.mfmf = "sin_janos"
     }
 
-    if ( article.form_id == "1xEz5o-7DzhgQaxoMWHJ_np5PwKr3FO5Z7LIyTuYwyKg"){
+    if (article.form_id == "1xEz5o-7DzhgQaxoMWHJ_np5PwKr3FO5Z7LIyTuYwyKg") {
         article.mfmf = "sin_janos"
     }
 
@@ -63,7 +63,7 @@ const Info = ({ article }) => {
         text = "text-white"
     }
 
-    if (article.mail == "karina_1607@yahoo.com.ar" ){
+    if (article.mail == "karina_1607@yahoo.com.ar") {
         hora_fin = "05:00"
     }
 
@@ -81,10 +81,10 @@ const Info = ({ article }) => {
 
     if (article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA") {
         ceremonia = "Ceremonia en el Salón 20:00 hs"
-    }   
+    }
 
 
-    
+
 
 
     function capitalize(string) {
@@ -174,7 +174,7 @@ const Info = ({ article }) => {
                                     </div>
 
                             }
-                            <h3 className={`${comfortaa.className} ${text} text-slate-700 sm:text-2xl xs:text-xl ${foto_ceremonia? "mb-0" : "mb-10"} font-[700] text-center`}>La Fiesta</h3>
+                            <h3 className={`${comfortaa.className} ${text} text-slate-700 sm:text-2xl xs:text-xl ${foto_ceremonia ? "mb-0" : "mb-10"} font-[700] text-center`}>La Fiesta</h3>
                         </motion.div>
                         <div className="flex flex-col justify-center items-center">
                             <motion.div
@@ -200,12 +200,19 @@ const Info = ({ article }) => {
                                             <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Ceremonia civil 20 hs</h4>
                                             <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Fiesta a continuación </h4>
                                         </>
-                                        :
-                                        <>
-                                            <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
-                                            <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora} hs</p>
-                                            {ceremonia &&<h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{ceremonia}</h4>}
-                                        </>
+                                        : article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA" ?
+                                            <>
+                                                <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 text-slate-600`}>Día</h4>
+                                                <p className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Sábado 26 de Octubre</p>
+                                                <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Ceremonia en el salón 20hs</h4>
+                                                <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>Recepción 21hs </h4>
+                                            </>
+                                            :
+                                            <>
+                                                <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
+                                                <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora} hs</p>
+                                                {ceremonia && <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{ceremonia}</h4>}
+                                            </>
                                 }
                                 {hora_fin &&
                                     <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>Hasta Las: {hora_fin}</p>

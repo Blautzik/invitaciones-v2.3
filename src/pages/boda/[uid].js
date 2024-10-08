@@ -13,6 +13,9 @@ import FormularioNombre from '@/components/boda/FormularioNombres';
 import { SliderTestigos } from '@/components/boda/SliderTestigos';
 import InfoSouci from '@/components/15/InfoSouci';
 import InfoCondicional from '@/components/boda/InfoCondicional';
+import Countdown from '@/components/15/Countdown';
+import { openSans } from '../../utils/fonts';
+import Link from 'next/link';
 
 
 
@@ -52,6 +55,8 @@ const Invitacion = ({ article }) => {
         let foto_regalos = false
         let bg = false
         let agendar = false
+        let countdownFuera = false
+        let texto = "text-slate-50"
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -70,34 +75,31 @@ const Invitacion = ({ article }) => {
         if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
             bg = "bg-[#f8f5ee]"
         }
+
         let portadaPC = false
 
         if (article.form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
             bg = "bg-[#e8e4db]"
-            article.sin_janos=true
-            portadaPC="https://res.cloudinary.com/fedexx/image/upload/v1727139538/XV_1920_x_1080_px_20_hdntbw.png"
+            article.sin_janos = true
+            portadaPC = "https://res.cloudinary.com/fedexx/image/upload/v1727139538/XV_1920_x_1080_px_20_hdntbw.png"
+            countdownFuera = true
+            texto = "text-secondary-600"
         }
-
-
-        if(article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA"){
-            agendar = "2024/10/26" 
-        }
-
-
-
 
         const mail = article.mail
 
         let title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Nos casamos!"}`;
         let description = `Te invitamos a compartir la alegría de esta fiesta inolvidable y única`;
 
-
-
-        
-        if(article.form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k"){
+        if (article.form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k") {
             portadaPC = "https://res.cloudinary.com/fedexx/image/upload/c_fill_pad,w_1920,h_900,g_auto,b_gen_fill/v1725917127/FullSizeRender_-_Milagros_Blaquier_bymrxn.jpg"
             title = "Maila & Maxi | 4-10 — 17hs"
             description = "¡Te invitamos a nuestro civil! R.S.V.P."
+        }
+
+
+        if (article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA") {
+            agendar = "2024/10/26"
         }
 
 
@@ -124,10 +126,21 @@ const Invitacion = ({ article }) => {
                     />
                 </div>
 
+                {countdownFuera &&
+                    <>
+                        <div className={`flex flex-col items-center relative -mt-16  pt-16 mb-12 ${bg} shadow-lg`}>
+                            <h2 className={`${openSans.className} ${texto} max-w-xs  text-center text-xl tracking-widest ]`}> Nos casamos en</h2>
+                            <Countdown date={article.fecha} texto={texto} />
+                            <Link href='#info' scroll={false}>
+                                <button className={`${openSans.className} py-3 px-9 bg-white rounded-full text-gray-900 font-[900] text-center mb-8 `}>MÁS INFO</button>
+                            </Link>
+                        </div>
+                    </>
 
-                <InfoCondicional article={article}/>
+                }
 
 
+                <InfoCondicional article={article} />
 
                 {article.regalo_sin_datos &&
                     <div>
@@ -140,7 +153,7 @@ const Invitacion = ({ article }) => {
                         <Regalos article={article} foto_regalos={foto_regalos} bg={bg} />
                     </div>
                 }
-                
+
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
                         <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
@@ -163,7 +176,7 @@ const Invitacion = ({ article }) => {
 
 
                 <div className='mb-5'>
-                    <Agendar foto_agendar={foto_agendar} fecha= { article.fecha} bg={bg} agendar={agendar} />
+                    <Agendar foto_agendar={foto_agendar} fecha={article.fecha} bg={bg} agendar={agendar} />
                 </div>
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
@@ -239,7 +252,7 @@ export async function getStaticPaths() {
     }
 
     const paths = posts
-        .filter(post => post.url) 
+        .filter(post => post.url)
         .map(post => ({
             params: { uid: String(post.url) },
         }));
