@@ -54,11 +54,6 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
 
 
-
-
-
-
-
     return (
         <div className='h-screen w-full'>
             <div className="h-full w-full flex flex-col relative items-center justify-between bg-gray-600">
@@ -94,7 +89,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                         <div className={`${openSans.className} text-sm  opacity-100`}>
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}
-                            <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>
+                            {article.alias && <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>}
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                             {cbuCustom && <> <br /> <p className='pb-2'><strong>LEMON TAG</strong> $leo.dam95 </p>   </>  }
                         </div>
