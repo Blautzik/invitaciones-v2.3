@@ -32,6 +32,7 @@ const Info = ({ article }) => {
     let txtbtn = "text-slate-50"
     let foto_ceremonia = false
     let ceremonia = false
+    let horario_distinto= ""
 
     if (article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A") {
         hora_fin = "20:00"
@@ -64,7 +65,7 @@ const Info = ({ article }) => {
     }
 
     if (article.mail == "karina_1607@yahoo.com.ar") {
-        hora_fin = "05:00"
+        horario_distinto = " 21 a 05 "
     }
 
 
@@ -210,7 +211,7 @@ const Info = ({ article }) => {
                                             :
                                             <>
                                                 <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
-                                                <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " + hora} hs</p>
+                                                <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " } { horario_distinto ? horario_distinto : hora} hs</p>
                                                 {ceremonia && <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{ceremonia}</h4>}
                                             </>
                                 }

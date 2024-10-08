@@ -78,6 +78,9 @@ const Invitacion = ({ article }) => {
         const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
 
 
+        console.log("frase",article.frase_regalos)
+
+
         return (
             <>
                 <Head>
@@ -193,7 +196,7 @@ const Invitacion = ({ article }) => {
 
 
 
-                            {article.frase_regalos &&
+                            {foto_regalos &&
                                 <div>
                                     <Regalos article={article} foto_regalos={foto_regalos} />
                                 </div>

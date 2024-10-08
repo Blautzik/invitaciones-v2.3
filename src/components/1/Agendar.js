@@ -29,7 +29,7 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}
     const fechaCeremonia = parseDateString(fecha);
     
     let formattedDate = fechaCeremonia 
-        ? format(addDays(fechaCeremonia, 1), 'yyyy/MM/dd', { locale: es })
+        ? format(addDays(fechaCeremonia, 0), 'yyyy/MM/dd', { locale: es })
         : 'Fecha inválida';
 
     const fecha2 = new Date(fecha);
