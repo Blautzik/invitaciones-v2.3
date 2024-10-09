@@ -143,9 +143,7 @@ const Invitacion = ({ article }) => {
                             </Link>
                         </div>
                     </>
-
                 }
-
 
                 <InfoCondicional article={article} />
 

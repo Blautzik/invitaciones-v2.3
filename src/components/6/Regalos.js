@@ -21,13 +21,8 @@ const Regalos = ({ article }) => {
     }
 
     return (
-        <div className='h-screen w-full'>
-            <div className="h-full w-full flex flex-col relative items-center justify-between bg-gray-600">
-                <img
-                    src={article.fondo_regalos}
-                    style={{ ...imageStyle, width: '100%', height: '100%' }}
-                    alt='portada'
-                />
+        <div className='h-screen w-full '>
+            <div className="h-full w-full flex flex-col relative items-center justify-between " style={{ backgroundImage: `url(${article.fondo_regalos})`, objectFit:"cover", objectPosition:"center"  }}>
                 <div className={`${article.regalo_sin_datos ? 'pt-[72vh] ' : 'mt-6'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
 
                     <img

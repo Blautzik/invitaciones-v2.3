@@ -48,15 +48,10 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
       const content = await response.json();
 
       if (response.ok) {
-        // Submission was successful
-        // Clear the form fields
         setMessage('');
         setName('');
         setMenu('Si');
-
-        // Enable the submit button again
         setIsSubmitting(false);
-
         alert('Asistencia registrada correctamente! Muchas gracias!');
       } else {
 
@@ -118,7 +113,7 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
                   name="select"
                   className={`${inputCN} text-gray-500`}
                   onChange={(e) => setchicos(e.target.value)}
-                  value={menu}
+                  value={chicos}
                   required
                 >
                   <option value="1">1</option>
