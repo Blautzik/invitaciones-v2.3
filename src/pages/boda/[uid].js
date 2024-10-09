@@ -106,6 +106,7 @@ const Invitacion = ({ article }) => {
 
 
         if (article.form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
+            portadaPC =  getGoogleDriveImageUrl("https://drive.google.com/file/d/13NtL5nST7jldK1kjEKFWr8gYZzSLPwtn/view?usp=sharing")
             formulario_simple = true
         }
 

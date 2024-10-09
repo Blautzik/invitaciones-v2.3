@@ -2,7 +2,6 @@
 import YouTube from 'react-youtube';
 
 const YouTubePlayer = ({ videoId }) => {
-    // Set up event handlers
     const onReady = (event) => {
 
 

@@ -30,9 +30,7 @@ const Info = ({ article }) => {
     let text = "text-slate-700"
     let bgbtn = "bg-black"
     let txtbtn = "text-slate-50"
-    let foto_ceremonia = false
-    let ceremonia = false
-    let horario_distinto= ""
+    let foto_ceremonia, ceremonia, horario_distinto, diciembre, lina = false
 
     if (article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A") {
         hora_fin = "20:00"
@@ -71,6 +69,12 @@ const Info = ({ article }) => {
 
     if (article.form_id == "1fxKU_AxCcsXCC9i-OXHvMeHP9HXhQFSRvHm_txKCe_4") {
         foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1701302507/jesi%20y%20maxi/descarga_mjuczu.jpg"
+        diciembre = true
+    }
+
+    if (article.form_id == "") {
+        foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1701302507/jesi%20y%20maxi/descarga_mjuczu.jpg"
+        lina = true
     }
 
 
@@ -130,12 +134,27 @@ const Info = ({ article }) => {
                         />
                     }
 
-                    <div className={`${openSans.className}my-4 text-center leading-7`}>
+                    {
 
-                        <p className={textito}><strong>Fecha: </strong> Domingo 1 de Diciembre</p>
-                        <p className={textito}><strong>Hora: </strong> 12:00 hs</p>
-                        <p className={textito}><strong>Lugar: </strong> Jano's Palermo Hollywood</p>
-                    </div>
+                        diciembre &&
+                        <div className={`${openSans.className}my-4 text-center leading-7`}>
+
+                            <p className={textito}><strong>Fecha: </strong> Domingo 1 de Diciembre</p>
+                            <p className={textito}><strong>Hora: </strong> 12:00 hs</p>
+                            <p className={textito}><strong>Lugar: </strong> Jano's Palermo Hollywood</p>
+                        </div>
+                    }
+
+                    {
+                        lina &&
+                        <div className={`${openSans.className}my-4 text-center leading-7`}>
+                            <p className={textito}><strong>Fecha: </strong> Domingo 1 de Diciembre</p>
+                            <p className={textito}><strong>Hora: </strong> 11:45 hs</p>
+                            <p className={textito}><strong>Lugar: </strong> Basílica Sagrado Corazón de Jesús </p>
+                            <p className={textito}><strong>Dirección: </strong> Vélez Sársfield 1371, Barracas  </p>
+
+                        </div>
+                    }
                 </div>
 
 
@@ -211,7 +230,7 @@ const Info = ({ article }) => {
                                             :
                                             <>
                                                 <h4 className={`${openSans.className} text-xl font-semibold text-center w-80 mt-3 ${text}`}>Día</h4>
-                                                <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - " } { horario_distinto ? horario_distinto : hora} hs</p>
+                                                <p className={`${openSans.className} text-base mb-2 text-center w-80 ${text}`}>{capitalize(formattedDate) + " - "} {horario_distinto ? horario_distinto : hora} hs</p>
                                                 {ceremonia && <h4 className={`${openSans.className} text-base mb-2 text-center w-80 text-slate-600`}>{ceremonia}</h4>}
                                             </>
                                 }
