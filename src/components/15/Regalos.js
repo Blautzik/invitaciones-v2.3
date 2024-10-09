@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { comfortaa, openSans } from '../../utils/fonts';
 import Accordion from '../6/Accordion'
+import { FaBullseye } from 'react-icons/fa6';
 
 const Regalos = ({ article, foto_regalos, bg }) => {
 
@@ -12,6 +13,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
     let cbuCustom = false
     let frase_abajo = false
+    let showAlias = true
 
     if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         opacity = 1
@@ -57,6 +59,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         }
     }
 
+    if (article.alias == "no" ){
+       showAlias = false
+    }
+
 
 
 
@@ -97,7 +103,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                         <div className={`${openSans.className} text-sm  opacity-100`}>
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}
-                            {article.alias && <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>}
+                            {showAlias && <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>}
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
                             {cbuCustom && <> <br /> <p className='pb-2'><strong>LEMON TAG</strong> $leo.dam95 </p>   </>  }
                         </div>
