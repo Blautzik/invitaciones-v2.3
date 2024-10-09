@@ -14,6 +14,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     let cbuCustom = false
     let frase_abajo = false
     let showAlias = true
+    let hide = false
 
     if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         opacity = 1
@@ -57,6 +58,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
             opacity: 0,
             
         }
+        hide=true
     }
 
     if (article.alias == "no" ){
@@ -85,7 +87,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                         width={65}
                         style={iconStyle}
                     />
-                    <h3 className={`${comfortaa.className} text-2xl mt-4 mb-2 font-[700]`}>Regalos</h3>
+                    <h3 className={`${comfortaa.className} text-2xl mt-4 mb-2 font-[700]`}> {!hide && "Regalos"}</h3>
                     {
                         article.mail === "marine" ?
 
