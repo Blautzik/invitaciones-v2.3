@@ -16,6 +16,7 @@ import InfoCondicional from '@/components/boda/InfoCondicional';
 import Countdown from '@/components/15/Countdown';
 import { openSans } from '../../utils/fonts';
 import Link from 'next/link';
+import FormularioSimple from '@/components/15/FormularioSimple';
 
 
 
@@ -57,6 +58,7 @@ const Invitacion = ({ article }) => {
         let agendar = false
         let countdownFuera = false
         let texto = "text-slate-50"
+        let formulario_simple = false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -102,6 +104,10 @@ const Invitacion = ({ article }) => {
             agendar = "2024/10/26"
         }
 
+
+        if (article.form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
+            formulario_simple = true
+        }
 
         return (
             <>
@@ -165,8 +171,10 @@ const Invitacion = ({ article }) => {
                         mail === "mercedes.matta10@gmail.com" ?
                             <FormularioNombre form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} mail={mail} frase_formulario={article.frase_formulario} />
                             :
+                            formulario_simple ? <FormularioSimple form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg}/> 
+                            :
                             <Formulario form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg} />
-                    }
+                             }
                 </div>
 
 
