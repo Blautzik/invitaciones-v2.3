@@ -15,6 +15,9 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     let frase_abajo = false
     let showAlias = true
     let hide = false
+    let cta2 = false
+    let cbu2 = false
+    let alias3 = false
 
     if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         opacity = 1
@@ -51,20 +54,29 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     if (article.form_id == "1xEz5o-7DzhgQaxoMWHJ_np5PwKr3FO5Z7LIyTuYwyKg") {
         frase_abajo = "El salón cuenta con sector de regalos y cofre"
     }
+    if (article.form_id == "1S2MaJiqQEDy42gv8_E6L9OTW5B5piCAAjgjjIuSyaPQ") {
+        texto = "text-gray-600"
+    }
 
 
     if (article.mail == "karina_1607@yahoo.com.ar") {
         iconStyle = {
             opacity: 0,
-            
+
         }
-        hide=true
+        hide = true
     }
 
-    if (article.alias == "no" ){
-       showAlias = false
+    if (article.alias == "no") {
+        showAlias = false
     }
 
+
+    if (article.form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM") {
+        cta2 = "cuenta en dólares"
+        cbu2 = "00703916-31004008808033"
+        alias3 = "ALDEA.RING.VACA"
+    }
 
 
 
@@ -103,11 +115,21 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                 <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg ? "opacity-100" : "opacity-70"} `}>
                     {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto}>
                         <div className={`${openSans.className} text-sm  opacity-100`}>
+                            {cta2 && <p className='pb-2'><strong>Cuenta en pesos </strong> </p>}
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}
                             {showAlias && <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>}
                             {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
-                            {cbuCustom && <> <br /> <p className='pb-2'><strong>LEMON TAG</strong> $leo.dam95 </p>   </>  }
+                            {cbuCustom && <> <br /> <p className='pb-2'><strong>LEMON TAG</strong> $leo.dam95 </p>   </>}
+                            {
+                                cta2 && <>
+                                    {cta2 && <p className='pb-2'><strong>Cuenta en dólares </strong> </p>}
+                                    {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
+                                    {cbu2 && <p className='pb-2'><strong>CBU: </strong> {cbu2} </p>}
+                                    {showAlias && <p className='pb-2'><strong>Alias: </strong> {alias3}</p>}
+                                    {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
+                                </>
+                            }
                         </div>
                         {frase_abajo &&
                             <p>{frase_abajo}</p>

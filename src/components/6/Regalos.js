@@ -22,7 +22,7 @@ const Regalos = ({ article }) => {
 
     return (
         <div className='h-screen w-full '>
-            <div className="h-full w-full flex flex-col relative items-center justify-between " style={{ backgroundImage: `url(${article.fondo_regalos})`, objectFit:"cover", objectPosition:"center"  }}>
+            <div className="h-full w-full flex flex-col relative items-center justify-between " style={{ backgroundImage: `url(${article.fondo_regalos})`, backgroundSize:'cover', backgroundPosition:"center"  }}>
                 <div className={`${article.regalo_sin_datos ? 'pt-[72vh] ' : 'mt-6'} text-center mx-10 flex flex-col items-center text-white opacity-100 z-30 `}>
 
                     <img
@@ -56,7 +56,6 @@ const Regalos = ({ article }) => {
                             <div className={`${openSans.className} text-sm font-thin opacity-100`}>
                                 <p className='pb-2'><strong>Lista 1: </strong> Fravega</p>
                                 <p className='pb-2'><strong>Lista 2: </strong> Avon </p>
-
                             </div>
                         </Accordion>
                     }
