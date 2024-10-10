@@ -79,7 +79,7 @@ const InfoCeremonia = ({ article }) => {
                     <div className={`${openSans.className}my-4 text-center leading-7`}>
 
                         <p className={textito}><strong>Fecha: </strong>{article.fecha_ceremonia} </p>
-                        <p className={textito}><strong>Hora: </strong> {hora}</p>
+                        <p className={textito}><strong>Hora: </strong> {article.hora}</p>
                         <p className={textito}><strong>Lugar: </strong> {article.lugar}</p>
                         <p className={textito}>{article.direccion_ceremonia}</p>
                     </div>
