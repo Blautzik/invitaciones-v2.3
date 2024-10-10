@@ -58,6 +58,9 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     if (article.form_id == "1S2MaJiqQEDy42gv8_E6L9OTW5B5piCAAjgjjIuSyaPQ") {
         texto = "text-gray-900"
         texto2 = "text-white"
+        iconStyle = {
+            filter: "invert(0.1"
+        }
     }
 
 
