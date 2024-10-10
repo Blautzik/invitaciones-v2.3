@@ -18,6 +18,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     let cta2 = false
     let cbu2 = false
     let alias3 = false
+    let texto2 = false
 
     if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         opacity = 1
@@ -55,7 +56,8 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         frase_abajo = "El salón cuenta con sector de regalos y cofre"
     }
     if (article.form_id == "1S2MaJiqQEDy42gv8_E6L9OTW5B5piCAAjgjjIuSyaPQ") {
-        texto = "text-gray-600"
+        texto = "text-gray-900"
+        texto2 = "text-white"
     }
 
 
@@ -113,7 +115,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                     }
                 </div>
                 <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg ? "opacity-100" : "opacity-70"} `}>
-                    {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto}>
+                    {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto2 ? texto2 : texto}>
                         <div className={`${openSans.className} text-sm  opacity-100`}>
                             {cta2 && <p className='pb-2'><strong>Cuenta en pesos </strong> </p>}
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
