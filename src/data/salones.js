@@ -288,7 +288,7 @@ export const salones = [
     },
     {
         nombre: "Jano's Moreno",
-        direccion: "Francisco Piovano 3787 – Moreno",
+        direccion: "Perú 2015 esq. Piovano – Moreno",
         link_maps: "http://maps.google.com/?q=Jano's+Moreno",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702988378/salones/moreno.png',
         link: 'https://www.janoseventos.com/salones.php?q=janos-moreno'
