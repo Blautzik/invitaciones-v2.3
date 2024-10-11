@@ -140,7 +140,7 @@ const InfoCeremonia = ({ article }) => {
                 </div>
 
 
-                <a href={article.ubicacion} target='_blank'>
+                <a href={salon.link_maps} target='_blank'>
                     <button className={`${openSans.className} flex flex-row py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
                         <PiMapPin className=' text-lg mr-1' />
                         Cómo Llegar
