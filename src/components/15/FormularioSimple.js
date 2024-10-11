@@ -31,9 +31,9 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
     let form = {
       id,
       name,
-      chicos,
       message,
       menu,
+      chicos,
     };
 
     try {

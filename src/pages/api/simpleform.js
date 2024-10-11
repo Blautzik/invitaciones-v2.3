@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       range: 'A2:C2',
       valueInputOption: 'USER_ENTERED',
       requestBody: {
-        values: [[body.name, body.message, body.menu]],
+        values: [[body.name, body.message, body.menu, body.chicos]],
       },
     });
 
