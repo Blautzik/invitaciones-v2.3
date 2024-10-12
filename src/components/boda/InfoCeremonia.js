@@ -25,7 +25,7 @@ const InfoCeremonia = ({ article }) => {
         timeZone: 'America/Argentina/Buenos_Aires'
     });
 
-    const foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1701302507/jesi%20y%20maxi/descarga_mjuczu.jpg"
+    let foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1701302507/jesi%20y%20maxi/descarga_mjuczu.jpg"
 
     const salon = encontrarSalon(article.salon);
 
@@ -33,7 +33,9 @@ const InfoCeremonia = ({ article }) => {
     const link_maps = "https://maps.app.goo.gl/teqVKjJwCaPqGseT8"
 
 
-    console.log(article)
+    if (article.form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
+        foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1728739699/Imagen_de_WhatsApp_2024-10-11_a_las_14.27.55_88eddf8f_wozmzj.jpg"
+      }
 
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
     return (

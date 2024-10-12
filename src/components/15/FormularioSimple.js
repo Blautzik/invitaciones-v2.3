@@ -50,7 +50,8 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
       if (response.ok) {
         setMessage('');
         setName('');
-        setMenu('Si');
+        setMenu('');
+        setchicos('')
         setIsSubmitting(false);
         alert('Asistencia registrada correctamente! Muchas gracias!');
       } else {
@@ -63,6 +64,11 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
       alert('Error al registrar la asistencia. Por favor, intenta nuevamente.');
     }
   };
+
+
+  if (form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
+    frase_extra = "Comentarios y saludos. Indicar si tienen restricciones alimentarias"
+  }
 
   return (
     <div className={`${openSans.className} ${color_fondo ? color : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
