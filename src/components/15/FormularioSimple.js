@@ -69,6 +69,9 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
   if (form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
     frase_extra = "Comentarios y saludos. Indicar si tienen restricciones alimentarias"
   }
+  if (form_id == "1S2MaJiqQEDy42gv8_E6L9OTW5B5piCAAjgjjIuSyaPQ"){
+    frase_extra = "Comentarios y saludos. Indicar si tienen restricciones alimentarias"
+  }
 
   return (
     <div className={`${openSans.className} ${color_fondo ? color : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
