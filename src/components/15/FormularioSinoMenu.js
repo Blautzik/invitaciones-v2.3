@@ -2,9 +2,8 @@
 import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 import { openSans } from '../../utils/fonts';
-import FormularioSinoMenu from './FormularioSinoMenu';
 
-const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_ninos }) => {
+const FormularioSinoMenu = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_ninos }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('1');
@@ -67,14 +66,10 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
   };
 
 
-  if (form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
+  if (form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM") {
     frase_extra = "Comentarios y saludos. Indicar si tienen restricciones alimentarias"
   }
-  if (form_id == "1S2MaJiqQEDy42gv8_E6L9OTW5B5piCAAjgjjIuSyaPQ"){
-    return (
-      <FormularioSinoMenu form_id={form_id} frase_extra={frase_extra} />
-    )
-  }
+
 
   return (
     <div className={`${openSans.className} ${color_fondo ? color : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
@@ -117,9 +112,9 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
               <option value="No">No</option>
             </select>
           </div>
-          { menu == "Si" &&
+          {menu == "Si" &&
             <>
-              <h3 className="text-white text-md max-w-2xl font-[500] pl-2">Cuántas personas</h3>
+              <h3 className="text-white text-md max-w-2xl font-[500] pl-2">Elección de Menú</h3>
               <div className="flex items-center justify-center">
                 <select
                   name="select"
@@ -128,12 +123,12 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
                   value={chicos}
                   required
                 >
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
+                  <option value="Menú Principal">Menú Principal</option>
+                  <option value="Menú Vegetariano">Menú Vegetariano</option>
+                  <option value="Menú Vegano">Menú Vegano</option>
+                  <option value="Menú Celíaco">Menú Celíaco</option>
+                  <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>
+                  <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
                 </select>
               </div>
             </>
@@ -167,4 +162,4 @@ const FormularioSimple = ({ form_id, frase_extra, color_fondo, menu_antinino, si
   );
 };
 
-export default FormularioSimple;
+export default FormularioSinoMenu;
