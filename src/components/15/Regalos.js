@@ -88,7 +88,9 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         otra_altura = "h-[600px] md:h-screen"
     }
 
-
+    if (article.form_id == "1S2MaJiqQEDy42gv8_E6L9OTW5B5piCAAjgjjIuSyaPQ"){
+        otra_altura = "h-[600px] md:h-screen"
+    }
 
 
 
