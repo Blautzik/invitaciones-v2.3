@@ -1,5 +1,5 @@
 
-import { bride, comfortaa, great_vives } from '@/utils/fonts'
+import { bride, comfortaa, great_vives, openSans } from '@/utils/fonts'
 import Image from 'next/image'
 import React from 'react'
 
@@ -10,6 +10,7 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
 
 
     let tipo = great_vives.className
+    let otra = false
 
 
     if (form_id == "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k"){
@@ -17,8 +18,11 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
     }
 
     if (form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk"){
-        tipo= bride.className + " hidden"
+        frase_cierre = "Gracias por acompañarnos en este día tan especial."
+        otra = "Tatiana y Andrés"
+        tipo = openSans.className
     }
+
 
 
 
@@ -27,8 +31,11 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
         <div className='flex flex-col items-center justify-center text-center  '>
             
             
-            <h2 className={`${tipo} text-gray-700 font-thin md:text-4xl text-2xl mx-10 `}>
+            <h2 className={`${tipo}  ${otra ? "text-secondary-600" : "font-thin text-gray-700" } md:text-4xl text-xl mx-10 `}>
                { frase_cierre || "Gracias por acompañarnos en este momento tan importante!!"}
+            </h2>
+            <h2 className={`${tipo} ${otra ? "text-secondary-600 mt-3 mb-10" : "font-thin text-gray-700" }  md:text-4xl text-xl mx-10 `}>
+               { otra && otra }
             </h2>
             { !sin_janos &&
             <a href='https://janoseventos.com' target='_blank'>

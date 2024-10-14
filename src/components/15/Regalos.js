@@ -19,6 +19,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     let cbu2 = false
     let alias3 = false
     let texto2 = false
+    let otra_altura = false
 
     if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         opacity = 1
@@ -83,12 +84,16 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         alias3 = "ALDEA.RING.VACA"
     }
 
+    if(article.form_id  == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk"){
+        otra_altura = "h-[600px] md:h-screen"
+    }
+
 
 
 
 
     return (
-        <div className='h-screen w-full'>
+        <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full`}>
             <div className="h-full w-full flex flex-col relative items-center justify-between bg-gray-600">
                 <Image
                     src={foto_regalos}

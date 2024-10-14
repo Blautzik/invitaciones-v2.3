@@ -59,6 +59,7 @@ const Invitacion = ({ article }) => {
         let countdownFuera = false
         let texto = "text-slate-50"
         let formulario_simple = false
+        let nombre = article.nombre
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -86,6 +87,7 @@ const Invitacion = ({ article }) => {
             portadaPC = "https://res.cloudinary.com/fedexx/image/upload/v1727139538/XV_1920_x_1080_px_20_hdntbw.png"
             countdownFuera = true
             texto = "text-secondary-600"
+            nombre = "2024"
         }
 
         const mail = article.mail
@@ -188,7 +190,7 @@ const Invitacion = ({ article }) => {
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
 
-                <div className={`w-screen ${bg ? `${bg} text-secondary-600 mt-8` : "bg-violeta text-white"} h-8 text-center pt-2 `}>{article.nombre} </div>
+                <div className={`w-screen ${bg ? `${bg} text-secondary-600 mt-8` : "bg-violeta text-white"} h-8 text-center pt-2 `}>{nombre} </div>
             </>
         )
     }
