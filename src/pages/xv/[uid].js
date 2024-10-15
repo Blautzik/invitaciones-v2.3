@@ -64,6 +64,10 @@ const Invitacion = ({ article }) => {
             foto_regalos = getGoogleDriveImageUrl(article.foto_regalos)
         }
 
+        if (article.form_id == "1uG27558N8RX4coNRJrKF1qep_8l2xfJ1UeQvTZk26Rg"){
+            article.frase_cierre = "Gracias por acompañarnos"
+        }
+
 
         const ig_link = article["Link Instagram  (opcional)"];
 
@@ -77,8 +81,6 @@ const Invitacion = ({ article }) => {
         const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
         const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
 
-
-        console.log("frase",article.frase_regalos)
 
 
         return (

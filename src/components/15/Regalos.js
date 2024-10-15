@@ -93,9 +93,14 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
 
 
+    if (article.form_id == "1uG27558N8RX4coNRJrKF1qep_8l2xfJ1UeQvTZk26Rg") {
+        imageStyle.objectPosition = "30% 50%"
+    }
+
+
 
     return (
-        <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full`}>
+        <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
             <div className="h-full w-full flex flex-col relative items-center justify-between bg-gray-600">
                 <Image
                     src={foto_regalos}
@@ -126,7 +131,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                 </div>
                 <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg ? "opacity-100" : "opacity-70"} `}>
                     {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto2 ? texto2 : texto}>
-                        <div className={`${openSans.className} text-sm  opacity-100`}>
+                        <div className={`${openSans.className} text-sm  opacity-100 regalos`}>
                             {cta2 && <p className='pb-2'><strong>Cuenta en pesos </strong> </p>}
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}
