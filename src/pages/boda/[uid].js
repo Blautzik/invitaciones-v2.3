@@ -17,6 +17,7 @@ import Countdown from '@/components/15/Countdown';
 import { openSans } from '../../utils/fonts';
 import Link from 'next/link';
 import FormularioSimple from '@/components/15/FormularioSimple';
+import Seccion from '@/components/boda/Seccion';
 
 
 
@@ -61,6 +62,9 @@ const Invitacion = ({ article }) => {
         let formulario_simple = false
         let nombre = article.nombre
         let sin_footer = false
+        let parte_extra = false
+        let imgstyle = false
+        let foto2 = false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -108,9 +112,22 @@ const Invitacion = ({ article }) => {
         }
 
 
-        if (article.form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
-            portadaPC =  getGoogleDriveImageUrl("https://drive.google.com/file/d/13NtL5nST7jldK1kjEKFWr8gYZzSLPwtn/view?usp=sharing")
+        if (article.form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM") {
+            portadaPC = getGoogleDriveImageUrl("https://drive.google.com/file/d/13NtL5nST7jldK1kjEKFWr8gYZzSLPwtn/view?usp=sharing")
             formulario_simple = true
+        }
+
+
+        if (article.form_id == "1WxaFG9lHytoa57dHPOsZA1pSmLKOSonPABwwoeXcUBM") {
+            parte_extra = true
+            imgstyle = {
+                objectFit: 'cover',
+                objectPosition: '50% 50%',
+                transform: 'scale(1.25)',
+                zIndex: 0,
+                borderRadius: '5px',
+            }
+            foto2 = getGoogleDriveImageUrl("https://drive.google.com/open?id=1fl3dRPUiBUbamUekn7p2epkdTqSGMDTs")
         }
 
         return (
@@ -150,6 +167,10 @@ const Invitacion = ({ article }) => {
 
                 <InfoCondicional article={article} />
 
+                {
+                    parte_extra && <Seccion article={article} />
+                }
+
                 {article.regalo_sin_datos &&
                     <div>
                         <Regalos article={article} />
@@ -173,14 +194,27 @@ const Invitacion = ({ article }) => {
                         mail === "mercedes.matta10@gmail.com" ?
                             <FormularioNombre form_id={article.form_id} bg={article.bg_color} otra_frase={article.otra_frase_ninos} mail={mail} frase_formulario={article.frase_formulario} />
                             :
-                            formulario_simple ? <FormularioSimple form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg}/> 
-                            :
-                            <Formulario form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg} />
-                             }
+                            formulario_simple ? <FormularioSimple form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg} />
+                                :
+                                <Formulario form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg} />
+                    }
                 </div>
 
 
-                { article.mail === "mercedes.matta10@gmail.com" && <SliderTestigos />  }
+                {article.mail === "mercedes.matta10@gmail.com" && <SliderTestigos />}
+
+                {parte_extra &&
+                    <div className="flex flex-col justify-between items-center m-auto max-w-[400px] overflow-hidden ">
+                        <div className=" flex justify-center">
+                            <img
+                                src={foto2}
+                                alt="Imagen 1"
+                                className="w-full h-auto max-w-[90vw] mt-4 md:w-[45vw] md:h-96 rounded-sm object-cover"
+                                style={imgstyle}
+                            />
+                        </div>
+                    </div>
+                }
 
 
                 <div className='mb-5'>
@@ -188,7 +222,7 @@ const Invitacion = ({ article }) => {
                 </div>
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
-                { !sin_footer &&
+                {!sin_footer &&
                     <div className={`w-screen ${bg ? `${bg} text-secondary-600 mt-8` : "bg-violeta text-white"} h-8 text-center pt-2 `}>{nombre} </div>
                 }
             </>

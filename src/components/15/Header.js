@@ -85,7 +85,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
                             h1_centrado ?
                                 <h1 className={`${minion.className}  max-w-sm text-center pt-96 text-5xl font-[200]`}>{!portada_custom && titulo}</h1>
                                 :
-                                <h1 className={`${minion.className}  ${color} ${mas_alto}  max-w-sm text-center text-5xl font-[200]`} style={sombra && { textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}>{!portada_custom && titulo}</h1>
+                                <h1 className={`${minion.className}  ${color} ${mas_alto}  max-w-sm text-center text-5xl font-[200]`} style={sombra ? { textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }: {textShadow:"none"}}>{!portada_custom && titulo}</h1>
                         }
                     </div>
 
