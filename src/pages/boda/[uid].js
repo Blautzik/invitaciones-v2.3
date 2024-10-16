@@ -65,6 +65,7 @@ const Invitacion = ({ article }) => {
         let parte_extra = false
         let imgstyle = false
         let foto2 = false
+        let ig_link = false
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -128,6 +129,11 @@ const Invitacion = ({ article }) => {
                 borderRadius: '5px',
             }
             foto2 = getGoogleDriveImageUrl("https://drive.google.com/open?id=1fl3dRPUiBUbamUekn7p2epkdTqSGMDTs")
+        }
+
+
+        if (article.form_id == "1C2fb3SL58pSRdc150OIlBh2AlswwHbH1wZFSO_ayXmc"){
+            ig_link = "https://www.instagram.com/joaivan_/profilecard/?igsh=N2cyaGcyMjF0NTEz"
         }
 
         return (
@@ -218,7 +224,7 @@ const Invitacion = ({ article }) => {
 
 
                 <div className='mb-5'>
-                    <Agendar foto_agendar={foto_agendar} fecha={article.fecha} bg={bg} agendar={agendar} />
+                    <Agendar foto_agendar={foto_agendar} fecha={article.fecha} bg={bg} agendar={agendar} ig_link={ig_link} />
                 </div>
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
