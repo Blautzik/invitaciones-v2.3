@@ -79,8 +79,13 @@ const Invitacion = ({ article }) => {
 
 
         const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
-        const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
+        let description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
 
+
+        if (article.form_id == "1AS4Jq8T14Qmcyaa630HJyd3uDuXDZaTM3mQ3WgWJwlQ"){
+            description = "Te esperamos para compartir la alegría de esta noche inolvidable y única"
+            article.frase_cierre = "Gracias por acompañarnos en este momento tan importante!!"
+        }
 
 
         return (

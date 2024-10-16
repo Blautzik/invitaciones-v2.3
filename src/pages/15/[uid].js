@@ -90,9 +90,8 @@ const Invitacion = ({ article }) => {
             bg= "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1727300651/Imagen_de_WhatsApp_2024-09-19_a_las_10.54.59_d90a1b17_zf54it.jpg')] bg-no-repeat bg-cover"
         }
 
-
         const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
-        const description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
+        let description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
 
 
         return (
