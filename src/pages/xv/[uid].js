@@ -84,6 +84,7 @@ const Invitacion = ({ article }) => {
 
         if (article.form_id == "1AS4Jq8T14Qmcyaa630HJyd3uDuXDZaTM3mQ3WgWJwlQ"){
             description = "Te esperamos para compartir la alegría de esta noche inolvidable y única"
+            frase = "Te esperamos para compartir la alegría de esta noche inolvidable y única"
             article.frase_cierre = "Gracias por acompañarnos en este momento tan importante!!"
         }
 
