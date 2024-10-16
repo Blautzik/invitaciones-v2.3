@@ -7,6 +7,13 @@ export const salones = [
         link: 'https://www.janoseventos.com/salones.php?q=janos-avellaneda'
     },
     {
+        nombre: "Jano's Avellaneda 1",
+        direccion: "Gral. Güemes 897, 1824 Avellaneda, Buenos Aires",
+        link_maps: "http://maps.google.com/?q=Jano's+Avellaneda",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987790/salones/avellaneda.png',
+        link: 'https://www.janoseventos.com/salones.php?q=janos-avellaneda'
+    },
+    {
         nombre: "Jano's Avellaneda 2",
         direccion: "Gral. Güemes 897, 1824 Avellaneda, Buenos Aires",
         link_maps: "http://maps.google.com/?q=Jano's+Avellaneda",
