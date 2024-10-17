@@ -23,6 +23,13 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         texto = "text-black"
     }
 
+
+    if (title === "Mayra Y Hernán "){
+        sin_nombre = true
+        opacity = 1
+        texto = "text-black"
+    }
+
     const imageStyle = {
         objectFit: 'cover',
         objectPosition: '50% 10%',

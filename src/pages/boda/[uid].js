@@ -84,6 +84,10 @@ const Invitacion = ({ article }) => {
         if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
             bg = "bg-[#f8f5ee]"
         }
+        
+        if(article.url == "Mayra-y-Hernan-17-01"){
+            bg = "bg-[#f8f5ee]"
+        }
 
         let portadaPC = false
 

@@ -25,6 +25,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         opacity = 1
     }
 
+    if (article.url == "Mayra-y-Hernan-17-01"){
+        opacity = 1
+        otra_altura = "h-[600px] md:h-screen"
+    }
+
     if (bg == "bg-[#f8f5ee]") {
         texto = "text-gray-900"
         iconStyle = {
