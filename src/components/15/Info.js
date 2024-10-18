@@ -33,6 +33,7 @@ const Info = ({ article }) => {
     let foto_ceremonia = false
     let ceremonia = false
     let horario_distinto= ""
+    let sin_foto_salon = false
 
     if (article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A") {
         hora_fin = "20:00"
@@ -82,6 +83,11 @@ const Info = ({ article }) => {
 
     if (article.form_id == "1BVNjGdXGL4DgYyY0qOy0OfSzXWWCG9WusnvfNaSaRyA") {
         ceremonia = "Ceremonia en el Salón 20:00 hs"
+    }
+
+
+    if (article.url == "Karen-y-Diego-02-11"){
+        sin_foto_salon = true
     }
 
 
@@ -270,7 +276,7 @@ const Info = ({ article }) => {
                                 }}
                             >
                                 {
-                                    article.mail !== 'bzerrizuela@gmail.com' ?
+                                    !sin_foto_salon ?
                                         <div className='relative w-[90vw] h-60 mt-4 md:w-[45vw] md:h-96 rounded-sm'>
                                             {salon?.foto_salon &&
                                                 <Image
