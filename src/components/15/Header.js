@@ -56,6 +56,10 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
         sombra=true
     }
 
+    if (article.url =='Sofi-13-12'){
+        texto = 'text-secondary-600'
+    }
+
 
     
 
