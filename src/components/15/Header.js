@@ -12,6 +12,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
 
     let texto = "text-slate-50"
     let sombra = false
+    let frase = ""
 
     if (title === "July" && portada_custom) {
         texto = "text-black"
@@ -62,6 +63,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
 
     if (article.url == 'ASTJ-07-11'){
         imageStyle.filter = "brightness(70%)" 
+        frase = "Evento de Fin de Año"
+        texto = "text-slate-50 font-[400]"
     }
 
 
@@ -95,10 +98,14 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
                                 :
                                 <h1 className={`${minion.className}  ${color} ${mas_alto}  max-w-sm text-center text-5xl font-[200]`} style={sombra ? { textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }: {textShadow:"none"}}>{!portada_custom && titulo}</h1>
                         }
+                        {
+
+                           frase && <h3 className={`${openSans.className}  max-w-sm text-center text-3xl font-thin`}>{ frase  }</h3>
+                        }
                     </div>
 
                     <div className='flex flex-col items-center'>
-                        <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest font-[100]`}> Faltan</h2>
+                        <h2 className={`${openSans.className} font-[100] ${texto} max-w-xs text-center text-xl tracking-widest `}> Faltan</h2>
                         <Countdown date={date} texto={texto} />
                         <Link href='#info' scroll={false}>
                             <button className={`${openSans.className} py-3 px-9 bg-white rounded-full text-gray-900 font-[900] text-center mb-16 `}>MÁS INFO</button>

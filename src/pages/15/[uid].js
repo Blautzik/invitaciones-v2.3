@@ -89,6 +89,10 @@ const Invitacion = ({ article }) => {
             bg ='bg-[#f8f5ee]'
         }
 
+        if (article.url == "ASTJ-07-11"){
+            article.frase_cierre = "Despidamos juntos otro año"
+        }
+
         //9-11
         if(article.form_id == "1aLSubnXmSUuyCEA9_1XPPkjIK5bECXyKsHDl60kWxJs"){
             bg= "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1727300651/Imagen_de_WhatsApp_2024-09-19_a_las_10.54.59_d90a1b17_zf54it.jpg')] bg-no-repeat bg-cover"
