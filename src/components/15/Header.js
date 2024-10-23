@@ -60,6 +60,10 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
         texto = 'text-secondary-600'
     }
 
+    if (article.url == 'ASTJ-07-11'){
+        imageStyle.filter = "brightness(70%)" 
+    }
+
 
     
 
