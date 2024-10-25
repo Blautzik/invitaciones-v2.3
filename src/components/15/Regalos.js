@@ -113,6 +113,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
 
 
+    if(article.url == "Carmela-01-12"){
+        otra_altura = "h-[600px] md:h-screen"
+    }
+
+
 
     return (
         <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>

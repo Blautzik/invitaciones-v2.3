@@ -62,8 +62,13 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
     }
 
     if (article.url == 'ASTJ-07-11'){
-        imageStyle.filter = "brightness(70%)" 
+        imageStyle.filter = "brightness(99%)" 
         imageStyle.opacity = 1
+        texto = "text-slate-50 font-[400]"
+    }
+    if (article.url == 'Carmela-01-12'){
+        imageStyle.opacity = 1
+        imageStyle.objectPosition='46% 10%',
         texto = "text-slate-50 font-[400]"
     }
 

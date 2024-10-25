@@ -48,6 +48,10 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     texto = "text-secondary-600" 
   }
 
+  if(form_id == "17lEcMroKT-oV8RPnGbxEcbyrNJi0yZfgimFst8Y24_8"){
+    frase_formulario = "Un micro saldrá desde la puerta del club Vélez Sarsfield a las 12:00 hs. Colocá tu nombre en este epacio para reservar tu lugar"
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
