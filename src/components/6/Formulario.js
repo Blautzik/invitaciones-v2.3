@@ -14,6 +14,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   const id = form_id;
   let con_menu = true
   let con_mail = true
+  let menu_especial = false
 
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
@@ -22,34 +23,38 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   let texto = "text-white"
 
 
-  if(form_id ==="16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0"){
+  if (form_id === "16tnTOMcRPSmLH1OwuOvOAikpyofJTK5Wz7eclwmIls0") {
     bg = "bg-black"
   }
 
-  if(form_id == "1aLSubnXmSUuyCEA9_1XPPkjIK5bECXyKsHDl60kWxJs"){
-    bg= "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1727300651/Imagen_de_WhatsApp_2024-09-19_a_las_10.54.59_d90a1b17_zf54it.jpg')] bg-no-repeat	bg-cover	"
+  if (form_id == "1aLSubnXmSUuyCEA9_1XPPkjIK5bECXyKsHDl60kWxJs") {
+    bg = "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1727300651/Imagen_de_WhatsApp_2024-09-19_a_las_10.54.59_d90a1b17_zf54it.jpg')] bg-no-repeat	bg-cover	"
   }
 
-  if(bg == "bg-[#f8f5ee]"){
+  if (bg == "bg-[#f8f5ee]") {
     texto = "text-gray-900"
   }
 
-  if(form_id =="13fSzKs3csXqr3iIqCWrJnLRw1gUQ7x-jF2bwZbLBhic"){
+  if (form_id == "13fSzKs3csXqr3iIqCWrJnLRw1gUQ7x-jF2bwZbLBhic") {
     con_menu = false
   }
 
-  if(form_id == "1ris5vIvuRruQq3JPPoudwh5YuctqofYQfS3LnHYcMlk"){
+  if (form_id == "1ris5vIvuRruQq3JPPoudwh5YuctqofYQfS3LnHYcMlk") {
     con_mail = false
     isFormValid = name && menu
   }
 
 
-  if (bg == "bg-[#e8e4db]"){
-    texto = "text-secondary-600" 
+  if (bg == "bg-[#e8e4db]") {
+    texto = "text-secondary-600"
   }
 
-  if(form_id == "17lEcMroKT-oV8RPnGbxEcbyrNJi0yZfgimFst8Y24_8"){
+  if (form_id == "17lEcMroKT-oV8RPnGbxEcbyrNJi0yZfgimFst8Y24_8") {
     frase_formulario = "Un micro saldrá desde la puerta del club Vélez Sarsfield a las 12:00 hs. Colocá tu nombre en este epacio para reservar tu lugar"
+  }
+
+  if(form_id == "1STzJd8lJeUtfWZTdNnc5q_3MXOjgQtcB0HXIfYACA4E"){
+    menu_especial = true
   }
 
   const handleSubmit = async (e) => {
@@ -108,7 +113,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     <div className={`${bg ? bg : 'bg-violeta'} w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col  items-center text-center w-[270px]">
-          <GoCheckCircle className={`${texto} text-[66px] font-thin`}/>
+          <GoCheckCircle className={`${texto} text-[66px] font-thin`} />
           <h3 className={`${openSans.className} ${texto} text-2xl my-4 text-center w-10/12 leading-7`}>Confirmar Asistencia</h3>
           <p className={`${openSans.className} ${texto} text-md max-w-2xl font-[500]`}>
             Por favor completá el formulario con tus datos y comentarios para organizar la mejor fiesta
@@ -134,42 +139,61 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
           {
             con_mail &&
             <div className="flex items-center justify-center">
-            <label htmlFor="email" className="sr-only">
-              Email
-            </label>
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              name="email"
-              id="email"
-              className={inputCN}
-              placeholder="Email"
+              <label htmlFor="email" className="sr-only">
+                Email
+              </label>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                name="email"
+                id="email"
+                className={inputCN}
+                placeholder="Email"
               />
-          </div>
-            }
-          { con_menu &&
-            <>
-            
+            </div>
+          }
+          {con_menu &&
 
-          <h3 className={`${openSans.className} ${texto} text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
-          <div className="flex items-center justify-center">
-            <select
-              name="select"
-              className={`${inputCN} text-gray-500`}
-              onChange={(e) => setMenu(e.target.value)}
-              value={menu}
+            menu_especial ?
+            <>
+              <h3 className={`${openSans.className} ${texto} text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
+              <div className="flex items-center justify-center">
+                <select
+                  name="select"
+                  className={`${inputCN} text-gray-500`}
+                  onChange={(e) => setMenu(e.target.value)}
+                  value={menu}
+                >
+                  <option value="Menú Principal">Menú Principal:  Ribs, con papas fritas y ensalada de col </option>
+                  <option value="Menú Vegetariano">Menú Vegetariano: Milanesa de soja a la Napo con papas fritas </option>
+                  <option value="Menú Vegano">Menú Vegano: Milanesa de soja con papas fritas </option>
+                  <option value="Menú Celíaco">Menú Celíaco: Canelones de verdura </option>
+                  <option value="Menú Adolescente/Niño">Menú Adolescente/Niño: Hamburguesa con papas fritas  </option>
+                  <option value="Menú Kosher">Menú Kosher: Ternera braseada con salsa de vino y guarnición</option>
+                </select>
+              </div>
+            </>
+            :
+            <>
+            <h3 className={`${openSans.className} ${texto} text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
+            <div className="flex items-center justify-center">
+              <select
+                name="select"
+                className={`${inputCN} text-gray-500`}
+                onChange={(e) => setMenu(e.target.value)}
+                value={menu}
               >
-              <option value="Menú Principal">Menú Principal</option>
-              <option value="Menú Vegetariano">Menú Vegetariano</option>
-              <option value="Menú Vegano">Menú Vegano</option>
-              <option value="Menú Celíaco">Menú Celíaco</option>
-              {form_id !== "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" && <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>}
-              <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
-            </select>
-          </div>
-              </>
-            }
+                <option value="Menú Principal">Menú Principal: </option>
+                <option value="Menú Vegetariano">Menú Vegetariano</option>
+                <option value="Menú Vegano">Menú Vegano</option>
+                <option value="Menú Celíaco">Menú Celíaco</option>
+                {form_id !== "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" && <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>}
+                <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
+              </select>
+            </div>
+          </>
+          }
 
 
 

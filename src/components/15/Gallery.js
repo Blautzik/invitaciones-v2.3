@@ -38,6 +38,10 @@ export default function Gallery({ imagenes, titulo, mail }) {
     },
   }
 
+  if (images.length == 1) {
+
+  }
+
   return (
     <>
 
@@ -49,7 +53,7 @@ export default function Gallery({ imagenes, titulo, mail }) {
             Nuestra historia comienza sabiendo que somos el uno para el otro, el destino asi lo quiso. Todo sucedió tan naturalmente, como si nos conocieramos de toda la vida y acá estamos. Tres años, tres meses y dos días después diciendo sí a una vida llena de amor, compañía y proyectos.
           </p>
         }
-        <div className="grid grid-cols-2 gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10">
+        <div className={`grid ${images.length === 1 ? 'grid-cols-1' : 'grid-cols-2'} gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10`}>
           {images.map(e => <div
             key={e}
             className='rounded drop-shadow-2xl relative h-52 md:h-[350px]'
