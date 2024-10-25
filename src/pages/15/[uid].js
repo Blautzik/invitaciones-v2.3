@@ -14,6 +14,11 @@ import FormularioSimple from '@/components/15/FormularioSimple';
 import { encontrarSalon } from '../../data/salones';
 import InfoBatDan from '@/components/1/infoBatDan';
 import { SwiperGallery } from '../../components/15/Swiper';
+import { BiUpload } from "react-icons/bi";
+import Link from 'next/link';
+import { openSans } from '../../utils/fonts';
+import { Button } from '@/components/ui/button';
+
 
 
 
@@ -41,6 +46,7 @@ const Invitacion = ({ article }) => {
         let portada = false
         let thumb = false
         let logo_inv = false
+        let cloud_fotos = false
 
         const salon = encontrarSalon(article.salon);
 
@@ -75,27 +81,28 @@ const Invitacion = ({ article }) => {
             bg = "bg-[#ffa4a4]"
         }
 
-        if(article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
+        if (article.form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU") {
             bg = "bg-black"
             article.sin_janos = true
         }
 
-        if(article.url == "Sofi-13-12"){
-            bg ='bg-[#f8f5ee]'
+        if (article.url == "Sofi-13-12") {
+            bg = 'bg-[#f8f5ee]'
         }
 
-        
+
         //9-11
-        if(article.form_id == "1aLSubnXmSUuyCEA9_1XPPkjIK5bECXyKsHDl60kWxJs"){
-            bg= "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1727300651/Imagen_de_WhatsApp_2024-09-19_a_las_10.54.59_d90a1b17_zf54it.jpg')] bg-no-repeat bg-cover"
+        if (article.form_id == "1aLSubnXmSUuyCEA9_1XPPkjIK5bECXyKsHDl60kWxJs") {
+            bg = "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1727300651/Imagen_de_WhatsApp_2024-09-19_a_las_10.54.59_d90a1b17_zf54it.jpg')] bg-no-repeat bg-cover"
         }
-        
+
         const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
         let description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
-        
-        if (article.url == "ASTJ-07-11"){
+
+        if (article.url == "ASTJ-07-11") {
             article.frase_cierre = "Despidamos juntos otro año"
             description = "Despidamos juntos otro año"
+            cloud_fotos = true
         }
 
         return (
@@ -108,7 +115,7 @@ const Invitacion = ({ article }) => {
                 </Head>
 
 
-                <div className={bg == "bg-black" && bg }>
+                <div className={bg == "bg-black" && bg}>
                     <Header title={article.nombre}
                         coverImage={portada}
                         coverImagePc={portada}
@@ -121,7 +128,7 @@ const Invitacion = ({ article }) => {
                     />
                 </div>
 
-                <section id='info' className={bg == "bg-black" && bg }>
+                <section id='info' className={bg == "bg-black" && bg}>
                     <motion.div>
                         <div className="h-full w-full flex flex-col items-center justify-between ">
                             {
@@ -177,7 +184,21 @@ const Invitacion = ({ article }) => {
                         }
                     </section>
                 }
-                
+
+                {
+                    cloud_fotos &&
+                    <section className="bg-[#fff] mt-12 text-center flex flex-col justify-center items-center  ">
+                        <h4 className={`${openSans.className} max-w-xs text-xl font-semibold text-center text-slate-700 mb-5`}>Compartí tus fotos para mostrar el día de la fiesta </h4>
+                        
+                        <a target='_blank' href={"https://forms.gle/MKkyYRtGeMNknXJcA"} className='mb-10' >
+                        <button className={`${openSans.className} text-white sm:text-sm flex justify-center text-center mt-2 mb-3 w-44 lg:w-64 rounded-full mx-1 py-2 px-6 bg-black outline-none shadow-lg transform active:scale-90 transition-transform`}>
+                            <BiUpload className='h-8 w-8 text-slate-50 ' />
+                            </button>
+                        </a>
+
+                    </section>
+                }
+
                 <div>
                     {
                         article.mfmf == "formulario_simple" ?
@@ -193,6 +214,8 @@ const Invitacion = ({ article }) => {
                         <Regalos article={article} foto_regalos={foto_regalos} bg={bg} />
                     </div>
                 }
+
+
 
 
                 <div>
