@@ -149,7 +149,9 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
           }
 
           {con_menu &&
-
+          <>
+          {
+            
             menu_especial ?
             <>
               <h3 className={`${openSans.className} ${texto} text-md max-w-2xl font-[500] pl-2`}>Opciones de menú</h3>
@@ -178,7 +180,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
                   className={`${inputCN} text-gray-500`}
                   onChange={(e) => setMenu(e.target.value)}
                   value={menu}
-                >
+                  >
                   <option value="Menú Principal">Menú Principal: </option>
                   <option value="Menú Vegetariano">Menú Vegetariano</option>
                   <option value="Menú Vegano">Menú Vegano</option>
@@ -188,6 +190,8 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
                 </select>
               </div>
             </>
+          }
+          </>
           }
 
 
