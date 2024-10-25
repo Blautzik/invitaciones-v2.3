@@ -86,7 +86,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
 
 
   if(form_id == "1gc1GFxewlPrds-R6XlsZNAqu2kdPLKzNm5_LD6Kxm4M"){
-    con_menu= false
+    con_menu = false
   }
 
   return (
