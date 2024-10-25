@@ -34,6 +34,7 @@ const Info = ({ article }) => {
     let ceremonia = false
     let horario_distinto= ""
     let sin_foto_salon = false
+    let estacionamiento = false
 
     if (article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A") {
         hora_fin = "20:00"
@@ -88,6 +89,10 @@ const Info = ({ article }) => {
 
     if (article.url == "Karen-y-Diego-02-11"){
         sin_foto_salon = true
+    }
+
+    if (article.url === "ASTJ-07-11"){
+        estacionamiento = true
     }
 
 
@@ -290,6 +295,11 @@ const Info = ({ article }) => {
                                         <></>
                                 }
                             </motion.div>
+                            {
+                                estacionamiento &&
+                                <p className={`${openSans.className} text-base text-center w-80 ${text}`}>Contamos con estacionamiento sin cargo</p>
+
+                            }
                             {salon?.link_maps &&
                                 <div className='mt-5 w-full flex flex-col items-center sm:flex-row justify-evenly '>
                                     {
@@ -303,6 +313,9 @@ const Info = ({ article }) => {
                                     </a>
                                 </div>
                             }
+
+
+
                             <div className="flex flex-col justify-center items-center">
                                 {article.nombre != "Noe" &&
 
@@ -318,6 +331,8 @@ const Info = ({ article }) => {
                                     </div>
                                 }
                             </div>
+
+
                         </div>
                     </div>
                 </div>
