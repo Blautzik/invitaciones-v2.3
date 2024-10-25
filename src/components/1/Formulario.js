@@ -85,6 +85,10 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
   }
 
 
+  if(form_id == "1gc1GFxewlPrds-R6XlsZNAqu2kdPLKzNm5_LD6Kxm4M"){
+    con_menu= false
+  }
+
   return (
     <div className={`${openSans.className} ${color_fondo ? color : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">

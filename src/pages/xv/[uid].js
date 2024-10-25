@@ -88,6 +88,7 @@ const Invitacion = ({ article }) => {
             article.frase_cierre = "Gracias por acompañarnos en este momento tan importante!!"
         }
 
+
         
 
 
