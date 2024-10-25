@@ -63,7 +63,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
 
     if (article.url == 'ASTJ-07-11'){
         imageStyle.filter = "brightness(70%)" 
-        frase = "Evento de Fin de Año"
+        imageStyle.opacity = 1
         texto = "text-slate-50 font-[400]"
     }
 

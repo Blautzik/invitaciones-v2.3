@@ -7,11 +7,8 @@ import Regalos from '@/components/15/Regalos';
 import Formulario from '@/components/6/Formulario';
 import Footer from '../../components/4/Footer';
 import { easeIn, motion } from 'framer-motion';
-import Audiowe from '../../components/Audiowe';
 import Image from 'next/image';
-import FormularioSinNino from '../../components/1/FormularioSinNino';
 import InfoBat from '../../components/1/infoBat';
-
 import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpers';
 import FormularioSimple from '@/components/15/FormularioSimple';
 import { encontrarSalon } from '../../data/salones';
@@ -32,7 +29,6 @@ const Invitacion = ({ article }) => {
         zIndex: -1000,
         opacity: 0.65,
     }
-
     const imageStyleFlipped = {
         objectFit: 'cover',
         objectPosition: '50% 100%',
@@ -44,10 +40,9 @@ const Invitacion = ({ article }) => {
     if (article) {
         let portada = false
         let thumb = false
-
+        let logo_inv = false
 
         const salon = encontrarSalon(article.salon);
-
 
         if (article.foto_portada) {
             portada = getGoogleDriveImageUrl(article.foto_portada)
@@ -182,7 +177,6 @@ const Invitacion = ({ article }) => {
                         }
                     </section>
                 }
-
                 
                 <div>
                     {
@@ -238,7 +232,6 @@ export async function getStaticProps({ params, previewData }) {
     }
 
     const articles = await response.json();
-
 
     const articleData = articles.find(article => String(article.url) === uid);
 
