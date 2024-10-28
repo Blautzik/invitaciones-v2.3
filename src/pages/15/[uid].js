@@ -86,6 +86,12 @@ const Invitacion = ({ article }) => {
             article.sin_janos = true
         }
 
+        if (article.url === "Carmela-01-12"){
+            bg= "bg-[#f185a9]"
+
+        }
+
+
         if (article.url == "Sofi-13-12") {
             bg = 'bg-[#f8f5ee]'
         }
