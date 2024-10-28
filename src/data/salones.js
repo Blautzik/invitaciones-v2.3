@@ -234,7 +234,7 @@ export const salones = [
         nombre: "Jano's Hurlingham",
         direccion: "Gral Pedro Díaz 1800 – Hurlingham",
         link_maps: "http://maps.google.com/?q=Jano's+Hurlingham",
-        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702988255/salones/hurlingham.png',
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1730155414/IMG_4598_-_Melisa_Lopez_tdqvgk.jpg',
         link: 'https://www.janoseventos.com/salones.php?q=janos-hurlingham'
     },
     {
