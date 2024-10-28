@@ -240,7 +240,6 @@ const Invitacion = ({ article }) => {
     }
 }
 
-
 export default Invitacion
 
 export async function getStaticProps({ params, previewData }) {
