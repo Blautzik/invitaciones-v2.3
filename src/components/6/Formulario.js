@@ -50,7 +50,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   }
 
   if (form_id == "17lEcMroKT-oV8RPnGbxEcbyrNJi0yZfgimFst8Y24_8") {
-    frase_formulario = "Un micro saldrá desde la puerta del club Vélez Sarsfield a las 12:00 hs. Colocá tu nombre en este epacio para reservar tu lugar"
+    frase_formulario = "Un micro saldrá desde la puerta del club Vélez Sarsfield a las 12:00 hs. Colocá tu nombre en este espacio para reservar tu lugar"
   }
 
   if(form_id == "1STzJd8lJeUtfWZTdNnc5q_3MXOjgQtcB0HXIfYACA4E"){
