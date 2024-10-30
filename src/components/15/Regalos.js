@@ -117,6 +117,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         otra_altura = "h-[600px] md:h-screen"
     }
 
+    if (article.url === "Sofia-07-12" ){
+        imageStyle.objectPosition = "28% 50%"
+    }
+
 
 
     return (
