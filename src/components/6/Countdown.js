@@ -38,7 +38,11 @@ const Countdown = ({ date, texto }) => {
 
     const cuentaStyle = `${openSans.className} font-[200] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
     const textitoStyle = ` text-[11px] ${texto ? texto  : "text-white"} font-[300] text-center `
-    const dospu = " text-3xl text-white mb-5 font-[300]"
+    let dospu = " text-3xl text-white mb-5 font-[300]"
+
+    if(texto == "text-black"){
+        dospu = " text-3xl mb-5 font-[300] text-black"
+    }
 
     return (
         <div className='w-60'>

@@ -22,7 +22,12 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         opacity = 1
         texto = "text-black"
     }
-
+    
+    if( title === "ÁNGEL & LILIANA "){
+        sin_nombre = true
+        opacity = 1
+        texto = "text-black"
+    }
 
     if (title === "Mayra Y Hernán "){
         sin_nombre = true
@@ -70,6 +75,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     if (form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
         countdownPortada = false
     }
+
 
 
 

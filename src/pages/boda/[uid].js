@@ -140,6 +140,11 @@ const Invitacion = ({ article }) => {
             ig_link = "https://www.instagram.com/joaivan_/profilecard/?igsh=N2cyaGcyMjF0NTEz"
         }
 
+
+        if(article.url=="Angel-y-Liliana-30-11"){
+            bg = "bg-[#f8f5ee]"
+        }
+
         return (
             <>
                 <Head>

@@ -96,6 +96,11 @@ const Info = ({ article }) => {
     }
 
 
+    if(article.url =="Angel-y-Liliana-30-11"){
+        article.mfmf = "sin_janos"
+    }
+
+
     function capitalize(string) {
         return string.replace(/^\w/, match => match.toUpperCase());
     }

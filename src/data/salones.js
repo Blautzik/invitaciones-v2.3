@@ -404,9 +404,16 @@ export const salones = [
         link_maps: "https://maps.app.goo.gl/kyN6ikeH3jX7hqhd6",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1726864753/428637044_18313570294132485_6697055707619539907_n_fsh4xe.jpg',
         link: 'https://palaciosanssouci.com/'
+    },
+    {
+        nombre: "Jano's Quilmes",
+        direccion: "Manuel Savio 3151, Quilmes",
+        link_maps: "https://maps.app.goo.gl/wD1jo4si4Sv4nU4w9",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1730502620/172978645104.07_11zon_oa2prf.webp',
+        link: 'https://janoseventos.com/blog/post.php?id=121'
+        
     }
 ];
-
 
 export function encontrarSalon(nombreSalon) {
     return salones.find(salon => salon.nombre === nombreSalon);
