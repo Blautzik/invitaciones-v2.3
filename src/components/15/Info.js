@@ -36,6 +36,13 @@ const Info = ({ article }) => {
     let sin_foto_salon = false
     let estacionamiento = false
 
+    const imgstyle = {
+        objectFit: 'cover',
+        objectPosition: '50% 50%',
+        zIndex: 0,
+        borderRadius: '5px',
+    }
+
     if (article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A") {
         hora_fin = "20:00"
     }
@@ -105,12 +112,11 @@ const Info = ({ article }) => {
         return string.replace(/^\w/, match => match.toUpperCase());
     }
 
-    const imgstyle = {
-        objectFit: 'cover',
-        objectPosition: '50% 50%',
-        zIndex: 0,
-        borderRadius: '5px',
+
+    if (article.url == "Valen-09-11"){
+        hora_fin = "05:00"
     }
+
 
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
 
