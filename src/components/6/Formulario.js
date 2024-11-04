@@ -57,6 +57,11 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     menu_especial = true
   }
 
+
+  if(form_id == "1Y-lsu6OkKXN063Cv2emLPgPW0kBkdUPKM3W5V3BbmAU"){
+    isFormValid = name && menu
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
