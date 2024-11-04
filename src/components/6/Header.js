@@ -61,8 +61,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         titulo = title
         palabras = title.split(" ");
         opacity = 1
-
-        side = "relative right-24 -top-14 md:right-0"
+        side = "relative right-24 md:right-0"
     }
 
 
