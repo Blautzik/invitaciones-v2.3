@@ -37,6 +37,8 @@ const Invitacion = ({ article }) => {
     transform: 'scaleY(-1)'
   }
 
+  article.url = ""
+
   if (article) {
     return (
       <>
@@ -70,6 +72,7 @@ const Invitacion = ({ article }) => {
                 foto_pc={prismic.asImageSrc(article.data.foto_pc)}
                 frase_portada={article.data.frase_portada}
                 sin_ondas={article.data.sin_ondas}
+                article={article}
               />
             </section>
 
