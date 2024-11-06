@@ -191,7 +191,7 @@ const Invitacion = ({ article }) => {
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
                         {
                             article.mfmf == "swiper" ?
-                                <SwiperGallery galeria={galeria} />
+                                <SwiperGallery galeria={galeria} article={article}/>
                                 : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
                         }
                     </section>
