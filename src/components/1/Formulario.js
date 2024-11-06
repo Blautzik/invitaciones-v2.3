@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { GoCheckCircle } from 'react-icons/go';
 import { openSans } from '../../utils/fonts';
 
-const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_ninos }) => {
+const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_ninos, article }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chicos, setchicos] = useState('');
@@ -14,6 +14,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
   let con_menu = true
   let menu_especial = false
   let texto = "text-white"
+  let frase_form = false
 
   const [color, setColor] = useState(`bg-[${color_fondo && color_fondo.toLowerCase()}]`)
 
@@ -87,6 +88,15 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
 
   if(form_id == "1gc1GFxewlPrds-R6XlsZNAqu2kdPLKzNm5_LD6Kxm4M"){
     con_menu = false
+  }
+
+
+  if(article.url == "Martu-01-12"){
+    con_menu = false
+    frase_form = "El plazo máximo de confirmación de asistencia es el 10/11"
+  }
+  if(article.url == "Dana-29-11"){
+    frase_form = "Trae una camiseta de fútbol para el final de la fiesta!"
   }
 
   return (
@@ -235,6 +245,12 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
             </button>
           </div>
         </form>
+        {
+          frase_form&&
+          <div className='text-white px-10 text-center'>
+          {frase_form}
+        </div>
+        }
       </div>
     </div>
   );

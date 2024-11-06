@@ -211,7 +211,7 @@ const Invitacion = ({ article }) => {
                             :
                             formulario_simple ? <FormularioSimple form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg} />
                                 :
-                                <Formulario form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg} />
+                                <Formulario form_id={article.form_id} otra_frase={article.otra_frase_ninos} frase_formulario={article.frase_formulario} bg={bg} article={article} />
                     }
                 </div>
 
