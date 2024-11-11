@@ -15,6 +15,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   let con_menu = true
   let con_mail = true
   let menu_especial = false
+  let sin_menu_infantil = true
 
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
@@ -56,6 +57,16 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   if(form_id == "1STzJd8lJeUtfWZTdNnc5q_3MXOjgQtcB0HXIfYACA4E"){
     menu_especial = true
   }
+
+  if(form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" ){
+    sin_menu_infantil = true
+  }
+
+  if(form_id == "1g_fTVmApIfCFX3US1H-epaagSksY4fs9kKvB5ZqFdiA"){
+    sin_menu_infantil = true
+  }
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -153,6 +164,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               />
             </div>
           }
+
           {con_menu &&
 
             menu_especial ?
@@ -188,7 +200,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
                 <option value="Menú Vegetariano">Menú Vegetariano</option>
                 <option value="Menú Vegano">Menú Vegano</option>
                 <option value="Menú Celíaco">Menú Celíaco</option>
-                {form_id !== "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" && <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>}
+                { !sin_menu_infantil && <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>}
                 <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
               </select>
             </div>

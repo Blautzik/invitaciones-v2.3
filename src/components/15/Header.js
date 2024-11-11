@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 
-import { alegreya, comfortaa, minion, openSans, roboto } from '../../utils/fonts';
+import { alegreya, Angelita, comfortaa, minion, openSans, roboto } from '../../utils/fonts';
 import Countdown from './Countdown';
 import Link from 'next/link';
 import PortadaSinFoto from './PortadaSinFoto';
@@ -13,6 +13,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
     let texto = "text-slate-50"
     let sombra = false
     let frase = ""
+    let fuente = false
+    let tamano = "text-5xl"
 
     if (title === "July" && portada_custom) {
         texto = "text-black"
@@ -39,7 +41,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
 
     const mas_alto = article.mail === "arielgov@gmail.com" ? "-translate-y-10 text-black" : " text-slate-50"
 
-    const titulo = title.toUpperCase()
+    let titulo = title.toUpperCase()
 
 
 
@@ -72,15 +74,19 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
         texto = "text-slate-50 font-[400]"
     }
 
+    if (article.url == "Isabella-22-11"){
+        fuente = Angelita.className
+        titulo = title
+        tamano = "text-7xl"
+        sombra = true
+    }
 
     
 
     return (
         <div className=" h-[100vh] ">
             <div className={`top-0 w-full h-full ${color}`}>
-
                 <div className='md:hidden h-full '>
-
                     <img
                         src={coverImage}
                         style={{ ...imageStyle, width: '100%', height: '100%' }}
@@ -101,7 +107,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
                             h1_centrado ?
                                 <h1 className={`${minion.className}  max-w-sm text-center pt-96 text-5xl font-[200]`}>{!portada_custom && titulo}</h1>
                                 :
-                                <h1 className={`${minion.className}  ${color} ${mas_alto}  max-w-sm text-center text-5xl font-[200]`} style={sombra ? { textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }: {textShadow:"none"}}>{!portada_custom && titulo}</h1>
+                                <h1 className={`${fuente ?  fuente : minion.className}  ${color} ${mas_alto}  max-w-sm text-center ${tamano} font-[200]`} style={sombra ? { textShadow: '2px 2px 16px rgba(0, 0, 0, 0.8)' }: {textShadow:"none"}}>{!portada_custom && titulo}</h1>
                         }
                         {
 

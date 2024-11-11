@@ -30,6 +30,13 @@ export const EyesomeRegular = localFont({
   subsets:['latin'],
   variable:'--eyesome-regular'
 })
+export const Angelita = localFont({
+  src:'./Angelita.ttf',
+  subsets:['latin'],
+  variable:'--angelita'
+})
+
+
 export const EyesomeScript = localFont({
   src:'./Eyesome-Script.woff2',
   subsets:['latin'],

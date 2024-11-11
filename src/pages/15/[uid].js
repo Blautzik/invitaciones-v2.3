@@ -20,13 +20,10 @@ import { openSans } from '../../utils/fonts';
 import { Button } from '@/components/ui/button';
 
 
-
-
 const Invitacion = ({ article }) => {
     if (!article) {
         return null
     }
-
 
     const imageStyle = {
         objectFit: 'cover',
