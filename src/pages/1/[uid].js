@@ -37,6 +37,8 @@ const Invitacion = ({ article }) => {
     transform: 'scaleY(-1)'
   }
 
+  article.url = ""
+
   if (article) {
     return (
       <>
@@ -70,6 +72,7 @@ const Invitacion = ({ article }) => {
                 foto_pc={prismic.asImageSrc(article.data.foto_pc)}
                 frase_portada={article.data.frase_portada}
                 sin_ondas={article.data.sin_ondas}
+                article={article}
               />
             </section>
 
@@ -137,7 +140,7 @@ const Invitacion = ({ article }) => {
                   : article.data.es_bat
                     ? <FormularioBat form_id={article.data.form_id} frase_extra={article.data.frase_extra} color_fondo={article.data.color_fondo} menu_antinino={article.data.menu_antinino}/> 
                     : 
-                    <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color_fondo={article.data.color_fondo} menu_antinino={article.data.menu_antinino} sin_ninos={article.data.sin_ninos} />
+                    <Formulario form_id={article.data.form_id} frase_extra={article.data.frase_extra} color_fondo={article.data.color_fondo} menu_antinino={article.data.menu_antinino} sin_ninos={article.data.sin_ninos} article={article} />
                     
                 }
               </div>

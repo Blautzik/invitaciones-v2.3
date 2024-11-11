@@ -108,6 +108,12 @@ const Invitacion = ({ article }) => {
             cloud_fotos = true
         }
 
+        
+
+
+
+
+
         return (
             <>
                 <Head>
@@ -182,7 +188,7 @@ const Invitacion = ({ article }) => {
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
                         {
                             article.mfmf == "swiper" ?
-                                <SwiperGallery galeria={galeria} />
+                                <SwiperGallery galeria={galeria} article={article}/>
                                 : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
                         }
                     </section>
@@ -207,7 +213,7 @@ const Invitacion = ({ article }) => {
                         article.mfmf == "formulario_simple" ?
                             <FormularioSimple form_id={article.form_id} frase_extra={article.frase_extra} />
                             :
-                            <Formulario form_id={article.form_id} frase_extra={article.frase_extra} bg={bg} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} />
+                            <Formulario form_id={article.form_id} frase_extra={article.frase_extra} bg={bg} menu_antinino={article.menu_antinino} sin_ninos={article.sin_ninos} article={article} />
                     }
                 </div>
 

@@ -122,6 +122,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
 
 
+    if (article.url == "Dana-29-11"){
+        imageStyle.objectPosition = "top"
+        
+    }
+
 
     return (
         <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>

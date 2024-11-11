@@ -6,7 +6,7 @@ import Countdown from '../15/Countdown';
 import Link from 'next/link';
 
 
-const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_ondas, mail }) => {
+const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_ondas, mail, article }) => {
     console.log(mail)
     const imageStyle = {
         objectFit: 'cover',
@@ -34,8 +34,9 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
     const dateFormated = moment(date).format('DD-MM-YYYY')
 
 
-    console.log("date: ", dateFormated)
-
+    if (article.url == "Elsa-y-Flor"){
+        imageStyle.objectPosition = "50% 50%" 
+    }
     return (
         <>
             <div className=" block md:hidden ">

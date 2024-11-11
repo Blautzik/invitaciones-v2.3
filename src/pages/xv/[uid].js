@@ -78,7 +78,7 @@ const Invitacion = ({ article }) => {
         }
 
 
-        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
+        let title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
         let description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
 
 
@@ -88,6 +88,12 @@ const Invitacion = ({ article }) => {
             article.frase_cierre = "Gracias por acompañarnos en este momento tan importante!!"
         }
 
+
+        if(article.url == "Elsa-y-Flor"){
+            description = "Te esperamos para compartir la alegría de esta noche única"
+            article.frase_cierre = "Gracias por acompañarnos en este momento tan importante!!"
+            title = "Después de tantos años nos Doctoramos. Encima Elsa cumple 50"
+        }
 
         
 
@@ -125,6 +131,7 @@ const Invitacion = ({ article }) => {
                                 frase_portada={article.frase_portada}
                                 sin_ondas={article.sin_ondas}
                                 mail={article.mail}
+                                article={article}
                             />
                         </section>
 
@@ -177,7 +184,7 @@ const Invitacion = ({ article }) => {
                                 <section className="bg-[#fff] mt-12 text-center flex justify-center ">
                                     {
                                         article.mfmf == "swiper" ?
-                                            <SwiperGallery galeria={galeria} />
+                                            <SwiperGallery galeria={galeria} article={article} />
                                             : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
                                     }
                                 </section>
@@ -199,6 +206,7 @@ const Invitacion = ({ article }) => {
                                                 color_fondo={article.color_fondo}
                                                 menu_antinino={menu_antinino}
                                                 sin_ninos={article.sin_ninos}
+                                                article={article}
                                             />
                                         )}
                                     </div>
