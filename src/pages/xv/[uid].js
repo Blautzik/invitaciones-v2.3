@@ -97,8 +97,8 @@ const Invitacion = ({ article }) => {
 
         if(article.url =="Martu-y-Polo") {
             article.frase_cierre = "Gracias por acompañarnos en este momento tan importante!!"
+            description = "Te esperamos para compartir la alegría de esta noche única"
         }
-
 
 
         
