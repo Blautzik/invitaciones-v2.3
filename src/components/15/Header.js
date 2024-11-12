@@ -79,7 +79,9 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
         titulo = title
         tamano = "text-7xl"
         sombra = true
-        imageStylePC.objectPosition = "50% 25%"
+        imageStylePC.objectPosition = "42% 25%"
+        imageStyle.objectPosition = "42% 0"
+        imageStyle.filter="brightness(89%)"
     }
 
     
