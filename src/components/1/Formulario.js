@@ -99,6 +99,14 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
     frase_form = "Trae una camiseta de fútbol para el final de la fiesta!"
   }
 
+  if(form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" ){
+    sin_menu_infantil = true
+  }
+
+  if(form_id =="1kBqWMPyYGO5-nd2JvzyT1plUhqw0pAVtwuoIRsfk1rw"){
+    sin_menu_infantil = true
+  }
+
   return (
     <div className={`${openSans.className} ${color_fondo ? color : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">
@@ -195,7 +203,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
                   <option value="Menú Vegetariano">Menú Vegetariano</option>
                   <option value="Menú Vegano">Menú Vegano</option>
                   <option value="Menú Celíaco">Menú Celíaco</option>
-                  {form_id !== "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk" && <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>}
+                  { !sin_menu_infantil && <option value="Menú Adolescente/Niño">Menú Adolescente/Niño</option>}
                   <option value="Otro, Especificar en comentarios">Otro, Especificar en comentarios</option>
                 </select>
               </div>

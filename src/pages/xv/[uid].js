@@ -95,6 +95,8 @@ const Invitacion = ({ article }) => {
             title = "Después de tantos años nos Doctoramos. Encima Elsa cumple 50"
         }
 
+
+
         
 
 
