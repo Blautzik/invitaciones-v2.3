@@ -37,9 +37,9 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
     }
 
 
-    const color = article.mail === "marinec" ? "black" : "text-slate-50"
+    let color = article.mail === "marinec" ? "black" : "text-slate-50"
 
-    const mas_alto = article.mail === "arielgov@gmail.com" ? "-translate-y-10 text-black" : " text-slate-50"
+    let mas_alto = article.mail === "arielgov@gmail.com" ? "-translate-y-10 text-black" : " text-slate-50"
 
     let titulo = title.toUpperCase()
 
@@ -77,11 +77,12 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
     if (article.url == "Isabella-22-11"){
         fuente = Angelita.className
         titulo = title
-        tamano = "text-7xl"
-        sombra = true
+        tamano = "text-7xl translate-y-10"
+        sombra = false
         imageStylePC.objectPosition = "42% 25%"
         imageStyle.objectPosition = "42% 0"
         imageStyle.filter="brightness(89%)"
+        color = "text-black"
     }
 
     
