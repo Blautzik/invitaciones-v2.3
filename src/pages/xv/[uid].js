@@ -95,6 +95,10 @@ const Invitacion = ({ article }) => {
             title = "Después de tantos años nos Doctoramos. Encima Elsa cumple 50"
         }
 
+        if(article.url =="Martu-y-Polo") {
+            article.frase_cierre = "Gracias por acompañarnos en este momento tan importante!!"
+        }
+
 
 
         
