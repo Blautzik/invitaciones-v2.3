@@ -66,9 +66,6 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     sin_menu_infantil = true
   }
 
-
-
-
   if(form_id == "1Y-lsu6OkKXN063Cv2emLPgPW0kBkdUPKM3W5V3BbmAU"){
     isFormValid = name && menu
   }
@@ -201,7 +198,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
                 onChange={(e) => setMenu(e.target.value)}
                 value={menu}
               >
-                <option value="Menú Principal">Menú Principal: </option>
+                <option value="Menú Principal">Menú Principal </option>
                 <option value="Menú Vegetariano">Menú Vegetariano</option>
                 <option value="Menú Vegano">Menú Vegano</option>
                 <option value="Menú Celíaco">Menú Celíaco</option>
