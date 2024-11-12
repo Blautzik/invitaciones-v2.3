@@ -15,6 +15,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
   let menu_especial = false
   let texto = "text-white"
   let frase_form = false
+  let sin_menu_infantil = true
 
   const [color, setColor] = useState(`bg-[${color_fondo && color_fondo.toLowerCase()}]`)
 
@@ -105,6 +106,10 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
 
   if(form_id =="1kBqWMPyYGO5-nd2JvzyT1plUhqw0pAVtwuoIRsfk1rw"){
     sin_menu_infantil = true
+  }
+
+  if(form_id =="11UkvfgFY2i4l32h-1jdxF6Xcg3BsCZBKHZJT-D_qri4"){
+    con_menu = false
   }
 
   return (
