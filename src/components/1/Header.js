@@ -37,6 +37,8 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
     if (article.url == "Elsa-y-Flor"){
         imageStyle.objectPosition = "50% 50%" 
     }
+
+
     return (
         <>
             <div className=" block md:hidden ">
