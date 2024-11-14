@@ -145,6 +145,10 @@ const Invitacion = ({ article }) => {
             bg = "bg-[#f8f5ee]"
         }
 
+        if(article.url == "Cris-y-Tefi"){
+           bg= "bg-[#BED3BB]" 
+        }
+
         return (
             <>
                 <Head>

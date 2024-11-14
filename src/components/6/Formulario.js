@@ -70,6 +70,10 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     isFormValid = name && menu
   }
 
+  if(form_id == "10dz7LDlRYloyeBFoP2sJP5Lq5CwPzDmIEYGhbWTyMds"){
+    frase_formulario = "¿Vas a necesitar combi? Si es así, ¿desde donde preferirías salir? \n  a)9 de Julio \n  b)Av. Santa Fe y Scalabrini Ortiz \n  c) Puente Saveedra"
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
