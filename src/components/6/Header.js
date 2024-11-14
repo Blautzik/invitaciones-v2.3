@@ -36,8 +36,6 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         texto = "text-black"
     }
 
-
-    
     if(title == "Cris & Tefi"){
         opacity = 0.95
         sombra = "drop-shadow-[0_5px_4px_rgba(0,0,0,0.99)] text-6xl"
@@ -51,6 +49,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         opacity: opacity,
         backgroundColor: '#555',
     }
+    
     const imageStylePC = {
         objectFit: 'cover',
         objectPosition: '50% 10%',
