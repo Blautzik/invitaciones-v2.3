@@ -18,6 +18,7 @@ import { openSans } from '../../utils/fonts';
 import Link from 'next/link';
 import FormularioSimple from '@/components/15/FormularioSimple';
 import Seccion from '@/components/boda/Seccion';
+import { SwiperGallery } from '../../components/15/Swiper';
 
 
 
@@ -84,8 +85,8 @@ const Invitacion = ({ article }) => {
         if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
             bg = "bg-[#f8f5ee]"
         }
-        
-        if(article.url == "Mayra-y-Hernan-17-01"){
+
+        if (article.url == "Mayra-y-Hernan-17-01") {
             bg = "bg-[#f8f5ee]"
         }
 
@@ -136,17 +137,18 @@ const Invitacion = ({ article }) => {
         }
 
 
-        if (article.form_id == "1C2fb3SL58pSRdc150OIlBh2AlswwHbH1wZFSO_ayXmc"){
+        if (article.form_id == "1C2fb3SL58pSRdc150OIlBh2AlswwHbH1wZFSO_ayXmc") {
             ig_link = "https://www.instagram.com/joaivan_/profilecard/?igsh=N2cyaGcyMjF0NTEz"
         }
 
 
-        if(article.url=="Angel-y-Liliana-30-11"){
+        if (article.url == "Angel-y-Liliana-30-11") {
             bg = "bg-[#f8f5ee]"
         }
 
-        if(article.url == "Cris-y-Tefi"){
-           bg= "bg-[#BED3BB]" 
+        if (article.url == "Cris-y-Tefi") {
+            bg = "bg-[#BED3BB]"
+            article.mfmf = "swiper"
         }
 
         return (
@@ -204,7 +206,11 @@ const Invitacion = ({ article }) => {
 
                 {article.galeria &&
                     <section className="bg-[#fff] mt-12 text-center flex justify-center ">
-                        <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
+                        {
+                            article.mfmf == "swiper" ?
+                                <SwiperGallery galeria={galeria} article={article} />
+                                : <Gallery imagenes={galeria} titulo={"Book de Fotos"} mail={article.mail} />
+                        }
                     </section>
                 }
 
