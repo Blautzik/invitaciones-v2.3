@@ -42,6 +42,11 @@ export const EyesomeScript = localFont({
   subsets:['latin'],
   variable:'--eyesome-script'
 })
+export const Gabriola = localFont({
+  src:'./gabriola.ttf',
+  subsets:['latin'],
+  variable:'--gabriola'
+})
 
 export const Amsterdam = localFont({
   src:'./Amsterdam-Four.woff2',

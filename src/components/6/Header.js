@@ -1,7 +1,7 @@
 
 import Image from 'next/image';
 
-import { alegreya, bride, comfortaa, minion, openSans, roboto } from '../../utils/fonts';
+import { alegreya, bride, Gabriola, comfortaa, minion, openSans, roboto } from '../../utils/fonts';
 import Countdown from './Countdown';
 import Link from 'next/link';
 
@@ -17,6 +17,10 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     let side = ""
     let countdownPortada = true
     let sombra = ""
+    let fuente = minion.className
+    
+    let titulo = title.toUpperCase()
+
 
     if (title === "Emi y Robert") {
         sin_nombre = true
@@ -38,7 +42,9 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
 
     if(title == "Cris & Tefi"){
         opacity = 0.95
-        sombra = "drop-shadow-[0_5px_4px_rgba(0,0,0,0.99)] text-6xl"
+        sombra = "drop-shadow-[0_5px_4px_rgba(0,0,0,0.99)] text-5xl"
+        fuente = Gabriola.className
+        titulo = title
     }
 
 
@@ -49,7 +55,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         opacity: opacity,
         backgroundColor: '#555',
     }
-    
+
     const imageStylePC = {
         objectFit: 'cover',
         objectPosition: '50% 10%',
@@ -58,11 +64,9 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         backgroundColor: '#555',
     }
 
-    let titulo = title.toUpperCase()
-    palabras = [titulo]
 
 
-    let fuente = minion.className
+
 
     if (form_id === "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
         fuente = bride.className
@@ -82,6 +86,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     if (form_id == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
         countdownPortada = false
     }
+
+    palabras = [titulo]
 
 
 
