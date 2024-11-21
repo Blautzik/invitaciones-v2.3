@@ -158,7 +158,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
                     }
                 </div>
-                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg ? "opacity-100" : "opacity-70"} `}>
+                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg ? "opacity-100" : "opacity-90"} `}>
                     {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto2 ? texto2 : texto}>
                         <div className={`${openSans.className} text-sm  opacity-100 regalos`}>
                             {cta2 && <p className='pb-2'><strong>Cuenta en pesos </strong> </p>}

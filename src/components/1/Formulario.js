@@ -112,6 +112,10 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
     con_menu = false
   }
 
+  if(article.url == "Bianca-21-12"){
+    frase_extra = "El salón cuenta con estacionamiento, reservá tu lugar colocando nombre, apellido y patente en este espacio"
+  }
+
   return (
     <div className={`${openSans.className} ${color_fondo ? color : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
       <div className="mx-auto py-10 ">

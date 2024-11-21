@@ -10,11 +10,16 @@ const Footer = ({frase_cierre, sin_janos, mfmf, mail, form_id }) => {
 
         let bg = "bg-white"
     let text = "text-slate-700"
+    let whitespace_pre = false
 
 
     if(form_id == "1vmYcfn6F_vk4Ry9spJ4DWShJ_uC8i9b7PdSEB73LIOU"){
         bg="bg-black"
         text="text-[#eac759]"
+    }
+
+    if(frase_cierre == "La vida no se mide en minutos \n se mide en momentos \n ❤ \n Gracias por acompañarme!!"){
+        whitespace_pre = "cierre"
     }
 
 
@@ -23,7 +28,7 @@ const Footer = ({frase_cierre, sin_janos, mfmf, mail, form_id }) => {
             
             {
                 mail != 'bzerrizuela@gmail.com' &&
-                <h2 className={`${mfmf == "formulario_simple" ? comfortaa.className : great_vives.className} ${mfmf == "formulario_simple" ? "hidden" :` ${text}  md:text-5xl text-4xl mx-10` } `}>
+                <h2 className={`${mfmf == "formulario_simple" ? comfortaa.className : great_vives.className} ${mfmf == "formulario_simple" ? "hidden" :` ${text}  md:text-5xl text-4xl mx-10` } ${whitespace_pre && whitespace_pre} `}>
                { frase_cierre || "Gracias por acompañarme en este momento tan importante!!"}
             </h2>
             }

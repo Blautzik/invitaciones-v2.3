@@ -101,6 +101,11 @@ const Invitacion = ({ article }) => {
         }
 
 
+        if(article.url =="Bianca-21-12"){
+            article.frase_cierre = "La vida no se mide en minutos \n se mide en momentos \n ❤ \n Gracias por acompañarme!!"
+        }
+
+
         
 
 
