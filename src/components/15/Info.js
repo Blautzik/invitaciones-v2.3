@@ -129,6 +129,10 @@ const Info = ({ article }) => {
         hora_fin = "5:00"
     }
 
+    if(article.url === "Lisandro-04-01"){
+        hora_fin = "5:00"
+    }
+
 
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
 
