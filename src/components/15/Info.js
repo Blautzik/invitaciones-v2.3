@@ -130,7 +130,7 @@ const Info = ({ article }) => {
     }
 
     if(article.url === "Lisandro-04-01"){
-        hora_fin = "5:00"
+        hora_fin = "5:30"
     }
 
 
