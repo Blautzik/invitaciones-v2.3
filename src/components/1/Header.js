@@ -38,6 +38,10 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
         imageStyle.objectPosition = "50% 50%" 
     }
 
+    if(article.url =="Lore-16-02"){
+        frase_portada = "Te espero para compartir la alegría de esta día inolvidable y único"
+    }
+
 
     return (
         <>
