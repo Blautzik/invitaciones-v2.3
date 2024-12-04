@@ -20,6 +20,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     let alias3 = false
     let texto2 = false
     let otra_altura = false
+    let nombre_cta1 = false
 
     if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
         opacity = 1
@@ -97,6 +98,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         cta2 = "cuenta en dólares"
         cbu2 = "00703916-31004008808033"
         alias3 = "ALDEA.RING.VACA"
+        nombre_cta1 = "Cuenta en Pesos"
     }
 
     if(article.form_id  == "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk"){
@@ -125,6 +127,15 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     if (article.url == "Dana-29-11"){
         imageStyle.objectPosition = "top"
         
+    }
+
+    if (article.url == "Carly-y-Fer"){
+        cta2 = "Banco Galicia"
+        cbu2 = "0070999030004078679978"
+        alias3 = "MURO.TELAR.CAMISA"
+        article.frase_regalos = "Tu presencia es nuestro mejor regalo, pero si aún así deseas hacernos un obsequio .Aquí esta nuestros números de cuenta :"
+        nombre_cta1 = "Mercado Pago"
+        article.dni = false
     }
 
 
@@ -161,7 +172,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                 <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg ? "opacity-100" : "opacity-90"} `}>
                     {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto2 ? texto2 : texto}>
                         <div className={`${openSans.className} text-sm  opacity-100 regalos`}>
-                            {cta2 && <p className='pb-2'><strong>Cuenta en pesos </strong> </p>}
+                            {cta2 && <p className='pb-2'><strong>{nombre_cta1} </strong> </p>}
                             {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                             {article.cbu && <p className='pb-2'><strong>CBU: </strong> {article.cbu} </p>}
                             {showAlias && <p className='pb-2'><strong>Alias: </strong> {article.alias}</p>}
@@ -169,11 +180,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                             {cbuCustom && <> <br /> <p className='pb-2'><strong>LEMON TAG</strong> $leo.dam95 </p>   </>}
                             {
                                 cta2 && <>
-                                    {cta2 && <p className='pb-2'><strong>Cuenta en dólares </strong> </p>}
+                                    {cta2 && <p className='pb-2'><strong>{cta2} </strong> </p>}
                                     {article.titular && <p className='pb-2'><strong>Titular: </strong> {article.titular}</p>}
                                     {cbu2 && <p className='pb-2'><strong>CBU: </strong> {cbu2} </p>}
-                                    {showAlias && <p className='pb-2'><strong>Alias: </strong> {alias3}</p>}
-                                    {article.dni && <p className='pb-2'><strong>DNI: </strong> {article.dni}</p>}
+                                    {alias3 && <p className='pb-2'><strong>Alias: </strong> {alias3}</p>}
                                 </>
                             }
                         </div>

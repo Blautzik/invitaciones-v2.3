@@ -24,6 +24,13 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
     }
 
 
+    if (form_id == "1wvlLwL5Z6wZsclJH8ZN99EfGg7wTO7hJfXFL0SnFRFw"){
+        tipo = openSans.className
+        frase_cierre = "Así como una bella canción es la fusión armoniosa entre música y poesía,  del mismo modo la vida en pareja requiere igualdad entre marido y mujer , para que ambos ,  juntos , puedan interpretar la magnífica melodía de la vida."
+        otra = "Daisaku Ikeda"
+    }
+
+
 
 
    
