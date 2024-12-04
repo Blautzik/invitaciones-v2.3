@@ -18,12 +18,15 @@ import { BiUpload } from "react-icons/bi";
 import Link from 'next/link';
 import { openSans } from '../../utils/fonts';
 import { Button } from '@/components/ui/button';
+import Audiowe from '../../components/Audiowe';
 
 
 const Invitacion = ({ article }) => {
     if (!article) {
         return null
     }
+
+    let music = false
 
     const imageStyle = {
         objectFit: 'cover',
@@ -109,7 +112,9 @@ const Invitacion = ({ article }) => {
         }
 
         
-
+        if (article.url == "Lisandro-04-01"){
+            music = "https://od.lk/s/NDVfNDgyMTcyOTZf/Ed%20Sheeran%20-%20Perfect%20-%20LatinHype%20%28youtube%29.mp3"
+        }
 
 
 
@@ -122,6 +127,12 @@ const Invitacion = ({ article }) => {
                     <meta property="og:description" content={description} />
                     <meta property="og:image:type" content="image/jpeg" />
                 </Head>
+
+                {music &&
+                    <div className='fixed bottom-4 right-0 z-50'>
+                        <Audiowe music={music} />
+                    </div>
+                }
 
 
                 <div className={bg == "bg-black" && bg}>
