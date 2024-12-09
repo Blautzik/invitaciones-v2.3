@@ -9,6 +9,7 @@ import { es } from 'date-fns/locale'
 import suitIcon from '../../../public/suit (1).png'
 import ropa from '../../../public/ropa.png'
 import { encontrarSalon } from '@/data/salones';
+import { getOptimizedGoogleDriveImageUrl } from '@/helpers';
 
 const InfoCeremonia = ({ article }) => {
     const fechaCeremonia = new Date(article.fecha);
@@ -30,12 +31,19 @@ const InfoCeremonia = ({ article }) => {
     const salon = encontrarSalon(article.salon);
 
 
-    const link_maps = "https://maps.app.goo.gl/teqVKjJwCaPqGseT8"
+    let link_maps = "https://maps.app.goo.gl/teqVKjJwCaPqGseT8"
 
 
     if (article.form_id == "1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
         foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1728739699/Imagen_de_WhatsApp_2024-10-11_a_las_14.27.55_88eddf8f_wozmzj.jpg"
       }
+
+
+    if(article.form_id == "1fkcSVt3orivOV1UMbUHCJcekpmWo6q5CowcPr0-MTNU"){
+        link_maps = "https://maps.app.goo.gl/DbMHy3nGxou8X36o7"
+        foto_ceremonia = getOptimizedGoogleDriveImageUrl("https://drive.google.com/file/d/1UCvU1xCbxookvD1pJXrEy12IVh9ov8LB/view?usp=sharing")
+         
+    }
 
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
     return (
@@ -123,8 +131,8 @@ const InfoCeremonia = ({ article }) => {
                 </div>
 
                 <div className='flex flex-col items-center mt-6'>
-                    <h3 className={`${openSans.className} text-xl text-center w-68 text-slate-600`}> Dress Code </h3>
-                    <h4 className={`${openSans.className} text-md text-center w-68 font-bold text-slate-800`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
+                    <h3 className={`${openSans.className} text-xl text-center w-68 text-slate-800`}> Dress Code </h3>
+                    <h4 className={`${openSans.className} text-md text-center w-68 dresscode text-slate-600`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
                     <div className='h-12 w-12 relative m-6'>
                         {
                             article.otro_iconito ?

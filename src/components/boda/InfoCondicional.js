@@ -24,8 +24,13 @@ const InfoCondicional = ({ article }) => {
         <InfoCeremonia article={article} />
       </div>
     )
-  }
-   else {
+  }else if(article.form_id=="1fkcSVt3orivOV1UMbUHCJcekpmWo6q5CowcPr0-MTNU"){
+    return (
+      <div id="info">
+        <InfoCeremonia article={article} />
+      </div>
+    )
+  }else {
     return (
       <div id="info">
         <Info article={article} />
