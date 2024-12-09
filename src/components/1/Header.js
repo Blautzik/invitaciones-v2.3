@@ -39,7 +39,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
     }
 
     if(article.url =="Lore-16-02"){
-        frase_portada = "Te espero para compartir la alegría de esta día inolvidable y único"
+        content = "Te espero para compartir la alegría de esta día inolvidable y único"
     }
 
 
