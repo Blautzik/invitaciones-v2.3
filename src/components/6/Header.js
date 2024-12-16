@@ -87,6 +87,10 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         countdownPortada = false
     }
 
+    if ( form_id == "1WZ9lVSd3hiRHIeiAVgX2YM8_KQ0OP4GPIJgHWls3RvQ"){
+        imageStyle.objectPosition = "65% 10%"
+    }
+
     palabras = [titulo]
 
 
