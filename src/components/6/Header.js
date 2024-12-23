@@ -74,7 +74,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     if (form_id === "1cNOZlSr_GZ8vRbmakuB30r8l7JIBFHrtGE3JM7PPMwk") {
         fuente = bride.className
         titulo = title
-        palabras = title.split(" ");
+        palabras = title.split(" ");    
         opacity = 1
         side = "relative right-24 md:right-0"
     }
