@@ -18,6 +18,23 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     let countdownPortada = true
     let sombra = ""
     let fuente = minion.className
+
+    const imageStyle = {
+        objectFit: 'cover',
+        objectPosition: '50% 10%',
+        zIndex: 0,
+        opacity: opacity,
+        backgroundColor: '#555',
+    }
+
+    const imageStylePC = {
+        objectFit: 'cover',
+        objectPosition: '50% 10%',
+        zIndex: 0,
+        opacity: opacity,
+        backgroundColor: '#555',
+    }
+
     
     let titulo = title.toUpperCase()
 
@@ -47,23 +64,9 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         titulo = title
     }
 
-
-    const imageStyle = {
-        objectFit: 'cover',
-        objectPosition: '50% 10%',
-        zIndex: 0,
-        opacity: opacity,
-        backgroundColor: '#555',
+    if(title == "Gise & Maxi"){
+        imageStyle.objectPosition = "70% 50%"
     }
-
-    const imageStylePC = {
-        objectFit: 'cover',
-        objectPosition: '50% 10%',
-        zIndex: 0,
-        opacity: opacity,
-        backgroundColor: '#555',
-    }
-
 
 
 
