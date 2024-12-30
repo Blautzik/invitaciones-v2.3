@@ -42,6 +42,10 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
         content = "Te espero para compartir la alegría de esta día inolvidable y único"
     }
 
+    if(article.url == "Tere-07-02"){
+        frase_portada = "Festejemos juntos"
+    }
+
 
     return (
         <>
