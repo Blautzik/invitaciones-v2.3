@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import Image from 'next/image';
 import fiestaIcon from '../../../public/fiestas-12.png';
 import suitIcon from '../../../public/suit (1).png'
+import trajeVestidoIcon from "../../../public/ropa.png"
 import ceremoniaIcon from "../../../public/heartseparator1.png"
 import salones, { encontrarSalon } from "../../data/salones"
 import { obtenerHoraArgentina } from '@/helpers';
@@ -35,6 +36,7 @@ const Info = ({ article }) => {
     let horario_distinto = ""
     let sin_foto_salon = false
     let estacionamiento = false
+    let iconoDC = suitIcon
 
     const imgstyle = {
         objectFit: 'cover',
@@ -137,6 +139,9 @@ const Info = ({ article }) => {
         hora_fin = "21:00hs"
     }
 
+    if (article.url == "Gise-y-Maxi"){
+        iconoDC = trajeVestidoIcon
+    }
 
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
 
@@ -362,7 +367,7 @@ const Info = ({ article }) => {
                                         <h4 className={`${openSans.className} dresscode text-base text-center w-80 ${text}`}> {article.dress_code ? article.dress_code : "Elegante"} </h4>
                                         <div className={`h-16 w-16 relative m-6 ${text == "text-secondary-600" && "opacity-60"}  ${text == "text-white" && "invert"}`}>
                                             <Image
-                                                src={suitIcon}
+                                                src={iconoDC}
                                                 fill
                                             />
                                         </div>

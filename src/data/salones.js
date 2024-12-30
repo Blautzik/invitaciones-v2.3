@@ -23,8 +23,8 @@ export const salones = [
     {
         nombre: "Jano's La Plata",
         direccion: "Los Hornos 60 y 132, 1900 La Plata, Buenos Aires",
-        link_maps: "http://maps.google.com/?q=Jano's+La+Plata",
-        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987838/salones/la%20plata.png',
+        link_maps: "https://maps.app.goo.gl/ZvkNw16A1LCumBK87",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1735597818/c3dc88f9-234a-4897-aee5-add06b1919c1.png',
         link: 'https://www.janoseventos.com/salones.php?q=janos-laplata'
     },
     {

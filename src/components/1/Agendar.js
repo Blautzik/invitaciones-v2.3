@@ -9,6 +9,8 @@ import {es} from 'date-fns/locale';
 
 const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}) => {
 
+    console.log(fecha)
+
     const parseDateString = (dateString) => {
         let parsedDate;
 
@@ -46,6 +48,11 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}
     }
 
 
+    if(fecha == "2025-03-15T23:00:00.000Z"){
+        formattedDate = "2025/3/15"
+    }
+
+
     return (
         <div className=' flex flex-col items-center justify-between pb-8'>
             <div className="flex flex-col items-center justify-between mb-4">
@@ -53,8 +60,8 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}
                 <BiCalendar className={`h-20 w-20 ${txt}  mt-6 `} />
 
                 <h3 className={`${comfortaa.className} ${txt} text-4xl mb-4`}>Agendar</h3>
-                <a className={`${openSans.className} ${bg == "bg-[#e8e4db]" ? "bg-[#e8e4db] text-secondary-600" : "bg-black text-white"}  flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}
-                    href={`https://calendar.google.com/calendar/u/0/r/day/${formattedDate}`}
+                <a className={`${openSans.className} ${bg == "bg-[#e8e4db]" ? "bg-[#e8e4db] text-secondary-600" : "bg-black text-white"}  flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}                    
+                    href={`https://calendar.google.com/calendar/u/0/r/day/${formattedDate}`}                        
                     target="_blank"
                 >
                     <BiCalendarCheck className=" text-[20px] " />
