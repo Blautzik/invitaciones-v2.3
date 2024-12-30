@@ -43,7 +43,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
     }
 
     if(article.url == "Tere-07-02"){
-        frase_portada = "Festejemos juntos"
+        frase_portada = "no"
     }
 
 
@@ -76,7 +76,7 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
                         <h1 className={`${minion.className} text-slate-900 ${title.length >= 6 ? 'text-5xl' : 'text-8xl'} font-[100] text-center leading-[0.7]`}>
                             {title.toUpperCase()}
                         </h1>
-                        <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>{frase_portada || 'MIS 15 AÑOS'}</h3>
+                        <h3 className={`${minion.className} text-slate-900 text-center text-3xl mb-6`}>{frase_portada? frase_portada != "no" && frase_portada : 'MIS 15 AÑOS'}</h3>
                         {!(mail == "bzerrizuela@gmail.com") &&
                             <>
                                 {content && <p className={`${openSans.className} text-slate-600 text-center text-xl mb-6 mx-7`}>{content}</p>}
