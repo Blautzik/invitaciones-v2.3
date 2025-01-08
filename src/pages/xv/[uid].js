@@ -18,6 +18,7 @@ import { getGoogleDriveImageUrl, getOptimizedGoogleDriveImageUrl } from '@/helpe
 import { SwiperGallery } from '@/components/15/Swiper';
 import FormularioPlaylist from '@/components/15/FormularioPlaylist';
 import FormularioVIP from '@/components/1/FormularioVIP';
+import { comfortaa } from '@/utils/fonts';
 
 const Invitacion = ({ article }) => {
 
@@ -40,6 +41,9 @@ const Invitacion = ({ article }) => {
 
         let portada = false
         let thumb = false
+        let texto = false
+        let bg = "bg-[#fff]"
+        let bgaccent = "bg-violeta"
 
         if (article.foto_portada) {
             portada = getGoogleDriveImageUrl(article.foto_portada)
@@ -50,6 +54,7 @@ const Invitacion = ({ article }) => {
         let foto_regalos = false
         let frase = article.qwe || "Te espero para compartir la alegría de esta noche inolvidable y única"
         let menu_antinino = false
+        let font = comfortaa.className
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -106,6 +111,12 @@ const Invitacion = ({ article }) => {
         }
 
 
+        if(article.url == "Malvi-28-02"){
+            texto= "text-secondary-800"
+            bg= "bg-amber-50"
+            bgaccent = "bg-indigo-400"
+        }
+
         
 
 
@@ -128,11 +139,11 @@ const Invitacion = ({ article }) => {
                         <Audiowe music={article.music} />
                     </div>
                 }
-                <div className='flex flex-col justify-center items-center w-screen'>
+                <div className={`flex flex-col justify-center items-center w-screen ${bg}`}>
 
                     <main className="w-screen" >
 
-                        <section className='z-10'>
+                        <section className='z-10 '>
                             <Header
                                 title={article.nombre}
                                 coverImage={portada}
@@ -160,7 +171,7 @@ const Invitacion = ({ article }) => {
                                 }}
                                 className='overflow-hidden md:hidden'>
 
-                                <Countdown date={article.fecha} />
+                                <Countdown date={article.fecha} texto={texto} />
                             </motion.div>
 
 
@@ -192,7 +203,7 @@ const Invitacion = ({ article }) => {
                             </section>
 
                             {article.galeria &&
-                                <section className="bg-[#fff] mt-12 text-center flex justify-center ">
+                                <section className={`${bg} mt-12 text-center flex justify-center`} >
                                     {
                                         article.mfmf == "swiper" ?
                                             <SwiperGallery galeria={galeria} article={article} />
@@ -264,7 +275,7 @@ const Invitacion = ({ article }) => {
 
                                 <>
                                     <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} mail={article.mail} />
-                                    <div className={`w-screen bg-violeta h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+                                    <div className={`w-screen ${bgaccent} h-8 text-center pt-2 text-white`}>{article.nombre} </div>
                                 </>
 
                             </section>

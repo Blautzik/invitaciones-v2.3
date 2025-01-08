@@ -5,7 +5,7 @@ import { openSans, roboto } from '../../utils/fonts';
 
 
 
-const Countdown = ({ date }) => {
+const Countdown = ({ date, texto }) => {
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
@@ -42,9 +42,9 @@ const Countdown = ({ date }) => {
 
 
 
-    const cuentaStyle = `${openSans.className} text-slate-800 font-[600] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`
-    const textitoStyle = "text-slate-900 text-[14px] text-center"
-    const dospu = "text-slate-900 font-[600]  text-3xl mb-5"
+    const cuentaStyle = `${openSans.className} font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center ${texto} `;
+    const textitoStyle = `${texto} text-[12px] text-center`;
+    const dospu = ` text-3xl mb-5 ${texto}`;
 
     return (
         <div className='flex items-center justify-center h-60 mt-10'>

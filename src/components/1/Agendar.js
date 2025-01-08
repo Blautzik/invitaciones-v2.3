@@ -53,6 +53,11 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}
     }
 
 
+    if(ig_link == "https://www.instagram.com/malvcob/"){
+        txt = "text-secondary-800";
+    }
+
+
     return (
         <div className=' flex flex-col items-center justify-between pb-8'>
             <div className="flex flex-col items-center justify-between mb-4">
@@ -60,7 +65,7 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}
                 <BiCalendar className={`h-20 w-20 ${txt}  mt-6 `} />
 
                 <h3 className={`${comfortaa.className} ${txt} text-4xl mb-4`}>Agendar</h3>
-                <a className={`${openSans.className} ${bg == "bg-[#e8e4db]" ? "bg-[#e8e4db] text-secondary-600" : "bg-black text-white"}  flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}                    
+                <a className={`${openSans.className} ${bg !== "bg-black" ? "bg-[#e8e4db] text-secondary-800" : "bg-black text-white"}  flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}                    
                     href={`https://calendar.google.com/calendar/u/0/r/day/${formattedDate}`}                        
                     target="_blank"
                 >
@@ -81,7 +86,7 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}
                     />
                 }
             </div>
-            {ig_link && <div className="md:w-96 w-10/12 flex items-center justify-evenly pb-24 mt-10">
+            {ig_link && <div className={`md:w-96 w-10/12 flex items-center justify-evenly pb-24 mt-10 ${txt}`}>
                 {
                     fb_link &&
                     <div className=" border-black text-black flex items-center border rounded-full h-16 w-16">

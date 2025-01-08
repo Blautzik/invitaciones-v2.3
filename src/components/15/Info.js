@@ -1,4 +1,4 @@
-import { comfortaa, inter, minion, openSans, roboto } from '../../utils/fonts';
+import { comfortaa, inter, minion, openSans, roboto, Vogue } from '../../utils/fonts';
 import { motion } from "framer-motion"
 import Image from 'next/image';
 import fiestaIcon from '../../../public/fiestas-12.png';
@@ -37,6 +37,7 @@ const Info = ({ article }) => {
     let sin_foto_salon = false
     let estacionamiento = false
     let iconoDC = suitIcon
+    let font = comfortaa.className
 
     const imgstyle = {
         objectFit: 'cover',
@@ -143,7 +144,15 @@ const Info = ({ article }) => {
         iconoDC = trajeVestidoIcon
     }
 
-    const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
+    if(article.url =="Malvi-28-02"){
+        text = "text-secondary-600 xs:text-4xl"
+        bgbtn = "bg-[#e8e4db]"
+        txtbtn = "text-secondary-600"
+        bg = "bg-amber-50"
+        font = Vogue.className
+    }
+
+    let textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
 
     return (
         <div className={`relative w-full mt-4 -globals-36 overflow-x-hidden ${bg}`}>
@@ -204,7 +213,7 @@ const Info = ({ article }) => {
                         >
                             {
                                 !foto_ceremonia ?
-                                    <div className='h-24 w-24 relative mb-6'>
+                                    <div className='h-24 w-24 relative mb-6 opacity-50'>
 
                                         <Image
                                             src={fiestaIcon}
@@ -219,7 +228,7 @@ const Info = ({ article }) => {
                                     </div>
 
                             }
-                            <h3 className={`${comfortaa.className} ${text} text-slate-700 sm:text-2xl xs:text-xl ${foto_ceremonia ? "mb-0" : "mb-10"} font-[700] text-center`}>La Fiesta</h3>
+                            <h3 className={`${font} sm:text-2xl xs:text-xl ${text} ${foto_ceremonia ? "mb-0" : "mb-10"} text-center`}>Fiesta</h3>
                         </motion.div>
                         <div className="flex flex-col justify-center items-center">
                             <motion.div

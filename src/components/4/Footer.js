@@ -8,7 +8,7 @@ import React from 'react'
 
 const Footer = ({frase_cierre, sin_janos, mfmf, mail, form_id }) => {
 
-        let bg = "bg-white"
+    let bg = "bg-white"
     let text = "text-slate-700"
     let whitespace_pre = false
 
@@ -20,6 +20,12 @@ const Footer = ({frase_cierre, sin_janos, mfmf, mail, form_id }) => {
 
     if(frase_cierre == "La vida no se mide en minutos \n se mide en momentos \n ❤ \n Gracias por acompañarme!!"){
         whitespace_pre = "cierre"
+    }
+
+    if(mail == "cynthiamarielpena@hotmail.com"){
+        bg = "bg-amber-50 -mt-24 text-secondary-800"
+        sin_janos = true
+        text = "text-secondary-800"
     }
 
 

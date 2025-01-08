@@ -10,6 +10,8 @@ const Countdown = ({ date, texto }) => {
         seconds: '00'
     });
 
+    console.log(texto)
+
     useEffect(() => {
 
         const target = moment(date);
@@ -51,9 +53,9 @@ const Countdown = ({ date, texto }) => {
     }, [date]);
 
     const { days, hours, minutes, seconds } = timeRemaining;
-    const cuentaStyle = `${openSans.className} ${texto} font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center`;
+    const cuentaStyle = `${openSans.className} font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center ${texto} `;
     const textitoStyle = `${texto} text-[12px] text-center`;
-    const dospu = `${texto} text-3xl mb-5`;
+    const dospu = ` text-3xl mb-5 ${texto}`;
 
     return (
         <div className='w-60'>
