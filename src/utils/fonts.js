@@ -58,6 +58,16 @@ export const Amsterdam = localFont({
   subsets:['latin'],
   variable:'--amsterdam'
 })
+export const Wedding = localFont({
+  src:'./TheWeddingSignature-Regular.woff2',
+  subsets:['latin'],
+  variable:'--amsterdam'
+})
+export const Caviar = localFont({
+  src:'./CaviarDreams.ttf',
+  subsets:['latin'],
+  variable:'--amsterdam'
+})
 
 
 export const amatic = Amatic_SC({

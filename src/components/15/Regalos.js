@@ -144,6 +144,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
 
 
+    if(article.url =="Dai-y-Leo"){
+        bg = "bg-[#5f8575]"
+    }
+
+
     return (
         <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
             <div className="h-full w-full flex flex-col relative items-center justify-between bg-gray-600">

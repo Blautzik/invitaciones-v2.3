@@ -23,6 +23,10 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
         tipo = openSans.className
     }
 
+    if (form_id == "1kKF8B-1gNtql6y8_1N2Q-i308_HjCgZddMOEVvUmmvY"){
+        tipo = openSans.className
+    }
+
 
     if (form_id == "1wvlLwL5Z6wZsclJH8ZN99EfGg7wTO7hJfXFL0SnFRFw"){
         tipo = openSans.className

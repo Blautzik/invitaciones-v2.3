@@ -151,6 +151,12 @@ const Invitacion = ({ article }) => {
             article.mfmf = "swiper"
         }
 
+
+        if (article.url == "Dai-y-Leo"){
+            bg = "bg-[#5f8575] text-secondary-50"
+
+        }
+
         return (
             <>
                 <Head>
@@ -248,7 +254,7 @@ const Invitacion = ({ article }) => {
                 <Footer frase_cierre={article.frase_cierre} sin_janos={article.sin_janos} form_id={article.form_id} />
 
                 {!sin_footer &&
-                    <div className={`w-screen ${bg ? `${bg} text-secondary-600 mt-8` : "bg-violeta text-white"} h-8 text-center pt-2 `}>{nombre} </div>
+                    <div className={`w-screen ${bg ? `${bg}  mt-8` : "bg-violeta text-white"} h-8 text-center pt-2 `}>{nombre} </div>
                 }
             </>
         )

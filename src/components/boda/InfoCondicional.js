@@ -4,6 +4,8 @@ import Info from '@/components/15/Info';
 import InfoSouci from '../15/InfoSouci';
 import InfoVip from './InfoVip';
 import InfoCeremonia from './InfoCeremonia';
+import Infoplaya from './Infoplaya';
+import { Caviar } from '@/utils/fonts';
 
 const InfoCondicional = ({ article }) => {
   if (article.form_id === "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k") {
@@ -28,6 +30,12 @@ const InfoCondicional = ({ article }) => {
     return (
       <div id="info">
         <InfoCeremonia article={article} />
+      </div>
+    )
+  }else if(article.form_id=="1kKF8B-1gNtql6y8_1N2Q-i308_HjCgZddMOEVvUmmvY"){
+    return (
+      <div id="info" className={`${Caviar.className} h-1/12`}>
+        <Infoplaya />
       </div>
     )
   }else {

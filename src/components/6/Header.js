@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { alegreya, bride, Gabriola, comfortaa, minion, openSans, roboto } from '../../utils/fonts';
 import Countdown from './Countdown';
 import Link from 'next/link';
+import { GiTrumpet } from 'react-icons/gi';
 
 
 
@@ -18,6 +19,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     let countdownPortada = true
     let sombra = ""
     let fuente = minion.className
+    let nos_casamos = true
+    let colores_boton = "bg-white text-gray-900"
 
     const imageStyle = {
         objectFit: 'cover',
@@ -97,6 +100,16 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     palabras = [titulo]
 
 
+    if (form_id == "1kKF8B-1gNtql6y8_1N2Q-i308_HjCgZddMOEVvUmmvY"){
+       sin_nombre = true    
+       imageStyle.opacity = 1
+       imageStylePC.opacity = 1
+       texto = "text-secondary-800 "
+       nos_casamos = false
+       colores_boton = "text-secondary-100 bg-[#5f8575] "
+    }
+
+
 
     return (
         <div className=" h-[100dvh] bg-slate-800 ">
@@ -144,11 +157,11 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                     {
                         countdownPortada &&
                         <div className='flex flex-col items-center'>
-                            <h2 className={`${openSans.className} ${texto} max-w-xs  text-center text-xl tracking-widest ]`}> Nos casamos en</h2>
+                            {nos_casamos && <h2 className={`${openSans.className} ${texto} max-w-xs  text-center text-xl tracking-widest ]`}> Nos casamos en</h2>}
                             <Countdown date={date} texto={texto} />
                             <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest`}>{frase_extra}</h2>
                             <Link href='#info' scroll={false}>
-                                <button className={`${openSans.className} py-3 px-9 bg-white rounded-full text-gray-900 font-[900] text-center ${!frase_extra && "mt-10"} mb-16 `}>MÁS INFO</button>
+                                <button className={`${openSans.className} py-3 px-9  rounded-full ${colores_boton} font-[900] text-center ${!frase_extra && "mt-10"} mb-16 `}>MÁS INFO</button>
                             </Link>
                         </div>
                     }

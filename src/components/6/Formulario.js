@@ -74,6 +74,12 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     frase_formulario = "¿Vas a necesitar combi? Si es así, ¿desde donde preferirías salir? \n  a)9 de Julio \n  b)Av. Santa Fe y Scalabrini Ortiz \n  c) Puente Saveedra"
   }
 
+
+
+  if (form_id == "1kKF8B-1gNtql6y8_1N2Q-i308_HjCgZddMOEVvUmmvY"){
+    bg= "bg-[#5f8575]"
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 

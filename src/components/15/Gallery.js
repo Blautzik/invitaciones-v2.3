@@ -5,7 +5,7 @@ import { easeInOut, easeIn, motion } from "framer-motion"
 import Image from 'next/image'
 import { Button, Modal } from 'flowbite-react';
 import GallerySlider from '../1/GallerySlider';
-import { openSans } from "@/utils/fonts";
+import { openSans, Wedding } from "@/utils/fonts";
 
 
 export default function Gallery({ imagenes, titulo, mail }) {
@@ -14,6 +14,8 @@ export default function Gallery({ imagenes, titulo, mail }) {
   const [showVideo, setShowVideo] = useState()
 
   const props = { openModal, setOpenModal };
+
+  let nombres = false
 
   const openClose = (index) => {
     setIndex(index)
@@ -42,11 +44,18 @@ export default function Gallery({ imagenes, titulo, mail }) {
 
   }
 
+
+  if (mail == "leomorea@gmail.com"){
+    titulo = "Nuestra Historia"
+    nombres = "Dai y Leo"
+  }
+
   return (
     <>
 
       <div className="flex flex-col items-center bg-[#fff] z-10 w-screen md:max-w-4xl text-center">
         <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
+        {nombres && <h2 className={`${Wedding.className} text-8xl mb-2 mt-4 md:text-9xl md:mb-6 `}>{nombres}</h2>}
         {
           mail === "mercedes.matta10@gmail.com" &&
           <p className={`${openSans.className} text-slate-700 text-sm mx-8 leading-2 mb-2 max-w-2xl font-[500]`}>
