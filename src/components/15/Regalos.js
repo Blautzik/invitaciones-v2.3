@@ -140,7 +140,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
 
     if (article.url == "Malvi-28-02"){
-        bg= "bg-indigo-400"
+        bg= "bg-blue-600"
     }
 
 

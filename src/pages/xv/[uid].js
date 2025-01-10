@@ -114,7 +114,7 @@ const Invitacion = ({ article }) => {
         if(article.url == "Malvi-28-02"){
             texto= "text-secondary-800"
             bg= "bg-amber-50"
-            bgaccent = "bg-indigo-400"
+            bgaccent = "bg-blue-600"
         }
 
         

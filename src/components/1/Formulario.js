@@ -117,12 +117,12 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
   }
 
   if (article.url == "Malvi-28-02"){
-    color_fondo = "bg-indigo-400"
+    color_fondo = "bg-blue-600 bg-opacity-100"
     frase_extra = "Qué canción no puede faltar en la playlist de la fiesta?"
   }
 
   return (
-    <div className={`${openSans.className} ${color_fondo ? color_fondo : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen bg-opacity-80`}>
+    <div className={`${openSans.className} bg-opacity-80 ${color_fondo ? color_fondo : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen `}>
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
           <GoCheckCircle className="text-[66px] font-thin text-white" />
