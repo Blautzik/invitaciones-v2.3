@@ -117,6 +117,9 @@ const Invitacion = ({ article }) => {
             bgaccent = "bg-blue-600"
         }
 
+        if (article.url == "Ambar-22-02"){
+            article.mfmfm = "playlist"
+        }
         
 
 
