@@ -386,7 +386,7 @@ export const salones = [
     },
     {
         nombre: "Jano's Los Naranjos",
-        direccion: "Ruta 88 K, 3.300 Mar del Plata",
+        direccion: "Ruta 88, Km 3.3, Mar del Plata",
         link_maps: "https://maps.app.goo.gl/WpE69NQQ5RPuGEF37",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1722389239/fotos%20salones/1713212794Recorrido_Naranjos_1_62_vwcdrb.jpg',
         link: 'https://www.janoseventos.com/salones.php?q=janos-losnaranjos'

@@ -97,6 +97,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         imageStyle.objectPosition = "65% 10%"
     }
 
+
+
     palabras = [titulo]
 
 
@@ -104,7 +106,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
        sin_nombre = true    
        imageStyle.opacity = 1
        imageStylePC.opacity = 1
-       texto = "text-secondary-800 "
+       texto = "text-secondary-900 font-extrabold "
        nos_casamos = false
        colores_boton = "text-secondary-100 bg-[#5f8575] "
     }
@@ -156,7 +158,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
 
                     {
                         countdownPortada &&
-                        <div className='flex flex-col items-center'>
+                        <div className={`flex flex-col items-center ${!nos_casamos && "relative top-10"}`}>
                             {nos_casamos && <h2 className={`${openSans.className} ${texto} max-w-xs  text-center text-xl tracking-widest ]`}> Nos casamos en</h2>}
                             <Countdown date={date} texto={texto} />
                             <h2 className={`${openSans.className} ${texto} max-w-xs text-center text-xl tracking-widest`}>{frase_extra}</h2>

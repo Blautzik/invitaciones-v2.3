@@ -146,6 +146,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
     if(article.url =="Dai-y-Leo"){
         bg = "bg-[#5f8575]"
+        frase_abajo = "Sino en la fiesta contaremos con un buzón"
     }
 
 
@@ -179,7 +180,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
                     }
                 </div>
-                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2 mb-24 ${bg ? "opacity-100" : "opacity-90"} `}>
+                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2  mb-24 ${bg ? "opacity-100" : "opacity-90"} `}>
                     {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto2 ? texto2 : texto}>
                         <div className={`${openSans.className} text-sm  opacity-100 regalos`}>
                             {cta2 && <p className='pb-2'><strong>{nombre_cta1} </strong> </p>}
@@ -197,10 +198,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                                 </>
                             }
                         </div>
-                        {frase_abajo &&
-                            <p>{frase_abajo}</p>
-                        }
                     </Accordion>
+                    }
+                    {frase_abajo &&
+                        <p className='text-white text-center '>{frase_abajo}</p>
                     }
                 </div>
             </div>
