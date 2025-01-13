@@ -17,6 +17,8 @@ export default function Gallery({ imagenes, titulo, mail }) {
 
   let nombres = false
 
+  let byn = false
+
   const openClose = (index) => {
     setIndex(index)
     props.setOpenModal('default')
@@ -50,8 +52,12 @@ export default function Gallery({ imagenes, titulo, mail }) {
     nombres = "Dai y Leo"
   }
 
+  if(mail == "ambar.style2012@gmail.com"){
+    byn = "grayscale(100%)"
+  }
+
   return (
-    <>
+    <>  
 
       <div className="flex flex-col items-center bg-[#fff] z-10 w-screen md:max-w-4xl text-center">
         <h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>
@@ -65,7 +71,7 @@ export default function Gallery({ imagenes, titulo, mail }) {
         <div className={`grid ${images.length === 1 ? 'grid-cols-1' : 'grid-cols-2'} gap-y-1 md:justify-center md:gap-1 w-full pl-1 mb-10`}>
           {images.map(e => <div
             key={e}
-            className='rounded drop-shadow-2xl relative h-52 md:h-[350px]'
+            className='rounded drop-shadow-2xl relative h-52 md:h-[350px] '
             style={{
               width: '98%', // Set a fixed width (adjust as needed)
               overflow: 'hidden', // Ensure consistent sizing
@@ -80,7 +86,8 @@ export default function Gallery({ imagenes, titulo, mail }) {
               style={{
                 borderRadius: '5px',
                 objectFit: "cover", // Ensure consistent image display
-                objectPosition: 'top'
+                objectPosition: 'top',
+                filter: byn && byn,
               }}
             />
           </div>

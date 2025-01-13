@@ -152,6 +152,10 @@ const Info = ({ article }) => {
         font = Vogue.className
     }
 
+    if (article.url == "Ambar-22-02"){
+        iconoDC = trajeVestidoIcon
+    }
+
     let textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
 
     return (
