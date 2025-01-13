@@ -118,7 +118,7 @@ const Invitacion = ({ article }) => {
         }
 
         if (article.url == "Ambar-22-02"){
-            article.mfmfm = "playlist"
+            article.mfmf = "playlist"
         }
         
 
