@@ -58,7 +58,7 @@ export default function Infoplaya() {
                   Condesa de los Naranjos
                 </p>
                 <p className="text-center text-sm text-gray-700">
-                  Ruta 88 K, 3.300 Mar del Plata
+                Ruta 88, Km 3.3, Mar del Plata
                 </p>
               </div>
 
@@ -66,7 +66,7 @@ export default function Infoplaya() {
                 <h2 className="mb-1 text-center text-sm font-medium uppercase text-gray-600">
                   HORA
                 </h2>
-                <p className="text-center text-gray-800">19:00 hs</p>
+                <p className="text-center text-gray-800">19:30 hs</p>
                 <p className="text-sm italic text-gray-700">
                   Comenzará con nuestra ceremonia civil
                 </p>
