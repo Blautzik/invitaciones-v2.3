@@ -7,7 +7,7 @@ import { Spinner } from 'flowbite-react';
 
 
 
-export default function GallerySlider({ images, index }) {
+export default function GallerySlider({ images, index , byn}) {
 
     const reorderedImg = images.slice(index).concat(images.slice(0, index))
 
@@ -32,7 +32,7 @@ export default function GallerySlider({ images, index }) {
                             src={e}
                             fill
                             quality={25}
-                            style={{ objectFit: "cover", borderRadius: '2%', objectPosition:'top'}}
+                            style={{ objectFit: "cover", borderRadius: '2%', objectPosition:'top', filter: {byn}}}
                         />
                     </div>
                 )
