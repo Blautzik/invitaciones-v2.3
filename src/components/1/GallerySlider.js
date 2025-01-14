@@ -32,7 +32,7 @@ export default function GallerySlider({ images, index , byn}) {
                             src={e}
                             fill
                             quality={25}
-                            style={{ objectFit: "cover", borderRadius: '2%', objectPosition:'top', filter: byn && byn }}
+                            style={{ objectFit: "cover", borderRadius: '2%', objectPosition:'top', filter: byn ?  byn : "" }}
                         />
                     </div>
                 )
