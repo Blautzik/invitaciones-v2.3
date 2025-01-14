@@ -97,6 +97,9 @@ export const salones = [
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987965/salones/ramos%20boutique.png',
         link: 'https://janoseventos.com/viewVenue/ldamqaswdg2j29yc8vox9fgg'
     },
+
+
+    
     {
         nombre: "Jano's Palermo Soho",
         direccion: "Armenia 1353- Palermo Soho",
