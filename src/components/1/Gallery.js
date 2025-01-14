@@ -85,7 +85,7 @@ export default function Gallery({ imagenes, titulo }) {
         >
           <Modal.Body className='p-0 bg-transparent'>
             <div className='h-96 w-full'>
-              <GallerySlider images={images} index={index} />
+              <GallerySlider images={images} index={index} byn={byn} />
             </div>
           </Modal.Body>
           <Modal.Footer className='justify-center '>
