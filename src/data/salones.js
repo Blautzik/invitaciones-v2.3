@@ -93,9 +93,9 @@ export const salones = [
     {
         nombre: "Jano's Ramos Boutique",
         direccion: "Castelli 580, Ramos Mejia, Buenos Aires",
-        link_maps: "http://maps.google.com/?q=Jano's+Ramos+Boutique",
+        link_maps: "https://maps.app.goo.gl/E9aobJK3TRMMRith7",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987965/salones/ramos%20boutique.png',
-        link: 'https://www.janoseventos.com/salones.php?q=janos-ramosboutique'
+        link: 'https://janoseventos.com/viewVenue/ldamqaswdg2j29yc8vox9fgg'
     },
     {
         nombre: "Jano's Palermo Soho",
