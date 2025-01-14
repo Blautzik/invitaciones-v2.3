@@ -7,7 +7,7 @@ import { Spinner } from 'flowbite-react';
 
 
 
-export default function GallerySlider({ images, index , byn}) {
+export default function GallerySlider({ images, index , byn= ""}) {
 
     const reorderedImg = images.slice(index).concat(images.slice(0, index))
 
