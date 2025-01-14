@@ -3,6 +3,7 @@ import React from 'react'
 import { comfortaa, openSans } from '../../utils/fonts';
 import Accordion from '../6/Accordion'
 import { FaBullseye } from 'react-icons/fa6';
+import { Comfortaa } from 'next/font/google';
 
 const Regalos = ({ article, foto_regalos, bg }) => {
 
@@ -142,6 +143,9 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     if (article.url == "Malvi-28-02"){
         bg= "bg-blue-600"
     }
+    if (article.url == "Luisana-22-02"){
+        bg= "bg-blue-600"
+    }
 
 
     if(article.url =="Dai-y-Leo"){
@@ -163,8 +167,8 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                 <div className={`${article.mfmf === "regalo_sin_datos" ? 'pt-[72vh] ' : 'mt-6'} text-center mx-10 flex flex-col items-center ${texto} opacity-100 z-30 `}>
                     <Image
                         src={'https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png'}
-                        height={65}
-                        width={65}
+                        height={50}
+                        width={50}
                         style={iconStyle}
                     />
                     <h3 className={`${comfortaa.className} text-2xl mt-4 mb-2 font-[700]`}> {!hide && "Regalos"}</h3>

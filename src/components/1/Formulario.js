@@ -121,6 +121,11 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
     frase_extra = "Qué canción no puede faltar en la playlist de la fiesta?"
   }
 
+
+  if(article.url == "Luisana-22-02"){
+    color_fondo = "bg-blue-600 bg-opacity-100"
+  }
+
   return (
     <div className={`${openSans.className} bg-opacity-80 ${color_fondo ? color_fondo : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen `}>
       <div className="mx-auto py-10 ">

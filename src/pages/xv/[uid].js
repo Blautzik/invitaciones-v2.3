@@ -122,6 +122,8 @@ const Invitacion = ({ article }) => {
         }
         if (article.url == "Luisana-22-02"){
             article.sin_ondas = true
+            description= "Te espero para compartir la alegría de esta noche única e inolvidable."
+            bgaccent="bg-blue-600"
         }
 
         
