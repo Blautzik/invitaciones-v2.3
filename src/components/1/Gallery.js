@@ -7,7 +7,7 @@ import GallerySlider from './GallerySlider';
 import { openSans } from "@/utils/fonts";
 
 
-export default function Gallery({ imagenes, titulo }) {
+export default function Gallery({ imagenes, titulo, byn= "" }) {
   const [index, setIndex] = useState(0)
   const [openModal, setOpenModal] = useState();
   const [showVideo, setShowVideo] = useState()
