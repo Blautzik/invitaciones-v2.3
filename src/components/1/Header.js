@@ -57,6 +57,11 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
         font = Vogue.className
     }
 
+
+    if (article.url == "Luisana-22-02"){
+        content = "Te espero para compartir la alegría de esta noche única e inolvidable."
+    }
+
     return (
         <>
             <div className={`block md:hidden ${bg} `}>
