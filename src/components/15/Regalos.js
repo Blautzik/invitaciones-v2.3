@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-import { comfortaa, openSans } from '../../utils/fonts';
+import { openSans } from '../../utils/fonts';
 import Accordion from '../6/Accordion'
 import { FaBullseye } from 'react-icons/fa6';
-import { Comfortaa } from 'next/font/google';
+
 
 const Regalos = ({ article, foto_regalos, bg }) => {
 
@@ -171,7 +171,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                         width={50}
                         style={iconStyle}
                     />
-                    <h3 className={`${comfortaa.className} text-2xl mt-4 mb-2 font-[700]`}> {!hide && "Regalos"}</h3>
+                    <h3 className={`${openSans.className} text-3xl mt-4 mb-2 font-[400]`}> {!hide && "Regalos"}</h3>
                     {
                         article.mail === "marine" ?
 
@@ -184,7 +184,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
                     }
                 </div>
-                <div className={`${comfortaa.className} z-30 w-10/12 lg:w-1/2  mb-24 ${bg ? "opacity-100" : "opacity-90"} `}>
+                <div className={`${openSans.className} z-30 w-10/12 lg:w-1/2  mb-24 ${bg ? "opacity-100" : "opacity-90"} `}>
                     {article.alias && <Accordion open header="Datos Bancarios" bg={bg} texto={texto2 ? texto2 : texto}>
                         <div className={`${openSans.className} text-sm  opacity-100 regalos`}>
                             {cta2 && <p className='pb-2'><strong>{nombre_cta1} </strong> </p>}

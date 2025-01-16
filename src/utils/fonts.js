@@ -2,6 +2,12 @@ import { Inter, Roboto_Mono, Great_Vibes, Roboto_Serif, Playfair_Display, Open_S
 import localFont from "next/font/local"
 
 
+export const comfortaa = Comfortaa({
+  subsets: ['latin'],
+  display:'swap',
+  weight: ['500','300','400','600','700'],
+})
+
 export const twcen = localFont({ 
   src: './TwCenMTStd.woff2',
   subsets: ['latin'],
@@ -119,11 +125,7 @@ export const openSans = Urbanist({
   weight: ['100', '200', '300','400','500','600','700','800','900'],
 })
 
-export const comfortaa = Comfortaa({
-  subsets: ['latin'],
-  display:'swap',
-  weight: ['500','300','400','600','700'],
-})
+
 
 
 export const alegreya = Alegreya({

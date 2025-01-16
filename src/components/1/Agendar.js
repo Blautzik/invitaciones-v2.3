@@ -63,13 +63,15 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}
     }
 
 
+    console.log("----------------__",comfortaa.className)
+
     return (
         <div className=' flex flex-col items-center justify-between pb-8'>
             <div className="flex flex-col items-center justify-between mb-4">
 
                 <BiCalendar className={`h-20 w-20 ${txt}  mt-6 `} />
 
-                <h3 className={`${comfortaa.className} ${txt} text-4xl mb-4`}>Agendar</h3>
+                <h3 className={`${openSans.className} ${txt} text-4xl mb-4`}>Agendar</h3>
                 <a className={`${openSans.className} ${bg !== "bg-black" ? `${bg + " text-white"} ` : "bg-black text-white"}  flex justify-evenly items-center w-72 max-w-[78vw] text-[14px] font-[600] px-4 py-2 rounded-full `}                    
                     href={`https://calendar.google.com/calendar/u/0/r/day/${formattedDate}`}                        
                     target="_blank"
