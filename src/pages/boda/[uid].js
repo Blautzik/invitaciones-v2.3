@@ -160,6 +160,7 @@ const Invitacion = ({ article }) => {
         if (article.url == "Vane-y-Fawaz"){
             texto = "text-blue-800"
             marginPortada = "mt-0"
+            bg= "bg-blue-900"
         }
 
         return (
