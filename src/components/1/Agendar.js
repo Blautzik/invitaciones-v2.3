@@ -7,7 +7,7 @@ import {format, parse, parseISO, isValid, addDays} from 'date-fns';
 import {es} from 'date-fns/locale';
 
 
-const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}) => {
+const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg="bg-black"}) => {
 
     console.log(fecha)
 
