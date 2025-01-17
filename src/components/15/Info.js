@@ -6,7 +6,7 @@ import suitIcon from '../../../public/suit (1).png'
 import trajeVestidoIcon from "../../../public/ropa.png"
 import ceremoniaIcon from "../../../public/heartseparator1.png"
 import salones, { encontrarSalon } from "../../data/salones"
-import { obtenerHoraArgentina } from '@/helpers';
+import { getGoogleDriveImageUrl, obtenerHoraArgentina } from '@/helpers';
 
 const Info = ({ article }) => {
     const fechaCeremonia = new Date(article.fecha);
@@ -38,6 +38,9 @@ const Info = ({ article }) => {
     let estacionamiento = false
     let iconoDC = suitIcon
     let font = comfortaa.className
+    let opacity = 1
+    let filter = ""
+    let bgimg = false
 
     const imgstyle = {
         objectFit: 'cover',
@@ -158,8 +161,33 @@ const Info = ({ article }) => {
 
     let textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
 
+
+
+    if(article.url == "Vane-y-Fawaz"){
+        text= "text-blue-900 text-3xl"
+        bgbtn = "bg-secondary-500"
+        txtbtn = "text-blue-900"
+        iconoDC = trajeVestidoIcon
+        filter = "invert(50%) sepia(100%) saturate(905%) hue-rotate(180deg) brightness(30%)  "
+        bgimg = 'https://drive.google.com/uc?export=view&id=1Y_IMd_i3rWy928Ff-qoMsSo2hyUF7gR7'
+    
+
+    }
+
     return (
-        <div className={`relative w-full mt-4 -globals-36 overflow-x-hidden ${bg}`}>
+        <div className={`relative w-full  -globals-36 overflow-x-hidden ${bg} mt-0`} >
+            {
+                article.url == "Vane-y-Fawaz" &&
+                <div
+                className="absolute inset-0 -z-10"
+                style={{
+                    backgroundImage: `url('${bgimg}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  opacity: 0.4, 
+                }}
+              ></div>
+            }
 
             {foto_ceremonia &&
 
@@ -382,6 +410,10 @@ const Info = ({ article }) => {
                                             <Image
                                                 src={iconoDC}
                                                 fill
+                                                style={{
+                                                    opacity:opacity,
+                                                    filter: filter,
+                                                }}
                                             />
                                         </div>
                                     </div>

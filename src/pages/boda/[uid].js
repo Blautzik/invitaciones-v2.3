@@ -67,6 +67,7 @@ const Invitacion = ({ article }) => {
         let imgstyle = false
         let foto2 = false
         let ig_link = false
+        let marginPortada = "mb-16"
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -156,6 +157,10 @@ const Invitacion = ({ article }) => {
             bg = "bg-[#5f8575] text-secondary-50"
 
         }
+        if (article.url == "Vane-y-Fawaz"){
+            texto = "text-blue-800"
+            marginPortada = "mt-0"
+        }
 
         return (
             <>
@@ -168,7 +173,7 @@ const Invitacion = ({ article }) => {
 
 
 
-                <div className="mb-16">
+                <div className={marginPortada}>
                     <Header title={article.nombre}
                         coverImage={portada}
                         coverImagePc={portadaPC ? portadaPC : portada}

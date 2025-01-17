@@ -61,9 +61,13 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg}
         txt = "text-white"
         bg= "bg-[#5f8575]"
     }
+    
+    
+    if(fecha == "2025-03-29T21:00:00.000Z"){
+        txt = "text-sky-900"
+        bg= "bg-sky-900"
+    } 
 
-
-    console.log("----------------__",comfortaa.className)
 
     return (
         <div className=' flex flex-col items-center justify-between pb-8'>

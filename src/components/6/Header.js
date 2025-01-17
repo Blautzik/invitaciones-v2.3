@@ -111,6 +111,14 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
        colores_boton = "text-secondary-100 bg-[#5f8575] "
     }
 
+    if(form_id == "1gU6UL4IAi_uIIAs1Jn1X3DIkF7zcnbLfLZetoZOuoAk"){
+        sin_nombre = true
+        imageStyle.opacity = 1
+        imageStylePC.opacity = 1
+        texto = "text-blue-900"
+        colores_boton = "bg-gray-100 text-blue-900 font-[400]"
+    }
+
 
 
     return (

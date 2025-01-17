@@ -80,6 +80,11 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     bg= "bg-[#5f8575]"
   }
 
+
+  if ( form_id == "1gU6UL4IAi_uIIAs1Jn1X3DIkF7zcnbLfLZetoZOuoAk"){
+    bg = "bg-sky-900"
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
