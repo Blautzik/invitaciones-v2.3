@@ -35,7 +35,7 @@ const Footer = ({frase_cierre, sin_janos, mfmf, mail, form_id }) => {
             {
                 mail != 'bzerrizuela@gmail.com' &&
                 <h2 className={`${mfmf == "formulario_simple" ? comfortaa.className : great_vives.className} ${mfmf == "formulario_simple" ? "hidden" :` ${text}  md:text-5xl text-4xl mx-10` } ${whitespace_pre && whitespace_pre} `}>
-               { frase_cierre || "Gracias por acompañarme en este momento tan importante!!"}
+               { frase_cierre || "¡Gracias por acompañarme en este momento tan importante!"}
             </h2>
             }
             { !sin_janos &&
