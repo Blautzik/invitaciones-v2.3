@@ -154,6 +154,13 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
 
 
+    if(article.url == "Cris-y-Tefi"){
+        cta2 = "BBVA"
+        cbu2 = "0170006040000005239960"
+        alias3 = "ESTEFI.BBVA"
+    }
+
+
     return (
         <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
             <div className="h-full w-full flex flex-col relative items-center justify-between bg-gray-600">
