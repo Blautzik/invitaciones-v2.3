@@ -155,9 +155,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
 
     if(article.url == "Cris-y-Tefi"){
-        cta2 = "BBVA"
+        cta2 = "Cuenta en Dólares"
         cbu2 = "0170006040000005239960"
         alias3 = "ESTEFI.BBVA"
+        nombre_cta1 = "Cuenta en Pesos"
     }
 
 
