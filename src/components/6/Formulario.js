@@ -88,7 +88,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
 
 
   if (form_id == "1UBuuvIEVZUPa-L05AZOJOk_OXhWNBhhZlDnf9Mwxy5s"){
-    frase= "Confirmar antes del 25/01 "
+    frase= "Confirmar antes de las 48hs "
   }
 
   if (form_id == "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI"){
