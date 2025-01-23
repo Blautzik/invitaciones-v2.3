@@ -56,7 +56,7 @@ const Invitacion = ({ article }) => {
         let galeria = false
         let foto_agendar = false
         let foto_regalos = false
-        let bg = false
+        let bg = undefined
         let agendar = false
         let countdownFuera = false
         let texto = "text-slate-50"
@@ -161,6 +161,11 @@ const Invitacion = ({ article }) => {
             texto = "text-blue-800"
             marginPortada = "mt-0"
             bg= "bg-blue-900"
+        }
+
+        if (article.url == "Ivonne-y-Pablo"){
+            article.mfmf = "swiper"
+
         }
 
         return (
