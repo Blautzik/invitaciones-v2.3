@@ -71,6 +71,11 @@ const InfoVip = ({ article }) => {
         bgbtn = "bg-[#e8e4db]"
         txtbtn = "text-secondary-600"
     }
+    if (article.form_id == "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI") {
+        text = "text-[#2f4538]"
+        bgbtn = "bg-[#e8e4db]"
+        txtbtn = "text-[#2f4538]"
+    }
 
 
     function capitalize(string) {

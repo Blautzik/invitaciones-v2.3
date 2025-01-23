@@ -45,6 +45,11 @@ const InfoCeremonia = ({ article }) => {
          
     }
 
+
+    if(article.url == "Ivonne-y-Pablo"){
+        link_maps = "https://maps.app.goo.gl/m1xFpyAhCWbgZKTYA"
+    }
+
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
     return (
         <div className='flex md:flex-row md:justify-evenly md:items-start flex-col'>

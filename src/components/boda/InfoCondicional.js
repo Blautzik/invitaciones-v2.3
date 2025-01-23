@@ -20,6 +20,12 @@ const InfoCondicional = ({ article }) => {
         <InfoVip article={article} />
       </div>
     );
+  } else if (article.form_id === "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI") { 
+    return (
+      <div id="info">
+        <InfoVip article={article} />
+      </div>
+    );
   }else if(article.form_id=="1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
     return (
       <div id="info">
@@ -27,6 +33,12 @@ const InfoCondicional = ({ article }) => {
       </div>
     )
   }else if(article.form_id=="1fkcSVt3orivOV1UMbUHCJcekpmWo6q5CowcPr0-MTNU"){
+    return (
+      <div id="info">
+        <InfoCeremonia article={article} />
+      </div>
+    )
+  }else if(article.form_id=="1UBuuvIEVZUPa-L05AZOJOk_OXhWNBhhZlDnf9Mwxy5s"){
     return (
       <div id="info">
         <InfoCeremonia article={article} />

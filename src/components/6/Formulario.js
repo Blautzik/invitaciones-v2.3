@@ -16,6 +16,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   let con_mail = true
   let menu_especial = false
   let sin_menu_infantil = true
+  let frase = undefined 
 
   const inputCN =
     'shadow-md focus:ring-indigo-500 focus:border-indigo-500 w-full h-14 px-5 block text-[14px] placeholder-gray-500 border-gray-300 rounded-sm';
@@ -85,6 +86,17 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
     bg = "bg-sky-900"
   }
 
+
+  if (form_id == "1UBuuvIEVZUPa-L05AZOJOk_OXhWNBhhZlDnf9Mwxy5s"){
+    frase= "Confirmar antes del 25/01 "
+  }
+
+  if (form_id == "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI"){
+    texto = "text-[#2f4538]"
+  }
+
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -146,6 +158,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
           <p className={`${openSans.className} ${texto} text-md max-w-2xl font-[500]`}>
             Por favor completá el formulario con tus datos y comentarios para organizar la mejor fiesta
           </p>
+
         </div>
 
         <form className="py-4 space-y-4 mx-auto w-10/12" onSubmit={handleSubmit}>
@@ -238,6 +251,9 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               placeholder={frase_formulario || 'Comentarios y saludos'}
             />
           </div>
+          {frase && <p className={`${openSans.className} ${texto} text-md max-w-2xl font-[700]`}>
+            {frase}
+          </p>}
 
           <div className="flex items-end justify-end">
             <button
