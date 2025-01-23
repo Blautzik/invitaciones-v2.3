@@ -171,6 +171,7 @@ const Invitacion = ({ article }) => {
         if (article.url == "Nahir-y-Ivan"){
             bg = "bg-[#BED3BB]"
             article.sin_janos = true
+            nombre = ""
         }
 
         return (

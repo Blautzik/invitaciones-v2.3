@@ -120,6 +120,13 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     }
 
 
+    if (Article.url == "Nahir-y-Ivan"){
+        sin_nombre = true
+        imageStyle.opacity = 1
+        imageStylePC.opacity = 1
+    }
+
+
 
     return (
         <div className=" h-[100dvh] bg-slate-800 ">
