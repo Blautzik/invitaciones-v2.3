@@ -172,6 +172,7 @@ const Invitacion = ({ article }) => {
             bg = "bg-[#BED3BB]"
             article.sin_janos = true
             nombre = ""
+            texto= "text-[#2f4538]"
         }
 
         return (
