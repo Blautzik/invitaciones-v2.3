@@ -120,7 +120,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     }
 
 
-    if (Article.url == "Nahir-y-Ivan"){
+    if (article.url == "Nahir-y-Ivan"){
         sin_nombre = true
         imageStyle.opacity = 1
         imageStylePC.opacity = 1
