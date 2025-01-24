@@ -88,7 +88,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
 
 
   if (form_id == "1UBuuvIEVZUPa-L05AZOJOk_OXhWNBhhZlDnf9Mwxy5s"){
-    frase= "Confirmar antes de las 48hs "
+    frase= "Confirmar antes de las 48 hs. De recibida esta invitación. Gracias "
   }
 
   if (form_id == "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI"){
