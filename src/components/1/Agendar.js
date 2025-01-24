@@ -69,6 +69,11 @@ const Agendar = ({ foto_agendar, fb_link, tw_link, ig_link , fecha, agendar, bg=
     } 
 
 
+
+    if(fecha == "2025-02-15T00:30:00.000Z"){
+        formattedDate = "2025/2/14"
+    }
+
     return (
         <div className=' flex flex-col items-center justify-between pb-8'>
             <div className="flex flex-col items-center justify-between mb-4">
