@@ -35,6 +35,9 @@ const Footer = ({frase_cierre, sin_janos, form_id}) => {
     }
 
 
+    if(form_id == "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI"){
+        tipo = "hidden"
+    }
 
 
    

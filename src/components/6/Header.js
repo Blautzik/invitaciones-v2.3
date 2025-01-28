@@ -125,6 +125,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         imageStyle.opacity = 1
         imageStylePC.opacity = 1
         texto = "text-[#2f4538]"
+        countdownPortada= false
     }
 
 

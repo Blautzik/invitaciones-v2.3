@@ -173,6 +173,7 @@ const Invitacion = ({ article }) => {
             article.sin_janos = true
             nombre = ""
             texto= "text-[#2f4538]"
+            article.frase_cierre = ""
         }
 
         return (

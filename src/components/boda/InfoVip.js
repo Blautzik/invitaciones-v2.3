@@ -75,7 +75,19 @@ const InfoVip = ({ article }) => {
         text = "text-[#2f4538]"
         bgbtn = "bg-[#e8e4db]"
         txtbtn = "text-[#2f4538]"
+        bg = "bg-custom"
+        // bg = "bg-[url('https://drive.google.com/uc?export=view&id=1MNOYGIxXy6w2PTrpxBhwmeFczTz74NJc')]"
     }
+
+
+    let backgroundStyle = article.form_id === "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI" 
+    ? {
+        backgroundImage: 'url(https://drive.google.com/uc?export=view&id=1VXQV1kihXtsfRGXGs65L8UkfbfWxRnm3)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }
+    : {};
 
 
     function capitalize(string) {
@@ -92,7 +104,19 @@ const InfoVip = ({ article }) => {
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
 
     return (
-        <div className={`relative w-full mt-4 -globals-36 overflow-x-hidden ${bg}`}>
+        <div className={`relative w-full mt-4 -globals-36 overflow-x-hidden ${bg}`} style={backgroundStyle}>
+            {article.form_id === "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI" && (
+                <div 
+                    className="absolute inset-0 z-0"
+                    style={{
+                        backgroundImage: `url(https://drive.google.com/uc?export=view&id=1VXQV1kihXtsfRGXGs65L8UkfbfWxRnm3)`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        opacity: 0.15  // Ajusta este valor según necesites
+                    }}
+                />
+            )}
             <h3 className={`${comfortaa.className} ${text} text-slate-700 sm:text-2xl xs:text-xl ${foto_ceremonia ? "mb-0" : "mb-4"} font-[700] text-center`}>Ceremonia y Fiesta</h3>
             <div className="flex flex-col justify-center items-center">
                 <motion.div

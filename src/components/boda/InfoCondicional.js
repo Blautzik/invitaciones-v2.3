@@ -6,6 +6,7 @@ import InfoVip from './InfoVip';
 import InfoCeremonia from './InfoCeremonia';
 import Infoplaya from './Infoplaya';
 import { Caviar } from '@/utils/fonts';
+import InfoVipNew from './InfoVipNew';
 
 const InfoCondicional = ({ article }) => {
   if (article.form_id === "1QnzLLfyqDlbbehwIJa7qPbEtpm16iZaEt8pI28cgW8k") {
@@ -23,7 +24,7 @@ const InfoCondicional = ({ article }) => {
   } else if (article.form_id === "1trFNkU-_EGblyx3Z44wXHg_6ajmphpvmfjGRfgkgAJI") { 
     return (
       <div id="info">
-        <InfoVip article={article} />
+        <InfoVipNew article={article} />
       </div>
     );
   }else if(article.form_id=="1ivEc4h8GKPPqzetPxNvi800X8i8gh4BEMau6D8RaqbM"){
