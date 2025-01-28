@@ -409,6 +409,13 @@ export const salones = [
         link: 'https://palaciosanssouci.com/'
     },
     {
+        nombre: "Holiday Inn",
+        direccion: "Martin Miguel de Guemes, 4718 Km 20, Ezeiza",
+        link_maps: "https://maps.app.goo.gl/aKW9xnxQVuccjBDc8",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1738107495/holiday-inn-buenos-aires-4271601495-4x3_wnqjwq.avif',
+        link: 'https://janoseventos.com/'
+    },
+    {
         nombre: "Jano's Quilmes",
         direccion: "Manuel Savio 3151, Quilmes",
         link_maps: "https://maps.app.goo.gl/wD1jo4si4Sv4nU4w9",
