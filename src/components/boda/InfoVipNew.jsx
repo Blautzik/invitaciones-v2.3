@@ -40,7 +40,6 @@ const InfoVipNew = ({ article }) => {
     }
 
     const overlayStyle = {
-        backgroundColor: 'rgba(255, 255, 255)',
         position: 'absolute',
         top: 0,
         left: 0,
