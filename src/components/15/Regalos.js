@@ -162,6 +162,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     }
 
 
+    if(article.url == "Antonella-03-03"){
+        imageStyle.objectPosition = "30% 50%"
+    }
+
+
     return (
         <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
             <div className="h-full w-full flex flex-col relative items-center justify-between bg-gray-600">
