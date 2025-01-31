@@ -45,6 +45,12 @@ const InfoCondicional = ({ article }) => {
         <InfoCeremonia article={article} />
       </div>
     )
+  }else if(article.form_id=="1LmGPi9qG-JifeA9BoYJZ-MQqidqUWYFyia6G3Qmj54Y"){
+    return (
+      <div id="info">
+        <InfoCeremonia article={article} />
+      </div>
+    )
   }else if(article.form_id=="1kKF8B-1gNtql6y8_1N2Q-i308_HjCgZddMOEVvUmmvY"){
     return (
       <div id="info" className={`${Caviar.className} h-1/12`}>

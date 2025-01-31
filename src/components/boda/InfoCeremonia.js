@@ -44,6 +44,10 @@ const InfoCeremonia = ({ article }) => {
         foto_ceremonia = getOptimizedGoogleDriveImageUrl("https://drive.google.com/file/d/1UCvU1xCbxookvD1pJXrEy12IVh9ov8LB/view?usp=sharing")
          
     }
+    if(article.form_id == "1LmGPi9qG-JifeA9BoYJZ-MQqidqUWYFyia6G3Qmj54Y"){
+        link_maps = "https://maps.app.goo.gl/JkPPRvcok9zHFB6e8"
+         
+    }
 
 
     if(article.url == "Ivonne-y-Pablo"){
