@@ -116,6 +116,14 @@ const Invitacion = ({ article }) => {
             music = "https://od.lk/s/NDVfNDgyMTcyOTZf/Ed%20Sheeran%20-%20Perfect%20-%20LatinHype%20%28youtube%29.mp3"
         }
 
+    
+        if (article.url == "Mia-22-02"){
+            article.fondo_sugerido = "https://res.cloudinary.com/fedexx/image/upload/v1738349672/WhatsApp_Image_2025-01-31_at_9.58.36_AM_kcmoyg.jpg"
+            article.data = {
+            fondo_sugerido: "https://res.cloudinary.com/fedexx/image/upload/v1738349672/WhatsApp_Image_2025-01-31_at_9.58.36_AM_kcmoyg.jpg"
+            }
+            bg = "bg-black"
+        }
 
 
 
@@ -148,13 +156,13 @@ const Invitacion = ({ article }) => {
                     />
                 </div>
 
-                <section id='info' className={bg == "bg-black" && bg}>
+                <section id='info'>
                     <motion.div>
                         <div className="h-full w-full flex flex-col items-center justify-between ">
                             {
                                 article.fondo_sugerido &&
                                 <Image
-                                    src={article.data.fondo_sugerido}
+                                    src={article.fondo_sugerido}
                                     fill
                                     quality={100}
                                     style={imageStyle}
@@ -196,7 +204,7 @@ const Invitacion = ({ article }) => {
 
 
                 {article.galeria &&
-                    <section className="bg-[#fff] mt-12 text-center flex justify-center ">
+                    <section className=" mt-12 text-center flex justify-center ">
                         {
                             article.mfmf == "swiper" ?
                                 <SwiperGallery galeria={galeria} article={article}/>
@@ -242,10 +250,9 @@ const Invitacion = ({ article }) => {
                     <Agendar className='z-40' foto={foto_agendar} ig_link={ig_link} fb_link={article.link_face} form_id={article.form_id} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
                 </div>
 
-                <Footer frase_cierre={article.frase_cierre} form_id={article.form_id} sin_janos={article.sin_janos} mfmf={article.mfmf} />
 
 
-                <div className={`w-screen ${bg} h-8 text-center pt-2 text-white`}>Invitaciones Jano's </div>
+
 
             </>
 

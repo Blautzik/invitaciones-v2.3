@@ -42,6 +42,8 @@ const Info = ({ article }) => {
     let filter = ""
     let bgimg = false
 
+    let iconOpacity = "opacity-50"
+
     const imgstyle = {
         objectFit: 'cover',
         objectPosition: '50% 50%',
@@ -174,17 +176,24 @@ const Info = ({ article }) => {
 
     }
 
+    if(article.url == "Mia-22-02"){
+       bgimg = "https://res.cloudinary.com/fedexx/image/upload/v1738349672/WhatsApp_Image_2025-01-31_at_9.58.36_AM_kcmoyg.jpg"
+       bg = "bg-transparent"
+       text= "text-black"
+       opacity = "opacity-100"
+    }
+
     return (
         <div className={`relative w-full  -globals-36 overflow-x-hidden ${bg} mt-0`} >
             {
-                article.url == "Vane-y-Fawaz" &&
+                bgimg &&
                 <div
                 className="absolute inset-0 -z-10"
                 style={{
                     backgroundImage: `url('${bgimg}')`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  opacity: 0.4, 
+                  opacity: 1, 
                 }}
               ></div>
             }
@@ -245,7 +254,7 @@ const Info = ({ article }) => {
                         >
                             {
                                 !foto_ceremonia ?
-                                    <div className='h-24 w-24 relative mb-6 opacity-50'>
+                                    <div className={`h-24 w-24 relative mb-6 ${opacity}`}>
 
                                         <Image
                                             src={fiestaIcon}
