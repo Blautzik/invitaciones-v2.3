@@ -102,7 +102,7 @@ const Invitacion = ({ article }) => {
             bg = "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1727300651/Imagen_de_WhatsApp_2024-09-19_a_las_10.54.59_d90a1b17_zf54it.jpg')] bg-no-repeat bg-cover"
         }
 
-        const title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
+        let title = `${article.nombre}${article.frase_portada ? " " + article.frase_portada : " Mis quince"}`;
         let description = `Te ${article.mfmf === "plural" ? "invitamos" : "invito"} a compartir la alegría de esta fiesta inolvidable y única`;
 
         if (article.url == "ASTJ-07-11") {
@@ -123,6 +123,8 @@ const Invitacion = ({ article }) => {
             fondo_sugerido: "https://res.cloudinary.com/fedexx/image/upload/v1738349672/WhatsApp_Image_2025-01-31_at_9.58.36_AM_kcmoyg.jpg"
             }
             bg = "bg-black"
+            title= "Mía"
+            description="Festejo mis XV el 22/02/25"
         }
 
 
@@ -176,27 +178,6 @@ const Invitacion = ({ article }) => {
                             <Info
                                 article={article}
                             />
-                            {
-                                article.mfmf === "bar_dionisio" &&
-                                <>
-                                    <InfoBat article={article} />
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <br />
-                                </>
-                            }
-                            {
-                                article.mfmf === "bar_dan" &&
-                                <>
-                                    <InfoBatDan article={article} />
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <br />
-                                </>
-                            }
-
 
                         </div>
                     </motion.div>
