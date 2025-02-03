@@ -130,7 +130,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
 
 
     if (title == "Barby & Leo"){
-        imageStyle.objectPosition = "70% 50%" 
+        imageStyle.objectPosition = "65% 50%" 
     }
 
 

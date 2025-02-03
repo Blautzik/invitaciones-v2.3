@@ -218,7 +218,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
                   onChange={(e) => setMenu(e.target.value)}
                   value={menu}
                   >
-                  <option value="Menú Principal">Menú Principal: </option>
+                  <option value="Menú Principal">Menú Principal</option>
                   <option value="Menú Vegetariano">Menú Vegetariano</option>
                   <option value="Menú Vegano">Menú Vegano</option>
                   <option value="Menú Celíaco">Menú Celíaco</option>
