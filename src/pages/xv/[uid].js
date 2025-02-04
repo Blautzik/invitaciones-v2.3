@@ -126,7 +126,7 @@ const Invitacion = ({ article }) => {
             bgaccent="bg-blue-600"
         }
 
-        
+
         
 
 

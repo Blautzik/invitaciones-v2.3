@@ -9,10 +9,12 @@ import "swiper/css/pagination";
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import { PiXCircleLight } from "react-icons/pi";
+import {openSans} from '../../utils/fonts';
 
 export const SwiperGallery = ({ galeria, article }) => {
   let height = "h-[500px]";
   let bgimg = false;
+  let titulo = false
 
   if (article.url == "Martu-y-Polo") {
     height = "h-[400px]";
@@ -23,13 +25,16 @@ export const SwiperGallery = ({ galeria, article }) => {
       "https://res.cloudinary.com/fedexx/image/upload/v1738349672/WhatsApp_Image_2025-01-31_at_9.58.36_AM_kcmoyg.jpg";
   }
 
+  if (article.url == "Bianqui-09-03"){
+    titulo = "Book de fotos"
+  }  
+
   return (
     <div className={`relative mx-auto min-h-[600px] max-w-full ${bgimg && "-mt-12"}`}>
       {bgimg && (
         <div
           className="absolute left-0 top-0 h-full w-full"
           style={{
-            backgroundColor: "red", // Para debug
             backgroundImage: `url('${bgimg}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
@@ -38,6 +43,8 @@ export const SwiperGallery = ({ galeria, article }) => {
           }}
         ></div>
       )}
+
+      {titulo &&<h2 className={`${openSans.className} text-4xl mb-2 md:text-9xl md:mb-6 `}>{titulo}</h2>}
       <div className="relative z-10 mx-auto max-w-full">
         <Swiper
           effect={"coverflow"}

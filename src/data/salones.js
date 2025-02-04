@@ -63,6 +63,13 @@ export const salones = [
         link: 'https://www.janoseventos.com/salones.php?q=janos-caballito'
     },
     {
+        nombre: "Jano's Caballito 1",
+        direccion: "Av Acoyte 754, CABA",
+        link_maps: "https://maps.app.goo.gl/7WTewoS2JCaLkiRW7",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1722026885/salones/2481_7933fotoalgr_nlu09m.jpg',
+        link: 'https://www.janoseventos.com/salones.php?q=janos-caballito'
+    },
+    {
         nombre: "Jano's Caballito 2",
         direccion: "Av Acoyte 754",
         link_maps: "https://maps.app.goo.gl/7WTewoS2JCaLkiRW7",
@@ -288,6 +295,13 @@ export const salones = [
         link_maps: "http://maps.google.com/?q=Jano's+Ramos+Mejia",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702988349/salones/ramos%20mejia.png',
         link: 'https://www.janoseventos.com/salones.php?q=janos-ramos-mejia'
+    },
+    {
+        nombre: "Jano's Lahusen",
+        direccion: "Av. de Mayo 1848 - Ramos Mejía",
+        link_maps: "https://maps.app.goo.gl/kodgzFX332diJ4DU8",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1738709969/large_Copia_de_0042_J7_A9071_3d770dfdd5_odjjxp.jpg',
+        link: 'https://janoseventos.com/viewVenue/ticf2314p7k6luhg5n9s3y4j'
     },
     {
         nombre: "Jano's Ramos Mejía II",

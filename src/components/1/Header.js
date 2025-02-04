@@ -62,6 +62,10 @@ const Header = ({ coverImage, title, date, content, foto_pc, frase_portada, sin_
         content = "Te espero para compartir la alegría de esta noche única e inolvidable."
     }
 
+    if (article.url == "Bianqui-09-03"){
+        imageStylepc.objectPosition = "50% 20%"
+    }
+
     return (
         <>
             <div className={`block md:hidden ${bg} `}>
