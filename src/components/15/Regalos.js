@@ -159,13 +159,13 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
 
   if (article.url == "Adri-y-Ro"){
-    imageStyle.objectPosition = "60& 50%"
+    imageStyle.objectPosition = "60% 50%"
     imageStyle.opacity = 0.6
   }
 
   return (
     <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
-      <div className="relative flex h-full w-full flex-col items-center justify-between bg-gray-600">
+      <div className="relative flex h-full w-full flex-col items-center justify-between bg-gray-700">
         <Image
           src={foto_regalos}
           fill

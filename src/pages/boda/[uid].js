@@ -176,6 +176,10 @@ const Invitacion = ({ article }) => {
             article.frase_cierre = ""
         }
 
+        if (article.url == "Adri-y-Ro"){
+            article.mfmf = "swiper"
+        }
+
         return (
             <>
                 <Head>
