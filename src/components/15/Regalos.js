@@ -164,7 +164,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
   }
 
   if (article.url == "Ela-y-Mari"){
-    imageStyle.objectPosition = "30% 50%"
+    imageStyle.objectPosition = "37% 50%"
   }
 
   return (
