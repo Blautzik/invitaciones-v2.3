@@ -124,8 +124,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     cta2 = "Banco Galicia";
     cbu2 = "0070999030004078679978";
     alias3 = "MURO.TELAR.CAMISA";
-    article.frase_regalos =
-      "Tu presencia es nuestro mejor regalo, pero si aún así deseas hacernos un obsequio .Aquí esta nuestros números de cuenta :";
+    article.frase_regalos = "Tu presencia es nuestro mejor regalo, pero si aún así deseas hacernos un obsequio .Aquí esta nuestros números de cuenta :";
     nombre_cta1 = "Mercado Pago";
     article.dni = false;
   }
@@ -156,6 +155,12 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
   if(article.url == "Mia-22-02"){
     urna = true
+  }
+
+
+  if (article.url == "Adri-y-Ro"){
+    imageStyle.objectPosition = "60& 50%"
+    imageStyle.opacity = 0.6
   }
 
   return (
