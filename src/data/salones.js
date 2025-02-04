@@ -45,8 +45,8 @@ export const salones = [
         nombre: "Jano's Darwin 2",
         direccion: "Darwin 1351, CABA",
         link_maps: "http://maps.google.com/?q=Jano's+Darwin",
-        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987888/salones/darwin%202.png',
-        link: 'https://www.janoseventos.com/salones.php?q=janos-darwin2'
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1738711642/large_Copia_de_Copia_de_3_J7_A6770_731bf1272b_yc6bqk.jpg',
+        link: 'https://janoseventos.com/viewVenue/a6nhw64zdn54xiniw1htmcg3'
     },
     {
         nombre: "Jano's San Justo",
