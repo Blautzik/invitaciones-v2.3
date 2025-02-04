@@ -183,6 +183,11 @@ const Info = ({ article }) => {
        opacity = "opacity-100"
     }
 
+
+    if(article.url == "Delfi-14-03"){
+        article.mfmf = "sin_janos"
+    }
+
     return (
         <div className={`relative w-full  -globals-36 overflow-x-hidden ${bg} mt-0`} >
             {
