@@ -163,6 +163,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     imageStyle.opacity = 0.6
   }
 
+  if (article.url == "Ela-y-Mari"){
+    imageStyle.objectPosition = "30% 50%"
+  }
+
   return (
     <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
       <div className="relative flex h-full w-full flex-col items-center justify-between bg-gray-700">
