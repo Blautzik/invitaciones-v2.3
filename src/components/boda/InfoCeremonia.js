@@ -54,6 +54,13 @@ const InfoCeremonia = ({ article }) => {
         link_maps = "https://maps.app.goo.gl/m1xFpyAhCWbgZKTYA"
     }
 
+
+    if(article.url == "Adri-y-Ro"){
+        link_maps = "https://maps.app.goo.gl/AhNThBAPSaeLB96aA"
+        foto_ceremonia = getOptimizedGoogleDriveImageUrl("https://drive.google.com/file/d/1h-LJvOlWyTFkQxH86BhfuNfQpalC4XJt/view?usp=drive_link")
+    }
+
+
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
     return (
         <div className='flex md:flex-row md:justify-evenly md:items-start flex-col'>
