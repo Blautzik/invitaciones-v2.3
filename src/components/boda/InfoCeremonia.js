@@ -143,6 +143,7 @@ const InfoCeremonia = ({ article }) => {
                     {article.hora_fiesta_string !== 'sin' && <p className={textito}><strong>Hora: </strong>{hora}</p>}
                     <p className={textito}><strong>Salón: </strong> {article.salon}</p>
                     <p className={textito}>{salon.direccion}</p>
+                   
 
                 </div>
 
@@ -164,6 +165,13 @@ const InfoCeremonia = ({ article }) => {
                         }
                     </div>
                 </div>
+
+                {
+                                        article.mfmf != "sin_janos" &&
+                                        <a href={salon?.link} target="_blank">
+                                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 ${bgbtn} rounded-full mx-1 py-2 px-6 ${txtbtn} outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
+                                        </a>
+                                    }
 
 
                 <a href={salon.link_maps} target='_blank'>
