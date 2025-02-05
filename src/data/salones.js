@@ -298,7 +298,7 @@ export const salones = [
     },
     {
         nombre: "Jano's Lahusen",
-        direccion: "Av. de Mayo 1848 - Ramos Mejía",
+        direccion: "Av. Paseo Colón 301, CABA",
         link_maps: "https://maps.app.goo.gl/kodgzFX332diJ4DU8",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1738709969/large_Copia_de_0042_J7_A9071_3d770dfdd5_odjjxp.jpg',
         link: 'https://janoseventos.com/viewVenue/ticf2314p7k6luhg5n9s3y4j'
