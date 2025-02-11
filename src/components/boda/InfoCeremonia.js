@@ -11,7 +11,7 @@ import ropa from '../../../public/ropa.png'
 import { encontrarSalon } from '@/data/salones';
 import { getOptimizedGoogleDriveImageUrl } from '@/helpers';
 
-const InfoCeremonia = ({ article }) => {
+const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn = "text-white" }) => {
     const fechaCeremonia = new Date(article.fecha);
     const formattedDate = fechaCeremonia.toLocaleDateString("es-ES", {
         weekday: 'long',
@@ -169,13 +169,13 @@ const InfoCeremonia = ({ article }) => {
                 {
                                         article.mfmf != "sin_janos" &&
                                         <a href={salon?.link} target="_blank">
-                                            <button className={`${openSans.className} ${text == "text-white" && "invert"} sm:text-sm text-center mt-2 mb-3 w-44 lg:w-64 ${bgbtn} rounded-full mx-1 py-2 px-6 ${txtbtn} outline-none shadow-lg transform active:scale-90 transition-transform`}>Conocelo</button>
+                                            <button className={`${openSans.className} flex flex-row justify-center w-44 py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-4 max-w-[280px] font-[500]`}>Conocelo</button>
                                         </a>
                                     }
 
 
                 <a href={salon.link_maps} target='_blank'>
-                    <button className={`${openSans.className} flex flex-row py-4 px-8 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
+                    <button className={`${openSans.className} flex flex-row py-4 px-8 w-44 bg-black tracking-wide text-sm rounded-full text-gray-50 text-center mb-24 max-w-[280px] font-[500]`}>
                         <PiMapPin className=' text-lg mr-1' />
                         Cómo Llegar
                         </button>
