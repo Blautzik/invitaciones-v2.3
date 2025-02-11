@@ -220,6 +220,20 @@ export const salones = [
         link: 'https://www.janoseventos.com/salones.php?q=janos-puerto-madero'
     },
     {
+        nombre: "Jano's Costanera 1",
+        direccion: "Av. Rafael Obligado 6880/6920, CABA",
+        link_maps: "https://maps.app.goo.gl/NFgNiiDDYf9eymHb6",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1739315537/small_DSC_07929_f6dca76c0e_idwwzl.jpg',
+        link: 'https://janoseventos.com/viewVenue/sts6mlo982fd7f92vjn8s48e'
+    },
+    {
+        nombre: "Jano's Puerto Madero",
+        direccion: "Olga Cossettini 1031",
+        link_maps: "http://maps.google.com/?q=Jano's+Puerto+Madero",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702988208/salones/puerto%20madero.png',
+        link: 'https://www.janoseventos.com/salones.php?q=janos-puerto-madero'
+    },
+    {
         nombre: "Jano's Puerto Madero Boutique",
         direccion: "Av. Dr. Tristán Achával Rodríguez 1353, CABA",
         link_maps: "http://maps.google.com/?q=Jano's+Puerto+Madero+Boutique",

@@ -126,6 +126,10 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
     color_fondo = "bg-blue-600 bg-opacity-100"
   }
 
+  if(article.url == "Renata-05-04"){
+    frase_extra = "En caso de tener hijos menores de 12 años , favor completar en Comentarios sus datos y si tiene alguna restricción alimentaria llenar una tarjeta"
+  }
+
   return (
     <div className={`${openSans.className} bg-opacity-80 ${color_fondo ? color_fondo : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen `}>
       <div className="mx-auto py-10 ">
