@@ -127,7 +127,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
   }
 
   if(article.url == "Renata-05-04"){
-    frase_extra = "En caso de tener hijos menores de 12 años , favor completar en Comentarios sus datos y si tiene alguna restricción alimentaria llenar una tarjeta"
+    frase_extra = "Comentarios. (En caso de tener hijos menores de 12 años por favor completar aquí sus datos pero si tiene alguna restricción alimentaria llenar una nueva tarjeta)"
   }
 
   return (

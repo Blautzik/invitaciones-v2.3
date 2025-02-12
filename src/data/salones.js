@@ -45,7 +45,7 @@ export const salones = [
         nombre: "Jano's Darwin 2",
         direccion: "Darwin 1351, CABA",
         link_maps: "http://maps.google.com/?q=Jano's+Darwin",
-        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1738711642/large_Copia_de_Copia_de_3_J7_A6770_731bf1272b_yc6bqk.jpg',
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1739382591/WhatsApp_Image_2025-02-11_at_9.52.17_PM_unxirq.jpg',
         link: 'https://janoseventos.com/viewVenue/a6nhw64zdn54xiniw1htmcg3'
     },
     {
@@ -71,7 +71,7 @@ export const salones = [
     },
     {
         nombre: "Jano's Caballito 2",
-        direccion: "Av Acoyte 754",
+        direccion: "Av Acoyte 754, CABA",
         link_maps: "https://maps.app.goo.gl/7WTewoS2JCaLkiRW7",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1722026885/salones/2481_7933fotoalgr_nlu09m.jpg',
         link: 'https://janoseventos.com/viewVenue/yie2w5knqruazngu7i83h9bc'
@@ -104,9 +104,6 @@ export const salones = [
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987965/salones/ramos%20boutique.png',
         link: 'https://janoseventos.com/viewVenue/ldamqaswdg2j29yc8vox9fgg'
     },
-
-
-    
     {
         nombre: "Jano's Palermo Soho",
         direccion: "Armenia 1353- Palermo Soho",
