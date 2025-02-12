@@ -187,6 +187,9 @@ const Info = ({ article }) => {
     if(article.url == "Delfi-14-03"){
         article.mfmf = "sin_janos"
     }
+    if(article.url == "Renata-05-04"){
+        article.mfmf = "sin_janos"
+    }
 
     return (
         <div className={`relative w-full  -globals-36 overflow-x-hidden ${bg} mt-0`} >
