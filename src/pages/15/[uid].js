@@ -218,22 +218,14 @@ const Invitacion = ({ article }) => {
                 </div>
 
                 {article.foto_regalos &&
-
                     <div>
                         <Regalos article={article} foto_regalos={foto_regalos} bg={bg} />
                     </div>
                 }
 
-
-
-
                 <div>
                     <Agendar className='z-40' foto={foto_agendar} ig_link={ig_link} fb_link={article.link_face} form_id={article.form_id} tw_link={article.link_tw} fecha={article.fecha} bg={article.bg_color} />
                 </div>
-
-
-
-
 
             </>
 

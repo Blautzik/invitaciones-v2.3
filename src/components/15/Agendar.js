@@ -58,11 +58,18 @@ const Agendar = ({ foto, links, fecha, form_id, bg = "bg-white", mail, mfmf, fra
     }
 
 
+    if(form_id == "19-lYH9erHvj6Zp-lq2kNv1abDma9Vuvy2OLLnweQiFo") {
+        bg = "bg-white"
+        text = "text-slate-700"
+    }
+
     if ( form_id = "1n6kdiyXQmHzj4IrY1-PY3g1wsXXZOkwuCjpZnj29juM"){
         text = "text-black"
         bg = "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1738349672/WhatsApp_Image_2025-01-31_at_9.58.36_AM_kcmoyg.jpg')]"
         bgcolor = "bg-black"
     }
+
+
 
     return (
         <div className={`max-h-screen flex flex-col items-center justify-between ${bg} ${text} `}>
