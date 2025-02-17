@@ -91,6 +91,11 @@ const Header = ({
     imageStylepc.objectPosition = "30% 50%";
   }
 
+
+  if(article.url == "Martina-01-03"){
+    content = "Hay momentos inolvidables que se atesoran en el corazón para siempre. Por esa razón quiero que compartas conmigo éste día tan especial"
+  }
+
   return (
     <>
       <div className={`block md:hidden ${bg} `}>
