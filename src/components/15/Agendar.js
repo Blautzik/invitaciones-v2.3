@@ -63,7 +63,7 @@ const Agendar = ({ foto, links, fecha, form_id, bg = "bg-white", mail, mfmf, fra
         text = "text-slate-700"
     }
 
-    if ( form_id = "1n6kdiyXQmHzj4IrY1-PY3g1wsXXZOkwuCjpZnj29juM"){
+    if ( form_id == "1n6kdiyXQmHzj4IrY1-PY3g1wsXXZOkwuCjpZnj29juM"){
         text = "text-black"
         bg = "bg-[url('https://res.cloudinary.com/fedexx/image/upload/v1738349672/WhatsApp_Image_2025-01-31_at_9.58.36_AM_kcmoyg.jpg')]"
         bgcolor = "bg-black"
