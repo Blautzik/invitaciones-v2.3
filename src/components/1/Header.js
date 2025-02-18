@@ -96,6 +96,10 @@ const Header = ({
     content = "Hay momentos inolvidables que se atesoran en el corazón para siempre. Por esa razón quiero que compartas conmigo éste día tan especial"
   }
 
+
+
+
+  
   return (
     <>
       <div className={`block md:hidden ${bg} `}>
