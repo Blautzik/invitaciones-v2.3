@@ -447,6 +447,14 @@ export const salones = [
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1730502620/172978645104.07_11zon_oa2prf.webp',
         link: 'https://janoseventos.com/blog/post.php?id=121'
         
+    },
+    {
+        nombre: "Jano's Haedo",
+        direccion: "Manuel Savio 3151, Quilmes",
+        link_maps: "https://maps.app.goo.gl/wD1jo4si4Sv4nU4w9",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1730502620/172978645104.07_11zon_oa2prf.webp',
+        link: 'https://janoseventos.com/blog/post.php?id=121'
+        
     }
 ];
 
