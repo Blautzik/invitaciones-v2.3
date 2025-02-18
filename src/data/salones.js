@@ -339,8 +339,8 @@ export const salones = [
         nombre: "Jano's Palermo Hollywood",
         direccion: "Arévalo 2020, CABA",
         link_maps: "https://maps.app.goo.gl/FpX9Lb87RoaXHvz3A",
-        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1713907809/fotos%20salones/2024-01-30_eob0aq.jpg',
-        link: 'https://www.janoseventos.com/salones.php?q=janos-palermo'
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1739842112/small_1_500a8d4937_wxffhg.jpg',
+        link: 'https://janoseventos.com/viewVenue/ogj420r7rzvyqru4a2utks0w'
     },
     {
         nombre: "Jano's Ituzaingo",
