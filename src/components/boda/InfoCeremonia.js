@@ -63,6 +63,7 @@ const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn
 
     if(article.url == "Iara-y-Gabi"){
         link_maps = "https://maps.app.goo.gl/AuEx6ddonApyEDzZ7"
+        fiestaIcon = false
     }
 
 
@@ -123,12 +124,15 @@ const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn
             }
 
             <div className='md:mt-4 flex flex-col items-center justify-center text-center'>
+                    { fiestaIcon &&
                 <div className='h-16 w-16 relative mb-6'>
+
                     <Image
                         src={fiestaIcon}
                         fill
-                    />
+                        />
                 </div>
+                    }    
                 <h3 className={`${comfortaa.className} text-slate-700 sm:text-2xl xs:text-xl  mb-10 font-[700] text-center`}>La Fiesta</h3>
                 <Image
                     src={salon.foto_salon}
