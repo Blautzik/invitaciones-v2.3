@@ -196,6 +196,12 @@ const Info = ({ article }) => {
         hora_fin == "05:30"
     }
 
+    if (article.url == "Martina-01-03"){
+        article.mfmf = "sin_janos"
+    }
+
+
+
     return (
         <div className={`relative w-full  -globals-36 overflow-x-hidden ${bg} mt-0`} >
             {
