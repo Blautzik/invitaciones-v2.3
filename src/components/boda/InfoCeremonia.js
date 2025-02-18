@@ -61,6 +61,11 @@ const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn
     }
 
 
+    if(article.url == "Iara-y-Gabi"){
+        link_maps = "https://maps.app.goo.gl/AuEx6ddonApyEDzZ7"
+    }
+
+
     const textito = `${openSans.className} text-gray-600 tracking-wider font-[500]`
     return (
         <div className='flex md:flex-row md:justify-evenly md:items-start flex-col'>

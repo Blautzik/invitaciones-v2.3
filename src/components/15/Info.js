@@ -200,6 +200,10 @@ const Info = ({ article }) => {
         article.mfmf = "sin_janos"
     }
 
+    if(salon == "Jano's Haedo"){
+        sin_foto_salon = true
+    }
+
 
 
     return (

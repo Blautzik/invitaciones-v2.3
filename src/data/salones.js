@@ -450,8 +450,8 @@ export const salones = [
     },
     {
         nombre: "Jano's Haedo",
-        direccion: "Manuel Savio 3151, Quilmes",
-        link_maps: "https://maps.app.goo.gl/wD1jo4si4Sv4nU4w9",
+        direccion: "Av. Pte. Perón 1742, Haedo",
+        link_maps: "https://maps.app.goo.gl/mdNRdHVZpv1EEVAb6",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1730502620/172978645104.07_11zon_oa2prf.webp',
         link: 'https://janoseventos.com/blog/post.php?id=121'
         

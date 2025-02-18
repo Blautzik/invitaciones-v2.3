@@ -33,6 +33,12 @@ const InfoCondicional = ({ article }) => {
         <InfoCeremonia article={article} />
       </div>
     )
+  }else if(article.form_id=="1JzJoR1M0ndSxnqkk4WrgwPMB0E0bQtfY9jWg4bhS_nw"){
+    return (
+      <div id="info">
+        <InfoCeremonia article={article} />
+      </div>
+    )
   }else if(article.form_id=="1uKF--Q_hR0UnN-gafWFjWUObtBqHbbgpSuNWwR-VAYM"){
     return (
       <div id="info">
