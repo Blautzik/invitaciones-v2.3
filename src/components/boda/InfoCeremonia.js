@@ -29,6 +29,7 @@ const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn
     let foto_ceremonia = "https://res.cloudinary.com/fedexx/image/upload/v1701302507/jesi%20y%20maxi/descarga_mjuczu.jpg"
 
     const salon = encontrarSalon(article.salon);
+    let ceremonia_icon = ceremoniaIcon
 
 
     let link_maps = "https://maps.app.goo.gl/teqVKjJwCaPqGseT8"
@@ -63,7 +64,7 @@ const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn
 
     if(article.url == "Iara-y-Gabi"){
         link_maps = "https://maps.app.goo.gl/AuEx6ddonApyEDzZ7"
-        fiestaIcon = false
+        ceremonia_icon = false
     }
 
 
@@ -75,12 +76,16 @@ const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn
             {foto_ceremonia &&
 
                 <div className='md:mt-4 flex flex-col items-center justify-center text-center'>
-                    <div className='h-16 w-16 relative mb-6'>
+
+                    {
+                        ceremonia_icon &&
+                        <div className='h-16 w-16 relative mb-6'>
                         <Image
                             src={ceremoniaIcon}
                             fill
-                        />
+                            />
                     </div>
+                        }
                     <h3 className={`${comfortaa.className} text-slate-700 sm:text-2xl xs:text-xl mb-10 font-[700] text-center`}>{article.es_civil ? 'El Civil' : 'La Ceremonia'}</h3>
 
                     {
