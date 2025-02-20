@@ -189,7 +189,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                         <div className={`flex flex-col items-center ${!nos_casamos && "relative top-10"}`}>
                             {nos_casamos && <h2 className={`${openSans.className} ${texto} max-w-xs  text-center text-xl tracking-widest ]`}> Nos casamos en</h2>}
                             <Countdown date={date} texto={texto} />
-                            <h2 className={`${great_vives.className} ${texto} max-w-xs text-center text-sm tracking-widest my-4`}>{frase_extra}</h2>
+                            <h2 className={`${great_vives.className} ${texto} max-w-xs text-center text-md tracking-widest my-4`}>{frase_extra}</h2>
                             <Link href='#info' scroll={false}>
                                 <button className={`${openSans.className} py-3 px-9  rounded-full ${colores_boton} font-[900] text-center ${!frase_extra && "mt-10"} mb-16 `}>MÁS INFO</button>
                             </Link>
