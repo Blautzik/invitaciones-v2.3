@@ -90,6 +90,11 @@ const Header = ({
   if (article.url == "Lucia-28-03") {
     imageStyle.objectPosition = "30% 50%";
   }
+  if (article.url == "Juana-21-03") {
+    imageStyle.objectPosition = "30% 50%";
+  }
+
+
 
 
   if(article.url == "Martina-01-03"){
