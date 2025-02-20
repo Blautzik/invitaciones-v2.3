@@ -96,6 +96,11 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
   }
 
 
+  if ( form_id == "1pnly9vkAU_g7slxCUBs5r01T0Xyd72f6_6ytoN5UbCA"){
+    frase = "Para asegurarnos de que todos puedan disfrutar plenamente de nuestra boda, hemos decidido que el evento sea solo para adultos. ¡Esperamos contar con su compañía y compresión en este día tan especial!"
+  }
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

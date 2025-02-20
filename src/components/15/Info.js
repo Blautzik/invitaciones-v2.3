@@ -206,6 +206,7 @@ const Info = ({ article }) => {
 
 
 
+
     return (
         <div className={`relative w-full  -globals-36 overflow-x-hidden ${bg} mt-0`} >
             {

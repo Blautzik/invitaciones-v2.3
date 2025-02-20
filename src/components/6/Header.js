@@ -136,7 +136,9 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         imageStylePC.objectPosition = "50% 55%" 
     }
 
-
+    if(title == "Vane & Pato"){
+        frase_extra = "Hay momentos en la vida que son especiales por sí solos. Compartirlos con las personas que quieres los convierte en momentos inolvidables."
+    }
 
 
     return (
