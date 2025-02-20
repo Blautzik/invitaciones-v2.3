@@ -163,6 +163,9 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
           <p className={`${openSans.className} ${texto} text-md max-w-2xl font-[500]`}>
             Por favor completá el formulario con tus datos y comentarios para organizar la mejor fiesta
           </p>
+          {frase && <p className={`${openSans.className} ${texto} text-md max-w-2xl font-[700]`}>
+            {frase}
+          </p>}
 
         </div>
 
@@ -256,9 +259,7 @@ const Formulario = ({ form_id, frase_extra, bg, otra_frase, frase_formulario }) 
               placeholder={frase_formulario || 'Comentarios y saludos'}
             />
           </div>
-          {frase && <p className={`${openSans.className} ${texto} text-md max-w-2xl font-[700]`}>
-            {frase}
-          </p>}
+         
 
           <div className="flex items-end justify-end">
             <button

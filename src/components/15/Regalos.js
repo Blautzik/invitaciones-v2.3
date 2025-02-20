@@ -167,6 +167,18 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     imageStyle.objectPosition = "37% 50%"
   }
 
+  if (article.url == "Carly-y-Fer") {
+    cta2 = "Caja de ahorro en pesos Banco Galicia";
+    cbu2 = "0070999030004155979663";
+    alias3 = "casamiento.vaneypato";
+    nombre_cta1 = "Caja de ahorro en dólares, Banco Nación";
+    article.dni = false;
+  }
+
+
+  
+
+
   return (
     <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
       <div className="relative flex h-full w-full flex-col items-center justify-between bg-gray-700">
