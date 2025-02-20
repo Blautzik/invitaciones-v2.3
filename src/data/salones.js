@@ -458,11 +458,11 @@ export const salones = [
     },
     {
         nombre: "Jano's Temperley",
-        direccion: "AAv 9 De Julio 802, Temperley",
+        direccion: "Av 9 De Julio 802, Temperley",
         link_maps: "https://maps.app.goo.gl/GHaac3sCPwXLn1A87",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1740007630/large_Copia_de_0005_J7_A6570_f2fa005588_whb8wv.jpg',
         link: 'https://janoseventos.com/viewVenue/g4zsyryrbaorryipu8ksnd8y'
-    },
+    }
 ];
 
 export function encontrarSalon(nombreSalon) {
