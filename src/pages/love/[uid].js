@@ -376,79 +376,79 @@ export default WeddingInvitation;
 
 
 
-export async function getStaticProps({ params, previewData }) {
-    const { uid } = params;
+// export async function getStaticProps({ params, previewData }) {
+//     const { uid } = params;
 
-    if (!uid) {
-        return {
-            notFound: true,
-        };
-    }
+//     if (!uid) {
+//         return {
+//             notFound: true,
+//         };
+//     }
 
-    const response = await fetch('https://script.google.com/macros/s/AKfycbwmHj6frc5-xZaHRLHIOVgE1iY_d75FizjIyEquORZkJozgISCXav5pFQLNJGXqSIv1/exec');
+//     const response = await fetch('https://script.google.com/macros/s/AKfycbwmHj6frc5-xZaHRLHIOVgE1iY_d75FizjIyEquORZkJozgISCXav5pFQLNJGXqSIv1/exec');
 
-    if (!response.ok) {
-        return {
-            notFound: true,
-        };
-    }
+//     if (!response.ok) {
+//         return {
+//             notFound: true,
+//         };
+//     }
 
-    const articles = await response.json();
+//     const articles = await response.json();
 
-    // Log de los artículos obtenidos para verificación
-
-
-    const articleData = articles.find(article => String(article.url) === uid);
-
-    if (!articleData) {
-        return {
-            notFound: true,
-        };
-    }
-
-    const article = {
-        uid,
-        ...articleData,
-    };
-    console.log(article)
-
-    // Log de los datos del artículo para verificación
+//     // Log de los artículos obtenidos para verificación
 
 
-    return {
-        props: {
-            article,
-        },
-    };
-}
+//     const articleData = articles.find(article => String(article.url) === uid);
 
-export async function getStaticPaths() {
-    if (process.env.SKIP_BUILD_STATIC_GENERATION) {
-        return {
-            paths: [],
-            fallback: 'blocking',
-        };
-    }
+//     if (!articleData) {
+//         return {
+//             notFound: true,
+//         };
+//     }
 
-    const res = await fetch('https://script.google.com/macros/s/AKfycbwmHj6frc5-xZaHRLHIOVgE1iY_d75FizjIyEquORZkJozgISCXav5pFQLNJGXqSIv1/exec');
-    const posts = await res.json();
+//     const article = {
+//         uid,
+//         ...articleData,
+//     };
+//     console.log(article)
+
+//     // Log de los datos del artículo para verificación
 
 
-    if (!Array.isArray(posts) || posts.length === 0) {
-        return {
-            paths: [],
-            fallback: false,
-        };
-    }
+//     return {
+//         props: {
+//             article,
+//         },
+//     };
+// }
 
-    const paths = posts
-        .filter(post => post.url) // Asegúrate de filtrar los posts que tienen el nombre definido
-        .map(post => ({
-            params: { uid: String(post.url) }, // Asegúrate de que el parámetro uid sea una cadena
-        }));
+// export async function getStaticPaths() {
+//     if (process.env.SKIP_BUILD_STATIC_GENERATION) {
+//         return {
+//             paths: [],
+//             fallback: 'blocking',
+//         };
+//     }
 
-    // Log de las rutas generadas para verificación
-    console.log('BODA Paths:', paths);
+//     const res = await fetch('https://script.google.com/macros/s/AKfycbwmHj6frc5-xZaHRLHIOVgE1iY_d75FizjIyEquORZkJozgISCXav5pFQLNJGXqSIv1/exec');
+//     const posts = await res.json();
 
-    return { paths, fallback: false };
-}
+
+//     if (!Array.isArray(posts) || posts.length === 0) {
+//         return {
+//             paths: [],
+//             fallback: false,
+//         };
+//     }
+
+//     const paths = posts
+//         .filter(post => post.url) // Asegúrate de filtrar los posts que tienen el nombre definido
+//         .map(post => ({
+//             params: { uid: String(post.url) }, // Asegúrate de que el parámetro uid sea una cadena
+//         }));
+
+//     // Log de las rutas generadas para verificación
+//     console.log('BODA Paths:', paths);
+
+//     return { paths, fallback: false };
+// }
