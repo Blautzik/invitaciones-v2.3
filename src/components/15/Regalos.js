@@ -22,6 +22,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
   let nombre_cta1 = false;
   let urna=false
   let cvu = false
+  let caprichin = false
 
 
   if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
@@ -184,6 +185,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     article.dni = false;
   }
 
+  if(article.url ==="Luisana-05-04"){
+    caprichin =true
+    hide = true
+  }
+
 
   
 
@@ -203,21 +209,24 @@ const Regalos = ({ article, foto_regalos, bg }) => {
             article.mfmf === "regalo_sin_datos" ? "pt-[72vh] " : "mt-6"
           } mx-10 flex flex-col items-center text-center ${texto} z-30 opacity-100 `}
         >
-          <Image
+          {
+            !caprichin &&
+            <Image
             src={
               "https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png"
             }
             height={50}
             width={50}
             style={iconStyle}
-          />
+            />
+          }
           <h3 className={`${openSans.className} mb-2 mt-4 text-3xl font-[400]`}>
             {" "}
             {!hide && "Regalos"}
           </h3>
           {article.mail === "marine" ? (
             <div
-              className={`${openSans.className} font-[500] leading-5 text-slate-800`}
+            className={`${openSans.className} font-[500] leading-5 text-slate-800`}
             >
               {article.frase_regalos}
             </div>
