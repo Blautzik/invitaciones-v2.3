@@ -167,7 +167,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     imageStyle.objectPosition = "37% 50%"
   }
 
-  if (article.url == "Carly-y-Fer") {
+  if (article.url == "Vane-y-Pato") {
     cta2 = "Caja de ahorro en pesos Banco Galicia";
     cbu2 = "0070999030004155979663";
     alias3 = "casamiento.vaneypato";
