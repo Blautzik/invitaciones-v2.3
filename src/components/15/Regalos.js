@@ -21,6 +21,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
   let otra_altura = false;
   let nombre_cta1 = false;
   let urna=false
+  let cvu = false
 
 
   if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
@@ -174,6 +175,14 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     nombre_cta1 = "Caja de ahorro en dólares, Banco Nación";
     article.dni = false;
   }
+  if (article.url == "Victoria-15-03") {
+    cvu = true
+    cta2 = "Opción 2";
+    cbu2 = "0000003100023047684051";
+    alias3 = "v.giltripicchio";
+    nombre_cta1 = "Opción 1";
+    article.dni = false;
+  }
 
 
   
@@ -281,7 +290,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                     )}
                     {cbu2 && (
                       <p className="pb-2">
-                        <strong>CBU: </strong> {cbu2}{" "}
+                        <strong>{cvu ? "CVU": "CBU:"} </strong> {cbu2}{" "}
                       </p>
                     )}
                     {alias3 && (
