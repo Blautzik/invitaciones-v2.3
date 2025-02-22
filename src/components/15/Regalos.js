@@ -23,6 +23,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
   let urna=false
   let cvu = false
   let caprichin = false
+  let otro_titular = false
 
 
   if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
@@ -183,6 +184,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     alias3 = "v.giltripicchio";
     nombre_cta1 = "Opción 1";
     article.dni = false;
+    otro_titular = "Maria Soledad Tripicchio"
   }
 
   if(article.url ==="Luisana-05-04"){
@@ -258,7 +260,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                 )}
                 {article.titular && (
                   <p className="pb-2">
-                    <strong>Titular: </strong> {article.titular}
+                    <strong>Titular: </strong> {otro_titular || article.titular}
                   </p>
                 )}
                 {article.cbu && (
