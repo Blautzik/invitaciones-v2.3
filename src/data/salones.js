@@ -105,6 +105,13 @@ export const salones = [
         link: 'https://janoseventos.com/viewVenue/ldamqaswdg2j29yc8vox9fgg'
     },
     {
+        nombre: "Jano's Ramos Boutique 2",
+        direccion: "Saavedra 649,, Ramos Mejia, Buenos Aires",
+        link_maps: "https://maps.app.goo.gl/5nXyBzEJPSduA8sVA",
+        foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1740236166/large_Copia_de_0127_J7_A6005_Pano_c74123bcf3_cknqxw.jpg',
+        link: 'https://janoseventos.com/viewVenue/i01887fo2apmr1t5beo9xqxx'
+    },
+    {
         nombre: "Jano's Palermo Soho",
         direccion: "Armenia 1353- Palermo Soho",
         link_maps: "http://maps.google.com/?q=Jano's+Palermo+Soho",
