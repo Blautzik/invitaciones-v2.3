@@ -192,6 +192,11 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     hide = true
   }
 
+  if(article.url == "Juani-28-03"){
+    bg = "bg-black"
+  }
+
+
 
   
 

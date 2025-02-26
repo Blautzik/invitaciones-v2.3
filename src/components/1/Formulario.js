@@ -130,6 +130,10 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
     frase_extra = "Comentarios. (En caso de tener hijos menores de 12 años por favor completar aquí sus datos pero si tiene alguna restricción alimentaria llenar una nueva tarjeta)"
   }
 
+  if(article.url == "Juani-28-03"){
+    color_fondo = "bg-black"
+  }
+
   return (
     <div className={`${openSans.className} bg-opacity-80 ${color_fondo ? color_fondo : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen `}>
       <div className="mx-auto py-10 ">

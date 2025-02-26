@@ -126,6 +126,10 @@ const Invitacion = ({ article }) => {
             bgaccent="bg-blue-600"
         }
 
+        if(article.url == "Juani-28-03"){
+            bgaccent = "bg-black"
+          }
+        
 
         
 
