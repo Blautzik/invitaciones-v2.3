@@ -46,7 +46,7 @@ const Agendar = ({ foto, links, fecha, form_id, bg = "bg-white", mail, mfmf, fra
 
     const fechaCeremonia = parseDateString(fecha);
 
-    const formattedDate = fechaCeremonia
+    let formattedDate = fechaCeremonia
         ? format(fechaCeremonia, 'yyyy/MM/dd', { locale: es })
         : 'Fecha inválida';
 
