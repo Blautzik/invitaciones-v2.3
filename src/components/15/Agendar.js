@@ -69,6 +69,10 @@ const Agendar = ({ foto, links, fecha, form_id, bg = "bg-white", mail, mfmf, fra
         bgcolor = "bg-black"
     }
 
+    if(form_id === "19-lYH9erHvj6Zp-lq2kNv1abDma9Vuvy2OLLnweQiFo"){
+        formattedDate = "2025/03/28"
+    }
+
 
 
     return (
