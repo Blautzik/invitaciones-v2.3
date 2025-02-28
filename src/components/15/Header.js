@@ -84,7 +84,9 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
         imageStyle.filter="brightness(89%)"
         color = "text-black"
     }
-
+    if(article.url == "Cande-30-03"){
+        color = "text-black"
+    }
     
 
     return (
