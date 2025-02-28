@@ -200,6 +200,10 @@ const Info = ({ article }) => {
         article.mfmf = "sin_janos"
     }
 
+    if (article.url ==="Cande-30-03"){
+        bg =  "bg-[#D4E7F8]"
+    }
+
     if(salon == "Jano's Haedo"){
         sin_foto_salon = true
     }
