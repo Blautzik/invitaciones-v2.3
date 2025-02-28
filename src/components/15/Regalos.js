@@ -196,6 +196,9 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     bg = "bg-black"
   }
 
+  if(article.url == "Cande-30-03"){
+    texto = "text-secondary-600"
+  }
 
 
   
@@ -214,7 +217,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
         <div
           className={`${
             article.mfmf === "regalo_sin_datos" ? "pt-[72vh] " : "mt-6"
-          } mx-10 flex flex-col items-center text-center ${texto} z-30 opacity-100 `}
+          } mx-10 flex flex-col items-center text-center text-white z-30 opacity-100 `}
         >
           {
             !caprichin &&
@@ -227,13 +230,13 @@ const Regalos = ({ article, foto_regalos, bg }) => {
             style={iconStyle}
             />
           }
-          <h3 className={`${openSans.className} mb-2 mt-4 text-3xl font-[400]`}>
+          <h3 className={`${openSans.className} mb-2 mt-4 text-wihte text-3xl font-[400]`}>
             {" "}
             {!hide && "Regalos"}
           </h3>
           {article.mail === "marine" ? (
             <div
-            className={`${openSans.className} font-[500] leading-5 text-slate-800`}
+            className={`${openSans.className} font-[500] leading-5  text-slate-800`}
             >
               {article.frase_regalos}
             </div>

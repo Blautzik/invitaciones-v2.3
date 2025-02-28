@@ -129,6 +129,14 @@ const Invitacion = ({ article }) => {
 
 
 
+        if (article.url == "Cande-30-03"){
+            bg = "bg-[#e8e4db]"
+            article.bg_color = "bg-[#e8e4db]"
+        }
+
+
+
+
         return (
             <>
                 <Head>

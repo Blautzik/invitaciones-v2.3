@@ -74,6 +74,12 @@ const Agendar = ({ foto, links, fecha, form_id, bg = "bg-white", mail, mfmf, fra
     }
 
 
+    if(form_id == "13WFZxyJHcRQHRd50NEWUlHbYTsYm5iDyKSRZaJPpXTU"){
+        text = "text-secondary"
+        bgcolor = "bg-[#D4E7F8]"
+    }
+
+
 
     return (
         <div className={`max-h-screen flex flex-col items-center justify-between ${bg} ${text} `}>
