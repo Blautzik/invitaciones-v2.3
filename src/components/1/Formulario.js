@@ -16,6 +16,8 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
   let texto = "text-white"
   let frase_form = false
   let sin_menu_infantil = true
+  let placeholder_nombre = "Nombre y Apellido"
+  let placeholder_email = "Email"
 
   const [color, setColor] = useState(`bg-[${color_fondo && color_fondo.toLowerCase()}]`)
 
@@ -134,6 +136,11 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
     color_fondo = "bg-black"
   }
 
+  if (article.url == "Melina-12-04"){
+    placeholder_nombre = "Apellido y Nombre"
+    placeholder_email = "DNI"
+  }
+
   return (
     <div className={`${openSans.className} bg-opacity-80 ${color_fondo ? color_fondo : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen `}>
       <div className="mx-auto py-10 ">
@@ -157,7 +164,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
               name="name"
               id="name"
               className={inputCN}
-              placeholder="Nombre y Apellido"
+              placeholder={placeholder_nombre}
             />
           </div>
           <div className="flex items-center justify-center">
@@ -171,7 +178,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
               name="email"
               id="email"
               className={inputCN}
-              placeholder="Email"
+              placeholder={placeholder_email}
             />
           </div>
           {
