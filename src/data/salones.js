@@ -8,17 +8,17 @@ export const salones = [
     },
     {
         nombre: "Jano's Avellaneda 1",
-        direccion: "Gral. Güemes 897, 1824 Avellaneda, Buenos Aires",
+        direccion: "Av. Crisólogo Larralde 1050, B1873 Crucecita, Provincia de Buenos Aires",
         link_maps: "http://maps.google.com/?q=Jano's+Avellaneda",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987790/salones/avellaneda.png',
-        link: 'https://www.janoseventos.com/salones.php?q=janos-avellaneda'
+        link: 'https://janoseventos.com/viewVenue/ebppoxjy4vj13i22smzpd8yc'
     },
     {
         nombre: "Jano's Avellaneda 2",
-        direccion: "Gral. Güemes 897, 1824 Avellaneda, Buenos Aires",
+        direccion: "Av. Crisólogo Larralde 1050, Crucecita, Provincia de Buenos Aires",
         link_maps: "http://maps.google.com/?q=Jano's+Avellaneda",
         foto_salon: 'https://res.cloudinary.com/fedexx/image/upload/v1702987821/salones/avellaneda%202.png',
-        link: 'https://www.janoseventos.com/salones.php?q=janos-avellaneda2'
+        link: 'https://janoseventos.com/viewVenue/llw2m35xk9dedjse4o6kunou'
     },
     {
         nombre: "Jano's La Plata",
