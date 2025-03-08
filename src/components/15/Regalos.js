@@ -200,6 +200,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     texto = "text-secondary-600"
   }
 
+  if(article.url == "Sofi-12-04"){
+    bg ="bg-black"
+  }
+
 
   
 

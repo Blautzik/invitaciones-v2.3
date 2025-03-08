@@ -141,6 +141,10 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
     placeholder_email = "DNI"
   }
 
+  if (article.url == "Sofi-12-04"){
+    color_fondo = "bg-black"
+  }
+
   return (
     <div className={`${openSans.className} bg-opacity-80 ${color_fondo ? color_fondo : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen `}>
       <div className="mx-auto py-10 ">
