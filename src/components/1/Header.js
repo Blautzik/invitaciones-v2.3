@@ -11,7 +11,7 @@ import {
   Moontime
 } from "../../utils/fonts";
 import moment from "moment/moment";
-import Countdown from "../15/Cunta";
+import Countdown from "../15/Countdown";
 import Link from "next/link";
 
 const Header = ({
