@@ -20,11 +20,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
   let texto2 = false;
   let otra_altura = false;
   let nombre_cta1 = false;
-  let urna=false
-  let cvu = false
-  let caprichin = false
-  let otro_titular = false
-
+  let urna = false;
+  let cvu = false;
+  let caprichin = false;
+  let otro_titular = false;
 
   if (article.form_id == "1kIqtxht_QLBF2TVgY6pw1EsLFILvVrj6fiy4fM25nRA") {
     opacity = 1;
@@ -127,7 +126,8 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     cta2 = "Banco Galicia";
     cbu2 = "0070999030004078679978";
     alias3 = "MURO.TELAR.CAMISA";
-    article.frase_regalos = "Tu presencia es nuestro mejor regalo, pero si aún así deseas hacernos un obsequio .Aquí esta nuestros números de cuenta :";
+    article.frase_regalos =
+      "Tu presencia es nuestro mejor regalo, pero si aún así deseas hacernos un obsequio .Aquí esta nuestros números de cuenta :";
     nombre_cta1 = "Mercado Pago";
     article.dni = false;
   }
@@ -155,19 +155,17 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     imageStyle.objectPosition = "30% 50%";
   }
 
-
-  if(article.url == "Mia-22-02"){
-    urna = true
+  if (article.url == "Mia-22-02") {
+    urna = true;
   }
 
-
-  if (article.url == "Adri-y-Ro"){
-    imageStyle.objectPosition = "60% 50%"
-    imageStyle.opacity = 0.6
+  if (article.url == "Adri-y-Ro") {
+    imageStyle.objectPosition = "60% 50%";
+    imageStyle.opacity = 0.6;
   }
 
-  if (article.url == "Ela-y-Mari"){
-    imageStyle.objectPosition = "37% 50%"
+  if (article.url == "Ela-y-Mari") {
+    imageStyle.objectPosition = "37% 50%";
   }
 
   if (article.url == "Vane-y-Pato") {
@@ -178,69 +176,69 @@ const Regalos = ({ article, foto_regalos, bg }) => {
     article.dni = false;
   }
   if (article.url == "Victoria-15-03") {
-    cvu = true
+    cvu = true;
     cta2 = "Opción 2";
     cbu2 = "0000003100023047684051";
     alias3 = "v.giltripicchio";
     nombre_cta1 = "Opción 1";
     article.dni = false;
-    otro_titular = "Maria Soledad Tripicchio"
+    otro_titular = "Maria Soledad Tripicchio";
   }
 
-  if(article.url ==="Luisana-05-04"){
-    caprichin =true
-    hide = true
+  if (article.url === "Luisana-05-04") {
+    caprichin = true;
+    hide = true;
   }
 
-  if(article.url == "Juani-28-03"){
-    bg = "bg-black"
+  if (article.url == "Juani-28-03") {
+    bg = "bg-black";
   }
 
-  if(article.url == "Cande-30-03"){
-    texto = "text-secondary-600"
+  if (article.url == "Cande-30-03") {
+    texto = "text-secondary-600";
   }
 
-  if(article.url == "Sofi-12-04"){
-    bg ="bg-black"
+  if (article.url == "Sofi-12-04") {
+    bg = "bg-black";
   }
-
-
-  
-
 
   return (
     <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
       <div className="relative flex h-full w-full flex-col items-center justify-between bg-gray-700">
-        <Image
+        <img
           src={foto_regalos}
-          fill
-          quality={100}
-          style={imageStyle}
+          style={{
+            ...imageStyle,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
           alt="portada"
         />
         <div
           className={`${
             article.mfmf === "regalo_sin_datos" ? "pt-[72vh] " : "mt-6"
-          } mx-10 flex flex-col items-center text-center text-white z-30 opacity-100 `}
+          } z-30 mx-10 flex flex-col items-center text-center text-white opacity-100 `}
         >
-          {
-            !caprichin &&
+          {!caprichin && (
             <Image
-            src={
-              "https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png"
-            }
-            height={50}
-            width={50}
-            style={iconStyle}
+              src={
+                "https://res.cloudinary.com/fedexx/image/upload/v1694439372/gift_kchoah.png"
+              }
+              height={50}
+              width={50}
+              style={iconStyle}
             />
-          }
-          <h3 className={`${openSans.className} mb-2 mt-4 text-wihte text-3xl font-[400]`}>
+          )}
+          <h3
+            className={`${openSans.className} text-wihte mb-2 mt-4 text-3xl font-[400]`}
+          >
             {" "}
             {!hide && "Regalos"}
           </h3>
           {article.mail === "marine" ? (
             <div
-            className={`${openSans.className} font-[500] leading-5  text-slate-800`}
+              className={`${openSans.className} font-[500] leading-5  text-slate-800`}
             >
               {article.frase_regalos}
             </div>
@@ -313,7 +311,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
                     )}
                     {cbu2 && (
                       <p className="pb-2">
-                        <strong>{cvu ? "CVU": "CBU:"} </strong> {cbu2}{" "}
+                        <strong>{cvu ? "CVU" : "CBU:"} </strong> {cbu2}{" "}
                       </p>
                     )}
                     {alias3 && (
