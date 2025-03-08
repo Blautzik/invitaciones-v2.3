@@ -74,6 +74,11 @@ export const Caviar = localFont({
   subsets:['latin'],
   variable:'--amsterdam'
 })
+export const Moontime = localFont({
+  src:'./MoonTime-Regular.ttf',
+  subsets:['latin'],
+  variable:'--amsterdam'
+})
 
 
 export const amatic = Amatic_SC({

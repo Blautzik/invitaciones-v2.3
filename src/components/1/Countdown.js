@@ -51,7 +51,7 @@ const Countdown = ({ date, texto }) => {
             <div className='w-60 text-center'>
                 {days >= 0 ? 
                 <>
-                <h3 className={`${openSans.className} font-thin text-2xl`}>Faltan</h3>
+                <h3 className={`${openSans.className} ${textitoStyle} font-thin text-2xl`}>Faltan</h3>
                 <div className={`${openSans.className} flex font-[100] justify-between items-center opacity-80 mb-10 mt-2 `}>
 
 

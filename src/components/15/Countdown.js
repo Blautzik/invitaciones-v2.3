@@ -51,9 +51,12 @@ const Countdown = ({ date, texto }) => {
 
         return () => clearInterval(interval);
     }, [date]);
+    
 
     const { days, hours, minutes, seconds } = timeRemaining;
-    const cuentaStyle = `${openSans.className} font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center ${texto} `;
+
+    
+    const cuentaStyle = `font-[500] text-3xl rounded-full w-10 h-10 text-center flex items-center justify-center ${texto} `;
     const textitoStyle = `${texto} text-[12px] text-center`;
     const dospu = ` text-3xl mb-5 ${texto}`;
 

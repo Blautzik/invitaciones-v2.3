@@ -208,6 +208,10 @@ const Info = ({ article }) => {
         sin_foto_salon = true
     }
 
+    if(article.url == "Sofi-12-04"){
+        text = "text-white"
+    }
+
 
 
 

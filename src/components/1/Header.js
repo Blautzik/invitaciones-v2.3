@@ -8,9 +8,10 @@ import {
   minion,
   openSans,
   Vogue,
+  Moontime
 } from "../../utils/fonts";
 import moment from "moment/moment";
-import Countdown from "../15/Countdown";
+import Countdown from "../15/Cunta";
 import Link from "next/link";
 
 const Header = ({
@@ -26,6 +27,7 @@ const Header = ({
 }) => {
   let bg = "bg-[#FFF]";
   let font = minion.className;
+  let fontTitle = minion.className;
 
   const imageStyle = {
     objectFit: "cover",
@@ -43,6 +45,7 @@ const Header = ({
     backgroundColor: "#555",
   };
 
+  let colorTextoTitle = "text-slate-900";
   let colorTexto = "text-slate-900";
 
   if (mail == "bzerrizuela@gmail.com") {
@@ -106,6 +109,15 @@ const Header = ({
   }
 
 
+  if (article.url == "Sofi-12-04"){
+    bg = "bg-black"
+    sin_ondas = true
+    fontTitle = Moontime.className 
+    colorTextoTitle = "text-yellow-400 drop-shadow-[0_0_10px_rgba(255,223,0,0.8)]"
+    colorTexto = "text-white"
+}
+
+
 
 
 
@@ -149,11 +161,11 @@ const Header = ({
 
           <div className=" text-center md:hidden">
             <h1
-              className={`${font} ${colorTexto} ${
+              className={`${fontTitle} ${colorTextoTitle} ${
                 title.length >= 6 ? "text-5xl" : "text-8xl"
               } text-center font-[100] leading-[0.7]`}
             >
-              {title.toUpperCase()}
+              {title != "Sofi" ? title.toUpperCase() : title}
             </h1>
             <h3
               className={`${font} ${colorTexto} ${bg} mb-6 text-center text-3xl`}
@@ -188,7 +200,7 @@ const Header = ({
           <div className="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-between">
             <div className="pt-8">
               <h1
-                className={`${minion.className} ${colorTexto} ${
+                className={`${minion.className} ${colorTextoTitle} ${
                   title.length >= 6 ? "text-5xl" : "text-8xl"
                 } text-center font-[100] leading-[0.7]`}
               >
@@ -208,7 +220,7 @@ const Header = ({
               >
                 Faltan
               </h2>
-              <Countdown date={date} texto={colorTexto} />
+              <Countdown date={date} texto={colorTextoTitle} />
               <Link href="#info" scroll={false}>
                 <button
                   className={`${openSans.className} mb-16 rounded-full bg-white px-9 py-3 text-center font-[900] text-gray-900`}
