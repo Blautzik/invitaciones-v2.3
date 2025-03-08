@@ -59,7 +59,7 @@ const Header = ({
       "https://res.cloudinary.com/fedexx/image/upload/c_fill_pad,w_1500,h_1080,g_auto,b_gen_fill/v1727981418/Ornella-173_-_karina_celentano_h1fwhb.jpg";
   }
 
-  const dateFormated = moment(date).format("DD-MM-YYYY");
+  let dateFormated = moment(date).format("DD-MM-YYYY");
 
   if (article.url == "Elsa-y-Flor") {
     imageStyle.objectPosition = "50% 50%";
@@ -115,6 +115,7 @@ const Header = ({
     fontTitle = Moontime.className 
     colorTextoTitle = "text-yellow-400 drop-shadow-[0_0_10px_rgba(255,223,0,0.8)]"
     colorTexto = "text-white"
+    dateFormated = "12-04-2024"
 }
 
 
