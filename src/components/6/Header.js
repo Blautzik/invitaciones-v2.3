@@ -142,7 +142,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
 
 
     if (title == "Su & Yule"){
-        imageStylePC.zIndex = -1
+
     }
 
 
@@ -150,7 +150,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
         <div className=" h-[100dvh] bg-slate-800 ">
             <div className="top-0 w-full h-full">
 
-                <div className='md:hidden h-full'>
+                <div className='md:hidden h-full '>
 
                     <img
                         src={coverImage}
@@ -158,7 +158,7 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                         alt='portada'
                     />
                 </div>
-                <div className='hidden md:block'>
+                <div className='hidden md:block max-h-screen overflow-hidden'>
                 <img src={coverImagePc} alt="portada" style={imageStylePC} />
 
                 </div>

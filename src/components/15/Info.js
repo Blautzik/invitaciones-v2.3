@@ -57,6 +57,7 @@ const Info = ({ article }) => {
     objectPosition: "50% 50%",
     zIndex: 0,
     borderRadius: "5px",
+    maxHeight: "400px"
   };
 
   if (article.form_id == "1l3h9980DQhgjmjxUbqJJzYJsKB5KpuQ0GeQFMbWJ36A") {
@@ -488,7 +489,7 @@ const Info = ({ article }) => {
                 }}
               >
                 {!sin_foto_salon ? (
-                  <div className="relative mt-4 h-60 w-[90vw] rounded-sm md:h-96 md:w-[45vw]">
+                  <div className="relative mt-4 h-60 w-[90vw] rounded-sm md:h-[400px] md:w-[45vw]">
                     {salon?.foto_salon && (
                       <img
                         src={salon.foto_salon}
