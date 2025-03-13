@@ -179,6 +179,12 @@ const Invitacion = ({ article }) => {
         if (article.url == "Adri-y-Ro"){
             article.mfmf = "swiper"
         }
+        if (article.url == "Ale-y-Guille"){
+            article.mfmf = "swiper"
+        }
+        if (article.url == "Su-y-Yule"){
+            article.mfmf = "swiper"
+        }
 
         return (
             <>
