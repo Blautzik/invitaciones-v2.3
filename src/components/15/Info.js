@@ -531,6 +531,10 @@ const Info = ({ article }) => {
                       } mb-3 mt-2 w-44 text-center sm:text-sm lg:w-64 ${bgbtn} mx-1 rounded-full px-6 py-2 ${txtbtn} transform shadow-lg outline-none transition-transform active:scale-90`}
                     >
                       ¿Cómo llegar?
+
+
+
+                      
                     </button>
                   </a>
                 </div>
