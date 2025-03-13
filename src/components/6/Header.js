@@ -141,6 +141,11 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
     }
 
 
+    if (title == "Su & Yule"){
+        imageStylePC.zIndex = -1
+    }
+
+
     return (
         <div className=" h-[100dvh] bg-slate-800 ">
             <div className="top-0 w-full h-full">
