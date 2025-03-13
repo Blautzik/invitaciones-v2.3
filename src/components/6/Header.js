@@ -154,13 +154,8 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                     />
                 </div>
                 <div className='hidden md:block'>
-                    <Image
-                        src={coverImagePc}
-                        fill
-                        quality={100}
-                        alt='portada'
-                        style={imageStylePC}
-                    />
+                <img src={coverImagePc} alt="portada" style={imageStylePC} />
+
                 </div>
                 <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between items-center '>
 
@@ -183,6 +178,10 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, form_id })
                             </>
                         }
                     </div>
+
+
+
+                    
 
                     {
                         countdownPortada &&
