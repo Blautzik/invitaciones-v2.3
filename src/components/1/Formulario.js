@@ -18,6 +18,7 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
   let sin_menu_infantil = true
   let placeholder_nombre = "Nombre y Apellido"
   let placeholder_email = "Email"
+  let caprichin = true
 
   const [color, setColor] = useState(`bg-[${color_fondo && color_fondo.toLowerCase()}]`)
 
@@ -143,13 +144,17 @@ const Formulario = ({ form_id, frase_extra, color_fondo, menu_antinino, sin_nino
 
   if (article.url == "Sofi-12-04"){
     color_fondo = "bg-black"
+    caprichin = false
   }
 
   return (
     <div className={`${openSans.className} bg-opacity-80 ${color_fondo ? color_fondo : 'bg-violeta'} bg-[#f09797] w-screen min-h-screen `}>
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex flex-col items-center text-center w-[270px]">
+          {
+            caprichin &&
           <GoCheckCircle className="text-[66px] font-thin text-white" />
+          }
           <h3 className="text-white text-2xl pt-6">Confirmar Asistencia</h3>
           <p className="text-white text-md max-w-2xl font-[500] pt-20">
             Por favor completá el formulario con tus datos y comentarios para organizar la mejor fiesta

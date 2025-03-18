@@ -281,17 +281,17 @@ const Invitacion = ({ article }) => {
                                     />
                                 }
 
+
+                            {
+                                article.url =="Sofi-12-04" && 
+                                <RegalosCapri article={article} foto_regalos={foto_regalos}/>
+                            }
                                 <div className='z-50'>
                                     <Agendar className='z-40' foto_agendar={foto_agendar} ig_link={ig_link} fb_link={article.link_face} tw_link={article.link_twitter} fecha={article.fecha} />
                                 </div>
 
                             </section>
 
-
-                            {
-                                article.url =="Sofi-12-04" && 
-                                <RegalosCapri article={article} foto_regalos={foto_regalos}/>
-                            }
 
                             <section className='relative pt-5'>
                                 {
