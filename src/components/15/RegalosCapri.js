@@ -4,7 +4,7 @@ import { openSans } from "../../utils/fonts";
 import Accordion from "../6/Accordion";
 import { FaBullseye } from "react-icons/fa6";
 
-const Regalos = ({ article, foto_regalos, bg }) => {
+const RegalosCapri= ({ article, foto_regalos, bg }) => {
   let opacity = 0.65;
   let texto = "text-white";
   let iconStyle = {
@@ -192,7 +192,6 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
   if (article.url == "Juani-28-03") {
     bg = "bg-black";
-
   }
 
   if (article.url == "Cande-30-03") {
@@ -201,13 +200,7 @@ const Regalos = ({ article, foto_regalos, bg }) => {
 
   if (article.url == "Sofi-12-04") {
     bg = "bg-black";
-    return(
-      <></>
-    )
   }
-
-
-
 
   return (
     <div className={` ${otra_altura ? otra_altura : "h-screen"} w-full `}>
@@ -362,4 +355,4 @@ const Regalos = ({ article, foto_regalos, bg }) => {
   );
 };
 
-export default Regalos;
+export default RegalosCapri;

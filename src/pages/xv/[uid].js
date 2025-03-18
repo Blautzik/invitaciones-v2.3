@@ -19,6 +19,7 @@ import { SwiperGallery } from '@/components/15/Swiper';
 import FormularioPlaylist from '@/components/15/FormularioPlaylist';
 import FormularioVIP from '@/components/1/FormularioVIP';
 import { comfortaa } from '@/utils/fonts';
+import RegalosCapri from '@/components/15/RegalosCapri';
 
 const Invitacion = ({ article }) => {
 
@@ -233,6 +234,10 @@ const Invitacion = ({ article }) => {
                                 </section>
                             }
 
+
+
+
+
                             {article.form_id && (
                                 article.mail === 'bzerrizuela@gmail.com' ? (
                                     <FormularioVIP form_id={article.form_id} frase_extra={article.qwe} article={article} />
@@ -281,6 +286,12 @@ const Invitacion = ({ article }) => {
                                 </div>
 
                             </section>
+
+
+                            {
+                                article.url =="Sofi-12-04" && 
+                                <RegalosCapri article={article} foto_regalos={foto_regalos}/>
+                            }
 
                             <section className='relative pt-5'>
                                 {

@@ -67,7 +67,7 @@ const Header = ({
 
   if (article.url == "Lore-16-02") {
     content =
-      "Te espero para compartir la alegría de esta día inolvidable y único";
+      " ";
   }
 
   if (article.url == "Tere-07-02") {

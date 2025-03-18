@@ -66,15 +66,7 @@ const Regalos = ({article}) => {
 
                     </Accordion>
                     }
-                    {article.lista_regalos &&
-                        <Accordion open header="Lista de Regalos">
-                        <div className={`${openSans.className} text-sm font-thin opacity-100`}>
-                            <p className='pb-2'><strong>Lista 1: </strong> Fravega</p>
-                            <p className='pb-2'><strong>Lista 2: </strong> Avon </p>
-                            
-                        </div>
-                    </Accordion>
-                    }
+
                 </div>
             </div>
 
