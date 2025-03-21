@@ -142,6 +142,10 @@ const Invitacion = ({ article }) => {
         if (article.url == "Angela-12-04"){
             bgaccent= "bg-[#A1A187]"
         }
+
+        if(article.url == "Renata-05-04"){
+            article.mfmf = "swiper"
+        }
         
 
 
