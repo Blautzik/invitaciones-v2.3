@@ -8,7 +8,7 @@ import {
   minion,
   openSans,
   Vogue,
-  Moontime
+  Moontime,
 } from "../../utils/fonts";
 import moment from "moment/moment";
 import Countdown from "../15/Countdown";
@@ -28,6 +28,7 @@ const Header = ({
   let bg = "bg-[#FFF]";
   let font = minion.className;
   let fontTitle = minion.className;
+  let Header = true;
 
   const imageStyle = {
     objectFit: "cover",
@@ -66,8 +67,7 @@ const Header = ({
   }
 
   if (article.url == "Lore-16-02") {
-    content =
-      " ";
+    content = " ";
   }
 
   if (article.url == "Tere-07-02") {
@@ -97,31 +97,29 @@ const Header = ({
     imageStyle.objectPosition = "30% 50%";
   }
 
-
-
-
-  if(article.url == "Martina-01-03"){
-    content = "Hay momentos inolvidables que se atesoran en el corazón para siempre. Por esa razón quiero que compartas conmigo éste día tan especial"
+  if (article.url == "Martina-01-03") {
+    content =
+      "Hay momentos inolvidables que se atesoran en el corazón para siempre. Por esa razón quiero que compartas conmigo éste día tan especial";
   }
 
-  if(article.url == "Juani-28-03"){
-    sin_ondas = true
+  if (article.url == "Juani-28-03") {
+    sin_ondas = true;
   }
 
+  if (article.url == "Sofi-12-04") {
+    bg = "bg-black";
+    sin_ondas = true;
+    fontTitle = Moontime.className;
+    colorTextoTitle =
+      "text-yellow-400 drop-shadow-[0_0_10px_rgba(255,223,0,0.8)]";
+    colorTexto = "text-white";
+    dateFormated = "12-04-2024";
+  }
 
-  if (article.url == "Sofi-12-04"){
-    bg = "bg-black"
-    sin_ondas = true
-    fontTitle = Moontime.className 
-    colorTextoTitle = "text-yellow-400 drop-shadow-[0_0_10px_rgba(255,223,0,0.8)]"
-    colorTexto = "text-white"
-    dateFormated = "12-04-2024"
-}
-
-
-
-
-
+  if (article.url == "Angela-12-04") {
+    sin_ondas = true;
+    Header = false
+  }
 
   return (
     <>
@@ -140,6 +138,7 @@ const Header = ({
           )}
         </div>
 
+              {Header && (
         <div className="w-full md:hidden ">
           <div className="flex w-full justify-center pt-14 md:hidden">
             <div className="flex w-full justify-center md:hidden">
@@ -157,38 +156,39 @@ const Header = ({
             </div>
           </div>
 
+            <div className=" text-center md:hidden">
+              <h1
+                className={`${fontTitle} ${colorTextoTitle} ${
+                  title.length >= 6 ? "text-5xl" : "text-8xl"
+                } text-center font-[100] leading-[0.7]`}
+              >
+                {title != "Sofi" ? title.toUpperCase() : title}
+              </h1>
+              <h3
+                className={`${font} ${colorTexto} ${bg} mb-6 text-center text-3xl`}
+              >
+                {frase_portada
+                  ? frase_portada != "no" && frase_portada
+                  : "MIS 15 AÑOS"}
+              </h3>
+              {!(mail == "bzerrizuela@gmail.com") && (
+                <>
+                  {content && (
+                    <p
+                      className={`${openSans.className} ${colorTexto} mx-7 mb-6 text-center text-xl`}
+                    >
+                      {content}
+                    </p>
+                  )}
+                </>
+              )}
+            </div>
 
-          
 
-          <div className=" text-center md:hidden">
-            <h1
-              className={`${fontTitle} ${colorTextoTitle} ${
-                title.length >= 6 ? "text-5xl" : "text-8xl"
-              } text-center font-[100] leading-[0.7]`}
-            >
-              {title != "Sofi" ? title.toUpperCase() : title}
-            </h1>
-            <h3
-              className={`${font} ${colorTexto} ${bg} mb-6 text-center text-3xl`}
-            >
-              {frase_portada
-                ? frase_portada != "no" && frase_portada
-                : "MIS 15 AÑOS"}
-            </h3>
-            {!(mail == "bzerrizuela@gmail.com") && (
-              <>
-                {content && (
-                  <p
-                    className={`${openSans.className} ${colorTexto} mx-7 mb-6 text-center text-xl`}
-                  >
-                    {content}
-                  </p>
-                )}
-              </>
-            )}
-          </div>
         </div>
+          )}
       </div>
+
       <div className="hidden h-[100vh] md:block">
         <div className="top-0 h-full w-full">
           <div className="hidden h-screen md:block">

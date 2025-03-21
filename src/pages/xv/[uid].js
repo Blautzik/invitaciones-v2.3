@@ -56,6 +56,7 @@ const Invitacion = ({ article }) => {
         let frase = article.qwe || "Te espero para compartir la alegría de esta noche inolvidable y única"
         let menu_antinino = false
         let font = comfortaa.className
+        let fotoloca = getGoogleDriveImageUrl("https://drive.google.com/file/d/1sd_Lyb0wZoAeIV84q8QPDqzBh7aY35Mc/view?usp=drive_link")
 
         if (article.galeria) {
             const urlsArray = article.galeria.split(',').map(url => url.trim())
@@ -136,6 +137,11 @@ const Invitacion = ({ article }) => {
             texto = "text-yellow-400 drop-shadow-[0_0_10px_rgba(255,223,0,0.8)]"
             bgaccent ="bg-black"
         }
+
+
+        if (article.url == "Angela-12-04"){
+            bgaccent= "bg-[#A1A187]"
+        }
         
 
 
@@ -177,6 +183,10 @@ const Invitacion = ({ article }) => {
                                 mail={article.mail}
                                 article={article}
                             />
+                        </section>
+
+                        <section>
+                            <img src={fotoloca} ></img>
                         </section>
 
                         <div>
@@ -394,4 +404,4 @@ export async function getStaticPaths() {
     console.log('Paths:', paths);
 
     return { paths, fallback: false };
-}
+}   

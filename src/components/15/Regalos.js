@@ -207,6 +207,10 @@ const Regalos = ({ article, foto_regalos, bg }) => {
   }
 
 
+  if(article.url == "Angela-12-04"){
+    bg="bg-[#A1A187]"
+  }
+
 
 
   return (
