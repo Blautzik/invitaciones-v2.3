@@ -185,9 +185,13 @@ const Invitacion = ({ article }) => {
                             />
                         </section>
 
-                        <section className='w-screen '>
+                        {
+
+                        article.url =="Angela-12-04" &&
+                            <section className='w-screen '>
                             <img src={fotoloca} className='mx-auto' ></img>
                         </section>
+                        }
 
                         <div>
                             <motion.div
