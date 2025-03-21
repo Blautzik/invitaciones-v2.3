@@ -185,8 +185,8 @@ const Invitacion = ({ article }) => {
                             />
                         </section>
 
-                        <section>
-                            <img src={fotoloca} ></img>
+                        <section className='w-screen '>
+                            <img src={fotoloca} className='mx-auto' ></img>
                         </section>
 
                         <div>

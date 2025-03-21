@@ -164,9 +164,9 @@ const Formulario = ({
 
   return (
     <div
-      className={`${openSans.className} bg-opacity-80 ${
+      className={`${openSans.className}bg-[#f09797] bg-opacity-80 ${
         color_fondo ? color_fondo : "bg-violeta"
-      } min-h-screen w-screen bg-[#f09797] `}
+      } min-h-screen w-screen  `}
     >
       <div className="mx-auto py-10 ">
         <div className="mx-auto flex w-[270px] flex-col items-center text-center">
