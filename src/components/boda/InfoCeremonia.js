@@ -80,9 +80,7 @@ const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn
     return (
         <div className='flex md:flex-row md:justify-evenly md:items-start flex-col'>
 
-
             {foto_ceremonia &&
-
                 <div className='md:mt-4 flex flex-col items-center justify-center text-center'>
 
                     {
