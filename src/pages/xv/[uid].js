@@ -259,6 +259,7 @@ const Invitacion = ({ article }) => {
 
 
 
+
                             {article.form_id && (
                                 article.mail === 'bzerrizuela@gmail.com' ? (
                                     <FormularioVIP form_id={article.form_id} frase_extra={article.qwe} article={article} />

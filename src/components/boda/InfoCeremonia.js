@@ -60,6 +60,14 @@ const InfoCeremonia = ({ article , text= "text-white", bgbtn= "bg-black", txtbtn
         link_maps = "https://maps.app.goo.gl/AhNThBAPSaeLB96aA"
         foto_ceremonia = getOptimizedGoogleDriveImageUrl("https://drive.google.com/file/d/1h-LJvOlWyTFkQxH86BhfuNfQpalC4XJt/view?usp=drive_link")
     }
+    if(article.url == "Alf-y-Vivi"){
+        link_maps = "https://maps.app.goo.gl/SD9UisgHCcBdHoU99"
+        foto_ceremonia = getOptimizedGoogleDriveImageUrl("https://drive.google.com/file/d/1iPS-p8UsMOwkYElrZDOXcsQLkWfEPhij/view?usp=drive_link")
+    }
+    if(article.url == "Adri-y-Ro"){
+        link_maps = "https://maps.app.goo.gl/AhNThBAPSaeLB96aA"
+        foto_ceremonia = getOptimizedGoogleDriveImageUrl("https://drive.google.com/file/d/1h-LJvOlWyTFkQxH86BhfuNfQpalC4XJt/view?usp=drive_link")
+    }
 
 
     if(article.url == "Iara-y-Gabi"){
