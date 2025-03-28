@@ -88,6 +88,10 @@ const Header = ({ coverImage, title, date, coverImagePc, h1_centrado, portada_cu
         color = "text-black"
         texto = "text-black"
     }
+    if(article.url == "Olivia-23-05"){
+        color = "text-black"
+        texto = "text-black"
+    }
     
 
     return (

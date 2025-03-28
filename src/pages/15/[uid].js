@@ -135,6 +135,11 @@ const Invitacion = ({ article }) => {
         }
 
 
+        if (article.url == "Olivia-23-05"){
+            bg = "bg-[#c0c0c0]"
+        }
+
+
 
 
         return (
