@@ -76,7 +76,7 @@ const Header = ({
 
   if (article.url == "Malvi-28-02") {
     colorTexto = "text-secondary-800";
-    sin_ondas = true;
+    sin_ondas = true;https://res.cloudinary.com/fedexx/image/upload/v1738349672/WhatsApp_Image_2025-01-31_at_9.58.36_AM_kcmoyg.jpg
     bg = "bg-amber-50";
     font = Vogue.className;
   }
@@ -119,6 +119,10 @@ const Header = ({
   if (article.url == "Angela-12-04") {
     sin_ondas = true;
     Header = false
+  }
+
+  if (article.url == "Loa-07-06"){
+    dateFormated = "07-06-2025"
   }
 
   return (
