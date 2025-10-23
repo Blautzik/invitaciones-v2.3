@@ -1,13 +1,5 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "functions": {
-    "src/pages/api/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "env": {
-    "NODE_VERSION": "20"
-  }
+  "buildCommand": "npm run build"
 }
