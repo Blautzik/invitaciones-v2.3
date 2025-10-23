@@ -9,12 +9,6 @@ const nextConfig = {
       },
     ];
   },
-};
-
-module.exports = nextConfig;
-
-
-module.exports = {
   images: {
     remotePatterns: [
       {
@@ -34,7 +28,6 @@ module.exports = {
         hostname: 'lh3.googleusercontent.com',
       },
     ],
-
   },
   webpack(config, options) {
     config.module.rules.push({
@@ -50,4 +43,6 @@ module.exports = {
     });
     return config;
   },
-}
+};
+
+module.exports = nextConfig;
